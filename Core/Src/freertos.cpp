@@ -26,9 +26,13 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "AllTasks.h"
+
 #ifdef __cplusplus
  extern "C" {
 #endif
+
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -110,6 +114,8 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+
+  AllTasks_init();
   /* USER CODE END RTOS_THREADS */
 
 }

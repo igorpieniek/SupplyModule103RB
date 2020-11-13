@@ -1,0 +1,5 @@
+ADC_Tools.h:9:8:float ADC_Tools::getValue() const	16	static
+LipoCell.cpp:5:1:LipoCell::LipoCell()	16	static
+LipoCell.cpp:10:6:void LipoCell::update(uint32_t)	24	static
+LipoCell.cpp:16:7:virtual float LipoCell::getValueAvrg()	16	static
+LipoCell.cpp:20:7:virtual float LipoCell::getPercentageAvrg()	24	static

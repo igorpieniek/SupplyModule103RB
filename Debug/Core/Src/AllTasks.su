@@ -1,0 +1,2 @@
+AllTasks.cpp:14:6:void AllTasks_init()	48	static
+AllTasks.cpp:23:6:void StartBatteryManagerTask(const void*)	16	static
