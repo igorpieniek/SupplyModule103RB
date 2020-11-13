@@ -3,3 +3,9 @@ LipoCell.cpp:5:1:LipoCell::LipoCell()	16	static
 LipoCell.cpp:10:6:void LipoCell::update(uint32_t)	24	static
 LipoCell.cpp:16:7:virtual float LipoCell::getValueAvrg()	16	static
 LipoCell.cpp:20:7:virtual float LipoCell::getPercentageAvrg()	24	static
+Average.h:27:2:Average<T, s>::Average() [with T = float; unsigned char s = 10u]	16	static
+Average.h:34:7:void Average<T, s>::insert(T) [with T = float; unsigned char s = 10u]	16	static
+Average.h:45:5:T& Average<T, s>::operator()() [with T = float; unsigned char s = 10u]	16	static
+Average.h:38:7:void Average<T, s>::clear() [with T = float; unsigned char s = 10u]	24	static
+Average.h:12:7:void Average<T, s>::indexIterate() [with T = float; unsigned char s = 10u]	16	static
+Average.h:20:7:void Average<T, s>::calculate() [with T = float; unsigned char s = 10u]	24	static
