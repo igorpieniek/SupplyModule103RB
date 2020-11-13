@@ -16,6 +16,7 @@ osThreadId BatteryManagerHandle;
 void StartBatteryManagerTask(void const * argument);
 
 uint32_t receiveADC[2];
+float per, volt, perAvrg, voltAvrg ;
 
 
 void AllTasks_init(){
@@ -38,10 +39,11 @@ void StartBatteryManagerTask(void const * argument){
 	for(;;){
 
 		lipo.update(receiveADC[0]);
-		float res = lipo.getPercentage();
-		char buf[15];
-		uint16_t size = sprintf( &buf[0], "Percent: %.2f\n", res);
-		HAL_UART_Transmit(&huart3, (uint8_t*)buf,size, 10);
+		per = lipo.getPercentage();
+		volt= lipo.getValue();
+		perAvrg = lipo.getPercentageAvrg();
+		voltAvrg= lipo.getValueAvrg();
+
 		osDelay(100);
 
 

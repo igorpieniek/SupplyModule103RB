@@ -38,7 +38,7 @@ cmsis_os.c:1432:10:osThreadSuspend	8	static
 cmsis_os.c:1448:10:osThreadResume	8	static
 cmsis_os.c:1472:10:osThreadSuspendAll	8	static
 cmsis_os.c:1483:10:osThreadResumeAll	8	static
-cmsis_os.c:1500:10:osDelayUntil	8	static
+cmsis_os.c:1500:10:osDelayUntil	0	static
 cmsis_os.c:1520:10:osAbortDelay	0	static
 cmsis_os.c:1541:10:osThreadList	0	static
 cmsis_os.c:1555:9:osMessagePeek	32	static

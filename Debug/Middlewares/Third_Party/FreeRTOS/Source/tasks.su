@@ -22,7 +22,6 @@ tasks.c:2255:13:uxTaskGetNumberOfTasks	0	static
 tasks.c:2263:7:pcTaskGetName	0	static
 tasks.c:2583:12:xTaskIncrementTick	40	static
 tasks.c:2099:12:xTaskResumeAll	32	static
-tasks.c:1198:7:vTaskDelayUntil	16	static
 tasks.c:1282:7:vTaskDelay	8	static
 tasks.c:2845:6:vTaskSwitchContext	8	static
 tasks.c:1624:7:vTaskSuspend	16	static

@@ -1,5 +1,6 @@
+ADC_Tools.h:9:8:float ADC_Tools::getValue() const	16	static
 ADC_Tools.h:11:8:float ADC_Tools::getPercentage() const	16	static
-AllTasks.cpp:21:6:void AllTasks_init()	48	static
+AllTasks.cpp:22:6:void AllTasks_init()	48	static
 LipoCell.h:9:7:LipoCell::~LipoCell()	16	static
-AllTasks.cpp:30:6:void StartBatteryManagerTask(const void*)	128	static
+AllTasks.cpp:31:6:void StartBatteryManagerTask(const void*)	96	static
 Average.h:30:2:Average<T, s>::~Average() [with T = float; unsigned char s = 10u]	16	static
