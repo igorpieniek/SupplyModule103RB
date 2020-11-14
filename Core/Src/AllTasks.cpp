@@ -19,6 +19,7 @@ void StartLedUpTask(void const * argument);
 
 uint32_t receiveADC[2];
 float per, volt, perAvrg, voltAvrg ;
+uint8_t RXdata;
 
 
 void AllTasks_init(){
@@ -29,6 +30,8 @@ void AllTasks_init(){
 	  osThreadDef(LedUpTask, StartLedUpTask, osPriorityBelowNormal, 0, 256);
 	  LedUpHandle = osThreadCreate(osThread(LedUpTask), NULL);
 
+
+	  HAL_UART_Receive_IT(&huart3, &RXdata, 1);
 
 }
 
@@ -58,7 +61,22 @@ void StartBatteryManagerTask(void const * argument){
 void StartLedUpTask(void const * argument){
 
 	for(;;){
-		HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-		osDelay(500);
+		osEvent evt = osSignalWait(0, osWaitForever);
+		if(evt.status== osEventSignal){
+			if(evt.value.signals == 0x01)HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_SET);
+		}
 	}
 }
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+
+	if		(RXdata == 'n') {
+		osSignalSet(LedUpHandle, 0x01);
+
+	}
+	else if (RXdata == 'f') HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+
+	HAL_UART_Receive_IT(&huart3, &RXdata, 1);
+}
+
+
