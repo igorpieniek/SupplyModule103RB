@@ -3,7 +3,7 @@ Archive member included to satisfy reference by file (symbol)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(si_class_type_info.o)
                               Core\Src\LipoCell.o (vtable for __cxxabiv1::__si_class_type_info)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
-                              Core\Inc\LedNotifier.o (operator delete(void*))
+                              Core\Inc\Fun.o (operator delete(void*))
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(atexit_arm.o)
                               Core\Src\AllTasks.o (__aeabi_atexit)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
@@ -96,6 +96,63 @@ Discarded input sections
  .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
  .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
  .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
+ .text          0x00000000        0x0 Core\Inc\Fun.o
+ .data          0x00000000        0x0 Core\Inc\Fun.o
+ .bss           0x00000000        0x0 Core\Inc\Fun.o
+ .text._ZN3Fun2onENS_8VelocityE
+                0x00000000       0x16 Core\Inc\Fun.o
+ .ARM.extab.text._ZN3Fun2onENS_8VelocityE
+                0x00000000        0x0 Core\Inc\Fun.o
+ .ARM.exidx.text._ZN3Fun2onENS_8VelocityE
+                0x00000000        0x8 Core\Inc\Fun.o
+ .text._ZN3Fun3offEv
+                0x00000000       0x12 Core\Inc\Fun.o
+ .ARM.extab.text._ZN3Fun3offEv
+                0x00000000        0x0 Core\Inc\Fun.o
+ .ARM.exidx.text._ZN3Fun3offEv
+                0x00000000        0x8 Core\Inc\Fun.o
+ .text._ZN3Fun4isOnEv
+                0x00000000       0x14 Core\Inc\Fun.o
+ .ARM.extab.text._ZN3Fun4isOnEv
+                0x00000000        0x0 Core\Inc\Fun.o
+ .ARM.exidx.text._ZN3Fun4isOnEv
+                0x00000000        0x8 Core\Inc\Fun.o
+ .text._ZN3Fun11getPWMvalueEv
+                0x00000000       0x16 Core\Inc\Fun.o
+ .ARM.extab.text._ZN3Fun11getPWMvalueEv
+                0x00000000        0x0 Core\Inc\Fun.o
+ .ARM.exidx.text._ZN3Fun11getPWMvalueEv
+                0x00000000        0x8 Core\Inc\Fun.o
+ .text._ZN3FunC2EP17TIM_HandleTypeDefm
+                0x00000000       0x24 Core\Inc\Fun.o
+ .ARM.extab.text._ZN3FunC2EP17TIM_HandleTypeDefm
+                0x00000000        0x0 Core\Inc\Fun.o
+ .ARM.exidx.text._ZN3FunC2EP17TIM_HandleTypeDefm
+                0x00000000        0x8 Core\Inc\Fun.o
+ .text._ZN3FunD2Ev
+                0x00000000       0x20 Core\Inc\Fun.o
+ .ARM.extab.text._ZN3FunD2Ev
+                0x00000000        0x0 Core\Inc\Fun.o
+ .ARM.exidx.text._ZN3FunD2Ev
+                0x00000000        0x8 Core\Inc\Fun.o
+ .text._ZN3FunD0Ev
+                0x00000000       0x1e Core\Inc\Fun.o
+ .ARM.extab.text._ZN3FunD0Ev
+                0x00000000        0x0 Core\Inc\Fun.o
+ .ARM.exidx.text._ZN3FunD0Ev
+                0x00000000        0x8 Core\Inc\Fun.o
+ .rodata        0x00000000       0x1d Core\Inc\Fun.o
+ .debug_info    0x00000000      0xa3d Core\Inc\Fun.o
+ .debug_abbrev  0x00000000      0x2af Core\Inc\Fun.o
+ .debug_aranges
+                0x00000000       0x50 Core\Inc\Fun.o
+ .debug_ranges  0x00000000       0x40 Core\Inc\Fun.o
+ .debug_line    0x00000000      0x29b Core\Inc\Fun.o
+ .debug_str     0x00000000      0x9e6 Core\Inc\Fun.o
+ .comment       0x00000000       0x7d Core\Inc\Fun.o
+ .debug_frame   0x00000000      0x124 Core\Inc\Fun.o
+ .ARM.attributes
+                0x00000000       0x33 Core\Inc\Fun.o
  .group         0x00000000       0x10 Core\Inc\LedNotifier.o
  .group         0x00000000       0x10 Core\Inc\LedNotifier.o
  .text          0x00000000        0x0 Core\Inc\LedNotifier.o
@@ -1632,6 +1689,7 @@ Linker script and memory map
 
 LOAD d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
 LOAD d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crtbegin.o
+LOAD Core\Inc\Fun.o
 LOAD Core\Inc\LedNotifier.o
 LOAD Core\Src\ADC_Tools.o
 LOAD Core\Src\AllTasks.o

@@ -1,0 +1,7 @@
+Fun.cpp:10:6:void Fun::on(Fun::Velocity)	16	static
+Fun.cpp:13:6:void Fun::off()	16	static
+Fun.cpp:16:9:uint8_t Fun::isOn()	16	static
+Fun.cpp:19:7:float Fun::getPWMvalue()	16	static
+Fun.cpp:25:1:Fun::Fun(TIM_HandleTypeDef*, uint32_t)	24	static
+Fun.cpp:30:1:Fun::~Fun()	16	static
+Fun.cpp:30:1:virtual Fun::~Fun()	16	static
