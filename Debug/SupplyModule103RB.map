@@ -2,6 +2,8 @@ Archive member included to satisfy reference by file (symbol)
 
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(si_class_type_info.o)
                               Core\Src\LipoCell.o (vtable for __cxxabiv1::__si_class_type_info)
+d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
+                              Core\Inc\LedNotifier.o (operator delete(void*))
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
                               Core\Src\AllTasks.o (__cxa_end_cleanup)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
@@ -14,8 +16,6 @@ d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gc
                               d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o) (std::type_info::~type_info())
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_exception.o)
                               d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o) (typeinfo for __cxxabiv1::__forced_unwind)
-d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
-                              d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_ops.o) (operator delete(void*))
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_call.o)
                               d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o) (__cxa_call_terminate)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(pure.o)
@@ -91,6 +91,39 @@ Discarded input sections
  .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
  .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
  .data          0x00000000        0x4 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crtbegin.o
+ .text          0x00000000        0x0 Core\Inc\LedNotifier.o
+ .data          0x00000000        0x0 Core\Inc\LedNotifier.o
+ .bss           0x00000000        0x0 Core\Inc\LedNotifier.o
+ .text._ZN11LedNotifierC2E12GPIO_TypeDeft
+                0x00000000       0x2c Core\Inc\LedNotifier.o
+ .ARM.extab.text._ZN11LedNotifierC2E12GPIO_TypeDeft
+                0x00000000        0x0 Core\Inc\LedNotifier.o
+ .ARM.exidx.text._ZN11LedNotifierC2E12GPIO_TypeDeft
+                0x00000000        0x8 Core\Inc\LedNotifier.o
+ .text._ZN11LedNotifierD2Ev
+                0x00000000       0x20 Core\Inc\LedNotifier.o
+ .ARM.extab.text._ZN11LedNotifierD2Ev
+                0x00000000        0x0 Core\Inc\LedNotifier.o
+ .ARM.exidx.text._ZN11LedNotifierD2Ev
+                0x00000000        0x8 Core\Inc\LedNotifier.o
+ .text._ZN11LedNotifierD0Ev
+                0x00000000       0x1e Core\Inc\LedNotifier.o
+ .ARM.extab.text._ZN11LedNotifierD0Ev
+                0x00000000        0x0 Core\Inc\LedNotifier.o
+ .ARM.exidx.text._ZN11LedNotifierD0Ev
+                0x00000000        0x8 Core\Inc\LedNotifier.o
+ .rodata        0x00000000       0x26 Core\Inc\LedNotifier.o
+ .debug_info    0x00000000      0x4ff Core\Inc\LedNotifier.o
+ .debug_abbrev  0x00000000      0x252 Core\Inc\LedNotifier.o
+ .debug_aranges
+                0x00000000       0x30 Core\Inc\LedNotifier.o
+ .debug_ranges  0x00000000       0x20 Core\Inc\LedNotifier.o
+ .debug_line    0x00000000      0x225 Core\Inc\LedNotifier.o
+ .debug_str     0x00000000      0x4f8 Core\Inc\LedNotifier.o
+ .comment       0x00000000       0x7d Core\Inc\LedNotifier.o
+ .debug_frame   0x00000000       0x88 Core\Inc\LedNotifier.o
+ .ARM.attributes
+                0x00000000       0x33 Core\Inc\LedNotifier.o
  .group         0x00000000       0x10 Core\Src\ADC_Tools.o
  .group         0x00000000       0x10 Core\Src\ADC_Tools.o
  .group         0x00000000        0x8 Core\Src\ADC_Tools.o
@@ -1383,6 +1416,9 @@ Discarded input sections
  .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(si_class_type_info.o)
  .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(si_class_type_info.o)
  .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(si_class_type_info.o)
+ .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
+ .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
+ .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
  .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
  .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
  .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
@@ -1456,9 +1492,6 @@ Discarded input sections
                 0x00000000       0x14 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_exception.o)
  .rodata._ZTVSt9exception
                 0x00000000       0x14 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_exception.o)
- .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
- .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
- .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
  .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_call.o)
  .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_call.o)
  .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_call.o)
@@ -1608,6 +1641,7 @@ Linker script and memory map
 
 LOAD d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
 LOAD d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crtbegin.o
+LOAD Core\Inc\LedNotifier.o
 LOAD Core\Src\ADC_Tools.o
 LOAD Core\Src\AllTasks.o
 LOAD Core\Src\Average.o
@@ -2213,74 +2247,74 @@ LOAD d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../l
  .text._ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE
                 0x0800401c       0x2a d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(si_class_type_info.o)
                 0x0800401c                __cxxabiv1::__si_class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+ .text._ZdlPv   0x08004046        0x4 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
+                0x08004046                operator delete(void*)
  .text.__cxa_end_cleanup
-                0x08004046        0xc d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
-                0x08004046                __cxa_end_cleanup
+                0x0800404a        0xc d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
+                0x0800404a                __cxa_end_cleanup
  .text._ZN10__cxxabiv1L24__is_gxx_exception_classEPc
-                0x08004052       0x3a d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
+                0x08004056       0x3a d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
  .text.__cxa_type_match
-                0x0800408c       0xbc d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
-                0x0800408c                __cxa_type_match
+                0x08004090       0xbc d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
+                0x08004090                __cxa_type_match
  .text.__cxa_begin_cleanup
-                0x08004148       0x3a d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
-                0x08004148                __cxa_begin_cleanup
+                0x0800414c       0x3a d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
+                0x0800414c                __cxa_begin_cleanup
  .text.__gnu_end_cleanup
-                0x08004182       0x32 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
-                0x08004182                __gnu_end_cleanup
+                0x08004186       0x32 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
+                0x08004186                __gnu_end_cleanup
  .text._ZL12read_uleb128PKhPm
-                0x080041b4       0x22 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
+                0x080041b8       0x22 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
  .text._ZL12read_sleb128PKhPl
-                0x080041d6       0x30 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
+                0x080041da       0x30 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
  .text._ZL28read_encoded_value_with_basehjPKhPj
-                0x08004206       0x88 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
+                0x0800420a       0x88 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
  .text._ZL21base_of_encoded_valuehP15_Unwind_Context
-                0x0800428e       0x46 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
+                0x08004292       0x46 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
  .text._ZL18read_encoded_valueP15_Unwind_ContexthPKhPj
-                0x080042d4       0x20 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
+                0x080042d8       0x20 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
  .text._ZL17parse_lsda_headerP15_Unwind_ContextPKhP16lsda_header_info
-                0x080042f4       0x5c d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
+                0x080042f8       0x5c d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
  .text._Unwind_GetGR
-                0x08004350       0x18 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
+                0x08004354       0x18 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
  .text.__gxx_personality_v0
-                0x08004368      0x370 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
-                0x08004368                __gxx_personality_v0
- .text._ZdlPvj  0x080046d8        0x4 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_ops.o)
-                0x080046d8                operator delete(void*, unsigned int)
+                0x0800436c      0x370 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
+                0x0800436c                __gxx_personality_v0
+ .text._ZdlPvj  0x080046dc        0x4 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_ops.o)
+                0x080046dc                operator delete(void*, unsigned int)
  .text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
-                0x080046dc       0x34 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x080046dc                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
+                0x080046e0       0x34 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x080046e0                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
  .text._ZNK10__cxxabiv117__class_type_info20__do_find_public_srcEiPKvPKS0_S2_
-                0x08004710        0xc d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x08004710                __cxxabiv1::__class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+                0x08004714        0xc d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x08004714                __cxxabiv1::__class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
  .text._ZN10__cxxabiv117__class_type_infoD2Ev
-                0x0800471c       0x14 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x0800471c                __cxxabiv1::__class_type_info::~__class_type_info()
-                0x0800471c                __cxxabiv1::__class_type_info::~__class_type_info()
+                0x08004720       0x14 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x08004720                __cxxabiv1::__class_type_info::~__class_type_info()
+                0x08004720                __cxxabiv1::__class_type_info::~__class_type_info()
  .text._ZN10__cxxabiv117__class_type_infoD0Ev
-                0x08004730       0x14 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x08004730                __cxxabiv1::__class_type_info::~__class_type_info()
+                0x08004734       0x14 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x08004734                __cxxabiv1::__class_type_info::~__class_type_info()
  .text._ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
-                0x08004744       0x18 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x08004744                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+                0x08004748       0x18 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x08004748                __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
  .text._ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
-                0x0800475c       0x2a d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x0800475c                __cxxabiv1::__class_type_info::__do_catch(std::type_info const*, void**, unsigned int) const
+                0x08004760       0x2a d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x08004760                __cxxabiv1::__class_type_info::__do_catch(std::type_info const*, void**, unsigned int) const
  .text._ZNK10__cxxabiv117__class_type_info12__do_dyncastEiNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
-                0x08004786       0x38 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
-                0x08004786                __cxxabiv1::__class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+                0x0800478a       0x38 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x0800478a                __cxxabiv1::__class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
  .text._ZNSt9type_infoD2Ev
-                0x080047be        0x2 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(tinfo.o)
-                0x080047be                std::type_info::~type_info()
-                0x080047be                std::type_info::~type_info()
+                0x080047c2        0x2 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(tinfo.o)
+                0x080047c2                std::type_info::~type_info()
+                0x080047c2                std::type_info::~type_info()
  .text._ZNKSt9type_info15__is_function_pEv
-                0x080047c0        0x4 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(tinfo.o)
-                0x080047c0                std::type_info::__is_pointer_p() const
-                0x080047c0                std::type_info::__is_function_p() const
+                0x080047c4        0x4 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(tinfo.o)
+                0x080047c4                std::type_info::__is_pointer_p() const
+                0x080047c4                std::type_info::__is_function_p() const
  .text._ZNKSt9type_infoeqERKS_
-                0x080047c4       0x2c d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(tinfo.o)
-                0x080047c4                std::type_info::operator==(std::type_info const&) const
- .text._ZdlPv   0x080047f0        0x4 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
-                0x080047f0                operator delete(void*)
+                0x080047c8       0x2c d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(tinfo.o)
+                0x080047c8                std::type_info::operator==(std::type_info const&) const
  .text._ZN10__cxxabiv1L24__is_gxx_exception_classEPc
                 0x080047f4       0x3a d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_call.o)
  .text.__cxa_call_terminate
@@ -2818,17 +2852,17 @@ LOAD d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../l
  .ARM.attributes
                 0x00000632       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(si_class_type_info.o)
  .ARM.attributes
-                0x0000065f       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
+                0x0000065f       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
  .ARM.attributes
-                0x0000068c       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_ops.o)
+                0x0000068c       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
  .ARM.attributes
-                0x000006b9       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
+                0x000006b9       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_ops.o)
  .ARM.attributes
-                0x000006e6       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(tinfo.o)
+                0x000006e6       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
  .ARM.attributes
-                0x00000713       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_exception.o)
+                0x00000713       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(tinfo.o)
  .ARM.attributes
-                0x00000740       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
+                0x00000740       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_exception.o)
  .ARM.attributes
                 0x0000076d       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_call.o)
  .ARM.attributes
@@ -3196,12 +3230,12 @@ OUTPUT(SupplyModule103RB.elf elf32-littlearm)
  .debug_frame   0x00002acc       0x98 Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.o
  .debug_frame   0x00002b64      0x54c Middlewares\Third_Party\FreeRTOS\Source\tasks.o
  .debug_frame   0x000030b0       0xd8 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(si_class_type_info.o)
- .debug_frame   0x00003188       0x78 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
- .debug_frame   0x00003200       0x20 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_ops.o)
- .debug_frame   0x00003220       0xd8 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
- .debug_frame   0x000032f8       0x80 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(tinfo.o)
- .debug_frame   0x00003378       0xf0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_exception.o)
- .debug_frame   0x00003468       0x20 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
+ .debug_frame   0x00003188       0x20 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
+ .debug_frame   0x000031a8       0x78 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
+ .debug_frame   0x00003220       0x20 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_ops.o)
+ .debug_frame   0x00003240       0xd8 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
+ .debug_frame   0x00003318       0x80 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(tinfo.o)
+ .debug_frame   0x00003398       0xf0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_exception.o)
  .debug_frame   0x00003488       0x54 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_call.o)
  .debug_frame   0x000034dc       0x8c d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_catch.o)
  .debug_frame   0x00003568       0xb0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_terminate.o)

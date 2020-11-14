@@ -1,0 +1,3 @@
+LedNotifier.cpp:10:1:LedNotifier::LedNotifier(GPIO_TypeDef, uint16_t)	16	static
+LedNotifier.cpp:15:1:LedNotifier::~LedNotifier()	16	static
+LedNotifier.cpp:15:1:virtual LedNotifier::~LedNotifier()	16	static
