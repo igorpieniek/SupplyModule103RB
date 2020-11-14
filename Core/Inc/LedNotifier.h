@@ -12,9 +12,12 @@
 
 
 class LedNotifier {
-private:
-	GPIO_TypeDef *Port;
-	uint16_t Pin;
+public:
+	void on();
+	void off();
+	void blink( uint32_t perON);
+	void blink( uint32_t perON, uint32_t perOFF);
+	void toggle();
 
 	enum LedState{
 		OFF=0,
@@ -22,8 +25,19 @@ private:
 		BLINK
 	};
 
+	LedState getState();
+	uint32_t getPeriod();
+
+
+	LedNotifier(GPIO_TypeDef *port, uint16_t pin, uint8_t rev=0);
+	virtual ~LedNotifier();
+private:
+	GPIO_TypeDef *Port;
+	uint16_t Pin;
+
+
 	LedState curState;
-	uint16_t blinkPeriodON, blinkPeriodOFF;
+	uint32_t blinkPeriodON, blinkPeriodOFF, currPeriod;
 
 	uint8_t isReversed;
 	GPIO_PinState onState; //state consider as ON
@@ -31,16 +45,7 @@ private:
 	GPIO_PinState getONPinState(){ return onState;};
 	GPIO_PinState getOFFPinState(){return offState; };
 
-public:
-	void on();
-	void off();
-	void blink( uint16_t perON);
-	void blink( uint16_t perON, uint16_t perOFF);
 
-	LedState getState();
-
-	LedNotifier(GPIO_TypeDef *port, uint16_t pin, uint8_t rev=0);
-	virtual ~LedNotifier();
 };
 
 #endif /* INC_LEDNOTIFIER_H_ */

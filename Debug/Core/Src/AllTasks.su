@@ -1,8 +1,10 @@
 ADC_Tools.h:9:8:float ADC_Tools::getValue() const	16	static
 ADC_Tools.h:11:8:float ADC_Tools::getPercentage() const	16	static
-AllTasks.cpp:25:6:void AllTasks_init()	72	static
+AllTasks.cpp:27:6:void AllTasks_init()	72	static
 LipoCell.h:9:7:LipoCell::~LipoCell()	16	static
-AllTasks.cpp:39:6:void StartBatteryManagerTask(const void*)	96	static
-AllTasks.cpp:61:6:void StartLedUpTask(const void*)	32	static
-AllTasks.cpp:71:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	16	static
+AllTasks.cpp:41:6:void StartBatteryManagerTask(const void*)	96	static
+AllTasks.cpp:66:6:void StartLedUpTask(const void*)	16	static
+AllTasks.cpp:79:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	16	static
 Average.h:30:2:Average<T, s>::~Average() [with T = float; unsigned char s = 10u]	16	static
+AllTasks.cpp:85:1:void __static_initialization_and_destruction_0(int, int)	16	static
+AllTasks.cpp:85:1:cpp)	8	static

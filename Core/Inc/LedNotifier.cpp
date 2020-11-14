@@ -15,18 +15,31 @@ void LedNotifier::off(){
 	HAL_GPIO_WritePin(Port,Pin, getOFFPinState());
 	curState = OFF;
 }
-void LedNotifier::blink( uint16_t perON){
+
+void LedNotifier::toggle(){
+	HAL_GPIO_TogglePin(Port,Pin);
+	if (currPeriod == blinkPeriodON) currPeriod = blinkPeriodOFF;
+	else currPeriod = blinkPeriodON;
+}
+
+uint32_t LedNotifier::getPeriod(){
+	return currPeriod;
+}
+void LedNotifier::blink( uint32_t perON){
+	blink(perON,perON);
+
+
+}
+void LedNotifier::blink( uint32_t perON, uint32_t perOFF){
+	off();
 	curState = BLINK;
 	blinkPeriodON = perON;
-	blinkPeriodOFF = perON;
-	off();
-
-
+	blinkPeriodOFF = perOFF;
+	currPeriod = perON;
 }
-void LedNotifier::blink( uint16_t perON, uint16_t perOFF){
-	curState = BLINK;
+LedNotifier::LedState LedNotifier::getState(){
+	return curState;
 }
-
 
 LedNotifier::LedNotifier(GPIO_TypeDef *port, uint16_t pin,uint8_t rev) {
 	isReversed = rev;
