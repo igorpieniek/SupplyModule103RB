@@ -13,8 +13,8 @@
 
 class LedNotifier {
 private:
-	GPIO_TypeDef *GPIOx;
-	uint16_t GPIO_Pin;
+	GPIO_TypeDef *Port;
+	uint16_t Pin;
 
 	enum LedState{
 		OFF=0,
@@ -27,8 +27,9 @@ private:
 
 	uint8_t isReversed;
 	GPIO_PinState onState; //state consider as ON
+	GPIO_PinState offState; //state consider as OFF
 	GPIO_PinState getONPinState(){ return onState;};
-	GPIO_PinState getOFFPinState(){return !onState; };
+	GPIO_PinState getOFFPinState(){return offState; };
 
 public:
 	void on();
@@ -38,7 +39,7 @@ public:
 
 	LedState getState();
 
-	LedNotifier(GPIO_TypeDef port, uint16_t pin, uint8_t rev=0);
+	LedNotifier(GPIO_TypeDef *port, uint16_t pin, uint8_t rev=0);
 	virtual ~LedNotifier();
 };
 

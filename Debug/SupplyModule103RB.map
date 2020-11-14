@@ -91,14 +91,45 @@ Discarded input sections
  .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
  .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
  .data          0x00000000        0x4 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crtbegin.o
+ .group         0x00000000       0x10 Core\Inc\LedNotifier.o
  .text          0x00000000        0x0 Core\Inc\LedNotifier.o
  .data          0x00000000        0x0 Core\Inc\LedNotifier.o
  .bss           0x00000000        0x0 Core\Inc\LedNotifier.o
- .text._ZN11LedNotifierC2E12GPIO_TypeDeft
-                0x00000000       0x2c Core\Inc\LedNotifier.o
- .ARM.extab.text._ZN11LedNotifierC2E12GPIO_TypeDeft
+ .text._ZN11LedNotifier13getONPinStateEv
+                0x00000000       0x16 Core\Inc\LedNotifier.o
+ .ARM.extab.text._ZN11LedNotifier13getONPinStateEv
                 0x00000000        0x0 Core\Inc\LedNotifier.o
- .ARM.exidx.text._ZN11LedNotifierC2E12GPIO_TypeDeft
+ .ARM.exidx.text._ZN11LedNotifier13getONPinStateEv
+                0x00000000        0x8 Core\Inc\LedNotifier.o
+ .text._ZN11LedNotifier2onEv
+                0x00000000       0x2a Core\Inc\LedNotifier.o
+ .ARM.extab.text._ZN11LedNotifier2onEv
+                0x00000000        0xc Core\Inc\LedNotifier.o
+ .ARM.exidx.text._ZN11LedNotifier2onEv
+                0x00000000        0x8 Core\Inc\LedNotifier.o
+ .text._ZN11LedNotifier3offEv
+                0x00000000       0x12 Core\Inc\LedNotifier.o
+ .ARM.extab.text._ZN11LedNotifier3offEv
+                0x00000000        0x0 Core\Inc\LedNotifier.o
+ .ARM.exidx.text._ZN11LedNotifier3offEv
+                0x00000000        0x8 Core\Inc\LedNotifier.o
+ .text._ZN11LedNotifier5blinkEt
+                0x00000000       0x16 Core\Inc\LedNotifier.o
+ .ARM.extab.text._ZN11LedNotifier5blinkEt
+                0x00000000        0x0 Core\Inc\LedNotifier.o
+ .ARM.exidx.text._ZN11LedNotifier5blinkEt
+                0x00000000        0x8 Core\Inc\LedNotifier.o
+ .text._ZN11LedNotifier5blinkEtt
+                0x00000000       0x1a Core\Inc\LedNotifier.o
+ .ARM.extab.text._ZN11LedNotifier5blinkEtt
+                0x00000000        0x0 Core\Inc\LedNotifier.o
+ .ARM.exidx.text._ZN11LedNotifier5blinkEtt
+                0x00000000        0x8 Core\Inc\LedNotifier.o
+ .text._ZN11LedNotifierC2EP12GPIO_TypeDefth
+                0x00000000       0x60 Core\Inc\LedNotifier.o
+ .ARM.extab.text._ZN11LedNotifierC2EP12GPIO_TypeDefth
+                0x00000000        0x0 Core\Inc\LedNotifier.o
+ .ARM.exidx.text._ZN11LedNotifierC2EP12GPIO_TypeDefth
                 0x00000000        0x8 Core\Inc\LedNotifier.o
  .text._ZN11LedNotifierD2Ev
                 0x00000000       0x20 Core\Inc\LedNotifier.o
@@ -113,15 +144,15 @@ Discarded input sections
  .ARM.exidx.text._ZN11LedNotifierD0Ev
                 0x00000000        0x8 Core\Inc\LedNotifier.o
  .rodata        0x00000000       0x26 Core\Inc\LedNotifier.o
- .debug_info    0x00000000      0x4ff Core\Inc\LedNotifier.o
- .debug_abbrev  0x00000000      0x252 Core\Inc\LedNotifier.o
+ .debug_info    0x00000000      0x68f Core\Inc\LedNotifier.o
+ .debug_abbrev  0x00000000      0x2be Core\Inc\LedNotifier.o
  .debug_aranges
-                0x00000000       0x30 Core\Inc\LedNotifier.o
- .debug_ranges  0x00000000       0x20 Core\Inc\LedNotifier.o
- .debug_line    0x00000000      0x225 Core\Inc\LedNotifier.o
- .debug_str     0x00000000      0x4f8 Core\Inc\LedNotifier.o
+                0x00000000       0x58 Core\Inc\LedNotifier.o
+ .debug_ranges  0x00000000       0x48 Core\Inc\LedNotifier.o
+ .debug_line    0x00000000      0x2a8 Core\Inc\LedNotifier.o
+ .debug_str     0x00000000      0x5b7 Core\Inc\LedNotifier.o
  .comment       0x00000000       0x7d Core\Inc\LedNotifier.o
- .debug_frame   0x00000000       0x88 Core\Inc\LedNotifier.o
+ .debug_frame   0x00000000      0x14c Core\Inc\LedNotifier.o
  .ARM.attributes
                 0x00000000       0x33 Core\Inc\LedNotifier.o
  .group         0x00000000       0x10 Core\Src\ADC_Tools.o

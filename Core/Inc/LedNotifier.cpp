@@ -7,10 +7,28 @@
 
 #include <LedNotifier.h>
 
-LedNotifier::LedNotifier(GPIO_TypeDef port, uint16_t pin,uint8_t rev) {
+void LedNotifier::on(){
+	HAL_GPIO_WritePin(Port,Pin, getONPinState());
+}
+void LedNotifier::off(){
 
-	if(rev) onState = GPIO_PIN_RESET;
-	else    onState = GPIO_PIN_SET;
+}
+void LedNotifier::blink( uint16_t perON){
+
+}
+void LedNotifier::blink( uint16_t perON, uint16_t perOFF){
+
+}
+
+
+LedNotifier::LedNotifier(GPIO_TypeDef *port, uint16_t pin,uint8_t rev) {
+	isReversed = rev;
+	if(isReversed){ onState = GPIO_PIN_RESET; offState= GPIO_PIN_SET;}
+	else    {onState = GPIO_PIN_SET;   offState= GPIO_PIN_RESET;}
+
+	Port = port;
+	Pin = pin;
+
 }
 
 LedNotifier::~LedNotifier() {
