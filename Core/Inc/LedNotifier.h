@@ -9,6 +9,7 @@
 #define INC_LEDNOTIFIER_H_
 
 #include "main.h"
+#include "cmsis_os.h"
 
 
 class LedNotifier {
@@ -28,13 +29,14 @@ public:
 	LedState getState();
 	uint32_t getPeriod();
 
+	void process();
+
 
 	LedNotifier(GPIO_TypeDef *port, uint16_t pin, uint8_t rev=0);
 	virtual ~LedNotifier();
 private:
 	GPIO_TypeDef *Port;
 	uint16_t Pin;
-
 
 	LedState curState;
 	uint32_t blinkPeriodON, blinkPeriodOFF, currPeriod;

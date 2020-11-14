@@ -67,12 +67,7 @@ void StartLedUpTask(void const * argument){
 
 
 	for(;;){
-		if(led.getState() == LedNotifier::BLINK){
-			led.toggle();
-			osDelay(led.getPeriod());
-
-		}
-		else osDelay(10);
+		led.process();
 	}
 }
 

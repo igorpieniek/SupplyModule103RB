@@ -18,27 +18,35 @@ void LedNotifier::off(){
 
 void LedNotifier::toggle(){
 	HAL_GPIO_TogglePin(Port,Pin);
-	if (currPeriod == blinkPeriodON) currPeriod = blinkPeriodOFF;
-	else currPeriod = blinkPeriodON;
 }
 
 uint32_t LedNotifier::getPeriod(){
+	if (currPeriod == blinkPeriodON) currPeriod = blinkPeriodOFF;
+	else currPeriod = blinkPeriodON;
 	return currPeriod;
 }
 void LedNotifier::blink( uint32_t perON){
 	blink(perON,perON);
-
-
 }
+
 void LedNotifier::blink( uint32_t perON, uint32_t perOFF){
 	off();
 	curState = BLINK;
 	blinkPeriodON = perON;
 	blinkPeriodOFF = perOFF;
-	currPeriod = perON;
+	currPeriod = perOFF;
 }
 LedNotifier::LedState LedNotifier::getState(){
 	return curState;
+}
+
+void LedNotifier::process(){
+	if(getState() == LedNotifier::BLINK){
+		toggle();
+		osDelay(getPeriod());
+
+	}
+	else osDelay(10);
 }
 
 LedNotifier::LedNotifier(GPIO_TypeDef *port, uint16_t pin,uint8_t rev) {
