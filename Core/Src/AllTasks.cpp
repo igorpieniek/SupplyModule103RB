@@ -12,8 +12,10 @@
 #include "adc.h"
 
 osThreadId BatteryManagerHandle;
+osThreadId LedUpHandle;
 
 void StartBatteryManagerTask(void const * argument);
+void StartLedUpTask(void const * argument);
 
 uint32_t receiveADC[2];
 float per, volt, perAvrg, voltAvrg ;
@@ -23,6 +25,9 @@ void AllTasks_init(){
 
 	  osThreadDef(BatteryManagerTask, StartBatteryManagerTask, osPriorityNormal, 0, 256);
 	  BatteryManagerHandle = osThreadCreate(osThread(BatteryManagerTask), NULL);
+
+	  osThreadDef(LedUpTask, StartLedUpTask, osPriorityBelowNormal, 0, 256);
+	  LedUpHandle = osThreadCreate(osThread(LedUpTask), NULL);
 
 
 }
@@ -47,5 +52,13 @@ void StartBatteryManagerTask(void const * argument){
 		osDelay(100);
 
 
+	}
+}
+
+void StartLedUpTask(void const * argument){
+
+	for(;;){
+		HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+		osDelay(500);
 	}
 }
