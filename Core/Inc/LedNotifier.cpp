@@ -46,7 +46,6 @@ void LedNotifier::process(){
 		osDelay(getPeriod());
 
 	}
-	else osDelay(10);
 }
 
 LedNotifier::LedNotifier(GPIO_TypeDef *port, uint16_t pin,uint8_t rev) {

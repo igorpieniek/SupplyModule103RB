@@ -53,9 +53,7 @@ void StartBatteryManagerTask(void const * argument){
 		volt= lipo.getValue();
 		perAvrg = lipo.getPercentageAvrg();
 		voltAvrg= lipo.getValueAvrg();
-		if(perAvrg <=15) led.blink(200);
-		else if (perAvrg> 70) led.on();
-		else led.off();
+
 
 		osDelay(100);
 
@@ -64,18 +62,24 @@ void StartBatteryManagerTask(void const * argument){
 }
 
 void StartLedUpTask(void const * argument){
-
-
 	for(;;){
 		led.process();
+		osDelay(10);
 	}
 }
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
-
+	static uint16_t per =500;
 	if		(RXdata == 'n') led.on();
 	else if (RXdata == 'f') led.off();
-	else if (RXdata == 'b') led.blink(1000,200);
+	else if (RXdata == 'b'){
+		led.blink(per);
+		per +=500;
+	}
+	else if (RXdata == 'c'){
+		if(per >500) per -=500;
+		led.blink(per);
+	}
 	HAL_UART_Receive_IT(&huart3, &RXdata, 1);
 }
 

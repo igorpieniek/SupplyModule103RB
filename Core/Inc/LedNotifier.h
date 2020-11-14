@@ -18,7 +18,8 @@ public:
 	void off();
 	void blink( uint32_t perON);
 	void blink( uint32_t perON, uint32_t perOFF);
-	void toggle();
+
+	void process();
 
 	enum LedState{
 		OFF=0,
@@ -29,7 +30,7 @@ public:
 	LedState getState();
 	uint32_t getPeriod();
 
-	void process();
+
 
 
 	LedNotifier(GPIO_TypeDef *port, uint16_t pin, uint8_t rev=0);
@@ -46,6 +47,7 @@ private:
 	GPIO_PinState offState; //state consider as OFF
 	GPIO_PinState getONPinState(){ return onState;};
 	GPIO_PinState getOFFPinState(){return offState; };
+	void toggle();
 
 
 };
