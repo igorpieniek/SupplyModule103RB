@@ -19,7 +19,7 @@
 
 class HallSensor:public ADC_Tools {
 public:
-	HallSensor(float sens);
+	HallSensor(float sens,float neutral, float max_vol );
 	virtual ~HallSensor();
 
 	void update(uint32_t);
@@ -32,6 +32,7 @@ public:
 private:
 	float sensivity;
 	float ampere;
+	float neutral_voltage;
 	Average<float, 10> amp_avrg;
 
 	void convertToAmperes();

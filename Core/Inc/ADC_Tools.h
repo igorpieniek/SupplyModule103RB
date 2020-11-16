@@ -8,7 +8,7 @@ class ADC_Tools
 public:
 	float getVoltage()const				   { return value; };
 	virtual float getVoltageAvrg()      { return value; };
-	float getPercentage()const			   { return per; };
+	virtual float getPercentage()const			   { return per; };
 	virtual float getPercentageAvrg() { return per; };
 
 	//virtual ~ADC_Tools();
