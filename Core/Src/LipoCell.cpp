@@ -2,7 +2,7 @@
 
 
 
-LipoCell::LipoCell():ADC_Tools(MAX_CELL_VOLTAGE, MIN_CELL_VOLTAGE){
+LipoCell::LipoCell():ADC_Tools(MAX_CELL_VOLTAGE){
 	//ADC_Tools::init(MAX_CELL_VOLTAGE, MIN_CELL_VOLTAGE);
 
 }

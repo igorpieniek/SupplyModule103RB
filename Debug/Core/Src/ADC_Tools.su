@@ -1,6 +1,6 @@
 ADC_Tools.h:10:16:virtual float ADC_Tools::getValueAvrg()	16	static
 ADC_Tools.h:12:16:virtual float ADC_Tools::getPercentageAvrg()	16	static
-ADC_Tools.cpp:5:1:ADC_Tools::ADC_Tools(float, float, uint32_t)	24	static
+ADC_Tools.cpp:5:1:ADC_Tools::ADC_Tools(float, uint32_t)	24	static
 ADC_Tools.cpp:19:6:void ADC_Tools::updateMeasurments(uint32_t)	16	static
 ADC_Tools.cpp:25:7:float ADC_Tools::convertToValue(uint32_t)	24	static
 ADC_Tools.cpp:29:7:float ADC_Tools::convertToPercentage(float)	16	static

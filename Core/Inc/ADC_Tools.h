@@ -16,7 +16,6 @@ public:
 private:
 	uint16_t bitResolution;
 	float maxVal;
-	float minVal;
 	uint32_t maxLevels;
 
 
@@ -25,7 +24,7 @@ private:
 
 
 protected:
-	ADC_Tools(float max, float min, uint32_t res = STANDARD_RESOLUTION);
+	ADC_Tools(float max, uint32_t res = STANDARD_RESOLUTION);
 	//void init(float max, float min, uint32_t res = STANDARD_RESOLUTION);
 	void updateMeasurments(uint32_t val);
 	float convertToValue(uint32_t);

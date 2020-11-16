@@ -1,7 +1,7 @@
 ADC_Tools.h:9:8:float ADC_Tools::getValue() const	16	static
 ADC_Tools.h:11:8:float ADC_Tools::getPercentage() const	16	static
 AllTasks.cpp:27:6:void AllTasks_init()	72	static
-LipoCell.h:9:7:LipoCell::~LipoCell()	16	static
+LipoCell.h:8:7:LipoCell::~LipoCell()	16	static
 AllTasks.cpp:41:6:void StartBatteryManagerTask(const void*)	96	static
 AllTasks.cpp:64:6:void StartLedUpTask(const void*)	16	static
 AllTasks.cpp:71:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	16	static
