@@ -2,22 +2,19 @@
 
 
 
-LipoCell::LipoCell():ADC_Tools(MAX_CELL_VOLTAGE){
-	//ADC_Tools::init(MAX_CELL_VOLTAGE, MIN_CELL_VOLTAGE);
-
-}
+LipoCell::LipoCell():ADC_Tools(MAX_CELL_VOLTAGE){ }
 
 void LipoCell::update(uint32_t val) {
 	updateMeasurments(val);
-	avrg.insert(getValue());
+	avrg.insert(getVoltage());
 }
 
 
-float LipoCell::getValueAvrg() {
+float LipoCell::getVoltageAvrg() {
 	return avrg();
 }
 
 float LipoCell::getPercentageAvrg() {
-	float valAvrg = getValueAvrg();
+	float valAvrg = getVoltageAvrg();
 	return convertToPercentage(valAvrg);
 }

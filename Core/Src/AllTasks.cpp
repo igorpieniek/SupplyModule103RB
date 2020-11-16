@@ -50,9 +50,9 @@ void StartBatteryManagerTask(void const * argument){
 
 		lipo.update(receiveADC[0]);
 		per = lipo.getPercentage();
-		volt= lipo.getValue();
+		volt= lipo.getVoltage();
 		perAvrg = lipo.getPercentageAvrg();
-		voltAvrg= lipo.getValueAvrg();
+		voltAvrg= lipo.getVoltageAvrg();
 
 
 		osDelay(100);

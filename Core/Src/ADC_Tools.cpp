@@ -1,3 +1,4 @@
+
 #include "ADC_Tools.h"
 
 
@@ -17,12 +18,12 @@ void ADC_Tools::init(float max, float min, uint32_t res) {
 */
 
 void ADC_Tools::updateMeasurments(uint32_t val){
-	value = convertToValue(val);
+	value = convertToVoltage(val);
 	per = convertToPercentage(value);
 
 }
 
-float ADC_Tools::convertToValue(uint32_t raw) {
+float ADC_Tools::convertToVoltage(uint32_t raw) {
 	return ((float)raw * maxVal) / (float)maxLevels;
 }
 

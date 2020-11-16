@@ -12,14 +12,10 @@ private:
 	Average<float, 10> avrg;
 public:
 	LipoCell();
-	float getValueAvrg();
+	float getVoltageAvrg();
 	float getPercentageAvrg();
 
 	void update(uint32_t raw);
-
-
-
-
 
 };
 

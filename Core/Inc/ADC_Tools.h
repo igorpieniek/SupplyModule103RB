@@ -6,8 +6,8 @@
 class ADC_Tools
 {
 public:
-	float getValue()const				   { return value; };
-	virtual float getValueAvrg()      { return value; };
+	float getVoltage()const				   { return value; };
+	virtual float getVoltageAvrg()      { return value; };
 	float getPercentage()const			   { return per; };
 	virtual float getPercentageAvrg() { return per; };
 
@@ -27,7 +27,7 @@ protected:
 	ADC_Tools(float max, uint32_t res = STANDARD_RESOLUTION);
 	//void init(float max, float min, uint32_t res = STANDARD_RESOLUTION);
 	void updateMeasurments(uint32_t val);
-	float convertToValue(uint32_t);
+	float convertToVoltage(uint32_t);
 	float convertToPercentage(float);
 
 };

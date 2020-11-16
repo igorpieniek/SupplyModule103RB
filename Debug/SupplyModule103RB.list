@@ -33,15 +33,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  14 .debug_ranges 00001508  00000000  00000000  000408c8  2**3
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_line   0000a0e8  00000000  00000000  00041dd0  2**0
+ 15 .debug_line   0000a0e5  00000000  00000000  00041dd0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_str    000068ea  00000000  00000000  0004beb8  2**0
+ 16 .debug_str    000068f9  00000000  00000000  0004beb5  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .comment      0000007c  00000000  00000000  000527a2  2**0
+ 17 .comment      0000007c  00000000  00000000  000527ae  2**0
                   CONTENTS, READONLY
- 18 .debug_frame  0000437c  00000000  00000000  00052820  2**2
+ 18 .debug_frame  0000437c  00000000  00000000  0005282c  2**2
                   CONTENTS, READONLY, DEBUGGING
- 19 .debug_loc    0000a9ab  00000000  00000000  00056b9c  2**0
+ 19 .debug_loc    0000a9ab  00000000  00000000  00056ba8  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -2141,13 +2141,13 @@ Disassembly of section .text:
  8001526:	f7ff fff9 	bl	800151c <_Unwind_GetTextRelBase>
  800152a:	bf00      	nop
 
-0800152c <_ZN9ADC_Tools12getValueAvrgEv>:
+0800152c <_ZN9ADC_Tools14getVoltageAvrgEv>:
 
 class ADC_Tools
 {
 public:
-	float getValue()const				   { return value; };
-	virtual float getValueAvrg()      { return value; };
+	float getVoltage()const				   { return value; };
+	virtual float getVoltageAvrg()      { return value; };
  800152c:	b480      	push	{r7}
  800152e:	b083      	sub	sp, #12
  8001530:	af00      	add	r7, sp, #0
@@ -2176,6 +2176,7 @@ public:
  8001556:	4770      	bx	lr
 
 08001558 <_ZN9ADC_ToolsC1Efm>:
+
 #include "ADC_Tools.h"
 
 
@@ -2235,10 +2236,10 @@ void ADC_Tools::updateMeasurments(uint32_t val){
  80015b0:	af00      	add	r7, sp, #0
  80015b2:	6078      	str	r0, [r7, #4]
  80015b4:	6039      	str	r1, [r7, #0]
-	value = convertToValue(val);
+	value = convertToVoltage(val);
  80015b6:	6839      	ldr	r1, [r7, #0]
  80015b8:	6878      	ldr	r0, [r7, #4]
- 80015ba:	f000 f810 	bl	80015de <_ZN9ADC_Tools14convertToValueEm>
+ 80015ba:	f000 f810 	bl	80015de <_ZN9ADC_Tools16convertToVoltageEm>
  80015be:	4602      	mov	r2, r0
  80015c0:	687b      	ldr	r3, [r7, #4]
  80015c2:	611a      	str	r2, [r3, #16]
@@ -2258,9 +2259,9 @@ void ADC_Tools::updateMeasurments(uint32_t val){
  80015da:	46bd      	mov	sp, r7
  80015dc:	bd80      	pop	{r7, pc}
 
-080015de <_ZN9ADC_Tools14convertToValueEm>:
+080015de <_ZN9ADC_Tools16convertToVoltageEm>:
 
-float ADC_Tools::convertToValue(uint32_t raw) {
+float ADC_Tools::convertToVoltage(uint32_t raw) {
  80015de:	b590      	push	{r4, r7, lr}
  80015e0:	b083      	sub	sp, #12
  80015e2:	af00      	add	r7, sp, #0
@@ -2320,8 +2321,8 @@ float ADC_Tools::convertToPercentage(float val) {
  800164a:	bf00      	nop
  800164c:	42c80000 	.word	0x42c80000
 
-08001650 <_ZNK9ADC_Tools8getValueEv>:
-	float getValue()const				   { return value; };
+08001650 <_ZNK9ADC_Tools10getVoltageEv>:
+	float getVoltage()const				   { return value; };
  8001650:	b480      	push	{r7}
  8001652:	b083      	sub	sp, #12
  8001654:	af00      	add	r7, sp, #0
@@ -2480,10 +2481,10 @@ void StartBatteryManagerTask(void const * argument){
  800175c:	4602      	mov	r2, r0
  800175e:	4b14      	ldr	r3, [pc, #80]	; (80017b0 <_Z23StartBatteryManagerTaskPKv+0x94>)
  8001760:	601a      	str	r2, [r3, #0]
-		volt= lipo.getValue();
+		volt= lipo.getVoltage();
  8001762:	f107 030c 	add.w	r3, r7, #12
  8001766:	4618      	mov	r0, r3
- 8001768:	f7ff ff72 	bl	8001650 <_ZNK9ADC_Tools8getValueEv>
+ 8001768:	f7ff ff72 	bl	8001650 <_ZNK9ADC_Tools10getVoltageEv>
  800176c:	4602      	mov	r2, r0
  800176e:	4b11      	ldr	r3, [pc, #68]	; (80017b4 <_Z23StartBatteryManagerTaskPKv+0x98>)
  8001770:	601a      	str	r2, [r3, #0]
@@ -2494,10 +2495,10 @@ void StartBatteryManagerTask(void const * argument){
  800177c:	4602      	mov	r2, r0
  800177e:	4b0e      	ldr	r3, [pc, #56]	; (80017b8 <_Z23StartBatteryManagerTaskPKv+0x9c>)
  8001780:	601a      	str	r2, [r3, #0]
-		voltAvrg= lipo.getValueAvrg();
+		voltAvrg= lipo.getVoltageAvrg();
  8001782:	f107 030c 	add.w	r3, r7, #12
  8001786:	4618      	mov	r0, r3
- 8001788:	f000 fa96 	bl	8001cb8 <_ZN8LipoCell12getValueAvrgEv>
+ 8001788:	f000 fa96 	bl	8001cb8 <_ZN8LipoCell14getVoltageAvrgEv>
  800178c:	4602      	mov	r2, r0
  800178e:	4b0b      	ldr	r3, [pc, #44]	; (80017bc <_Z23StartBatteryManagerTaskPKv+0xa0>)
  8001790:	601a      	str	r2, [r3, #0]
@@ -3230,7 +3231,7 @@ LedNotifier::~LedNotifier() {
 
 
 
-LipoCell::LipoCell():ADC_Tools(MAX_CELL_VOLTAGE){
+LipoCell::LipoCell():ADC_Tools(MAX_CELL_VOLTAGE){ }
  8001c4c:	b580      	push	{r7, lr}
  8001c4e:	b082      	sub	sp, #8
  8001c50:	af00      	add	r7, sp, #0
@@ -3247,9 +3248,6 @@ LipoCell::LipoCell():ADC_Tools(MAX_CELL_VOLTAGE){
  8001c68:	3318      	adds	r3, #24
  8001c6a:	4618      	mov	r0, r3
  8001c6c:	f7ff fe3a 	bl	80018e4 <_ZN7AverageIfLh10EEC1Ev>
-	//ADC_Tools::init(MAX_CELL_VOLTAGE, MIN_CELL_VOLTAGE);
-
-}
  8001c70:	687b      	ldr	r3, [r7, #4]
  8001c72:	4618      	mov	r0, r3
  8001c74:	3708      	adds	r7, #8
@@ -3272,12 +3270,12 @@ void LipoCell::update(uint32_t val) {
  8001c90:	6839      	ldr	r1, [r7, #0]
  8001c92:	4618      	mov	r0, r3
  8001c94:	f7ff fc8a 	bl	80015ac <_ZN9ADC_Tools17updateMeasurmentsEm>
-	avrg.insert(getValue());
+	avrg.insert(getVoltage());
  8001c98:	687b      	ldr	r3, [r7, #4]
  8001c9a:	f103 0418 	add.w	r4, r3, #24
  8001c9e:	687b      	ldr	r3, [r7, #4]
  8001ca0:	4618      	mov	r0, r3
- 8001ca2:	f7ff fcd5 	bl	8001650 <_ZNK9ADC_Tools8getValueEv>
+ 8001ca2:	f7ff fcd5 	bl	8001650 <_ZNK9ADC_Tools10getVoltageEv>
  8001ca6:	4603      	mov	r3, r0
  8001ca8:	4619      	mov	r1, r3
  8001caa:	4620      	mov	r0, r4
@@ -3288,10 +3286,10 @@ void LipoCell::update(uint32_t val) {
  8001cb4:	46bd      	mov	sp, r7
  8001cb6:	bd90      	pop	{r4, r7, pc}
 
-08001cb8 <_ZN8LipoCell12getValueAvrgEv>:
+08001cb8 <_ZN8LipoCell14getVoltageAvrgEv>:
 
 
-float LipoCell::getValueAvrg() {
+float LipoCell::getVoltageAvrg() {
  8001cb8:	b580      	push	{r7, lr}
  8001cba:	b082      	sub	sp, #8
  8001cbc:	af00      	add	r7, sp, #0
@@ -3316,7 +3314,7 @@ float LipoCell::getPercentageAvrg() {
  8001cd8:	b084      	sub	sp, #16
  8001cda:	af00      	add	r7, sp, #0
  8001cdc:	6078      	str	r0, [r7, #4]
-	float valAvrg = getValueAvrg();
+	float valAvrg = getVoltageAvrg();
  8001cde:	687b      	ldr	r3, [r7, #4]
  8001ce0:	681b      	ldr	r3, [r3, #0]
  8001ce2:	681b      	ldr	r3, [r3, #0]
