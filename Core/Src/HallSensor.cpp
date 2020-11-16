@@ -7,7 +7,7 @@
 
 #include <HallSensor.h>
 
-HallSensor::HallSensor() {
+HallSensor::HallSensor():ADC_Tools(MAX_HALL_VOLTAGE) {
 	// TODO Auto-generated constructor stub
 
 }
