@@ -30,7 +30,7 @@ float HallSensor::getPercentage(){
 }
 
 void HallSensor::convertToAmperes(){
-	ampere = (ADC_Tools::getVoltage() - neutral) / sensivity;
+	ampere = (ADC_Tools::getVoltage() - neutral_voltage) / sensivity;
 }
 
 void HallSensor::updateAmperesAvrg(){
