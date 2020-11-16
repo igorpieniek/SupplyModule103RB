@@ -26,16 +26,16 @@ public:
 
 	float getAmpere()const{ return ampere;};
 	float getAmpereAvrg();
-	float getVoltage();
 	float getPercentage();
 
 
 private:
 	float sensivity;
 	float ampere;
-	Average<float, 10> Amp_avrg;
+	Average<float, 10> amp_avrg;
 
 	void convertToAmperes();
+	void updateAmperesAvrg();
 
 
 };
