@@ -24,7 +24,7 @@ float BatteryManager::getBatteryVoltage(){
 }
 
 float BatteryManager::getBatteryLevel(){
-	return cells[cell4]->getPercentageAvrg();
+	return cells[cell4]->getPercentageAvrg(); //TODO: calibrate percents later; wrong in this form
 }
 
 float BatteryManager::getCellVoltage(uint8_t index){
@@ -51,6 +51,26 @@ void BatteryManager::updateMeasurments(){
 }
 
 void BatteryManager::checkBatteryLevel(){
+	//CHECK MAIN VOLTAGE
+	float batt_level = getBatteryVoltage( );
+	if (batt_level <= BATTERY_LOW_VOLTAGE){
+		//osSignal(BuzzerTask, cell_low_signal); // TODO:add later specyfic taskhandle and signals
+		//osSignal(OLEDTask, cell_low_signal);
+		return;
+	}
+	else if (batt_level <= BATTERY_DEAD_VOLTAGE){
+		//osSignal(BuzzerTask, cell_low_signal); // TODO:add later specyfic taskhandle and signals
+		//osSignal(OLEDTask, cell_low_signal);
+		return;
+	}
+	//CHECK EVERY CELL (if main battery voltage OK)
+	for(uint8_t i=0; i <LIPOCELLS_NUMBER; i++){
+		if(getCellVoltage(i) <= CELL_LOW_VOLTAGE){
+			//osSignal(BuzzerTask, cell_low_signal); // TODO:add later specyfic taskhandle and signals
+			//osSignal(OLEDTask, cell_low_signal);
+			break;
+		}
+	}
 
 }
 

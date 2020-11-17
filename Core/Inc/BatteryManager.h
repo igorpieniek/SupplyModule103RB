@@ -22,6 +22,10 @@
 #define CELL3_MAX_VOL 11.1f
 #define CELL4_MAX_VOL 14.8f
 
+#define BATTERY_LOW_VOLTAGE 12.4f
+#define BATTERY_DEAD_LEVEL 12.0f
+#define CELL_LOW_VOLTAGE 3.1f
+
 class BatteryManager {
 public:
 
