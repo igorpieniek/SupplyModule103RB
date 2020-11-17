@@ -3,7 +3,7 @@ Archive member included to satisfy reference by file (symbol)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(si_class_type_info.o)
                               Core\Src\HallSensor.o (vtable for __cxxabiv1::__si_class_type_info)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
-                              Core\Src\HallSensor.o (operator delete(void*))
+                              Core\Inc\BatteryManager.o (operator delete(void*))
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(atexit_arm.o)
                               Core\Src\AllTasks.o (__aeabi_atexit)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
@@ -96,6 +96,39 @@ Discarded input sections
  .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
  .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
  .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
+ .text          0x00000000        0x0 Core\Inc\BatteryManager.o
+ .data          0x00000000        0x0 Core\Inc\BatteryManager.o
+ .bss           0x00000000        0x0 Core\Inc\BatteryManager.o
+ .text._ZN14BatteryManagerC2Ev
+                0x00000000       0x20 Core\Inc\BatteryManager.o
+ .ARM.extab.text._ZN14BatteryManagerC2Ev
+                0x00000000        0x0 Core\Inc\BatteryManager.o
+ .ARM.exidx.text._ZN14BatteryManagerC2Ev
+                0x00000000        0x8 Core\Inc\BatteryManager.o
+ .text._ZN14BatteryManagerD2Ev
+                0x00000000       0x20 Core\Inc\BatteryManager.o
+ .ARM.extab.text._ZN14BatteryManagerD2Ev
+                0x00000000        0x0 Core\Inc\BatteryManager.o
+ .ARM.exidx.text._ZN14BatteryManagerD2Ev
+                0x00000000        0x8 Core\Inc\BatteryManager.o
+ .text._ZN14BatteryManagerD0Ev
+                0x00000000       0x1e Core\Inc\BatteryManager.o
+ .ARM.extab.text._ZN14BatteryManagerD0Ev
+                0x00000000        0x0 Core\Inc\BatteryManager.o
+ .ARM.exidx.text._ZN14BatteryManagerD0Ev
+                0x00000000        0x8 Core\Inc\BatteryManager.o
+ .rodata        0x00000000       0x29 Core\Inc\BatteryManager.o
+ .debug_info    0x00000000      0x3ec Core\Inc\BatteryManager.o
+ .debug_abbrev  0x00000000      0x200 Core\Inc\BatteryManager.o
+ .debug_aranges
+                0x00000000       0x30 Core\Inc\BatteryManager.o
+ .debug_ranges  0x00000000       0x20 Core\Inc\BatteryManager.o
+ .debug_line    0x00000000      0x20b Core\Inc\BatteryManager.o
+ .debug_str     0x00000000      0x514 Core\Inc\BatteryManager.o
+ .comment       0x00000000       0x7d Core\Inc\BatteryManager.o
+ .debug_frame   0x00000000       0x84 Core\Inc\BatteryManager.o
+ .ARM.attributes
+                0x00000000       0x33 Core\Inc\BatteryManager.o
  .group         0x00000000       0x10 Core\Src\ADC_Tools.o
  .group         0x00000000       0x10 Core\Src\ADC_Tools.o
  .group         0x00000000       0x10 Core\Src\ADC_Tools.o
@@ -1781,6 +1814,7 @@ Linker script and memory map
 
 LOAD d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
 LOAD d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crtbegin.o
+LOAD Core\Inc\BatteryManager.o
 LOAD Core\Src\ADC_Tools.o
 LOAD Core\Src\AllTasks.o
 LOAD Core\Src\Average.o
