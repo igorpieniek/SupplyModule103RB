@@ -3,15 +3,21 @@ Archive member included to satisfy reference by file (symbol)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(si_class_type_info.o)
                               Core\Src\HallSensor.o (vtable for __cxxabiv1::__si_class_type_info)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
-                              Core\Inc\BatteryManager.o (operator delete(void*))
+                              Core\Src\BatteryManager.o (operator delete(void*))
+d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_opv.o)
+                              Core\Src\BatteryManager.o (operator delete[](void*))
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(atexit_arm.o)
                               Core\Src\AllTasks.o (__aeabi_atexit)
+d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_op.o)
+                              Core\Src\BatteryManager.o (operator new(unsigned int))
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
                               Core\Src\AllTasks.o (__cxa_end_cleanup)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o)
                               Core\Src\AllTasks.o (__gxx_personality_v0)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_ops.o)
                               d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(si_class_type_info.o) (operator delete(void*, unsigned int))
+d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_handler.o)
+                              d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_op.o) (std::get_new_handler())
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
                               d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(si_class_type_info.o) (__cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(tinfo.o)
@@ -33,7 +39,7 @@ d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gc
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_unex_handler.o)
                               d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_terminate.o) (__cxxabiv1::__unexpected_handler)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libc_nano.a(lib_a-abort.o)
-                              d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_personality.o) (abort)
+                              d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_op.o) (abort)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libc_nano.a(lib_a-cxa_atexit.o)
                               d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(atexit_arm.o) (__cxa_atexit)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libc_nano.a(lib_a-errno.o)
@@ -43,7 +49,7 @@ d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gc
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libc_nano.a(lib_a-init.o)
                               startup\startup_stm32f103xb.o (__libc_init_array)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libc_nano.a(lib_a-malloc.o)
-                              d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o) (free)
+                              d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_op.o) (malloc)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libc_nano.a(lib_a-memcpy-stub.o)
                               Middlewares\Third_Party\FreeRTOS\Source\queue.o (memcpy)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libc_nano.a(lib_a-memset.o)
@@ -96,39 +102,6 @@ Discarded input sections
  .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
  .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
  .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
- .text          0x00000000        0x0 Core\Inc\BatteryManager.o
- .data          0x00000000        0x0 Core\Inc\BatteryManager.o
- .bss           0x00000000        0x0 Core\Inc\BatteryManager.o
- .text._ZN14BatteryManagerC2Ev
-                0x00000000       0x20 Core\Inc\BatteryManager.o
- .ARM.extab.text._ZN14BatteryManagerC2Ev
-                0x00000000        0x0 Core\Inc\BatteryManager.o
- .ARM.exidx.text._ZN14BatteryManagerC2Ev
-                0x00000000        0x8 Core\Inc\BatteryManager.o
- .text._ZN14BatteryManagerD2Ev
-                0x00000000       0x20 Core\Inc\BatteryManager.o
- .ARM.extab.text._ZN14BatteryManagerD2Ev
-                0x00000000        0x0 Core\Inc\BatteryManager.o
- .ARM.exidx.text._ZN14BatteryManagerD2Ev
-                0x00000000        0x8 Core\Inc\BatteryManager.o
- .text._ZN14BatteryManagerD0Ev
-                0x00000000       0x1e Core\Inc\BatteryManager.o
- .ARM.extab.text._ZN14BatteryManagerD0Ev
-                0x00000000        0x0 Core\Inc\BatteryManager.o
- .ARM.exidx.text._ZN14BatteryManagerD0Ev
-                0x00000000        0x8 Core\Inc\BatteryManager.o
- .rodata        0x00000000       0x29 Core\Inc\BatteryManager.o
- .debug_info    0x00000000      0x3ec Core\Inc\BatteryManager.o
- .debug_abbrev  0x00000000      0x200 Core\Inc\BatteryManager.o
- .debug_aranges
-                0x00000000       0x30 Core\Inc\BatteryManager.o
- .debug_ranges  0x00000000       0x20 Core\Inc\BatteryManager.o
- .debug_line    0x00000000      0x20b Core\Inc\BatteryManager.o
- .debug_str     0x00000000      0x514 Core\Inc\BatteryManager.o
- .comment       0x00000000       0x7d Core\Inc\BatteryManager.o
- .debug_frame   0x00000000       0x84 Core\Inc\BatteryManager.o
- .ARM.attributes
-                0x00000000       0x33 Core\Inc\BatteryManager.o
  .group         0x00000000       0x10 Core\Src\ADC_Tools.o
  .group         0x00000000       0x10 Core\Src\ADC_Tools.o
  .group         0x00000000       0x10 Core\Src\ADC_Tools.o
@@ -173,6 +146,87 @@ Discarded input sections
  .comment       0x00000000       0x7d Core\Src\Average.o
  .ARM.attributes
                 0x00000000       0x33 Core\Src\Average.o
+ .text          0x00000000        0x0 Core\Src\BatteryManager.o
+ .data          0x00000000        0x0 Core\Src\BatteryManager.o
+ .bss           0x00000000        0x0 Core\Src\BatteryManager.o
+ .text._ZN14BatteryManager4initEv
+                0x00000000       0x30 Core\Src\BatteryManager.o
+ .ARM.extab.text._ZN14BatteryManager4initEv
+                0x00000000        0xc Core\Src\BatteryManager.o
+ .ARM.exidx.text._ZN14BatteryManager4initEv
+                0x00000000        0x8 Core\Src\BatteryManager.o
+ .text._ZN14BatteryManager7processEv
+                0x00000000       0x1c Core\Src\BatteryManager.o
+ .ARM.extab.text._ZN14BatteryManager7processEv
+                0x00000000        0x0 Core\Src\BatteryManager.o
+ .ARM.exidx.text._ZN14BatteryManager7processEv
+                0x00000000        0x8 Core\Src\BatteryManager.o
+ .text._ZN14BatteryManager17getBatteryVoltageEv
+                0x00000000       0x14 Core\Src\BatteryManager.o
+ .ARM.extab.text._ZN14BatteryManager17getBatteryVoltageEv
+                0x00000000        0x0 Core\Src\BatteryManager.o
+ .ARM.exidx.text._ZN14BatteryManager17getBatteryVoltageEv
+                0x00000000        0x8 Core\Src\BatteryManager.o
+ .text._ZN14BatteryManager15getBatteryLevelEv
+                0x00000000       0x14 Core\Src\BatteryManager.o
+ .ARM.extab.text._ZN14BatteryManager15getBatteryLevelEv
+                0x00000000        0x0 Core\Src\BatteryManager.o
+ .ARM.exidx.text._ZN14BatteryManager15getBatteryLevelEv
+                0x00000000        0x8 Core\Src\BatteryManager.o
+ .text._ZN14BatteryManager14getCellVoltageEh
+                0x00000000       0x18 Core\Src\BatteryManager.o
+ .ARM.extab.text._ZN14BatteryManager14getCellVoltageEh
+                0x00000000        0x0 Core\Src\BatteryManager.o
+ .ARM.exidx.text._ZN14BatteryManager14getCellVoltageEh
+                0x00000000        0x8 Core\Src\BatteryManager.o
+ .text._ZN14BatteryManagerC2Ev
+                0x00000000       0x20 Core\Src\BatteryManager.o
+ .ARM.extab.text._ZN14BatteryManagerC2Ev
+                0x00000000        0x0 Core\Src\BatteryManager.o
+ .ARM.exidx.text._ZN14BatteryManagerC2Ev
+                0x00000000        0x8 Core\Src\BatteryManager.o
+ .text._ZN14BatteryManagerD2Ev
+                0x00000000       0x30 Core\Src\BatteryManager.o
+ .ARM.extab.text._ZN14BatteryManagerD2Ev
+                0x00000000        0x0 Core\Src\BatteryManager.o
+ .ARM.exidx.text._ZN14BatteryManagerD2Ev
+                0x00000000        0x8 Core\Src\BatteryManager.o
+ .text._ZN14BatteryManagerD0Ev
+                0x00000000       0x1e Core\Src\BatteryManager.o
+ .ARM.extab.text._ZN14BatteryManagerD0Ev
+                0x00000000        0x0 Core\Src\BatteryManager.o
+ .ARM.exidx.text._ZN14BatteryManagerD0Ev
+                0x00000000        0x8 Core\Src\BatteryManager.o
+ .text._ZN14BatteryManager17updateMeasurmentsEv
+                0x00000000       0x12 Core\Src\BatteryManager.o
+ .ARM.extab.text._ZN14BatteryManager17updateMeasurmentsEv
+                0x00000000        0x0 Core\Src\BatteryManager.o
+ .ARM.exidx.text._ZN14BatteryManager17updateMeasurmentsEv
+                0x00000000        0x8 Core\Src\BatteryManager.o
+ .text._ZN14BatteryManager17checkBatteryLevelEv
+                0x00000000       0x12 Core\Src\BatteryManager.o
+ .ARM.extab.text._ZN14BatteryManager17checkBatteryLevelEv
+                0x00000000        0x0 Core\Src\BatteryManager.o
+ .ARM.exidx.text._ZN14BatteryManager17checkBatteryLevelEv
+                0x00000000        0x8 Core\Src\BatteryManager.o
+ .text._ZN14BatteryManager8addCellsEv
+                0x00000000       0x46 Core\Src\BatteryManager.o
+ .ARM.extab.text._ZN14BatteryManager8addCellsEv
+                0x00000000       0x1c Core\Src\BatteryManager.o
+ .ARM.exidx.text._ZN14BatteryManager8addCellsEv
+                0x00000000        0x8 Core\Src\BatteryManager.o
+ .rodata        0x00000000       0x29 Core\Src\BatteryManager.o
+ .debug_info    0x00000000      0x987 Core\Src\BatteryManager.o
+ .debug_abbrev  0x00000000      0x2c6 Core\Src\BatteryManager.o
+ .debug_aranges
+                0x00000000       0x70 Core\Src\BatteryManager.o
+ .debug_ranges  0x00000000       0x60 Core\Src\BatteryManager.o
+ .debug_line    0x00000000      0x328 Core\Src\BatteryManager.o
+ .debug_str     0x00000000      0x8bc Core\Src\BatteryManager.o
+ .comment       0x00000000       0x7d Core\Src\BatteryManager.o
+ .debug_frame   0x00000000      0x1b8 Core\Src\BatteryManager.o
+ .ARM.attributes
+                0x00000000       0x33 Core\Src\BatteryManager.o
  .group         0x00000000       0x10 Core\Src\HallSensor.o
  .group         0x00000000       0x10 Core\Src\HallSensor.o
  .group         0x00000000       0x10 Core\Src\HallSensor.o
@@ -1575,9 +1629,23 @@ Discarded input sections
  .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
  .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
  .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
+ .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_opv.o)
+ .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_opv.o)
+ .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_opv.o)
+ .text._ZdaPv   0x00000000        0x4 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_opv.o)
+ .debug_frame   0x00000000       0x20 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_opv.o)
+ .ARM.attributes
+                0x00000000       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_opv.o)
  .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(atexit_arm.o)
  .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(atexit_arm.o)
  .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(atexit_arm.o)
+ .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_op.o)
+ .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_op.o)
+ .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_op.o)
+ .text._Znwj    0x00000000       0x22 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_op.o)
+ .debug_frame   0x00000000       0x28 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_op.o)
+ .ARM.attributes
+                0x00000000       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_op.o)
  .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
  .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
  .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(eh_arm.o)
@@ -1590,6 +1658,20 @@ Discarded input sections
  .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_ops.o)
  .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_ops.o)
  .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_ops.o)
+ .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_handler.o)
+ .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_handler.o)
+ .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_handler.o)
+ .text._ZSt15set_new_handlerPFvvE
+                0x00000000       0x20 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_handler.o)
+ .text._ZSt15get_new_handlerv
+                0x00000000       0x10 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_handler.o)
+ .bss._ZN12_GLOBAL__N_113__new_handlerE
+                0x00000000        0x4 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_handler.o)
+ .rodata._ZSt7nothrow
+                0x00000000        0x1 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_handler.o)
+ .debug_frame   0x00000000       0x30 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_handler.o)
+ .ARM.attributes
+                0x00000000       0x2d d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(new_handler.o)
  .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
  .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
  .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(class_type_info.o)
@@ -1814,10 +1896,10 @@ Linker script and memory map
 
 LOAD d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
 LOAD d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crtbegin.o
-LOAD Core\Inc\BatteryManager.o
 LOAD Core\Src\ADC_Tools.o
 LOAD Core\Src\AllTasks.o
 LOAD Core\Src\Average.o
+LOAD Core\Src\BatteryManager.o
 LOAD Core\Src\HallSensor.o
 LOAD Core\Src\LedNotifier.o
 LOAD Core\Src\LipoCell.o
