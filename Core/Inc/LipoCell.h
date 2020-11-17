@@ -3,7 +3,6 @@
 #include "ADC_Tools.h"
 #include "main.h"
 
-#define MAX_CELL_VOLTAGE 3.7f
 
 class LipoCell:  public ADC_Tools
 {
@@ -11,7 +10,7 @@ class LipoCell:  public ADC_Tools
 private:
 	Average<float, 10> avrg;
 public:
-	LipoCell();
+	LipoCell(float max);
 	float getVoltageAvrg();
 	float getPercentageAvrg();
 

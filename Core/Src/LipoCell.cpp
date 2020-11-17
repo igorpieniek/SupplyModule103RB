@@ -2,7 +2,7 @@
 
 
 
-LipoCell::LipoCell():ADC_Tools(MAX_CELL_VOLTAGE){ }
+LipoCell::LipoCell(float max):ADC_Tools(max){ }
 
 void LipoCell::update(uint32_t val) {
 	updateMeasurments(val);
