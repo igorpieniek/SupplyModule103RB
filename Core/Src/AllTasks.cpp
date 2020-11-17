@@ -42,17 +42,17 @@ void StartBatteryManagerTask(void const * argument){
 
 
 	uint32_t counter = 0;
-	LipoCell lipo;
+//	LipoCell lipo;
 	HAL_ADC_Start(&hadc1);
 	HAL_ADC_Start_DMA(&hadc1, receiveADC, 2);
 
 	for(;;){
 
-		lipo.update(receiveADC[0]);
-		per = lipo.getPercentage();
-		volt= lipo.getVoltage();
-		perAvrg = lipo.getPercentageAvrg();
-		voltAvrg= lipo.getVoltageAvrg();
+//		lipo.update(receiveADC[0]);
+//		per = lipo.getPercentage();
+//		volt= lipo.getVoltage();
+//		perAvrg = lipo.getPercentageAvrg();
+//		voltAvrg= lipo.getVoltageAvrg();
 
 
 		osDelay(100);

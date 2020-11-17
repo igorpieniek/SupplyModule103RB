@@ -7,5 +7,5 @@ BatteryManager.cpp:36:1:BatteryManager::BatteryManager()	16	static
 BatteryManager.cpp:41:1:BatteryManager::~BatteryManager()	16	static
 BatteryManager.cpp:41:1:virtual BatteryManager::~BatteryManager()	16	static
 BatteryManager.cpp:47:6:void BatteryManager::updateMeasurments()	24	static
-BatteryManager.cpp:53:6:void BatteryManager::checkBatteryLevel()	16	static
-BatteryManager.cpp:57:6:void BatteryManager::addCells()	24	static
+BatteryManager.cpp:53:6:void BatteryManager::checkBatteryLevel()	32	static
+BatteryManager.cpp:77:6:void BatteryManager::addCells()	24	static

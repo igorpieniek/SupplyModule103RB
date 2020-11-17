@@ -3,6 +3,7 @@
 #include "ADC_Tools.h"
 #include "main.h"
 
+#define CELL_MAX_VOLTAGE_DROP 1.2f
 
 class LipoCell:  public ADC_Tools
 {
