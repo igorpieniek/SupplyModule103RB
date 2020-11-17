@@ -17,12 +17,12 @@
 #define INDEX_OUT_OF_RANGE_VALUE 0.0f   // number to return in case user want number of cell out of index
 #define LIPO_ADC_CHANNEL hadc1
 
-#define CELL1_MAX_VOL  3.7f
-#define CELL2_MAX_VOL  7.4f
-#define CELL3_MAX_VOL 11.1f
-#define CELL4_MAX_VOL 14.8f
+#define CELL1_MAX_VOL  4.2f
+#define CELL2_MAX_VOL  8.4f
+#define CELL3_MAX_VOL 12.6f
+#define CELL4_MAX_VOL 16.8f
 
-#define BATTERY_LOW_VOLTAGE 12.4f
+#define BATTERY_LOW_VOLTAGE 12.4f //TODO: change
 #define BATTERY_DEAD_VOLTAGE 12.0f
 #define CELL_LOW_VOLTAGE 3.1f
 
