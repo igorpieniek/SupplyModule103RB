@@ -17,6 +17,11 @@
 #define INDEX_OUT_OF_RANGE_VALUE 0.0f   // number to return in case user want number of cell out of index
 #define LIPO_ADC_CHANNEL hadc1
 
+#define CELL1_MAX_VOL  3.7f
+#define CELL2_MAX_VOL  7.4f
+#define CELL3_MAX_VOL 11.1f
+#define CELL4_MAX_VOL 14.8f
+
 class BatteryManager {
 public:
 
@@ -37,6 +42,14 @@ private:
 
 	LipoCell* cells[LIPOCELLS_NUMBER];
 	uint32_t rawADC[LIPOCELLS_NUMBER]; // IF IT WILL BE IN ONE DMA :/
+
+
+	enum cell_number{
+		cell1,
+		cell2,
+		cell3,
+		cell4
+	};
 
 };
 

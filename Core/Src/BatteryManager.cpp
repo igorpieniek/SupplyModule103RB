@@ -20,15 +20,17 @@ void BatteryManager::process(){
 }
 
 float BatteryManager::getBatteryVoltage(){
-
+	return cells[cell4]->getVoltageAvrg();
 }
 
 float BatteryManager::getBatteryLevel(){
-
+	return cells[cell4]->getPercentageAvrg();
 }
 
-float BatteryManager::getCellVoltage(uint8_t){
-
+float BatteryManager::getCellVoltage(uint8_t index){
+	if( index <0 || index > LIPOCELLS_NUMBER ) return INDEX_OUT_OF_RANGE_VALUE; // out of index
+	if (index == cell1) return cells[cell1]->getVoltageAvrg();					// first cell
+	return cells[index]->getVoltageAvrg() - cells[index -1]->getVoltageAvrg();  // every next cell
 }
 
 BatteryManager::BatteryManager() {
@@ -44,7 +46,7 @@ BatteryManager::~BatteryManager() {
 
 void BatteryManager::updateMeasurments(){
 	for(uint8_t i =0; i < LIPOCELLS_NUMBER; i++){
-		cells[i]->updateMeasurments(rawADC[i]);
+		cells[i]->update(rawADC[i]);
 	}
 }
 
@@ -53,7 +55,8 @@ void BatteryManager::checkBatteryLevel(){
 }
 
 void BatteryManager::addCells(){
-	for(uint8_t i =0; i < LIPOCELLS_NUMBER; i++){
-		cells[i]= new LipoCell();
-	}
+	cells[cell1] = new LipoCell(CELL1_MAX_VOL );
+	cells[cell2] = new LipoCell(CELL2_MAX_VOL );
+	cells[cell3] = new LipoCell(CELL3_MAX_VOL );
+	cells[cell4] = new LipoCell(CELL4_MAX_VOL );
 }

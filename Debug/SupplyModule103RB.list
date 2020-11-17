@@ -2418,9 +2418,9 @@ void AllTasks_init(){
 #include "ADC_Tools.h"
 #include "main.h"
 
-#define MAX_CELL_VOLTAGE 3.5f
 
 class LipoCell:  public ADC_Tools
+{
  80016f8:	b580      	push	{r7, lr}
  80016fa:	b082      	sub	sp, #8
  80016fc:	af00      	add	r7, sp, #0
@@ -3232,7 +3232,7 @@ LedNotifier::~LedNotifier() {
 
 
 
-LipoCell::LipoCell():ADC_Tools(MAX_CELL_VOLTAGE){ }
+LipoCell::LipoCell(float max):ADC_Tools(max){ }
  8001c50:	b580      	push	{r7, lr}
  8001c52:	b082      	sub	sp, #8
  8001c54:	af00      	add	r7, sp, #0
