@@ -7,7 +7,7 @@
 
 #include <HallSensor.h>
 
-HallSensor::HallSensor(float sens,float neutral = NEUTRAL_HALL_VOLTAGE, float max_vol = MAX_HALL_VOLTAGE):
+HallSensor::HallSensor(float sens,float neutral , float max_vol ):
 				ADC_Tools(max_vol), sensivity(sens), neutral_voltage(neutral) { }
 
 HallSensor::~HallSensor() {

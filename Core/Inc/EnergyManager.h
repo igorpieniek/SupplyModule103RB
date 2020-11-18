@@ -18,6 +18,9 @@
 #define SUPPLY_BRANCH_NUMBER 4
 #define SECTION_SWITCH_NUMBER 4
 
+#define HALL_ACS714_50A_SENSIVITY 0.04f
+#define HALL_ACHS7121_SENSIVITY   0.185f
+
 
 class EnergyManager {
 private:
@@ -49,7 +52,11 @@ private:
 	void supplyBranch_init();
 	void sectionSwitch_init();
 public:
-
+	struct Section{
+		float A; //Ampere
+		float V; //Voltage
+		float P; //Power
+	};
 	void init();
 
 	EnergyManager();

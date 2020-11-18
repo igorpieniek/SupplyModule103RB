@@ -12,6 +12,10 @@
 #include "Average.h"
 
 class SupplyBranch: public ADC_Tools {
+private:
+	Average<float, 10> avrg;
+	float margin;
+
 public:
 
 	float getVoltageAvrg();
@@ -22,10 +26,7 @@ public:
 	SupplyBranch(float max, float marg = 0.0f);
 	virtual ~SupplyBranch();
 
-private:
 
-	Average<float, 10> avrg;
-	float margin;
 
 };
 

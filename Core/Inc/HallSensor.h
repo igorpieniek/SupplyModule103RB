@@ -19,7 +19,7 @@
 
 class HallSensor:public ADC_Tools {
 public:
-	HallSensor(float sens,float neutral, float max_vol );
+	HallSensor(float sens,float neutral= NEUTRAL_HALL_VOLTAGE, float max_vol = MAX_HALL_VOLTAGE);
 	virtual ~HallSensor();
 
 	void update(uint32_t);
