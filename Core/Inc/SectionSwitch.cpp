@@ -19,3 +19,14 @@ SectionSwitch::~SectionSwitch() {
 	// TODO Auto-generated destructor stub
 }
 
+void SectionSwitch::on(){
+
+}
+
+void SectionSwitch::off(){
+
+}
+
+void SectionSwitch::updateRealStateON(){
+
+}
