@@ -7,7 +7,8 @@
 
 #include <SectionSwitch.h>
 
-SectionSwitch::SectionSwitch() {
+SectionSwitch::SectionSwitch(GPIO_TypeDef * por, uint16_t pi, GPIO_PinState st):
+							port(por), pin(pi), state(st){
 	// TODO Auto-generated constructor stub
 
 }

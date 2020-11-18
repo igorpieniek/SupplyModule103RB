@@ -8,6 +8,9 @@
 #ifndef INC_SECTIONSWITCH_H_
 #define INC_SECTIONSWITCH_H_
 
+#include "main.h"
+#include "gpio.h"
+
 class SectionSwitch {
 public:
 	SectionSwitch();
