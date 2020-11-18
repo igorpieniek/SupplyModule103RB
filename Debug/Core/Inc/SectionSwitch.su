@@ -1,0 +1,3 @@
+SectionSwitch.cpp:10:1:SectionSwitch::SectionSwitch(GPIO_TypeDef*, uint16_t, GPIO_PinState)	24	static
+SectionSwitch.cpp:18:1:SectionSwitch::~SectionSwitch()	16	static
+SectionSwitch.cpp:18:1:virtual SectionSwitch::~SectionSwitch()	16	static

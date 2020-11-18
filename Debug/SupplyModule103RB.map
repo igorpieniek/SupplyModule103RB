@@ -3,7 +3,7 @@ Archive member included to satisfy reference by file (symbol)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(si_class_type_info.o)
                               Core\Src\HallSensor.o (vtable for __cxxabiv1::__si_class_type_info)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
-                              Core\Src\BatteryManager.o (operator delete(void*))
+                              Core\Inc\SectionSwitch.o (operator delete(void*))
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_opv.o)
                               Core\Src\BatteryManager.o (operator delete[](void*))
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(atexit_arm.o)
@@ -104,6 +104,39 @@ Discarded input sections
  .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
  .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
  .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
+ .text          0x00000000        0x0 Core\Inc\SectionSwitch.o
+ .data          0x00000000        0x0 Core\Inc\SectionSwitch.o
+ .bss           0x00000000        0x0 Core\Inc\SectionSwitch.o
+ .text._ZN13SectionSwitchC2EP12GPIO_TypeDeft13GPIO_PinState
+                0x00000000       0x64 Core\Inc\SectionSwitch.o
+ .ARM.extab.text._ZN13SectionSwitchC2EP12GPIO_TypeDeft13GPIO_PinState
+                0x00000000        0xc Core\Inc\SectionSwitch.o
+ .ARM.exidx.text._ZN13SectionSwitchC2EP12GPIO_TypeDeft13GPIO_PinState
+                0x00000000        0x8 Core\Inc\SectionSwitch.o
+ .text._ZN13SectionSwitchD2Ev
+                0x00000000       0x20 Core\Inc\SectionSwitch.o
+ .ARM.extab.text._ZN13SectionSwitchD2Ev
+                0x00000000        0x0 Core\Inc\SectionSwitch.o
+ .ARM.exidx.text._ZN13SectionSwitchD2Ev
+                0x00000000        0x8 Core\Inc\SectionSwitch.o
+ .text._ZN13SectionSwitchD0Ev
+                0x00000000       0x1e Core\Inc\SectionSwitch.o
+ .ARM.extab.text._ZN13SectionSwitchD0Ev
+                0x00000000        0x0 Core\Inc\SectionSwitch.o
+ .ARM.exidx.text._ZN13SectionSwitchD0Ev
+                0x00000000        0x8 Core\Inc\SectionSwitch.o
+ .rodata        0x00000000       0x28 Core\Inc\SectionSwitch.o
+ .debug_info    0x00000000      0x50f Core\Inc\SectionSwitch.o
+ .debug_abbrev  0x00000000      0x256 Core\Inc\SectionSwitch.o
+ .debug_aranges
+                0x00000000       0x30 Core\Inc\SectionSwitch.o
+ .debug_ranges  0x00000000       0x20 Core\Inc\SectionSwitch.o
+ .debug_line    0x00000000      0x24b Core\Inc\SectionSwitch.o
+ .debug_str     0x00000000      0x555 Core\Inc\SectionSwitch.o
+ .comment       0x00000000       0x7d Core\Inc\SectionSwitch.o
+ .debug_frame   0x00000000       0x80 Core\Inc\SectionSwitch.o
+ .ARM.attributes
+                0x00000000       0x33 Core\Inc\SectionSwitch.o
  .group         0x00000000       0x10 Core\Src\ADC_Tools.o
  .group         0x00000000       0x10 Core\Src\ADC_Tools.o
  .group         0x00000000       0x10 Core\Src\ADC_Tools.o
@@ -2118,6 +2151,7 @@ Linker script and memory map
 
 LOAD d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
 LOAD d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crtbegin.o
+LOAD Core\Inc\SectionSwitch.o
 LOAD Core\Src\ADC_Tools.o
 LOAD Core\Src\AllTasks.o
 LOAD Core\Src\Average.o
