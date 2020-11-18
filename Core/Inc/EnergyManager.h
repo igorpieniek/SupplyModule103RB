@@ -8,10 +8,11 @@
 #ifndef INC_ENERGYMANAGER_H_
 #define INC_ENERGYMANAGER_H_
 
-
+#include "main.h"
 #include "HallSensor.h"
-#include "SupplyBranch.h"
 #include "SectionSwitch.h"
+#include "SupplyBranch.h"
+
 
 #define EM_DMA_NUMBER_OF_CONVERSION  9 //5 HALL + 4 VOLTAGE MEASURMENTS (+ 1 internal temperature?)
 #define HALL_SENSOR_NUMBER 5

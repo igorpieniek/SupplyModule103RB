@@ -270,6 +270,63 @@ Discarded input sections
  .debug_frame   0x00000000      0x1ac Core\Src\BatteryManager.o
  .ARM.attributes
                 0x00000000       0x33 Core\Src\BatteryManager.o
+ .text          0x00000000        0x0 Core\Src\EnergyManager.o
+ .data          0x00000000        0x0 Core\Src\EnergyManager.o
+ .bss           0x00000000        0x0 Core\Src\EnergyManager.o
+ .text._ZN13EnergyManagerC2Ev
+                0x00000000       0x20 Core\Src\EnergyManager.o
+ .ARM.extab.text._ZN13EnergyManagerC2Ev
+                0x00000000        0x0 Core\Src\EnergyManager.o
+ .ARM.exidx.text._ZN13EnergyManagerC2Ev
+                0x00000000        0x8 Core\Src\EnergyManager.o
+ .text._ZN13EnergyManagerD2Ev
+                0x00000000       0x20 Core\Src\EnergyManager.o
+ .ARM.extab.text._ZN13EnergyManagerD2Ev
+                0x00000000        0x0 Core\Src\EnergyManager.o
+ .ARM.exidx.text._ZN13EnergyManagerD2Ev
+                0x00000000        0x8 Core\Src\EnergyManager.o
+ .text._ZN13EnergyManagerD0Ev
+                0x00000000       0x1e Core\Src\EnergyManager.o
+ .ARM.extab.text._ZN13EnergyManagerD0Ev
+                0x00000000        0x0 Core\Src\EnergyManager.o
+ .ARM.exidx.text._ZN13EnergyManagerD0Ev
+                0x00000000        0x8 Core\Src\EnergyManager.o
+ .text._ZN13EnergyManager4initEv
+                0x00000000       0x22 Core\Src\EnergyManager.o
+ .ARM.extab.text._ZN13EnergyManager4initEv
+                0x00000000        0xc Core\Src\EnergyManager.o
+ .ARM.exidx.text._ZN13EnergyManager4initEv
+                0x00000000        0x8 Core\Src\EnergyManager.o
+ .text._ZN13EnergyManager15hallSensor_initEv
+                0x00000000       0xd4 Core\Src\EnergyManager.o
+ .ARM.extab.text._ZN13EnergyManager15hallSensor_initEv
+                0x00000000       0x43 Core\Src\EnergyManager.o
+ .ARM.exidx.text._ZN13EnergyManager15hallSensor_initEv
+                0x00000000        0x8 Core\Src\EnergyManager.o
+ .text._ZN13EnergyManager17supplyBranch_initEv
+                0x00000000       0x12 Core\Src\EnergyManager.o
+ .ARM.extab.text._ZN13EnergyManager17supplyBranch_initEv
+                0x00000000        0x0 Core\Src\EnergyManager.o
+ .ARM.exidx.text._ZN13EnergyManager17supplyBranch_initEv
+                0x00000000        0x8 Core\Src\EnergyManager.o
+ .text._ZN13EnergyManager18sectionSwitch_initEv
+                0x00000000       0x12 Core\Src\EnergyManager.o
+ .ARM.extab.text._ZN13EnergyManager18sectionSwitch_initEv
+                0x00000000        0x0 Core\Src\EnergyManager.o
+ .ARM.exidx.text._ZN13EnergyManager18sectionSwitch_initEv
+                0x00000000        0x8 Core\Src\EnergyManager.o
+ .rodata        0x00000000       0x28 Core\Src\EnergyManager.o
+ .debug_info    0x00000000      0x484 Core\Src\EnergyManager.o
+ .debug_abbrev  0x00000000      0x235 Core\Src\EnergyManager.o
+ .debug_aranges
+                0x00000000       0x50 Core\Src\EnergyManager.o
+ .debug_ranges  0x00000000       0x40 Core\Src\EnergyManager.o
+ .debug_line    0x00000000      0x280 Core\Src\EnergyManager.o
+ .debug_str     0x00000000      0x4c1 Core\Src\EnergyManager.o
+ .comment       0x00000000       0x7d Core\Src\EnergyManager.o
+ .debug_frame   0x00000000      0x120 Core\Src\EnergyManager.o
+ .ARM.attributes
+                0x00000000       0x33 Core\Src\EnergyManager.o
  .group         0x00000000       0x10 Core\Src\HallSensor.o
  .group         0x00000000       0x10 Core\Src\HallSensor.o
  .group         0x00000000       0x10 Core\Src\HallSensor.o
@@ -410,7 +467,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0xb0 Core\Src\HallSensor.o
  .debug_ranges  0x00000000       0xa0 Core\Src\HallSensor.o
- .debug_line    0x00000000      0x396 Core\Src\HallSensor.o
+ .debug_line    0x00000000      0x398 Core\Src\HallSensor.o
  .debug_str     0x00000000      0x888 Core\Src\HallSensor.o
  .comment       0x00000000       0x7d Core\Src\HallSensor.o
  .debug_frame   0x00000000      0x2d8 Core\Src\HallSensor.o
@@ -526,7 +583,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x78 Core\Src\LipoCell.o
  .debug_ranges  0x00000000       0x68 Core\Src\LipoCell.o
- .debug_line    0x00000000      0x310 Core\Src\LipoCell.o
+ .debug_line    0x00000000      0x312 Core\Src\LipoCell.o
  .debug_str     0x00000000      0x731 Core\Src\LipoCell.o
  .comment       0x00000000       0x7d Core\Src\LipoCell.o
  .debug_frame   0x00000000      0x1d8 Core\Src\LipoCell.o
@@ -703,7 +760,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x98 Core\Src\SupplyBranch.o
  .debug_ranges  0x00000000       0x88 Core\Src\SupplyBranch.o
- .debug_line    0x00000000      0x371 Core\Src\SupplyBranch.o
+ .debug_line    0x00000000      0x373 Core\Src\SupplyBranch.o
  .debug_str     0x00000000      0x808 Core\Src\SupplyBranch.o
  .comment       0x00000000       0x7d Core\Src\SupplyBranch.o
  .debug_frame   0x00000000      0x26c Core\Src\SupplyBranch.o
@@ -2299,6 +2356,7 @@ LOAD Core\Src\ADC_Tools.o
 LOAD Core\Src\AllTasks.o
 LOAD Core\Src\Average.o
 LOAD Core\Src\BatteryManager.o
+LOAD Core\Src\EnergyManager.o
 LOAD Core\Src\HallSensor.o
 LOAD Core\Src\LedNotifier.o
 LOAD Core\Src\LipoCell.o

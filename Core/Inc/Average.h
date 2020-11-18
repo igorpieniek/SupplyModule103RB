@@ -1,4 +1,8 @@
 
+
+#ifndef INC_AVERAGE_H_
+#define INC_AVERAGE_H_
+
 #include "main.h"
 
 template<typename T , uint8_t s> class Average
@@ -103,6 +107,6 @@ public:
 //	this->calculate();
 //	return this->avrg;
 //}
-
+#endif /* INC_AVERAGE_H_ */
 
 

@@ -1,6 +1,10 @@
 
 #include "main.h"
 
+
+#ifndef INC_ADC_TOOLS_H_
+#define INC_ADC_TOOLS_H_
+
 #define STANDARD_RESOLUTION 12
 
 class ADC_Tools
@@ -32,4 +36,4 @@ protected:
 	float convertToPercentage(float);
 
 };
-
+#endif /* INC_ADC_TOOLS_H_ */

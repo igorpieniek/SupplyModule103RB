@@ -1,7 +1,7 @@
-ADC_Tools.h:9:8:float ADC_Tools::getVoltage() const	16	static
-ADC_Tools.h:10:16:virtual float ADC_Tools::getVoltageAvrg()	16	static
-ADC_Tools.h:11:16:virtual float ADC_Tools::getPercentage() const	16	static
-ADC_Tools.h:12:16:virtual float ADC_Tools::getPercentageAvrg()	16	static
+ADC_Tools.h:13:8:float ADC_Tools::getVoltage() const	16	static
+ADC_Tools.h:14:16:virtual float ADC_Tools::getVoltageAvrg()	16	static
+ADC_Tools.h:15:16:virtual float ADC_Tools::getPercentage() const	16	static
+ADC_Tools.h:16:16:virtual float ADC_Tools::getPercentageAvrg()	16	static
 HallSensor.cpp:10:1:HallSensor::HallSensor(float, float, float)	24	static
 HallSensor.cpp:13:1:HallSensor::~HallSensor()	16	static
 HallSensor.cpp:13:1:virtual HallSensor::~HallSensor()	16	static
@@ -10,10 +10,10 @@ HallSensor.cpp:24:7:float HallSensor::getAmpereAvrg()	16	static
 HallSensor.cpp:28:7:float HallSensor::getPercentage()	16	static
 HallSensor.cpp:32:6:void HallSensor::convertToAmperes()	16	static
 HallSensor.cpp:36:6:void HallSensor::updateAmperesAvrg()	16	static
-Average.h:27:2:Average<T, s>::Average() [with T = float; unsigned char s = 10u]	16	static
-Average.h:30:2:Average<T, s>::~Average() [with T = float; unsigned char s = 10u]	16	static
-Average.h:45:5:T& Average<T, s>::operator()() [with T = float; unsigned char s = 10u]	16	static
-Average.h:34:7:void Average<T, s>::insert(T) [with T = float; unsigned char s = 10u]	16	static
-Average.h:38:7:void Average<T, s>::clear() [with T = float; unsigned char s = 10u]	24	static
-Average.h:20:7:void Average<T, s>::calculate() [with T = float; unsigned char s = 10u]	24	static
-Average.h:12:7:void Average<T, s>::indexIterate() [with T = float; unsigned char s = 10u]	16	static
+Average.h:31:2:Average<T, s>::Average() [with T = float; unsigned char s = 10u]	16	static
+Average.h:34:2:Average<T, s>::~Average() [with T = float; unsigned char s = 10u]	16	static
+Average.h:49:5:T& Average<T, s>::operator()() [with T = float; unsigned char s = 10u]	16	static
+Average.h:38:7:void Average<T, s>::insert(T) [with T = float; unsigned char s = 10u]	16	static
+Average.h:42:7:void Average<T, s>::clear() [with T = float; unsigned char s = 10u]	24	static
+Average.h:24:7:void Average<T, s>::calculate() [with T = float; unsigned char s = 10u]	24	static
+Average.h:16:7:void Average<T, s>::indexIterate() [with T = float; unsigned char s = 10u]	16	static
