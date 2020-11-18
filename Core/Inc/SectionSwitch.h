@@ -32,7 +32,6 @@ public:
 private:
 	GPIO_TypeDef * port;
 	uint16_t pin;
-	GPIO_PinState state;
 	Section_state realState;
 };
 
