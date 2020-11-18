@@ -8,10 +8,24 @@
 #ifndef INC_SUPPLYBRANCH_H_
 #define INC_SUPPLYBRANCH_H_
 
-class SupplyBranch {
+#include "ADC_Tools.h"
+#include "Average.h"
+
+class SupplyBranch: public ADC_Tools {
 public:
-	SupplyBranch();
+
+	float getVoltageAvrg();
+	float getPercentageAvrg();
+	void update(uint32_t raw);
+	uint8_t isCloseToZero();
+
+	SupplyBranch(float max, float margin = 0.0f);
 	virtual ~SupplyBranch();
+
+private:
+
+	Average<float, 10> avrg;
+
 };
 
 #endif /* INC_SUPPLYBRANCH_H_ */

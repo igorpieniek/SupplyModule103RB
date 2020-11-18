@@ -7,7 +7,7 @@
 
 #include <SupplyBranch.h>
 
-SupplyBranch::SupplyBranch() {
+SupplyBranch::SupplyBranch(float max, float margin) {
 	// TODO Auto-generated constructor stub
 
 }
