@@ -1,0 +1,6 @@
+SectionSwitch.cpp:10:1:SectionSwitch::SectionSwitch(GPIO_TypeDef*, uint16_t, GPIO_PinState)	24	static
+SectionSwitch.cpp:18:1:SectionSwitch::~SectionSwitch()	16	static
+SectionSwitch.cpp:18:1:virtual SectionSwitch::~SectionSwitch()	16	static
+SectionSwitch.cpp:22:6:void SectionSwitch::on()	16	static
+SectionSwitch.cpp:27:6:void SectionSwitch::off()	16	static
+SectionSwitch.cpp:32:6:void SectionSwitch::updateRealStateON()	16	static

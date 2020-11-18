@@ -19,12 +19,13 @@ public:
 	void update(uint32_t raw);
 	uint8_t isCloseToZero();
 
-	SupplyBranch(float max, float margin = 0.0f);
+	SupplyBranch(float max, float marg = 0.0f);
 	virtual ~SupplyBranch();
 
 private:
 
 	Average<float, 10> avrg;
+	float margin;
 
 };
 

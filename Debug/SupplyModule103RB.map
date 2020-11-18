@@ -3,7 +3,7 @@ Archive member included to satisfy reference by file (symbol)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(si_class_type_info.o)
                               Core\Src\HallSensor.o (vtable for __cxxabiv1::__si_class_type_info)
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_op.o)
-                              Core\Inc\SectionSwitch.o (operator delete(void*))
+                              Core\Src\BatteryManager.o (operator delete(void*))
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(del_opv.o)
                               Core\Src\BatteryManager.o (operator delete[](void*))
 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7-m\libstdc++_nano.a(atexit_arm.o)
@@ -104,57 +104,6 @@ Discarded input sections
  .text          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
  .data          0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
  .bss           0x00000000        0x0 d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
- .text          0x00000000        0x0 Core\Inc\SectionSwitch.o
- .data          0x00000000        0x0 Core\Inc\SectionSwitch.o
- .bss           0x00000000        0x0 Core\Inc\SectionSwitch.o
- .text._ZN13SectionSwitchC2EP12GPIO_TypeDeft13GPIO_PinState
-                0x00000000       0x5c Core\Inc\SectionSwitch.o
- .ARM.extab.text._ZN13SectionSwitchC2EP12GPIO_TypeDeft13GPIO_PinState
-                0x00000000        0xc Core\Inc\SectionSwitch.o
- .ARM.exidx.text._ZN13SectionSwitchC2EP12GPIO_TypeDeft13GPIO_PinState
-                0x00000000        0x8 Core\Inc\SectionSwitch.o
- .text._ZN13SectionSwitchD2Ev
-                0x00000000       0x20 Core\Inc\SectionSwitch.o
- .ARM.extab.text._ZN13SectionSwitchD2Ev
-                0x00000000        0x0 Core\Inc\SectionSwitch.o
- .ARM.exidx.text._ZN13SectionSwitchD2Ev
-                0x00000000        0x8 Core\Inc\SectionSwitch.o
- .text._ZN13SectionSwitchD0Ev
-                0x00000000       0x1e Core\Inc\SectionSwitch.o
- .ARM.extab.text._ZN13SectionSwitchD0Ev
-                0x00000000        0x0 Core\Inc\SectionSwitch.o
- .ARM.exidx.text._ZN13SectionSwitchD0Ev
-                0x00000000        0x8 Core\Inc\SectionSwitch.o
- .text._ZN13SectionSwitch2onEv
-                0x00000000       0x26 Core\Inc\SectionSwitch.o
- .ARM.extab.text._ZN13SectionSwitch2onEv
-                0x00000000        0xc Core\Inc\SectionSwitch.o
- .ARM.exidx.text._ZN13SectionSwitch2onEv
-                0x00000000        0x8 Core\Inc\SectionSwitch.o
- .text._ZN13SectionSwitch3offEv
-                0x00000000       0x26 Core\Inc\SectionSwitch.o
- .ARM.extab.text._ZN13SectionSwitch3offEv
-                0x00000000        0xc Core\Inc\SectionSwitch.o
- .ARM.exidx.text._ZN13SectionSwitch3offEv
-                0x00000000        0x8 Core\Inc\SectionSwitch.o
- .text._ZN13SectionSwitch17updateRealStateONEv
-                0x00000000       0x12 Core\Inc\SectionSwitch.o
- .ARM.extab.text._ZN13SectionSwitch17updateRealStateONEv
-                0x00000000        0x0 Core\Inc\SectionSwitch.o
- .ARM.exidx.text._ZN13SectionSwitch17updateRealStateONEv
-                0x00000000        0x8 Core\Inc\SectionSwitch.o
- .rodata        0x00000000       0x28 Core\Inc\SectionSwitch.o
- .debug_info    0x00000000      0x57c Core\Inc\SectionSwitch.o
- .debug_abbrev  0x00000000      0x29c Core\Inc\SectionSwitch.o
- .debug_aranges
-                0x00000000       0x48 Core\Inc\SectionSwitch.o
- .debug_ranges  0x00000000       0x38 Core\Inc\SectionSwitch.o
- .debug_line    0x00000000      0x27f Core\Inc\SectionSwitch.o
- .debug_str     0x00000000      0x555 Core\Inc\SectionSwitch.o
- .comment       0x00000000       0x7d Core\Inc\SectionSwitch.o
- .debug_frame   0x00000000       0xf0 Core\Inc\SectionSwitch.o
- .ARM.attributes
-                0x00000000       0x33 Core\Inc\SectionSwitch.o
  .group         0x00000000       0x10 Core\Src\ADC_Tools.o
  .group         0x00000000       0x10 Core\Src\ADC_Tools.o
  .group         0x00000000       0x10 Core\Src\ADC_Tools.o
@@ -583,6 +532,183 @@ Discarded input sections
  .debug_frame   0x00000000      0x1d8 Core\Src\LipoCell.o
  .ARM.attributes
                 0x00000000       0x33 Core\Src\LipoCell.o
+ .text          0x00000000        0x0 Core\Src\SectionSwitch.o
+ .data          0x00000000        0x0 Core\Src\SectionSwitch.o
+ .bss           0x00000000        0x0 Core\Src\SectionSwitch.o
+ .text._ZN13SectionSwitchC2EP12GPIO_TypeDeft13GPIO_PinState
+                0x00000000       0x5c Core\Src\SectionSwitch.o
+ .ARM.extab.text._ZN13SectionSwitchC2EP12GPIO_TypeDeft13GPIO_PinState
+                0x00000000        0xc Core\Src\SectionSwitch.o
+ .ARM.exidx.text._ZN13SectionSwitchC2EP12GPIO_TypeDeft13GPIO_PinState
+                0x00000000        0x8 Core\Src\SectionSwitch.o
+ .text._ZN13SectionSwitchD2Ev
+                0x00000000       0x20 Core\Src\SectionSwitch.o
+ .ARM.extab.text._ZN13SectionSwitchD2Ev
+                0x00000000        0x0 Core\Src\SectionSwitch.o
+ .ARM.exidx.text._ZN13SectionSwitchD2Ev
+                0x00000000        0x8 Core\Src\SectionSwitch.o
+ .text._ZN13SectionSwitchD0Ev
+                0x00000000       0x1e Core\Src\SectionSwitch.o
+ .ARM.extab.text._ZN13SectionSwitchD0Ev
+                0x00000000        0x0 Core\Src\SectionSwitch.o
+ .ARM.exidx.text._ZN13SectionSwitchD0Ev
+                0x00000000        0x8 Core\Src\SectionSwitch.o
+ .text._ZN13SectionSwitch2onEv
+                0x00000000       0x26 Core\Src\SectionSwitch.o
+ .ARM.extab.text._ZN13SectionSwitch2onEv
+                0x00000000        0xc Core\Src\SectionSwitch.o
+ .ARM.exidx.text._ZN13SectionSwitch2onEv
+                0x00000000        0x8 Core\Src\SectionSwitch.o
+ .text._ZN13SectionSwitch3offEv
+                0x00000000       0x26 Core\Src\SectionSwitch.o
+ .ARM.extab.text._ZN13SectionSwitch3offEv
+                0x00000000        0xc Core\Src\SectionSwitch.o
+ .ARM.exidx.text._ZN13SectionSwitch3offEv
+                0x00000000        0x8 Core\Src\SectionSwitch.o
+ .text._ZN13SectionSwitch17updateRealStateONEv
+                0x00000000       0x18 Core\Src\SectionSwitch.o
+ .ARM.extab.text._ZN13SectionSwitch17updateRealStateONEv
+                0x00000000        0x0 Core\Src\SectionSwitch.o
+ .ARM.exidx.text._ZN13SectionSwitch17updateRealStateONEv
+                0x00000000        0x8 Core\Src\SectionSwitch.o
+ .rodata        0x00000000       0x28 Core\Src\SectionSwitch.o
+ .debug_info    0x00000000      0x57c Core\Src\SectionSwitch.o
+ .debug_abbrev  0x00000000      0x29c Core\Src\SectionSwitch.o
+ .debug_aranges
+                0x00000000       0x48 Core\Src\SectionSwitch.o
+ .debug_ranges  0x00000000       0x38 Core\Src\SectionSwitch.o
+ .debug_line    0x00000000      0x28c Core\Src\SectionSwitch.o
+ .debug_str     0x00000000      0x555 Core\Src\SectionSwitch.o
+ .comment       0x00000000       0x7d Core\Src\SectionSwitch.o
+ .debug_frame   0x00000000       0xf0 Core\Src\SectionSwitch.o
+ .ARM.attributes
+                0x00000000       0x33 Core\Src\SectionSwitch.o
+ .group         0x00000000       0x10 Core\Src\SupplyBranch.o
+ .group         0x00000000       0x10 Core\Src\SupplyBranch.o
+ .group         0x00000000       0x10 Core\Src\SupplyBranch.o
+ .group         0x00000000       0x10 Core\Src\SupplyBranch.o
+ .group         0x00000000       0x10 Core\Src\SupplyBranch.o
+ .group         0x00000000       0x10 Core\Src\SupplyBranch.o
+ .group         0x00000000       0x10 Core\Src\SupplyBranch.o
+ .group         0x00000000       0x10 Core\Src\SupplyBranch.o
+ .group         0x00000000       0x10 Core\Src\SupplyBranch.o
+ .group         0x00000000        0x8 Core\Src\SupplyBranch.o
+ .group         0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text          0x00000000        0x0 Core\Src\SupplyBranch.o
+ .data          0x00000000        0x0 Core\Src\SupplyBranch.o
+ .bss           0x00000000        0x0 Core\Src\SupplyBranch.o
+ .text._ZNK9ADC_Tools10getVoltageEv
+                0x00000000       0x16 Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZNK9ADC_Tools10getVoltageEv
+                0x00000000        0x0 Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZNK9ADC_Tools10getVoltageEv
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text._ZNK9ADC_Tools13getPercentageEv
+                0x00000000       0x16 Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZNK9ADC_Tools13getPercentageEv
+                0x00000000        0x0 Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZNK9ADC_Tools13getPercentageEv
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text._ZN12SupplyBranchC2Eff
+                0x00000000       0x40 Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZN12SupplyBranchC2Eff
+                0x00000000        0xc Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZN12SupplyBranchC2Eff
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text._ZN12SupplyBranchD2Ev
+                0x00000000       0x28 Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZN12SupplyBranchD2Ev
+                0x00000000        0x0 Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZN12SupplyBranchD2Ev
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text._ZN12SupplyBranchD0Ev
+                0x00000000       0x1e Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZN12SupplyBranchD0Ev
+                0x00000000        0x0 Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZN12SupplyBranchD0Ev
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text._ZN12SupplyBranch6updateEm
+                0x00000000       0x34 Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZN12SupplyBranch6updateEm
+                0x00000000        0xc Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZN12SupplyBranch6updateEm
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text._ZN12SupplyBranch14getVoltageAvrgEv
+                0x00000000       0x1e Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZN12SupplyBranch14getVoltageAvrgEv
+                0x00000000        0xc Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZN12SupplyBranch14getVoltageAvrgEv
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text._ZN12SupplyBranch17getPercentageAvrgEv
+                0x00000000       0x2a Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZN12SupplyBranch17getPercentageAvrgEv
+                0x00000000        0xc Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZN12SupplyBranch17getPercentageAvrgEv
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text._ZN12SupplyBranch13isCloseToZeroEv
+                0x00000000       0x3e Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZN12SupplyBranch13isCloseToZeroEv
+                0x00000000        0xc Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZN12SupplyBranch13isCloseToZeroEv
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text._ZN7AverageIfLh10EEC2Ev
+                0x00000000       0x18 Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZN7AverageIfLh10EEC2Ev
+                0x00000000        0x0 Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZN7AverageIfLh10EEC2Ev
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text._ZN7AverageIfLh10EED2Ev
+                0x00000000       0x14 Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZN7AverageIfLh10EED2Ev
+                0x00000000        0x0 Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZN7AverageIfLh10EED2Ev
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text._ZN7AverageIfLh10EE6insertEf
+                0x00000000       0x28 Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZN7AverageIfLh10EE6insertEf
+                0x00000000        0x0 Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZN7AverageIfLh10EE6insertEf
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text._ZN7AverageIfLh10EEclEv
+                0x00000000       0x1a Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZN7AverageIfLh10EEclEv
+                0x00000000        0x0 Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZN7AverageIfLh10EEclEv
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text._ZN7AverageIfLh10EE5clearEv
+                0x00000000       0x40 Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZN7AverageIfLh10EE5clearEv
+                0x00000000        0x0 Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZN7AverageIfLh10EE5clearEv
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text._ZN7AverageIfLh10EE12indexIterateEv
+                0x00000000       0x50 Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZN7AverageIfLh10EE12indexIterateEv
+                0x00000000        0x0 Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZN7AverageIfLh10EE12indexIterateEv
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .text._ZN7AverageIfLh10EE9calculateEv
+                0x00000000       0x60 Core\Src\SupplyBranch.o
+ .ARM.extab.text._ZN7AverageIfLh10EE9calculateEv
+                0x00000000        0x0 Core\Src\SupplyBranch.o
+ .ARM.exidx.text._ZN7AverageIfLh10EE9calculateEv
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .rodata        0x00000000       0x37 Core\Src\SupplyBranch.o
+ .rodata._ZTI9ADC_Tools
+                0x00000000        0x8 Core\Src\SupplyBranch.o
+ .rodata._ZTS9ADC_Tools
+                0x00000000        0xb Core\Src\SupplyBranch.o
+ .debug_info    0x00000000      0xa19 Core\Src\SupplyBranch.o
+ .debug_abbrev  0x00000000      0x2e5 Core\Src\SupplyBranch.o
+ .debug_aranges
+                0x00000000       0x98 Core\Src\SupplyBranch.o
+ .debug_ranges  0x00000000       0x88 Core\Src\SupplyBranch.o
+ .debug_line    0x00000000      0x371 Core\Src\SupplyBranch.o
+ .debug_str     0x00000000      0x808 Core\Src\SupplyBranch.o
+ .comment       0x00000000       0x7d Core\Src\SupplyBranch.o
+ .debug_frame   0x00000000      0x26c Core\Src\SupplyBranch.o
+ .ARM.attributes
+                0x00000000       0x33 Core\Src\SupplyBranch.o
  .text          0x00000000        0x0 Core\Src\adc.o
  .data          0x00000000        0x0 Core\Src\adc.o
  .bss           0x00000000        0x0 Core\Src\adc.o
@@ -2169,7 +2295,6 @@ Linker script and memory map
 
 LOAD d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crti.o
 LOAD d:/programs/atollic truestudio/truestudio for stm32 9.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7-m/crtbegin.o
-LOAD Core\Inc\SectionSwitch.o
 LOAD Core\Src\ADC_Tools.o
 LOAD Core\Src\AllTasks.o
 LOAD Core\Src\Average.o
@@ -2177,6 +2302,8 @@ LOAD Core\Src\BatteryManager.o
 LOAD Core\Src\HallSensor.o
 LOAD Core\Src\LedNotifier.o
 LOAD Core\Src\LipoCell.o
+LOAD Core\Src\SectionSwitch.o
+LOAD Core\Src\SupplyBranch.o
 LOAD Core\Src\adc.o
 LOAD Core\Src\dma.o
 LOAD Core\Src\freertos.o
