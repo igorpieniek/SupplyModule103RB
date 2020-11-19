@@ -101,7 +101,12 @@ void EnergyManager::update_section_data(){
 }
 
 void EnergyManager::update_switch_data(){
-
-
+	//check the "false/ positive" problem - when pin is off but all branch is still turn on
+	for(uint8_t i=0; i <SECTION_SWITCH_NUMBER -1; i++){ // -1 because main switch can't do anything when branch was turn on by slider
+		// if voltage on branch is non zero and switch state ii OFF
+		if(!( supply_branches[i]->isCloseToZero() ) && ( section_switches[i]->getState() == SectionSwitch::OFF)  ){
+			section_switches[i]->updateRealStateON();
+		}
+	}
 }
 
