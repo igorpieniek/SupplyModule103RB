@@ -19,7 +19,6 @@ public:
 	void blink( uint32_t perON);
 	void blink( uint32_t perON, uint32_t perOFF);
 
-	void process();
 
 	enum LedState{
 		OFF=0,

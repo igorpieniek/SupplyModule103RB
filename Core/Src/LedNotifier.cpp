@@ -40,13 +40,6 @@ LedNotifier::LedState LedNotifier::getState(){
 	return curState;
 }
 
-void LedNotifier::process(){
-	if(getState() == LedNotifier::BLINK){
-		toggle();
-		osDelay(getPeriod());
-
-	}
-}
 
 LedNotifier::LedNotifier(GPIO_TypeDef *port, uint16_t pin,uint8_t rev) {
 	isReversed = rev;
