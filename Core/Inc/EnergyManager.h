@@ -59,7 +59,7 @@ private:
 	SectionSwitch* section_switches[SECTION_SWITCH_NUMBER];
 
 	uint32_t rawADC[EM_DMA_NUMBER_OF_CONVERSION];
-	Section sectorsData[HALL_SENSOR_NUMBER]; //number of branches (motor included)
+	Section sectionData[HALL_SENSOR_NUMBER]; //number of branches (motor included)
 
 
 	void dma_init();

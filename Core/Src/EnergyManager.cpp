@@ -88,11 +88,11 @@ void EnergyManager::update_dma_data(){
 void EnergyManager::update_section_data(){
 	// gather all data in Section struct
 	for(uint8_t i =0; i < 4; i++){ //TODO: do smth with this "number"
-		sectorsData[i].A = hall_sensors[i]->getAmpereAvrg();
-		sectorsData[i].V = supply_branches[i]->getVoltageAvrg();
-		sectorsData[i].P =  sectorsData[i].V * sectorsData[i].A;
+		sectionData[i].A = hall_sensors[i]->getAmpereAvrg();
+		sectionData[i].V = supply_branches[i]->getVoltageAvrg();
+		sectionData[i].P =  sectionData[i].V * sectionData[i].A;
 	}
-	sectorsData[SECTION_MOTOR].A = hall_sensors[SECTION_MOTOR]->getAmpereAvrg();
+	sectionData[SECTION_MOTOR].A = hall_sensors[SECTION_MOTOR]->getAmpereAvrg();
 	//TODO: add after define batterymanager and adding to target project
 //	sectorsData[SECTION_MOTOR].V = battery_manager.getBatteryVoltage();
 //	sectorsData[SECTION_MOTOR].P = sectorsData[SECTION_MOTOR].A * sectorsData[SECTION_MOTOR].V;
@@ -108,5 +108,16 @@ void EnergyManager::update_switch_data(){
 			section_switches[i]->updateRealStateON();
 		}
 	}
+}
+
+void EnergyManager::sectionON(Section_name sec){
+	section_switches[sec]->on();
+}
+void EnergyManager::sectionOFF(Section_name sec){
+	section_switches[sec]->off();
+}
+
+EnergyManager::Section EnergyManager::getSectionData(Section_name sec){
+	return sectionData[sec];
 }
 
