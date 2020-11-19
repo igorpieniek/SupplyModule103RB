@@ -1,0 +1,4 @@
+AllTasks.cpp:27:6:void AllTasks_init()	72	static
+AllTasks.cpp:41:6:void StartBatteryManagerTask(const void*)	24	static
+AllTasks.cpp:64:6:void StartLedUpTask(const void*)	216	static
+AllTasks.cpp:82:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	16	static

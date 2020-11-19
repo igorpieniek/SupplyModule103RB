@@ -62,24 +62,30 @@ void StartBatteryManagerTask(void const * argument){
 }
 
 void StartLedUpTask(void const * argument){
+	LedNotifier led(LD2_GPIO_Port, LD2_Pin, htim4);
 	for(;;){
+		osEvent evt = osSignalWait(0,osWaitForever);
+		if(evt.status == osEventSignal ){
+			if      (evt.value.v == 0x01) led.on();
+			else if (evt.value.v == 0x02) led.off();
+			else if (evt.value.v == 0x03){
+				led.blink_config(100,400);
+			}
+			else if (evt.value.v == 0x04){
+				led.blink_process();
+			}
+		}
 
 	}
 }
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 	static uint16_t per =500;
-	if		(RXdata == 'n') led.on();
-	else if (RXdata == 'f') led.off();
-	else if (RXdata == 'b'){
-		led.blink(per);
-		per +=500;
-	}
-	else if (RXdata == 'c'){
-		if(per >500) per -=500;
-		led.blink(per);
-	}
+
+
 	HAL_UART_Receive_IT(&huart3, &RXdata, 1);
 }
+
+
 
 
