@@ -25,7 +25,7 @@ void EnergyManager::init(){
 
 
 void EnergyManager::process(){
-	//update all data
+	update_dma_data();
 }
 
 
@@ -59,7 +59,7 @@ void EnergyManager::sectionSwitch_init(){
 
 }
 
-void EnergyManager::update_all(){
+void EnergyManager::update_dma_data(){
 	/*rawADC is a table to be written by DMA. It store data in specific order:
 	 * 0. Hall_5_1
 	 * 1. Hall_5_2
@@ -71,6 +71,16 @@ void EnergyManager::update_all(){
 	 * 7. Hall_0 (MOTOR)
 	 * 8. Section_5_2
 	 */
+	hall_sensors[section_5_1]->update(rawADC[ HALL_5_1_INDEX ]);
+	hall_sensors[section_5_2]->update(rawADC[ HALL_5_2_INDEX ]);
+	hall_sensors[section_3]->update(rawADC[ HALL_3_INDEX ]);
+	hall_sensors[section_7]->update(rawADC[ HALL_7_INDEX ]);
+	hall_sensors[MOTOR_SW_INDEX]->update(rawADC[ HALL_0_INDEX ]);
+
+	supply_branches[section_5_1]->update(rawADC[ SEC_5_1_INDEX ]);
+	supply_branches[section_5_2]->update(rawADC[ SEC_5_2_INDEX ]);
+	supply_branches[section_3]->update(rawADC[ SEC_3_INDEX ]);
+	supply_branches[section_7]->update(rawADC[ SEC_7_INDEX ]);
 }
 
 

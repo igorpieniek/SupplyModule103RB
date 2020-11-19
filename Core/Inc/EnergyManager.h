@@ -30,6 +30,19 @@
 
 #define MOTOR_SW_INDEX 4 //TODO: deal with this messy method (use enum or smth)
 
+//--------DMA_indexes------------
+#define HALL_5_1_INDEX  0
+#define HALL_5_2_INDEX  1
+#define HALL_7_INDEX    2
+#define HALL_3_INDEX    5
+#define HALL_0_INDEX    7
+
+#define SEC_3_INDEX		3
+#define SEC_5_1_INDEX	4
+#define SEC_7_INDEX     6
+#define SEC_5_2_INDEX   8
+
+//-------------------------------
 
 class EnergyManager {
 private:
@@ -47,7 +60,7 @@ private:
 	void supplyBranch_init();
 	void sectionSwitch_init();
 
-	void update_all();
+	void update_dma_data();
 public:
 	struct Section{
 		float A; //Ampere
