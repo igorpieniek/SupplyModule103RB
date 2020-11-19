@@ -9,15 +9,17 @@
 #define INC_LEDNOTIFIER_H_
 
 #include "main.h"
-#include "cmsis_os.h"
+#include "gpio.h"
+#include "tim.h"
 
 
 class LedNotifier {
 public:
 	void on();
 	void off();
-	void blink( uint32_t perON);
-	void blink( uint32_t perON, uint32_t perOFF);
+	void blink_config( uint32_t perON);
+	void blink_config( uint32_t perON, uint32_t perOFF);
+	void blink_process();
 
 
 	enum LedState{
@@ -30,13 +32,12 @@ public:
 	uint32_t getPeriod();
 
 
-
-
-	LedNotifier(GPIO_TypeDef *port, uint16_t pin, uint8_t rev=0);
+	LedNotifier(GPIO_TypeDef *port, uint16_t pin,TIM_HandleTypeDef tim, uint8_t rev=0);
 	virtual ~LedNotifier();
 private:
 	GPIO_TypeDef *Port;
 	uint16_t Pin;
+	TIM_HandleTypeDef timer;
 
 	LedState curState;
 	uint32_t blinkPeriodON, blinkPeriodOFF, currPeriod;
