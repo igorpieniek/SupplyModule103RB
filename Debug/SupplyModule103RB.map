@@ -298,7 +298,7 @@ Discarded input sections
  .ARM.exidx.text._ZN13EnergyManager4initEv
                 0x00000000        0x8 Core\Src\EnergyManager.o
  .text._ZN13EnergyManager7processEv
-                0x00000000       0x16 Core\Src\EnergyManager.o
+                0x00000000       0x22 Core\Src\EnergyManager.o
  .ARM.extab.text._ZN13EnergyManager7processEv
                 0x00000000        0xc Core\Src\EnergyManager.o
  .ARM.exidx.text._ZN13EnergyManager7processEv
@@ -333,16 +333,28 @@ Discarded input sections
                 0x00000000        0xc Core\Src\EnergyManager.o
  .ARM.exidx.text._ZN13EnergyManager15update_dma_dataEv
                 0x00000000        0x8 Core\Src\EnergyManager.o
+ .text._ZN13EnergyManager19update_section_dataEv
+                0x00000000       0xc8 Core\Src\EnergyManager.o
+ .ARM.extab.text._ZN13EnergyManager19update_section_dataEv
+                0x00000000        0xc Core\Src\EnergyManager.o
+ .ARM.exidx.text._ZN13EnergyManager19update_section_dataEv
+                0x00000000        0x8 Core\Src\EnergyManager.o
+ .text._ZN13EnergyManager18update_switch_dataEv
+                0x00000000       0x12 Core\Src\EnergyManager.o
+ .ARM.extab.text._ZN13EnergyManager18update_switch_dataEv
+                0x00000000        0x0 Core\Src\EnergyManager.o
+ .ARM.exidx.text._ZN13EnergyManager18update_switch_dataEv
+                0x00000000        0x8 Core\Src\EnergyManager.o
  .rodata        0x00000000       0x28 Core\Src\EnergyManager.o
- .debug_info    0x00000000      0xa5f Core\Src\EnergyManager.o
- .debug_abbrev  0x00000000      0x2db Core\Src\EnergyManager.o
+ .debug_info    0x00000000      0xb1a Core\Src\EnergyManager.o
+ .debug_abbrev  0x00000000      0x2f3 Core\Src\EnergyManager.o
  .debug_aranges
-                0x00000000       0x68 Core\Src\EnergyManager.o
- .debug_ranges  0x00000000       0x58 Core\Src\EnergyManager.o
- .debug_line    0x00000000      0x360 Core\Src\EnergyManager.o
- .debug_str     0x00000000      0xa20 Core\Src\EnergyManager.o
+                0x00000000       0x78 Core\Src\EnergyManager.o
+ .debug_ranges  0x00000000       0x68 Core\Src\EnergyManager.o
+ .debug_line    0x00000000      0x3a4 Core\Src\EnergyManager.o
+ .debug_str     0x00000000      0xaab Core\Src\EnergyManager.o
  .comment       0x00000000       0x7d Core\Src\EnergyManager.o
- .debug_frame   0x00000000      0x18c Core\Src\EnergyManager.o
+ .debug_frame   0x00000000      0x1dc Core\Src\EnergyManager.o
  .ARM.attributes
                 0x00000000       0x33 Core\Src\EnergyManager.o
  .group         0x00000000       0x10 Core\Src\HallSensor.o

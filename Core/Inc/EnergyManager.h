@@ -10,6 +10,7 @@
 
 #include "main.h"
 #include "adc.h"
+#include "BatteryManager.h"
 #include "HallSensor.h"
 #include "SectionSwitch.h"
 #include "SupplyBranch.h"
@@ -28,7 +29,7 @@
 #define BRANCH_7_VOLTAGE 7.0f
 #define NEAR_ZERO_VOLTAGE 0.5f
 
-#define MOTOR_SW_INDEX 4 //TODO: deal with this messy method (use enum or smth)
+#define SECTION_MOTOR 4 //TODO: deal with this messy method (use enum or smth)
 
 //--------DMA_indexes------------
 #define HALL_5_1_INDEX  0
@@ -45,6 +46,12 @@
 //-------------------------------
 
 class EnergyManager {
+public:
+	struct Section{
+		float A; //Ampere
+		float V; //Voltage
+		float P; //Power
+	};
 private:
 
 	HallSensor* hall_sensors[HALL_SENSOR_NUMBER];
@@ -52,7 +59,7 @@ private:
 	SectionSwitch* section_switches[SECTION_SWITCH_NUMBER];
 
 	uint32_t rawADC[EM_DMA_NUMBER_OF_CONVERSION];
-
+	Section sectorsData[HALL_SENSOR_NUMBER]; //number of branches (motor included)
 
 
 	void dma_init();
@@ -61,12 +68,11 @@ private:
 	void sectionSwitch_init();
 
 	void update_dma_data();
+	void update_section_data();
+	void update_switch_data();
+
 public:
-	struct Section{
-		float A; //Ampere
-		float V; //Voltage
-		float P; //Power
-	};
+
 	enum Section_name{
 		section_5_1,
 		section_5_2,
