@@ -304,9 +304,9 @@ Discarded input sections
  .ARM.exidx.text._ZN13EnergyManager15hallSensor_initEv
                 0x00000000        0x8 Core\Src\EnergyManager.o
  .text._ZN13EnergyManager17supplyBranch_initEv
-                0x00000000       0x12 Core\Src\EnergyManager.o
+                0x00000000       0xac Core\Src\EnergyManager.o
  .ARM.extab.text._ZN13EnergyManager17supplyBranch_initEv
-                0x00000000        0x0 Core\Src\EnergyManager.o
+                0x00000000       0x36 Core\Src\EnergyManager.o
  .ARM.exidx.text._ZN13EnergyManager17supplyBranch_initEv
                 0x00000000        0x8 Core\Src\EnergyManager.o
  .text._ZN13EnergyManager18sectionSwitch_initEv
@@ -321,8 +321,8 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x50 Core\Src\EnergyManager.o
  .debug_ranges  0x00000000       0x40 Core\Src\EnergyManager.o
- .debug_line    0x00000000      0x280 Core\Src\EnergyManager.o
- .debug_str     0x00000000      0x4c1 Core\Src\EnergyManager.o
+ .debug_line    0x00000000      0x2a0 Core\Src\EnergyManager.o
+ .debug_str     0x00000000      0x4cb Core\Src\EnergyManager.o
  .comment       0x00000000       0x7d Core\Src\EnergyManager.o
  .debug_frame   0x00000000      0x120 Core\Src\EnergyManager.o
  .ARM.attributes

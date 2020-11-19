@@ -17,10 +17,17 @@
 #define EM_DMA_NUMBER_OF_CONVERSION  9 //5 HALL + 4 VOLTAGE MEASURMENTS (+ 1 internal temperature?)
 #define HALL_SENSOR_NUMBER 5
 #define SUPPLY_BRANCH_NUMBER 4
-#define SECTION_SWITCH_NUMBER 4
+#define SECTION_SWITCH_NUMBER 5
 
 #define HALL_ACS714_50A_SENSIVITY 0.04f
 #define HALL_ACHS7121_SENSIVITY   0.185f
+
+#define BRANCH_5_VOLTAGE 5.0f
+#define BRANCH_3_VOLTAGE 3.3f
+#define BRANCH_7_VOLTAGE 7.0f
+#define NEAR_ZERO_VOLTAGE 0.5f
+
+#define MAIN_SW_INDEX 4 //TODO: deal with this messy method (use enum or smth)
 
 
 class EnergyManager {
@@ -29,25 +36,16 @@ private:
 	HallSensor* hall_sensors[HALL_SENSOR_NUMBER];
 	SupplyBranch* supply_branches[SUPPLY_BRANCH_NUMBER];
 	SectionSwitch* section_switches[SECTION_SWITCH_NUMBER];
-	enum hall_index{
+
+	enum branch_index{
+		branch_5_1,
+		branch_5_2,
+		branch_3,
+		branch_7,
 		motor,
-		hall_5_1,
-		hall_5_2,
-		hall_3,
-		hall_7
+
 	};
-	enum supplybranch_index{
-		supply_5_1,
-		supply_5_2,
-		supply_3,
-		supply_7
-	};
-	enum switch_index{
-		switch_5_1,
-		switch_5_2,
-		switch_3,
-		switch_7
-	};
+
 
 	void hallSensor_init();
 	void supplyBranch_init();
