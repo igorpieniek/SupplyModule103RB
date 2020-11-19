@@ -2,6 +2,7 @@ EnergyManager.cpp:10:1:EnergyManager::EnergyManager()	16	static
 EnergyManager.cpp:15:1:EnergyManager::~EnergyManager()	16	static
 EnergyManager.cpp:15:1:virtual EnergyManager::~EnergyManager()	16	static
 EnergyManager.cpp:19:6:void EnergyManager::init()	16	static
-EnergyManager.cpp:25:6:void EnergyManager::hallSensor_init()	24	static
-EnergyManager.cpp:34:6:void EnergyManager::supplyBranch_init()	24	static
-EnergyManager.cpp:41:6:void EnergyManager::sectionSwitch_init()	16	static
+EnergyManager.cpp:25:6:void EnergyManager::dma_init()	16	static
+EnergyManager.cpp:29:6:void EnergyManager::hallSensor_init()	24	static
+EnergyManager.cpp:38:6:void EnergyManager::supplyBranch_init()	24	static
+EnergyManager.cpp:45:6:void EnergyManager::sectionSwitch_init()	16	static

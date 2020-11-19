@@ -17,11 +17,15 @@ EnergyManager::~EnergyManager() {
 }
 
 void EnergyManager::init(){
+	dma_init();
 	hallSensor_init();
 	supplyBranch_init();
 	sectionSwitch_init();
 }
-
+void EnergyManager::dma_init(){
+	HAL_ADC_Start(&EM_DMA_ADC_CHANNEL);
+	HAL_ADC_Start_DMA(&EM_DMA_ADC_CHANNEL, rawADC, EM_DMA_NUMBER_OF_CONVERSION);
+}
 void EnergyManager::hallSensor_init(){
 	hall_sensors[branch_5_1] = new HallSensor(HALL_ACHS7121_SENSIVITY );
 	hall_sensors[branch_5_2] = new HallSensor(HALL_ACHS7121_SENSIVITY );

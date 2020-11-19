@@ -9,11 +9,12 @@
 #define INC_ENERGYMANAGER_H_
 
 #include "main.h"
+#include "adc.h"
 #include "HallSensor.h"
 #include "SectionSwitch.h"
 #include "SupplyBranch.h"
 
-
+#define EM_DMA_ADC_CHANNEL hadc1 //TODO: TARGET HADC2
 #define EM_DMA_NUMBER_OF_CONVERSION  9 //5 HALL + 4 VOLTAGE MEASURMENTS (+ 1 internal temperature?)
 #define HALL_SENSOR_NUMBER 5
 #define SUPPLY_BRANCH_NUMBER 4
@@ -37,6 +38,8 @@ private:
 	SupplyBranch* supply_branches[SUPPLY_BRANCH_NUMBER];
 	SectionSwitch* section_switches[SECTION_SWITCH_NUMBER];
 
+	uint32_t rawADC[EM_DMA_NUMBER_OF_CONVERSION];
+
 	enum branch_index{
 		branch_5_1,
 		branch_5_2,
@@ -46,7 +49,7 @@ private:
 
 	};
 
-
+	void dma_init();
 	void hallSensor_init();
 	void supplyBranch_init();
 	void sectionSwitch_init();
