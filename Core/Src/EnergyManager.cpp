@@ -22,6 +22,14 @@ void EnergyManager::init(){
 	supplyBranch_init();
 	sectionSwitch_init();
 }
+
+
+void EnergyManager::process(){
+	//update all data
+}
+
+
+
 void EnergyManager::dma_init(){
 	HAL_ADC_Start(&EM_DMA_ADC_CHANNEL);
 	HAL_ADC_Start_DMA(&EM_DMA_ADC_CHANNEL, rawADC, EM_DMA_NUMBER_OF_CONVERSION);
@@ -50,3 +58,19 @@ void EnergyManager::sectionSwitch_init(){
 //	section_switches[section_main] =   new SectionSwitch(SW_MAIN_GPIO_Port, SW_MAIN_Pin);
 
 }
+
+void EnergyManager::update_all(){
+	/*rawADC is a table to be written by DMA. It store data in specific order:
+	 * 0. Hall_5_1
+	 * 1. Hall_5_2
+	 * 2. Hall_7
+	 * 3. Section_3
+	 * 4. Section_5_1
+	 * 5. Hall_3
+	 * 6. Section_7
+	 * 7. Hall_0 (MOTOR)
+	 * 8. Section_5_2
+	 */
+}
+
+

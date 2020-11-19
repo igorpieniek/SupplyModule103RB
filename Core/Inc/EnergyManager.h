@@ -46,6 +46,8 @@ private:
 	void hallSensor_init();
 	void supplyBranch_init();
 	void sectionSwitch_init();
+
+	void update_all();
 public:
 	struct Section{
 		float A; //Ampere
@@ -65,6 +67,10 @@ public:
 	void process();
 
 	void sectionON(Section_name); //to turn on specyfic section
+	void sectionOFF(Section_name);
+
+	Section getSectionData(Section_name);
+	SectionSwitch::Section_state getSectionState(Section_name);
 
 
 
