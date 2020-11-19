@@ -28,7 +28,7 @@
 #define BRANCH_7_VOLTAGE 7.0f
 #define NEAR_ZERO_VOLTAGE 0.5f
 
-#define MAIN_SW_INDEX 4 //TODO: deal with this messy method (use enum or smth)
+#define MOTOR_SW_INDEX 4 //TODO: deal with this messy method (use enum or smth)
 
 
 class EnergyManager {
@@ -40,14 +40,7 @@ private:
 
 	uint32_t rawADC[EM_DMA_NUMBER_OF_CONVERSION];
 
-	enum branch_index{
-		branch_5_1,
-		branch_5_2,
-		branch_3,
-		branch_7,
-		motor,
 
-	};
 
 	void dma_init();
 	void hallSensor_init();
@@ -59,7 +52,21 @@ public:
 		float V; //Voltage
 		float P; //Power
 	};
+	enum Section_name{
+		section_5_1,
+		section_5_2,
+		section_3,
+		section_7,
+		section_main
+
+	};
+
 	void init();
+	void process();
+
+	void sectionON(Section_name); //to turn on specyfic section
+
+
 
 	EnergyManager();
 	virtual ~EnergyManager();
