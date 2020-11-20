@@ -22,6 +22,9 @@ void LedNotifier::off(){
 
 void LedNotifier::toggle(){
 	HAL_GPIO_TogglePin(Port,Pin);
+}
+
+void LedNotifier::toggle_blinkstate(){
 	if (blink_state == blinkOff) blink_state = blinkOn;
 	else 						 blink_state = blinkOff;
 }
@@ -36,36 +39,38 @@ void LedNotifier::blink_config( uint32_t perON){
 }
 
 void LedNotifier::blink_config( uint32_t perON, uint32_t perOFF){
-	off();
+	// initial state of led in blinking mode
+	on();
+	// update led state
 	curState = BLINK;
-	blinkPeriodON = perON;
-	blinkPeriodOFF = perOFF;
-	currPeriod = perOFF;
 	blink_state = blinkOn;
 
-//	timer->Instance->ARR =perON;
-	__HAL_TIM_SET_AUTORELOAD(timer, perON);
-	HAL_TIM_Base_Start_IT(timer);
-	HAL_GPIO_WritePin(Port,Pin, getONPinState());
+	// saving required periods
+	blinkPeriodON = perON;
+	blinkPeriodOFF = perOFF;
+
+	timerSTART();
+
 
 }
 void LedNotifier::blink_process(){
 	// process called by timer interrupt (not directly)
 	if(curState == BLINK){
-
 		timerSTOP();
 		toggle();
-//		timer->Instance->ARR = getPeriod();
-		__HAL_TIM_SET_AUTORELOAD(timer, getPeriod());
-		HAL_TIM_Base_Start_IT(timer);
-
-
+		toggle_blinkstate();
+		timerSTART();
 	}
 }
 
 void LedNotifier::timerSTOP(){
 	HAL_TIM_Base_Stop_IT(timer);
 	__HAL_TIM_SetCounter(timer, 0 );
+}
+
+void LedNotifier::timerSTART(){
+	__HAL_TIM_SET_AUTORELOAD(timer, getPeriod());
+	HAL_TIM_Base_Start_IT(timer);
 }
 
 LedNotifier::LedState LedNotifier::getState(){

@@ -40,7 +40,7 @@ private:
 	TIM_HandleTypeDef* timer;
 
 	LedState curState;
-	uint32_t blinkPeriodON, blinkPeriodOFF, currPeriod;
+	uint32_t blinkPeriodON, blinkPeriodOFF;
 
 	enum BlinkState{
 		blinkOff, blinkOn
@@ -53,6 +53,8 @@ private:
 	GPIO_PinState getOFFPinState(){return offState; };
 
 	void timerSTOP();
+	void timerSTART();
+	void toggle_blinkstate();
 	void toggle();
 
 
