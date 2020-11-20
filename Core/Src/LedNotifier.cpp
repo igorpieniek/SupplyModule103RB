@@ -8,12 +8,16 @@
 #include <LedNotifier.h>
 
 void LedNotifier::on(){
-	HAL_GPIO_WritePin(Port,Pin, getONPinState());
+	if(curState == BLINK) timerSTOP();
 	curState = ON;
+	HAL_GPIO_WritePin(Port,Pin, getONPinState());
+
 }
 void LedNotifier::off(){
-	HAL_GPIO_WritePin(Port,Pin, getOFFPinState());
+	if(curState == BLINK) timerSTOP();
 	curState = OFF;
+	HAL_GPIO_WritePin(Port,Pin, getOFFPinState());
+
 }
 
 void LedNotifier::toggle(){
@@ -36,21 +40,29 @@ void LedNotifier::blink_config( uint32_t perON, uint32_t perOFF){
 	blinkPeriodOFF = perOFF;
 	currPeriod = perOFF;
 
-	timer.Instance->ARR =perON;
-	HAL_TIM_Base_Start_IT(&timer);
+//	timer->Instance->ARR =perON;
+	__HAL_TIM_SET_AUTORELOAD(timer, perON);
+	HAL_TIM_Base_Start_IT(timer);
+	HAL_GPIO_WritePin(Port,Pin, getONPinState());
 
 }
 void LedNotifier::blink_process(){
 	// process called by timer interrupt (not directly)
 	if(curState == BLINK){
-		HAL_TIM_Base_Stop_IT(&timer);
-		__HAL_TIM_SetCounter(&timer, 0 );
 
+		timerSTOP();
 		toggle();
-		timer.Instance->ARR = getPeriod();
-		HAL_TIM_Base_Start_IT(&timer);
+//		timer->Instance->ARR = getPeriod();
+		__HAL_TIM_SET_AUTORELOAD(timer, getPeriod());
+		HAL_TIM_Base_Start_IT(timer);
+
 
 	}
+}
+
+void LedNotifier::timerSTOP(){
+	HAL_TIM_Base_Stop_IT(timer);
+	__HAL_TIM_SetCounter(timer, 0 );
 }
 
 LedNotifier::LedState LedNotifier::getState(){
@@ -58,7 +70,7 @@ LedNotifier::LedState LedNotifier::getState(){
 }
 
 
-LedNotifier::LedNotifier(GPIO_TypeDef *port, uint16_t pin,TIM_HandleTypeDef tim,uint8_t rev):
+LedNotifier::LedNotifier(GPIO_TypeDef *port, uint16_t pin,TIM_HandleTypeDef* tim,uint8_t rev):
 	Port(port), Pin(pin), timer(tim){
 	isReversed = rev;
 	if(isReversed){ onState = GPIO_PIN_RESET; offState= GPIO_PIN_SET;}

@@ -62,25 +62,38 @@ void StartBatteryManagerTask(void const * argument){
 }
 
 void StartLedUpTask(void const * argument){
-	LedNotifier led(LD2_GPIO_Port, LD2_Pin, htim4);
+	LedNotifier led(LD2_GPIO_Port, LD2_Pin, &htim4);
+
 	for(;;){
-		osEvent evt = osSignalWait(0,osWaitForever);
-		if(evt.status == osEventSignal ){
-			if      (evt.value.v == 0x01) led.on();
-			else if (evt.value.v == 0x02) led.off();
-			else if (evt.value.v == 0x03){
-				led.blink_config(100,400);
+		osEvent evt = osSignalWait(0x01 | 0x02 | 0x04| 0x08,osWaitForever);
+			if      (evt.value.signals == 0x01){
+				led.on();
+
 			}
-			else if (evt.value.v == 0x04){
+			else if (evt.value.signals == 0x02){
+				led.off();
+
+			}
+			else if (evt.value.signals == 0x04){
+				led.blink_config(1000,100);
+
+			}
+			else if (evt.value.signals== 0x08){
 				led.blink_process();
+
 			}
-		}
+
+
+		osDelay(50);
 
 	}
 }
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
-	static uint16_t per =500;
+	//static uint16_t per =500;
+	if		(RXdata == 'n') osSignalSet(LedUpHandle, 0x01);
+	else if(RXdata == 'f') osSignalSet(LedUpHandle, 0x02);
+	else if(RXdata == 'b') osSignalSet(LedUpHandle, 0x04);
 
 
 	HAL_UART_Receive_IT(&huart3, &RXdata, 1);
@@ -94,7 +107,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     HAL_IncTick();
   }
   if(htim->Instance == TIM4){
-	  osSignalSet(LedUpHandle, 0x03);
+	  osSignalSet(LedUpHandle, 0x08);
   }
 
 }

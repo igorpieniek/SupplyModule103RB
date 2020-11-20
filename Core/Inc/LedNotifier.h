@@ -32,21 +32,25 @@ public:
 	uint32_t getPeriod();
 
 
-	LedNotifier(GPIO_TypeDef *port, uint16_t pin,TIM_HandleTypeDef tim, uint8_t rev=0);
+	LedNotifier(GPIO_TypeDef *port, uint16_t pin,TIM_HandleTypeDef* tim, uint8_t rev=0);
 	virtual ~LedNotifier();
 private:
 	GPIO_TypeDef *Port;
 	uint16_t Pin;
-	TIM_HandleTypeDef timer;
+	TIM_HandleTypeDef* timer;
 
 	LedState curState;
 	uint32_t blinkPeriodON, blinkPeriodOFF, currPeriod;
+
+
 
 	uint8_t isReversed;
 	GPIO_PinState onState; //state consider as ON
 	GPIO_PinState offState; //state consider as OFF
 	GPIO_PinState getONPinState(){ return onState;};
 	GPIO_PinState getOFFPinState(){return offState; };
+
+	void timerSTOP();
 	void toggle();
 
 
