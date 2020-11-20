@@ -42,7 +42,9 @@ private:
 	LedState curState;
 	uint32_t blinkPeriodON, blinkPeriodOFF, currPeriod;
 
-
+	enum BlinkState{
+		blinkOff, blinkOn
+	}blink_state;
 
 	uint8_t isReversed;
 	GPIO_PinState onState; //state consider as ON

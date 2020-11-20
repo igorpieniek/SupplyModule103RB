@@ -22,13 +22,15 @@ void LedNotifier::off(){
 
 void LedNotifier::toggle(){
 	HAL_GPIO_TogglePin(Port,Pin);
+	if (blink_state == blinkOff) blink_state = blinkOn;
+	else 						 blink_state = blinkOff;
 }
 
 uint32_t LedNotifier::getPeriod(){
-	if (currPeriod == blinkPeriodON) currPeriod = blinkPeriodOFF;
-	else currPeriod = blinkPeriodON;
-	return currPeriod;
+	if(blink_state == blinkOff) return blinkPeriodOFF;
+	else 						return blinkPeriodON;
 }
+
 void LedNotifier::blink_config( uint32_t perON){
 	blink_config(perON,perON);
 }
@@ -39,6 +41,7 @@ void LedNotifier::blink_config( uint32_t perON, uint32_t perOFF){
 	blinkPeriodON = perON;
 	blinkPeriodOFF = perOFF;
 	currPeriod = perOFF;
+	blink_state = blinkOn;
 
 //	timer->Instance->ARR =perON;
 	__HAL_TIM_SET_AUTORELOAD(timer, perON);
