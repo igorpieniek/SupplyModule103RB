@@ -12,7 +12,13 @@
 #include "gpio.h"
 #include "tim.h"
 
-
+/*
+ * To correctly define object of this class you have to define
+ * one timer in OnePulse mode.
+ * To make led blink first you had to define use blink_config to determine
+ * periods. Next blink_process has to be called by interrupt function: PeriodElapsed.
+ * It should call blink_process directly or by osSignal method
+ */
 class LedNotifier {
 public:
 	void on();
@@ -29,8 +35,6 @@ public:
 	};
 
 	LedState getState();
-	uint32_t getPeriod();
-
 
 	LedNotifier(GPIO_TypeDef *port, uint16_t pin,TIM_HandleTypeDef* tim, uint8_t rev=0);
 	virtual ~LedNotifier();
@@ -39,12 +43,12 @@ private:
 	uint16_t Pin;
 	TIM_HandleTypeDef* timer;
 
-	LedState curState;
-	uint32_t blinkPeriodON, blinkPeriodOFF;
+	uint32_t blinkPeriodON, blinkPeriodOFF; // blinking periods
 
 	enum BlinkState{
 		blinkOff, blinkOn
 	}blink_state;
+	LedState curState;
 
 	uint8_t isReversed;
 	GPIO_PinState onState; //state consider as ON
@@ -52,6 +56,7 @@ private:
 	GPIO_PinState getONPinState(){ return onState;};
 	GPIO_PinState getOFFPinState(){return offState; };
 
+	uint32_t getPeriod();
 	void timerSTOP();
 	void timerSTART();
 	void toggle_blinkstate();

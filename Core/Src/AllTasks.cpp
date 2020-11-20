@@ -75,7 +75,7 @@ void StartLedUpTask(void const * argument){
 
 			}
 			else if (evt.value.signals == 0x04){
-				led.blink_config(1000,100);
+				led.blink_config(100);
 
 			}
 			else if (evt.value.signals== 0x08){
@@ -91,9 +91,9 @@ void StartLedUpTask(void const * argument){
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 	//static uint16_t per =500;
-	if		(RXdata == 'n') osSignalSet(LedUpHandle, 0x01);
-	else if(RXdata == 'f') osSignalSet(LedUpHandle, 0x02);
-	else if(RXdata == 'b') osSignalSet(LedUpHandle, 0x04);
+	if	   (RXdata == 'n') osSignalSet(LedUpHandle, 1 << 0);
+	else if(RXdata == 'f') osSignalSet(LedUpHandle, 1 << 1);
+	else if(RXdata == 'b') osSignalSet(LedUpHandle, 1 << 2);
 
 
 	HAL_UART_Receive_IT(&huart3, &RXdata, 1);
