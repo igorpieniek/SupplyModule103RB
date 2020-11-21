@@ -7,10 +7,10 @@ SupplyBranch.cpp:19:6:void SupplyBranch::update(uint32_t)	24	static
 SupplyBranch.cpp:24:7:virtual float SupplyBranch::getVoltageAvrg()	16	static
 SupplyBranch.cpp:28:7:virtual float SupplyBranch::getPercentageAvrg()	24	static
 SupplyBranch.cpp:34:9:uint8_t SupplyBranch::isCloseToZero()	24	static
-Average.h:27:2:Average<T, s>::Average() [with T = float; unsigned char s = 10u]	16	static
-Average.h:30:2:Average<T, s>::~Average() [with T = float; unsigned char s = 10u]	16	static
-Average.h:34:7:void Average<T, s>::insert(T) [with T = float; unsigned char s = 10u]	16	static
-Average.h:45:5:T& Average<T, s>::operator()() [with T = float; unsigned char s = 10u]	16	static
-Average.h:38:7:void Average<T, s>::clear() [with T = float; unsigned char s = 10u]	24	static
-Average.h:12:7:void Average<T, s>::indexIterate() [with T = float; unsigned char s = 10u]	16	static
-Average.h:20:7:void Average<T, s>::calculate() [with T = float; unsigned char s = 10u]	24	static
+Average.h:32:2:Average<T, s>::Average() [with T = float; unsigned char s = 10u]	16	static
+Average.h:35:2:Average<T, s>::~Average() [with T = float; unsigned char s = 10u]	16	static
+Average.h:41:7:void Average<T, s>::insert(T) [with T = float; unsigned char s = 10u]	16	static
+Average.h:61:5:T& Average<T, s>::operator()() [with T = float; unsigned char s = 10u]	16	static
+Average.h:47:7:void Average<T, s>::clear() [with T = float; unsigned char s = 10u]	24	static
+Average.h:17:7:void Average<T, s>::indexIterate() [with T = float; unsigned char s = 10u]	16	static
+Average.h:25:7:void Average<T, s>::calculate() [with T = float; unsigned char s = 10u]	24	static

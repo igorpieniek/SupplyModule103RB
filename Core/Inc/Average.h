@@ -1,6 +1,12 @@
 
 #include "main.h"
 
+/// **Moving average**\n
+/// Class for objects which gather specified data and calculate moving average.
+/// During first fill of object, average will be calculate in range <0, n>,
+/// where **n** is a number of elements inserted to this moment -
+/// even if **n < s** (where **s** is a fixed  maximal number of data)
+
 template<typename T , uint8_t s> class Average
 {
 private:
@@ -31,17 +37,28 @@ public:
 
 	}
 
+	///  Method to add value that will be take into consideration during average calculation
+	///  @param val  value that will be added to average
 	void insert(T val){
 		elem[currentIndex] = val;
 		indexIterate();
 	}
+
+	/// Clear average buffer
 	void clear(){
 		currentIndex = 0;
 		numberOfElem = 0;
 		for (uint8_t i = 0; i < s; i++) elem[i] = T();
 	}
-	int size()const { return s; };
+
+	/// Function to return maximal number of elements in average
+	/// @return uint8_t size - maximal number of elements in average
+	uint8_t size()const { return s; };
 	//T& getAvrage()const{ return avrg;};
+
+
+	/// Overload of () operator
+	/// @return average of all data collected in object
 	T& operator()(){
 		this->calculate();
 		return this->avrg;

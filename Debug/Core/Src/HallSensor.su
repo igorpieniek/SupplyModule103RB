@@ -10,10 +10,10 @@ HallSensor.cpp:24:7:float HallSensor::getAmpereAvrg()	16	static
 HallSensor.cpp:28:7:float HallSensor::getPercentage()	16	static
 HallSensor.cpp:32:6:void HallSensor::convertToAmperes()	16	static
 HallSensor.cpp:36:6:void HallSensor::updateAmperesAvrg()	16	static
-Average.h:27:2:Average<T, s>::Average() [with T = float; unsigned char s = 10u]	16	static
-Average.h:30:2:Average<T, s>::~Average() [with T = float; unsigned char s = 10u]	16	static
-Average.h:45:5:T& Average<T, s>::operator()() [with T = float; unsigned char s = 10u]	16	static
-Average.h:34:7:void Average<T, s>::insert(T) [with T = float; unsigned char s = 10u]	16	static
-Average.h:38:7:void Average<T, s>::clear() [with T = float; unsigned char s = 10u]	24	static
-Average.h:20:7:void Average<T, s>::calculate() [with T = float; unsigned char s = 10u]	24	static
-Average.h:12:7:void Average<T, s>::indexIterate() [with T = float; unsigned char s = 10u]	16	static
+Average.h:32:2:Average<T, s>::Average() [with T = float; unsigned char s = 10u]	16	static
+Average.h:35:2:Average<T, s>::~Average() [with T = float; unsigned char s = 10u]	16	static
+Average.h:61:5:T& Average<T, s>::operator()() [with T = float; unsigned char s = 10u]	16	static
+Average.h:41:7:void Average<T, s>::insert(T) [with T = float; unsigned char s = 10u]	16	static
+Average.h:47:7:void Average<T, s>::clear() [with T = float; unsigned char s = 10u]	24	static
+Average.h:25:7:void Average<T, s>::calculate() [with T = float; unsigned char s = 10u]	24	static
+Average.h:17:7:void Average<T, s>::indexIterate() [with T = float; unsigned char s = 10u]	16	static
