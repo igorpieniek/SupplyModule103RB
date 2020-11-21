@@ -12,30 +12,55 @@
 #include "gpio.h"
 #include "tim.h"
 
-/*
- * To correctly define object of this class you have to define
- * one timer in OnePulse mode.
- * To make led blink first you had to define use blink_config to determine
- * periods. Next blink_process has to be called by interrupt function: PeriodElapsed.
- * It should call blink_process directly or by osSignal method
+/** Tool intended for led's, it provide typical behaviours for notifier - ON/OFF or blink.
+ * To correctly define object of this class you have to define one timer in **OnePulse mode**.
+ * To make led blink first you had to define use blink_config() to determine
+ * periods. Next blink_process() has to be called by interrupt function: HAL_TIM_PeriodElapsed().
+ * It should call blink_process() directly or by osSignal method.
+ *
+ * Led blinking could be stopped by using on() / off() method
  */
 class LedNotifier {
 public:
+	/** Put LED into ON state*/
 	void on();
+
+	/** Put LED into OFF state*/
 	void off();
+
+	/** Put LED into BLINK state, and configure behaviour
+	 * @param perON - uint32_t value in miliseconds - configure the same time for ON and OFF state
+	 */
 	void blink_config( uint32_t perON);
+
+	/** Put LED into BLINK state, and configure behaviour
+	 * @param perON - uint32_t value in miliseconds - configure time of LED ON state
+	 * @param perOFF - uint32_t value in miliseconds - configure time of LED OFF state
+	 */
 	void blink_config( uint32_t perON, uint32_t perOFF);
+
+	/** Process of led blinking.
+	 * Function that should be called by HAL_TIM_PeriodElapsed() function in any form to work properly.
+	 * @warning It won't work if blink_config() function wasn't called before
+	 */
 	void blink_process();
 
-
+	/** Enum to specify state of lednotifier object */
 	enum LedState{
-		OFF=0,
-		ON,
-		BLINK
+		OFF=0, /**< in this state led should be turn off  */
+		ON,    /**< in this state led should be turn on  */
+		BLINK  /**< in this state led should blinking  */
 	};
-
+	/** Return current object state using LedState() */
 	LedState getState();
 
+	/**
+	 * @param *port - GPIO_TypeDef value - it define port of using pin
+	 * @param pin - uint16_t value - pin definition
+	 * @param tim - TIM_HandleTypeDef value - timer number eg. htim1
+	 * @param rev - uint8_t flag (optional) normally 0, but it should be set as 1 if there is reversed logic -
+	 *  eg. high state on pin -> led is turn off
+	 */
 	LedNotifier(GPIO_TypeDef *port, uint16_t pin,TIM_HandleTypeDef* tim, uint8_t rev=0);
 	virtual ~LedNotifier();
 private:
@@ -43,24 +68,26 @@ private:
 	uint16_t Pin;
 	TIM_HandleTypeDef* timer;
 
-	uint32_t blinkPeriodON, blinkPeriodOFF; // blinking periods
+	uint32_t blinkPeriodON, blinkPeriodOFF; /** blinking periods */
 
 	enum BlinkState{
 		blinkOff, blinkOn
 	}blink_state;
+
 	LedState curState;
 
-	uint8_t isReversed;
-	GPIO_PinState onState; //state consider as ON
-	GPIO_PinState offState; //state consider as OFF
-	GPIO_PinState getONPinState(){ return onState;};
-	GPIO_PinState getOFFPinState(){return offState; };
+	uint8_t isReversed;   								/** flag of reversed led logic */
+	GPIO_PinState onState; 								/** state consider as ON */
+	GPIO_PinState offState; 							/** state consider as OFF */
+	GPIO_PinState getONPinState(){ return onState;};  	/** return real ON state */
+	GPIO_PinState getOFFPinState(){return offState; }; 	/** return real OFF state */
 
-	uint32_t getPeriod();
-	void timerSTOP();
-	void timerSTART();
-	void toggle_blinkstate();
-	void toggle();
+	// Additional function need in blinking process
+	uint32_t getPeriod();		/** return current period in blinking process: blinkPeriodON / blinkPeriodOFF */
+	void timerSTOP();			/** stop timer and zeroing CNT register */
+	void timerSTART();			/** configure timer autoreload value and start timer */
+	void toggle_blinkstate();	/** toggle current blink_state (enum BlinkState) */
+	void toggle();				/** toggle led pin state */
 
 
 };

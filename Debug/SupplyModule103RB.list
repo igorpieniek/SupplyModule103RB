@@ -33,11 +33,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  14 .debug_ranges 00001408  00000000  00000000  0003fb88  2**3
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_line   00009aea  00000000  00000000  00040f90  2**0
+ 15 .debug_line   00009aec  00000000  00000000  00040f90  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_str    000063cf  00000000  00000000  0004aa7a  2**0
+ 16 .debug_str    000063cf  00000000  00000000  0004aa7c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .comment      0000007c  00000000  00000000  00050e49  2**0
+ 17 .comment      0000007c  00000000  00000000  00050e4b  2**0
                   CONTENTS, READONLY
  18 .debug_frame  00003d2c  00000000  00000000  00050ec8  2**2
                   CONTENTS, READONLY, DEBUGGING
@@ -2014,9 +2014,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	LedState curState;
 
 	uint8_t isReversed;
-	GPIO_PinState onState; //state consider as ON
-	GPIO_PinState offState; //state consider as OFF
-	GPIO_PinState getONPinState(){ return onState;};
+	GPIO_PinState onState; /** state consider as ON */
+	GPIO_PinState offState; /** state consider as OFF */
+	GPIO_PinState getONPinState(){ return onState;};  /** return real ON state */
  800124c:	b480      	push	{r7}
  800124e:	b083      	sub	sp, #12
  8001250:	af00      	add	r7, sp, #0
@@ -2030,7 +2030,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
  8001260:	4770      	bx	lr
 
 08001262 <_ZN11LedNotifier14getOFFPinStateEv>:
-	GPIO_PinState getOFFPinState(){return offState; };
+	GPIO_PinState getOFFPinState(){return offState; }; /** return real OFF state */
  8001262:	b480      	push	{r7}
  8001264:	b083      	sub	sp, #12
  8001266:	af00      	add	r7, sp, #0
