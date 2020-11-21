@@ -403,7 +403,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0xb0 Core\Src\HallSensor.o
  .debug_ranges  0x00000000       0xa0 Core\Src\HallSensor.o
- .debug_line    0x00000000      0x396 Core\Src\HallSensor.o
+ .debug_line    0x00000000      0x399 Core\Src\HallSensor.o
  .debug_str     0x00000000      0x888 Core\Src\HallSensor.o
  .comment       0x00000000       0x7d Core\Src\HallSensor.o
  .debug_frame   0x00000000      0x2d8 Core\Src\HallSensor.o
@@ -525,7 +525,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x78 Core\Src\LipoCell.o
  .debug_ranges  0x00000000       0x68 Core\Src\LipoCell.o
- .debug_line    0x00000000      0x310 Core\Src\LipoCell.o
+ .debug_line    0x00000000      0x313 Core\Src\LipoCell.o
  .debug_str     0x00000000      0x731 Core\Src\LipoCell.o
  .comment       0x00000000       0x7d Core\Src\LipoCell.o
  .debug_frame   0x00000000      0x1d8 Core\Src\LipoCell.o
@@ -702,7 +702,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x98 Core\Src\SupplyBranch.o
  .debug_ranges  0x00000000       0x88 Core\Src\SupplyBranch.o
- .debug_line    0x00000000      0x371 Core\Src\SupplyBranch.o
+ .debug_line    0x00000000      0x374 Core\Src\SupplyBranch.o
  .debug_str     0x00000000      0x808 Core\Src\SupplyBranch.o
  .comment       0x00000000       0x7d Core\Src\SupplyBranch.o
  .debug_frame   0x00000000      0x26c Core\Src\SupplyBranch.o

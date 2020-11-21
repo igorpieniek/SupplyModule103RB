@@ -1,6 +1,6 @@
-ADC_Tools.h:10:16:virtual float ADC_Tools::getVoltageAvrg()	16	static
-ADC_Tools.h:11:16:virtual float ADC_Tools::getPercentage() const	16	static
-ADC_Tools.h:12:16:virtual float ADC_Tools::getPercentageAvrg()	16	static
+ADC_Tools.h:25:16:virtual float ADC_Tools::getVoltageAvrg()	16	static
+ADC_Tools.h:32:16:virtual float ADC_Tools::getPercentage() const	16	static
+ADC_Tools.h:38:16:virtual float ADC_Tools::getPercentageAvrg()	16	static
 ADC_Tools.cpp:6:1:ADC_Tools::ADC_Tools(float, float, uint32_t)	24	static
 ADC_Tools.cpp:20:6:void ADC_Tools::updateMeasurments(uint32_t)	16	static
 ADC_Tools.cpp:26:7:float ADC_Tools::convertToVoltage(uint32_t)	24	static
