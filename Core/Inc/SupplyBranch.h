@@ -18,7 +18,7 @@
  */
 class SupplyBranch: public ADC_Tools {
 private:
-	Average<float, 10> avrg;
+	Average<float, AVERAGE_SIZE_SUPPLYBRANCH> avrg;
 	float margin;
 
 public:
@@ -46,9 +46,6 @@ public:
 	SupplyBranch(float max, float marg = SUPPLYBRANCH_VOLTAGE_MARGIN);
 	virtual ~SupplyBranch();
 
-
-	Average<float, AVERAGE_SIZE_SUPPLYBRANCH> avrg;
-	float margin;
 
 };
 

@@ -1,4 +1,4 @@
-SectionSwitch.h:22:16:SectionSwitch::Section_state SectionSwitch::getState() const	16	static
+SectionSwitch.h:30:16:SectionSwitch::Section_state SectionSwitch::getState() const	16	static
 EnergyManager.cpp:10:1:EnergyManager::EnergyManager()	16	static
 EnergyManager.cpp:15:1:EnergyManager::~EnergyManager()	16	static
 EnergyManager.cpp:15:1:virtual EnergyManager::~EnergyManager()	16	static
