@@ -16,7 +16,6 @@ private:
 	Average<float, AVERAGE_SIZE_LIPO > avrg;
 public:
 	/** Define initial parameters, also connected with ADC_Tools(max, min) where min = max - #CELL_MAX_VOLTAGE_DROP
-	 *
 	 * @param max - float value that define maximum voltage
 	 */
 	LipoCell(float max);

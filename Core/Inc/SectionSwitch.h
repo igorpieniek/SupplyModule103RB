@@ -11,21 +11,41 @@
 #include "main.h"
 #include "gpio.h"
 
+/** Tools for switching ON / OFF specific supply branch.
+ * It help in easy way to set branch in right state. It solve the
+ * problem of branch state - when pin is set to OFF but branch is still ON because
+ * of mechanical slider switch -updateRealStateON()
+ */
 class SectionSwitch {
 public:
 
+	/** To specify current state of supply branch*/
 	enum Section_state{
 		OFF,
 		ON,
-		ON_BY_SLIDER // SECTION PIN IS OFF BUT SLIDER SWITCH TURN ON SUPPLYBRANCH
+		ON_BY_SLIDER /** state when section pin is set to OFF but mechanical switch was turned ON */
 	};
+
+	/**@return current state of supply branch in Section_state enum */
 	Section_state getState()const {return realState;};
+
+	/**Turn branch ON and change internal state*/
 	void on();
+	/**Turn branch ON and change internal state*/
 	void off();
-	void updateRealStateON(); //to solve problem of current istate when pin state = OFF, but switch is ON
 
+	/**Change internal state to real one.
+	 *  It update info about supply branch, but without changing pin state to ON
+	 *  @warning It must be called when current state is OFF, but branch voltage is higher than 0V !
+	 *  */
+	void updateRealStateON();
 
-	SectionSwitch(GPIO_TypeDef *, uint16_t pin, GPIO_PinState st = GPIO_PIN_SET );
+	/**
+	 * @param port - GPIO_TypeDef* - pin port
+	 * @param pin - uint16_t
+	 * @param st - GPIO_PinState (optional) - initial state of supply branch - normally ON
+	 */
+	SectionSwitch(GPIO_TypeDef* port , uint16_t pin, GPIO_PinState st = GPIO_PIN_SET );
 	virtual ~SectionSwitch();
 
 

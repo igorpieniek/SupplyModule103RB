@@ -2013,10 +2013,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 0800124c <_ZN11LedNotifier13getONPinStateEv>:
 	LedState curState;
 
-	uint8_t isReversed;
-	GPIO_PinState onState; /** state consider as ON */
-	GPIO_PinState offState; /** state consider as OFF */
-	GPIO_PinState getONPinState(){ return onState;};  /** return real ON state */
+	uint8_t isReversed;   								/** flag of reversed led logic */
+	GPIO_PinState onState; 								/** state consider as ON */
+	GPIO_PinState offState; 							/** state consider as OFF */
+	GPIO_PinState getONPinState(){ return onState;};  	/** return real ON state */
  800124c:	b480      	push	{r7}
  800124e:	b083      	sub	sp, #12
  8001250:	af00      	add	r7, sp, #0
@@ -2030,7 +2030,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
  8001260:	4770      	bx	lr
 
 08001262 <_ZN11LedNotifier14getOFFPinStateEv>:
-	GPIO_PinState getOFFPinState(){return offState; }; /** return real OFF state */
+	GPIO_PinState getOFFPinState(){return offState; }; 	/** return real OFF state */
  8001262:	b480      	push	{r7}
  8001264:	b083      	sub	sp, #12
  8001266:	af00      	add	r7, sp, #0

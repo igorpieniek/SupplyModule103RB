@@ -27,11 +27,11 @@ float BatteryManager::getBatteryLevel(){
 	return cells[cell4]->getPercentageAvrg(); //TODO: calibrate percents later; wrong in this form
 }
 
-float BatteryManager::getCellVoltage(uint8_t index){
-	if( index <0 || index > LIPOCELLS_NUMBER ) return INDEX_OUT_OF_RANGE_VALUE; // out of index
-	if (index == cell1) return cells[cell1]->getVoltageAvrg();					// first cell
-	return cells[index]->getVoltageAvrg() - cells[index -1]->getVoltageAvrg();  // every next cell
+float BatteryManager::getCellVoltage(cell_name name){
+	if (name == cell1) return cells[cell1]->getVoltageAvrg();					// first cell
+	return cells[name]->getVoltageAvrg() - cells[name -1]->getVoltageAvrg();  // every next cell
 }
+
 
 BatteryManager::BatteryManager() {
 	// TODO Auto-generated constructor stub
@@ -64,8 +64,9 @@ void BatteryManager::checkBatteryLevel(){
 		return;
 	}
 	//CHECK EVERY CELL (if main battery voltage OK)
-	for(uint8_t i=0; i <LIPOCELLS_NUMBER; i++){
-		if(getCellVoltage(i) <= CELL_LOW_VOLTAGE){
+
+	for(uint8_t i= 0; i <LIPOCELLS_NUMBER; i++){
+		if(getCellVoltage(cell_name(i)) <= CELL_LOW_VOLTAGE){
 			//osSignal(BuzzerTask, cell_low_signal); // TODO:add later specyfic taskhandle and signals
 			//osSignal(OLEDTask, cell_low_signal);
 			break;
