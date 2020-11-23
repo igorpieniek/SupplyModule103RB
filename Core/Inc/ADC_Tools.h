@@ -3,6 +3,13 @@
 
 
 
+#ifndef INC_ADC_TOOLS_H_
+#define INC_ADC_TOOLS_H_
+
+
+
+
+
 #define STANDARD_RESOLUTION    12
 #define STANDARD_MINIMUM_VOLT 0.0f
 
@@ -80,4 +87,4 @@ protected:
 	float convertToPercentage(float val);
 
 };
-
+#endif /* INC_ADC_TOOLS_H_ */

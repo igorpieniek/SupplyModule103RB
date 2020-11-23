@@ -17,6 +17,10 @@
  *  It uses Average() class object with fixed number of samples take into calculations (#AVERAGE_SIZE_SUPPLYBRANCH)
  */
 class SupplyBranch: public ADC_Tools {
+private:
+	Average<float, 10> avrg;
+	float margin;
+
 public:
 
 	/** Return voltage [V] moving average of #AVERAGE_SIZE_LIPO last samples.
@@ -42,7 +46,6 @@ public:
 	SupplyBranch(float max, float marg = SUPPLYBRANCH_VOLTAGE_MARGIN);
 	virtual ~SupplyBranch();
 
-private:
 
 	Average<float, AVERAGE_SIZE_SUPPLYBRANCH> avrg;
 	float margin;

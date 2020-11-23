@@ -1,4 +1,8 @@
 
+
+#ifndef INC_AVERAGE_H_
+#define INC_AVERAGE_H_
+
 #include "main.h"
 
 /** Moving average.
@@ -136,6 +140,6 @@ public:
 //	this->calculate();
 //	return this->avrg;
 //}
-
+#endif /* INC_AVERAGE_H_ */
 
 

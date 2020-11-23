@@ -29,6 +29,7 @@ public:
 	 * @param max_vol - float value (optional) - maximum voltage (normally 5.0V)
 	 */
 	HallSensor(float sens,float neutral = NEUTRAL_HALL_VOLTAGE, float max_vol = MAX_HALL_VOLTAGE);
+
 	virtual ~HallSensor();
 
 	/** Function called to update all measurments and states stored in object.

@@ -1,0 +1,16 @@
+SectionSwitch.h:22:16:SectionSwitch::Section_state SectionSwitch::getState() const	16	static
+EnergyManager.cpp:10:1:EnergyManager::EnergyManager()	16	static
+EnergyManager.cpp:15:1:EnergyManager::~EnergyManager()	16	static
+EnergyManager.cpp:15:1:virtual EnergyManager::~EnergyManager()	16	static
+EnergyManager.cpp:19:6:void EnergyManager::init()	16	static
+EnergyManager.cpp:27:6:void EnergyManager::process()	16	static
+EnergyManager.cpp:35:6:void EnergyManager::dma_init()	16	static
+EnergyManager.cpp:39:6:void EnergyManager::hallSensor_init()	24	static
+EnergyManager.cpp:48:6:void EnergyManager::supplyBranch_init()	24	static
+EnergyManager.cpp:55:6:void EnergyManager::sectionSwitch_init()	16	static
+EnergyManager.cpp:64:6:void EnergyManager::update_dma_data()	16	static
+EnergyManager.cpp:88:6:void EnergyManager::update_section_data()	32	static
+EnergyManager.cpp:103:6:void EnergyManager::update_switch_data()	24	static
+EnergyManager.cpp:113:6:void EnergyManager::sectionON(EnergyManager::Section_name)	16	static
+EnergyManager.cpp:116:6:void EnergyManager::sectionOFF(EnergyManager::Section_name)	16	static
+EnergyManager.cpp:120:24:EnergyManager::Section EnergyManager::getSectionData(EnergyManager::Section_name)	24	static
