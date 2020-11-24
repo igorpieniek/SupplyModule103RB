@@ -11,14 +11,14 @@
 #include "main.h"
 
 
-/** Class to define functions typical for Fun.
+/** Class to define functions typical for Funs.
  * User can turn on fun and choose velocity (typical or custom)
  *  */
 class Fun {
 public:
 	/** Velocity levels available to set */
 	enum Velocity{
-		ZERO,			/**< Zero speed. Fun if turn OFF*/
+		ZERO,			/**< Zero speed- it's  OFF*/
 		LOW = 300, 		/**< Low speed : 30% */
 		NORMAL = 650,	/**< Normal speed : 65% */
 		HIGH= 1000		/**< Max speed : 100% */
