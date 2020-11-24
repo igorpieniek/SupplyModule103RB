@@ -1,0 +1,10 @@
+Fan.h:58:7:void Fan::stateOFF()	16	static
+Fan.h:59:7:void Fan::stateON()	16	static
+Fan.cpp:10:6:void Fan::on(Fan::Velocity)	16	static
+Fan.cpp:16:6:void Fan::on(uint16_t)	16	static
+Fan.cpp:24:6:void Fan::timerSTART(uint16_t)	16	static
+Fan.cpp:30:6:void Fan::off()	16	static
+Fan.cpp:37:7:float Fan::getPWMvalue()	16	static
+Fan.cpp:42:1:Fan::Fan(TIM_HandleTypeDef*, uint32_t)	24	static
+Fan.cpp:46:1:Fan::~Fan()	16	static
+Fan.cpp:46:1:virtual Fan::~Fan()	16	static

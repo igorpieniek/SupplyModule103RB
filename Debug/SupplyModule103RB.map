@@ -375,6 +375,83 @@ Discarded input sections
  .debug_frame   0x00000000      0x270 Core\Src\EnergyManager.o
  .ARM.attributes
                 0x00000000       0x33 Core\Src\EnergyManager.o
+ .group         0x00000000       0x10 Core\Src\Fan.o
+ .group         0x00000000       0x10 Core\Src\Fan.o
+ .text          0x00000000        0x0 Core\Src\Fan.o
+ .data          0x00000000        0x0 Core\Src\Fan.o
+ .bss           0x00000000        0x0 Core\Src\Fan.o
+ .text._ZN3Fan8stateOFFEv
+                0x00000000       0x18 Core\Src\Fan.o
+ .ARM.extab.text._ZN3Fan8stateOFFEv
+                0x00000000        0x0 Core\Src\Fan.o
+ .ARM.exidx.text._ZN3Fan8stateOFFEv
+                0x00000000        0x8 Core\Src\Fan.o
+ .text._ZN3Fan7stateONEv
+                0x00000000       0x18 Core\Src\Fan.o
+ .ARM.extab.text._ZN3Fan7stateONEv
+                0x00000000        0x0 Core\Src\Fan.o
+ .ARM.exidx.text._ZN3Fan7stateONEv
+                0x00000000        0x8 Core\Src\Fan.o
+ .text._ZN3Fan2onENS_8VelocityE
+                0x00000000       0x2a Core\Src\Fan.o
+ .ARM.extab.text._ZN3Fan2onENS_8VelocityE
+                0x00000000        0xc Core\Src\Fan.o
+ .ARM.exidx.text._ZN3Fan2onENS_8VelocityE
+                0x00000000        0x8 Core\Src\Fan.o
+ .text._ZN3Fan2onEt
+                0x00000000       0x38 Core\Src\Fan.o
+ .ARM.extab.text._ZN3Fan2onEt
+                0x00000000        0xc Core\Src\Fan.o
+ .ARM.exidx.text._ZN3Fan2onEt
+                0x00000000        0x8 Core\Src\Fan.o
+ .text._ZN3Fan10timerSTARTEt
+                0x00000000       0x74 Core\Src\Fan.o
+ .ARM.extab.text._ZN3Fan10timerSTARTEt
+                0x00000000        0xc Core\Src\Fan.o
+ .ARM.exidx.text._ZN3Fan10timerSTARTEt
+                0x00000000        0x8 Core\Src\Fan.o
+ .text._ZN3Fan3offEv
+                0x00000000       0x6c Core\Src\Fan.o
+ .ARM.extab.text._ZN3Fan3offEv
+                0x00000000        0xc Core\Src\Fan.o
+ .ARM.exidx.text._ZN3Fan3offEv
+                0x00000000        0x8 Core\Src\Fan.o
+ .text._ZN3Fan11getPWMvalueEv
+                0x00000000       0x38 Core\Src\Fan.o
+ .ARM.extab.text._ZN3Fan11getPWMvalueEv
+                0x00000000        0x0 Core\Src\Fan.o
+ .ARM.exidx.text._ZN3Fan11getPWMvalueEv
+                0x00000000        0x8 Core\Src\Fan.o
+ .text._ZN3FanC2EP17TIM_HandleTypeDefm
+                0x00000000       0x34 Core\Src\Fan.o
+ .ARM.extab.text._ZN3FanC2EP17TIM_HandleTypeDefm
+                0x00000000        0x0 Core\Src\Fan.o
+ .ARM.exidx.text._ZN3FanC2EP17TIM_HandleTypeDefm
+                0x00000000        0x8 Core\Src\Fan.o
+ .text._ZN3FanD2Ev
+                0x00000000       0x20 Core\Src\Fan.o
+ .ARM.extab.text._ZN3FanD2Ev
+                0x00000000        0x0 Core\Src\Fan.o
+ .ARM.exidx.text._ZN3FanD2Ev
+                0x00000000        0x8 Core\Src\Fan.o
+ .text._ZN3FanD0Ev
+                0x00000000       0x1e Core\Src\Fan.o
+ .ARM.extab.text._ZN3FanD0Ev
+                0x00000000        0x0 Core\Src\Fan.o
+ .ARM.exidx.text._ZN3FanD0Ev
+                0x00000000        0x8 Core\Src\Fan.o
+ .rodata        0x00000000       0x1d Core\Src\Fan.o
+ .debug_info    0x00000000      0xb6a Core\Src\Fan.o
+ .debug_abbrev  0x00000000      0x310 Core\Src\Fan.o
+ .debug_aranges
+                0x00000000       0x68 Core\Src\Fan.o
+ .debug_ranges  0x00000000       0x58 Core\Src\Fan.o
+ .debug_line    0x00000000      0x361 Core\Src\Fan.o
+ .debug_str     0x00000000      0xa74 Core\Src\Fan.o
+ .comment       0x00000000       0x7d Core\Src\Fan.o
+ .debug_frame   0x00000000      0x188 Core\Src\Fan.o
+ .ARM.attributes
+                0x00000000       0x33 Core\Src\Fan.o
  .group         0x00000000       0x10 Core\Src\HallSensor.o
  .group         0x00000000       0x10 Core\Src\HallSensor.o
  .group         0x00000000       0x10 Core\Src\HallSensor.o
@@ -2380,6 +2457,7 @@ LOAD Core\Src\AllTasks.o
 LOAD Core\Src\Average.o
 LOAD Core\Src\BatteryManager.o
 LOAD Core\Src\EnergyManager.o
+LOAD Core\Src\Fan.o
 LOAD Core\Src\HallSensor.o
 LOAD Core\Src\InternTemperature.o
 LOAD Core\Src\LedNotifier.o

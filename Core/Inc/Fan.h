@@ -1,20 +1,20 @@
 /*
- * Fun.h
+ * Fan.h
  *
  *  Created on: 14.11.2020
  *      Author: Igor
  */
 
-#ifndef INC_FUN_H_
-#define INC_FUN_H_
+#ifndef INC_FAN_H_
+#define INC_FAN_H_
 
 #include "main.h"
 
 
-/** Class to define functions typical for Funs.
- * User can turn on fun and choose velocity (typical or custom)
+/** Class to define functions typical for Fans.
+ * User can turn on fan and choose velocity (typical or custom)
  *  */
-class Fun {
+class Fan {
 public:
 	/** Velocity levels available to set */
 	enum Velocity{
@@ -24,29 +24,29 @@ public:
 		HIGH= 1000		/**< Max speed : 100% */
 	};
 
-	/** Turn ON Fun
+	/** Turn ON Fan
 	 * @param vel - Velocity (optional) - normally velocity is set to NORMAL() */
 	void on(Velocity vel= NORMAL);
 
-	/**Turn ON Fun - with custom speed in range <ZERO(), HIGH()>
-	 * @param vel - uint16_t - custom value of Fun speed*/
+	/**Turn ON Fan - with custom speed in range <ZERO(), HIGH()>
+	 * @param vel - uint16_t - custom value of speed*/
 	void on(uint16_t vel);
 
-	/**Turn off Fun */
+	/**Turn off Fan */
 	void off();
 
-	/** Return info about current state of Fun*/
+	/** Return info about current state of Fan*/
 	uint8_t isOn()const{ return is_on;};
 
 	/** Return current PWM value in percents [%]*/
 	float getPWMvalue();
 
 	/**
-	 * @param tim - TIM_HandleTypeDef * - to define timer to use
-	 * @param ch - uint32_t - timer channel
+	 * @param tim - TIM_HandleTypeDef * - to define timer to use eg. htim12
+	 * @param ch - uint32_t - timer channel eg. TIM_CHANNEL_1
 	 */
-	Fun(TIM_HandleTypeDef * tim, uint32_t ch);
-	virtual ~Fun();
+	Fan(TIM_HandleTypeDef * tim, uint32_t ch);
+	virtual ~Fan();
 private:
 
 	uint8_t is_on;
@@ -64,4 +64,4 @@ private:
 
 };
 
-#endif /* INC_FUN_H_ */
+#endif /* INC_FAN_H_ */
