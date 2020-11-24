@@ -7,7 +7,7 @@
 
 #include <InternTemperature.h>
 
-InternTemperature::InternTemperature() {
+InternTemperature::InternTemperature():ADC_Tools(TEMPERATURE_MAX_VOLTAGE) {
 	// TODO Auto-generated constructor stub
 
 }
