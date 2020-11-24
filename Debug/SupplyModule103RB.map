@@ -521,6 +521,91 @@ Discarded input sections
  .debug_frame   0x00000000      0x2d8 Core\Src\HallSensor.o
  .ARM.attributes
                 0x00000000       0x33 Core\Src\HallSensor.o
+ .group         0x00000000       0x10 Core\Src\InternTemperature.o
+ .group         0x00000000       0x10 Core\Src\InternTemperature.o
+ .group         0x00000000       0x10 Core\Src\InternTemperature.o
+ .group         0x00000000       0x10 Core\Src\InternTemperature.o
+ .group         0x00000000        0x8 Core\Src\InternTemperature.o
+ .group         0x00000000        0x8 Core\Src\InternTemperature.o
+ .text          0x00000000        0x0 Core\Src\InternTemperature.o
+ .data          0x00000000        0x0 Core\Src\InternTemperature.o
+ .bss           0x00000000        0x0 Core\Src\InternTemperature.o
+ .text._ZNK9ADC_Tools10getVoltageEv
+                0x00000000       0x16 Core\Src\InternTemperature.o
+ .ARM.extab.text._ZNK9ADC_Tools10getVoltageEv
+                0x00000000        0x0 Core\Src\InternTemperature.o
+ .ARM.exidx.text._ZNK9ADC_Tools10getVoltageEv
+                0x00000000        0x8 Core\Src\InternTemperature.o
+ .text._ZN9ADC_Tools14getVoltageAvrgEv
+                0x00000000       0x16 Core\Src\InternTemperature.o
+ .ARM.extab.text._ZN9ADC_Tools14getVoltageAvrgEv
+                0x00000000        0x0 Core\Src\InternTemperature.o
+ .ARM.exidx.text._ZN9ADC_Tools14getVoltageAvrgEv
+                0x00000000        0x8 Core\Src\InternTemperature.o
+ .text._ZNK9ADC_Tools13getPercentageEv
+                0x00000000       0x16 Core\Src\InternTemperature.o
+ .ARM.extab.text._ZNK9ADC_Tools13getPercentageEv
+                0x00000000        0x0 Core\Src\InternTemperature.o
+ .ARM.exidx.text._ZNK9ADC_Tools13getPercentageEv
+                0x00000000        0x8 Core\Src\InternTemperature.o
+ .text._ZN9ADC_Tools17getPercentageAvrgEv
+                0x00000000       0x16 Core\Src\InternTemperature.o
+ .ARM.extab.text._ZN9ADC_Tools17getPercentageAvrgEv
+                0x00000000        0x0 Core\Src\InternTemperature.o
+ .ARM.exidx.text._ZN9ADC_Tools17getPercentageAvrgEv
+                0x00000000        0x8 Core\Src\InternTemperature.o
+ .text._ZN17InternTemperature14getTemperatureEv
+                0x00000000       0x24 Core\Src\InternTemperature.o
+ .ARM.extab.text._ZN17InternTemperature14getTemperatureEv
+                0x00000000        0x0 Core\Src\InternTemperature.o
+ .ARM.exidx.text._ZN17InternTemperature14getTemperatureEv
+                0x00000000        0x8 Core\Src\InternTemperature.o
+ .text._ZN17InternTemperature6updateEm
+                0x00000000       0x1c Core\Src\InternTemperature.o
+ .ARM.extab.text._ZN17InternTemperature6updateEm
+                0x00000000        0xc Core\Src\InternTemperature.o
+ .ARM.exidx.text._ZN17InternTemperature6updateEm
+                0x00000000        0x8 Core\Src\InternTemperature.o
+ .text._ZN17InternTemperature20convertToTemperatureEf
+                0x00000000       0x3c Core\Src\InternTemperature.o
+ .ARM.extab.text._ZN17InternTemperature20convertToTemperatureEf
+                0x00000000        0x0 Core\Src\InternTemperature.o
+ .ARM.exidx.text._ZN17InternTemperature20convertToTemperatureEf
+                0x00000000        0x8 Core\Src\InternTemperature.o
+ .text._ZN17InternTemperatureC2Ev
+                0x00000000       0x30 Core\Src\InternTemperature.o
+ .ARM.extab.text._ZN17InternTemperatureC2Ev
+                0x00000000        0xc Core\Src\InternTemperature.o
+ .ARM.exidx.text._ZN17InternTemperatureC2Ev
+                0x00000000        0x8 Core\Src\InternTemperature.o
+ .text._ZN17InternTemperatureD2Ev
+                0x00000000       0x20 Core\Src\InternTemperature.o
+ .ARM.extab.text._ZN17InternTemperatureD2Ev
+                0x00000000        0x0 Core\Src\InternTemperature.o
+ .ARM.exidx.text._ZN17InternTemperatureD2Ev
+                0x00000000        0x8 Core\Src\InternTemperature.o
+ .text._ZN17InternTemperatureD0Ev
+                0x00000000       0x1e Core\Src\InternTemperature.o
+ .ARM.extab.text._ZN17InternTemperatureD0Ev
+                0x00000000        0x0 Core\Src\InternTemperature.o
+ .ARM.exidx.text._ZN17InternTemperatureD0Ev
+                0x00000000        0x8 Core\Src\InternTemperature.o
+ .rodata        0x00000000       0x3c Core\Src\InternTemperature.o
+ .rodata._ZTI9ADC_Tools
+                0x00000000        0x8 Core\Src\InternTemperature.o
+ .rodata._ZTS9ADC_Tools
+                0x00000000        0xb Core\Src\InternTemperature.o
+ .debug_info    0x00000000      0x6eb Core\Src\InternTemperature.o
+ .debug_abbrev  0x00000000      0x2a1 Core\Src\InternTemperature.o
+ .debug_aranges
+                0x00000000       0x68 Core\Src\InternTemperature.o
+ .debug_ranges  0x00000000       0x58 Core\Src\InternTemperature.o
+ .debug_line    0x00000000      0x2bb Core\Src\InternTemperature.o
+ .debug_str     0x00000000      0x6a3 Core\Src\InternTemperature.o
+ .comment       0x00000000       0x7d Core\Src\InternTemperature.o
+ .debug_frame   0x00000000      0x18c Core\Src\InternTemperature.o
+ .ARM.attributes
+                0x00000000       0x33 Core\Src\InternTemperature.o
  .group         0x00000000       0x10 Core\Src\LedNotifier.o
  .group         0x00000000       0x10 Core\Src\LedNotifier.o
  .text          0x00000000        0x0 Core\Src\LedNotifier.o
@@ -2296,6 +2381,7 @@ LOAD Core\Src\Average.o
 LOAD Core\Src\BatteryManager.o
 LOAD Core\Src\EnergyManager.o
 LOAD Core\Src\HallSensor.o
+LOAD Core\Src\InternTemperature.o
 LOAD Core\Src\LedNotifier.o
 LOAD Core\Src\LipoCell.o
 LOAD Core\Src\SectionSwitch.o
