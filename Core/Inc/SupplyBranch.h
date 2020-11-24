@@ -33,7 +33,7 @@ public:
 
 	/** Function called to update the measurments in object.
 	 * It provide voltage, percent conversion and adding sample to average object
-	 * @param val - uint32_t value - raw value from ADC channel register*/
+	 * @param raw - uint32_t value - raw value from ADC channel register*/
 	void update(uint32_t raw);
 
 	/** Function return **1** when branch voltage is near zero value (in range from 0V to margin defined in  SupplyBranch())*/

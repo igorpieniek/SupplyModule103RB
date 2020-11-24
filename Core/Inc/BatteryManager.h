@@ -32,7 +32,8 @@
 class BatteryManager {
 public:
 
-	/**Init of DMA ADC channels and LipoCell() objects */
+	/**Class Init function.
+	 * Init of DMA ADC channels and LipoCell() objects */
 	void init();
 
 	/**Main Process of task
@@ -56,8 +57,7 @@ public:
 	float getBatteryLevel();
 
 	/**Return specified cell voltage - (reference to the previous cell voltage value)
-	 * @param name - cell_number enum - to prevent from incorrect index
-	 * */
+	 * @param name - cell_number enum - to prevent from incorrect index*/
 	float getCellVoltage(cell_name name);
 
 
