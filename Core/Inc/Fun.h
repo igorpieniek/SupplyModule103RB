@@ -11,7 +11,9 @@
 #include "main.h"
 
 
-/** Class to define functions typical for Fun */
+/** Class to define functions typical for Fun.
+ * User can turn on fun and choose velocity (typical or custom)
+ *  */
 class Fun {
 public:
 	/** Velocity levels available to set */
@@ -34,7 +36,7 @@ public:
 	void off();
 
 	/** Return info about current state of Fun*/
-	uint8_t isOn()const;
+	uint8_t isOn()const{ return is_on;};
 
 	/** Return current PWM value in percents [%]*/
 	float getPWMvalue();
@@ -53,7 +55,12 @@ private:
 	uint32_t channel;
 	uint16_t velocity;
 
+	void stateOFF(){is_on = 0;};
+	void stateON() {is_on = 1;};
 
+	/** Start timer and set compare value
+	 * @param compare_val - value to be write in timer CCR register */
+	void timerSTART(uint16_t compare_val);
 
 };
 
