@@ -18,7 +18,7 @@ void InternTemperature::update(uint32_t raw){
 }
 
 float InternTemperature::convertToTemperature(float volt){
-	return ( (volt - TEMPERATURE_V25) / TEMPETATURE_AVG_SLOPE) + 25.0f; /** datasheet formula*/
+	return ( (TEMPERATURE_V25 - volt) / TEMPETATURE_AVG_SLOPE) + 25.0f; /** datasheet formula*/
 }
 InternTemperature::InternTemperature():ADC_Tools(TEMPERATURE_MAX_VOLTAGE) {
 	// TODO Auto-generated constructor stub
