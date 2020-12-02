@@ -23,7 +23,7 @@ uint32_t receiveADC[2];
 float per, volt, perAvrg, voltAvrg ;
 uint16_t  currentTime[3]= {0};
 uint8_t RXdata;
-
+LedNotifier led(LD2_GPIO_Port, LD2_Pin, &htim4);
 
 
 void AllTasks_init(){
@@ -43,18 +43,27 @@ void AllTasks_init(){
 void StartBatteryManagerTask(void const * argument){
 
 
-	uint32_t counter = 0;
-//	LipoCell lipo;
+	uint8_t blinkFlag=0;
+	LipoCell lipo(3.3f);
 	HAL_ADC_Start(&hadc1);
 	HAL_ADC_Start_DMA(&hadc1, receiveADC, 2);
 
 	for(;;){
 
-//		lipo.update(receiveADC[0]);
-//		per = lipo.getPercentage();
-//		volt= lipo.getVoltage();
-//		perAvrg = lipo.getPercentageAvrg();
-//		voltAvrg= lipo.getVoltageAvrg();
+		lipo.update(receiveADC[0]);
+		per = lipo.getPercentage();
+		volt= lipo.getVoltage();
+		perAvrg = lipo.getPercentageAvrg();
+		voltAvrg= lipo.getVoltageAvrg();
+
+		if(voltAvrg >=2.5f && blinkFlag==0){
+			led.blink_config(500,1000);
+			blinkFlag = 1;
+		}
+//		if (voltAvrg< 2.5f){
+//			blinkFlag = 0;
+//			led.on();
+//		}
 
 
 		osDelay(100);
@@ -64,13 +73,15 @@ void StartBatteryManagerTask(void const * argument){
 }
 
 void StartLedUpTask(void const * argument){
-	LedNotifier led(LD2_GPIO_Port, LD2_Pin, &htim4);
+
 	time_tool.init();
 
 	for(;;){
 		currentTime[2]= time_tool.getMicros();
 		currentTime[0]= time_tool.compareMicros(currentTime[2], currentTime[1]);
 		currentTime[1] = currentTime[2];
+
+		led.blink_process();
 
 
 //		osEvent evt = osSignalWait(0x01 | 0x02 | 0x04| 0x08,osWaitForever);
@@ -99,9 +110,9 @@ void StartLedUpTask(void const * argument){
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 	//static uint16_t per =500;
-	if	   (RXdata == 'n') osSignalSet(LedUpHandle, 1 << 0);
-	else if(RXdata == 'f') osSignalSet(LedUpHandle, 1 << 1);
-	else if(RXdata == 'b') osSignalSet(LedUpHandle, 1 << 2);
+	if	   (RXdata == 'n') led.on();
+	else if(RXdata == 'f') led.off();
+	else if(RXdata == 'b') led.blink_config(500,1000);
 
 
 	HAL_UART_Receive_IT(&huart3, &RXdata, 1);

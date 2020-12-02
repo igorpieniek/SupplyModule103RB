@@ -11,6 +11,7 @@
 #include "main.h"
 #include "gpio.h"
 #include "tim.h"
+#include "TimeTool.h"
 
 /** Tool intended for led's, it provide typical behaviours for notifier - ON/OFF or blink.
  * To correctly define object of this class you have to define one timer in **OnePulse mode**.
@@ -69,6 +70,7 @@ private:
 	TIM_HandleTypeDef* timer;
 
 	uint32_t blinkPeriodON, blinkPeriodOFF; /** blinking periods */
+	uint16_t last_toggle_time;
 
 	enum BlinkState{
 		blinkOff, blinkOn
@@ -88,6 +90,8 @@ private:
 	void timerSTART();			/** configure timer autoreload value and start timer */
 	void toggle_blinkstate();	/** toggle current blink_state (enum BlinkState) */
 	void toggle();				/** toggle led pin state */
+
+	uint16_t getTimeFromLastToggle();
 
 
 };
