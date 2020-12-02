@@ -24,6 +24,8 @@ float per, volt, perAvrg, voltAvrg ;
 uint16_t  currentTime[3]= {0};
 uint8_t RXdata;
 LedNotifier led(LD2_GPIO_Port, LD2_Pin, &htim4);
+LedNotifier led1(LED1_GPIO_Port, LED1_Pin, &htim4);
+LedNotifier led2(LED2_GPIO_Port, LED2_Pin, &htim4);
 
 
 void AllTasks_init(){
@@ -58,6 +60,8 @@ void StartBatteryManagerTask(void const * argument){
 
 		if(voltAvrg >=2.5f && blinkFlag==0){
 			led.blink_config(500,1000);
+			led1.blink_config(1000,200);
+			led2.blink_config(25);
 			blinkFlag = 1;
 		}
 //		if (voltAvrg< 2.5f){
@@ -82,8 +86,8 @@ void StartLedUpTask(void const * argument){
 		currentTime[1] = currentTime[2];
 
 		led.blink_process();
-
-
+		led1.blink_process();
+		led2.blink_process();
 //		osEvent evt = osSignalWait(0x01 | 0x02 | 0x04| 0x08,osWaitForever);
 //			if      (evt.value.signals == 0x01){
 //				led.on();
@@ -103,7 +107,7 @@ void StartLedUpTask(void const * argument){
 //			}
 
 
-		osDelay(50);
+		osDelay(10);
 
 	}
 }
