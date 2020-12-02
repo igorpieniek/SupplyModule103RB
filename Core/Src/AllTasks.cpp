@@ -11,6 +11,7 @@
 #include "usart.h"
 #include "adc.h"
 #include "LedNotifier.h"
+#include "TimeTool.h"
 
 osThreadId BatteryManagerHandle;
 osThreadId LedUpHandle;
@@ -20,6 +21,7 @@ void StartLedUpTask(void const * argument);
 
 uint32_t receiveADC[2];
 float per, volt, perAvrg, voltAvrg ;
+uint16_t  currentTime[3]= {0};
 uint8_t RXdata;
 
 
@@ -63,25 +65,31 @@ void StartBatteryManagerTask(void const * argument){
 
 void StartLedUpTask(void const * argument){
 	LedNotifier led(LD2_GPIO_Port, LD2_Pin, &htim4);
+	time_tool.init();
 
 	for(;;){
-		osEvent evt = osSignalWait(0x01 | 0x02 | 0x04| 0x08,osWaitForever);
-			if      (evt.value.signals == 0x01){
-				led.on();
+		currentTime[2]= time_tool.getMicros();
+		currentTime[0]= time_tool.compareMicros(currentTime[2], currentTime[1]);
+		currentTime[1] = currentTime[2];
 
-			}
-			else if (evt.value.signals == 0x02){
-				led.off();
 
-			}
-			else if (evt.value.signals == 0x04){
-				led.blink_config(100);
-
-			}
-			else if (evt.value.signals== 0x08){
-				led.blink_process();
-
-			}
+//		osEvent evt = osSignalWait(0x01 | 0x02 | 0x04| 0x08,osWaitForever);
+//			if      (evt.value.signals == 0x01){
+//				led.on();
+//
+//			}
+//			else if (evt.value.signals == 0x02){
+//				led.off();
+//
+//			}
+//			else if (evt.value.signals == 0x04){
+//				led.blink_config(100);
+//
+//			}
+//			else if (evt.value.signals== 0x08){
+//				led.blink_process();
+//
+//			}
 
 
 		osDelay(50);
@@ -106,9 +114,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   if (htim->Instance == TIM1) {
     HAL_IncTick();
   }
-  if(htim->Instance == TIM4){
-	  osSignalSet(LedUpHandle, 0x08);
-  }
+
 
 }
 

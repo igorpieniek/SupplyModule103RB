@@ -4,6 +4,7 @@
 #define CLASSES_TIMETOOL_H_
 
 #include "stdint.h"
+#include <limits.h>
 #include "tim.h"
 
 #define TIMETOOL_TIMER htim4
@@ -11,12 +12,13 @@
 extern class TimeTool {
 
 	uint8_t microsInitDone;
+	const uint16_t uint16Half= UINT16_MAX / 2;
 public:
 
 	void init(void);
 	uint8_t isToolInit(void);
-	uint32_t getMicros(void);
-	int32_t compareMicros(uint32_t a, uint32_t b);
+	uint16_t getMicros(void);
+	uint16_t compareMicros(uint16_t a, uint16_t b);
 
 	TimeTool();
 	virtual ~TimeTool();

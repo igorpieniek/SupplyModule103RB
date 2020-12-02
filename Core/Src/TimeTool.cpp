@@ -9,11 +9,18 @@ TimeTool time_tool;
 uint8_t TimeTool::isToolInit(void){
 	return microsInitDone;
 }
-uint32_t TimeTool::getMicros(void){
+uint16_t TimeTool::getMicros(void){
 	return TIMETOOL_TIMER.Instance->CNT;
 }
-int32_t TimeTool::compareMicros(uint32_t a, uint32_t b) {
-	return (int32_t)(a - b);
+uint16_t TimeTool::compareMicros(uint16_t a, uint16_t b) {
+	uint16_t res = 0;
+	if (a > b) res = a - b;
+	else       res = b - a;
+	if (res > uint16Half){
+		res = UINT16_MAX- res;
+	}
+	return res;
+
 }
 void TimeTool::init(void) {
 	if (!microsInitDone) {
@@ -24,7 +31,7 @@ void TimeTool::init(void) {
 
 
 TimeTool::TimeTool(): microsInitDone(0) {
-	// TODO Auto-generated constructor stub
+
 
 }
 

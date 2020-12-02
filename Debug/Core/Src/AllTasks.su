@@ -1,5 +1,5 @@
-AllTasks.cpp:27:6:void AllTasks_init()	72	static
-AllTasks.cpp:41:6:void StartBatteryManagerTask(const void*)	24	static
-AllTasks.cpp:64:6:void StartLedUpTask(const void*)	72	static
-AllTasks.cpp:92:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	16	static
-AllTasks.cpp:103:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	16	static
+AllTasks.cpp:29:6:void AllTasks_init()	72	static
+AllTasks.cpp:43:6:void StartBatteryManagerTask(const void*)	24	static
+AllTasks.cpp:66:6:void StartLedUpTask(const void*)	56	static
+AllTasks.cpp:100:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	16	static
+AllTasks.cpp:111:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	16	static
