@@ -59,9 +59,9 @@ void StartBatteryManagerTask(void const * argument){
 		voltAvrg= lipo.getVoltageAvrg();
 
 		if(voltAvrg >=2.5f && blinkFlag==0){
-			led.blink_config(500,1000);
-			led1.blink_config(1000,200);
-			led2.blink_config(25);
+			led.blink(500,1000);
+			led1.blink(1000,200);
+			led2.blink(25);
 			blinkFlag = 1;
 		}
 //		if (voltAvrg< 2.5f){
@@ -114,9 +114,9 @@ void StartLedUpTask(void const * argument){
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 	//static uint16_t per =500;
-	if	   (RXdata == 'n') led.on();
-	else if(RXdata == 'f') led.off();
-	else if(RXdata == 'b') led.blink_config(500,1000);
+//	if	   (RXdata == 'n') led.on();
+//	else if(RXdata == 'f') led.off();
+//	else if(RXdata == 'b') led.blink_config(500,1000);
 
 
 	HAL_UART_Receive_IT(&huart3, &RXdata, 1);

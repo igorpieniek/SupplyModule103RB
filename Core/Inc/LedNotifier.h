@@ -32,13 +32,13 @@ public:
 	/** Put LED into BLINK state, and configure behaviour
 	 * @param perON - uint32_t value in miliseconds - configure the same time for ON and OFF state
 	 */
-	void blink_config( uint32_t perON);
+	void blink( uint16_t perON);
 
 	/** Put LED into BLINK state, and configure behaviour
 	 * @param perON - uint32_t value in miliseconds - configure time of LED ON state
 	 * @param perOFF - uint32_t value in miliseconds - configure time of LED OFF state
 	 */
-	void blink_config( uint32_t perON, uint32_t perOFF);
+	void blink( uint16_t perON, uint16_t perOFF);
 
 	/** Process of led blinking.
 	 * Function that should be called by HAL_TIM_PeriodElapsed() function in any form to work properly.
@@ -62,13 +62,13 @@ public:
 	 * @param rev - uint8_t flag (optional) normally 0, but it should be set as 1 if there is reversed logic -
 	 *  eg. high state on pin -> led is turn off
 	 */
-	LedNotifier(GPIO_TypeDef *port, uint16_t pin, uint8_t rev=0);
+	LedNotifier(GPIO_TypeDef *port, uint16_t pin, uint8_t rev= 0);
 	virtual ~LedNotifier();
 private:
 	GPIO_TypeDef *Port;
 	uint16_t Pin;
 
-	uint32_t blinkPeriodON, blinkPeriodOFF; /** blinking periods */
+	uint16_t blinkPeriodON, blinkPeriodOFF; /** blinking periods */
 	uint16_t last_toggle_time;
 
 	enum BlinkState{

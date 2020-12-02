@@ -2,15 +2,15 @@ LedNotifier.h:83:16:GPIO_PinState LedNotifier::getONPinState()	16	static
 LedNotifier.h:84:16:GPIO_PinState LedNotifier::getOFFPinState()	16	static
 LedNotifier.cpp:10:6:void LedNotifier::on()	24	static
 LedNotifier.cpp:16:6:void LedNotifier::off()	24	static
-LedNotifier.cpp:22:6:void LedNotifier::blink_config(uint32_t)	16	static
-LedNotifier.cpp:26:6:void LedNotifier::blink_config(uint32_t, uint32_t)	24	static
+LedNotifier.cpp:22:6:void LedNotifier::blink(uint16_t)	16	static
+LedNotifier.cpp:26:6:void LedNotifier::blink(uint16_t, uint16_t)	16	static
 LedNotifier.cpp:40:6:void LedNotifier::blink_process()	24	static
-LedNotifier.cpp:52:10:uint16_t LedNotifier::getTimeFromLastToggle()	16	static
-LedNotifier.cpp:55:6:void LedNotifier::toggle()	16	static
-LedNotifier.cpp:59:6:void LedNotifier::updateLastToggleTime()	16	static
-LedNotifier.cpp:63:6:void LedNotifier::toggle_blinkstate()	16	static
-LedNotifier.cpp:68:10:uint32_t LedNotifier::getPeriod()	16	static
-LedNotifier.cpp:74:23:LedNotifier::LedState LedNotifier::getState()	16	static
-LedNotifier.cpp:79:1:LedNotifier::LedNotifier(GPIO_TypeDef*, uint16_t, uint8_t)	24	static
-LedNotifier.cpp:87:1:LedNotifier::~LedNotifier()	16	static
-LedNotifier.cpp:87:1:virtual LedNotifier::~LedNotifier()	16	static
+LedNotifier.cpp:51:10:uint16_t LedNotifier::getTimeFromLastToggle()	16	static
+LedNotifier.cpp:54:6:void LedNotifier::toggle()	16	static
+LedNotifier.cpp:58:6:void LedNotifier::updateLastToggleTime()	16	static
+LedNotifier.cpp:62:6:void LedNotifier::toggle_blinkstate()	16	static
+LedNotifier.cpp:67:10:uint32_t LedNotifier::getPeriod()	16	static
+LedNotifier.cpp:73:23:LedNotifier::LedState LedNotifier::getState()	16	static
+LedNotifier.cpp:78:1:LedNotifier::LedNotifier(GPIO_TypeDef*, uint16_t, uint8_t)	24	static
+LedNotifier.cpp:86:1:LedNotifier::~LedNotifier()	16	static
+LedNotifier.cpp:86:1:virtual LedNotifier::~LedNotifier()	16	static

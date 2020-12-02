@@ -19,11 +19,11 @@ void LedNotifier::off(){
 
 }
 
-void LedNotifier::blink_config( uint32_t perON){
-	blink_config(perON,perON);
+void LedNotifier::blink( uint16_t perON){
+	blink(perON,perON);
 }
 
-void LedNotifier::blink_config( uint32_t perON, uint32_t perOFF){
+void LedNotifier::blink( uint16_t perON, uint16_t perOFF){
 	// initial state of led in blinking mode
 	on();
 	// update led state
@@ -38,14 +38,13 @@ void LedNotifier::blink_config( uint32_t perON, uint32_t perOFF){
 }
 
 void LedNotifier::blink_process(){
-	// process called by timer interrupt (not directly)
+	// process called by ledNotifier manager
 	if(curState == BLINK){
-		if(getTimeFromLastToggle() >= (uint16_t)getPeriod()){
+		if(getTimeFromLastToggle() >= getPeriod()){
 			updateLastToggleTime();
 			toggle();
 			toggle_blinkstate();
 		}
-
 	}
 }
 
