@@ -6,33 +6,28 @@
  */
 
 #include <Tools.h>
-#include "tim.h"
+
 
 Tools tools;
 
-uint8_t Tools::GetMicrosState(void){
-	return MicrosInitDone;
+uint8_t Tools::getMicrosState(void){
+	return microsInitDone;
 }
-uint32_t Tools::GetMicros(void){
-	return TIM5->CNT;
+uint32_t Tools::getMicros(void){
+	return TOOL_TIMER.Instance->CNT;
 }
-int32_t Tools::CompareMicros(uint32_t a, uint32_t b) {
+int32_t Tools::compareMicros(uint32_t a, uint32_t b) {
 	return (int32_t)(a - b);
 }
-uint8_t Tools::Init(void) {
-	if (MicrosInitDone) {
-		return 0;
-	} else {
-		MX_TIM5_Init();
-		HAL_TIM_Base_Start(&htim5);
-		MicrosInitDone = 1;
-
+void Tools::init(void) {
+	if (!microsInitDone) {
+		HAL_TIM_Base_Start(&TOOL_TIMER);
+		microsInitDone = 1;
 	}
-	return 1;
 }
 
 
-Tools::Tools() {
+Tools::Tools(): microsInitDone(0) {
 	// TODO Auto-generated constructor stub
 
 }
