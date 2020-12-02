@@ -8,14 +8,12 @@
 #include <LedNotifier.h>
 
 void LedNotifier::on(){
-	if(curState == BLINK) timerSTOP();
 	curState = ON;
 	HAL_GPIO_WritePin(Port,Pin, getONPinState());
 
 }
 
 void LedNotifier::off(){
-	if(curState == BLINK) timerSTOP();
 	curState = OFF;
 	HAL_GPIO_WritePin(Port,Pin, getOFFPinState());
 
@@ -37,8 +35,6 @@ void LedNotifier::blink_config( uint32_t perON, uint32_t perOFF){
 	blinkPeriodOFF = perOFF;
 
 	last_toggle_time = time_tool.getMicros();
-
-//	timerSTART();
 }
 
 void LedNotifier::blink_process(){
@@ -52,8 +48,6 @@ void LedNotifier::blink_process(){
 
 	}
 }
-
-
 
 uint16_t LedNotifier::getTimeFromLastToggle(){
 	return time_tool.compareMicros(time_tool.getMicros(), last_toggle_time );
@@ -73,23 +67,13 @@ uint32_t LedNotifier::getPeriod(){
 }
 
 
-void LedNotifier::timerSTOP(){
-	HAL_TIM_Base_Stop_IT(timer);
-	__HAL_TIM_SetCounter(timer, 0 );
-}
-
-void LedNotifier::timerSTART(){
-	__HAL_TIM_SET_AUTORELOAD(timer, getPeriod());
-	HAL_TIM_Base_Start_IT(timer);
-}
-
 LedNotifier::LedState LedNotifier::getState(){
 	return curState;
 }
 
 
-LedNotifier::LedNotifier(GPIO_TypeDef *port, uint16_t pin,TIM_HandleTypeDef* tim,uint8_t rev):
-	Port(port), Pin(pin), timer(tim){
+LedNotifier::LedNotifier(GPIO_TypeDef *port, uint16_t pin, uint8_t rev):
+	Port(port), Pin(pin){
 	isReversed = rev;
 	if(isReversed){ onState = GPIO_PIN_RESET; offState= GPIO_PIN_SET;}
 	else          { onState = GPIO_PIN_SET;   offState= GPIO_PIN_RESET;}

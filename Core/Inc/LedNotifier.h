@@ -62,12 +62,11 @@ public:
 	 * @param rev - uint8_t flag (optional) normally 0, but it should be set as 1 if there is reversed logic -
 	 *  eg. high state on pin -> led is turn off
 	 */
-	LedNotifier(GPIO_TypeDef *port, uint16_t pin,TIM_HandleTypeDef* tim, uint8_t rev=0);
+	LedNotifier(GPIO_TypeDef *port, uint16_t pin, uint8_t rev=0);
 	virtual ~LedNotifier();
 private:
 	GPIO_TypeDef *Port;
 	uint16_t Pin;
-	TIM_HandleTypeDef* timer;
 
 	uint32_t blinkPeriodON, blinkPeriodOFF; /** blinking periods */
 	uint16_t last_toggle_time;
@@ -86,8 +85,6 @@ private:
 
 	// Additional function need in blinking process
 	uint32_t getPeriod();		/** return current period in blinking process: blinkPeriodON / blinkPeriodOFF */
-	void timerSTOP();			/** stop timer and zeroing CNT register */
-	void timerSTART();			/** configure timer autoreload value and start timer */
 	void toggle_blinkstate();	/** toggle current blink_state (enum BlinkState) */
 	void toggle();				/** toggle led pin state */
 
