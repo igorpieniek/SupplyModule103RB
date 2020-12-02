@@ -89,6 +89,7 @@ private:
 	void toggle();				/** toggle led pin state */
 
 	uint16_t getTimeFromLastToggle();
+	void updateLastToggleTime();
 
 
 };

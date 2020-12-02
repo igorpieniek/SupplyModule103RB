@@ -34,14 +34,14 @@ void LedNotifier::blink_config( uint32_t perON, uint32_t perOFF){
 	blinkPeriodON = perON;
 	blinkPeriodOFF = perOFF;
 
-	last_toggle_time = time_tool.getMicros();
+	updateLastToggleTime();
 }
 
 void LedNotifier::blink_process(){
 	// process called by timer interrupt (not directly)
 	if(curState == BLINK){
 		if(getTimeFromLastToggle() >= (uint16_t)getPeriod()){
-			last_toggle_time = time_tool.getMicros();
+			updateLastToggleTime();
 			toggle();
 			toggle_blinkstate();
 		}
@@ -54,6 +54,10 @@ uint16_t LedNotifier::getTimeFromLastToggle(){
 }
 void LedNotifier::toggle(){
 	HAL_GPIO_TogglePin(Port,Pin);
+}
+
+void LedNotifier::updateLastToggleTime(){
+	last_toggle_time = time_tool.getMicros();
 }
 
 void LedNotifier::toggle_blinkstate(){

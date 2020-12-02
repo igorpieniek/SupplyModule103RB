@@ -23,9 +23,9 @@ uint32_t receiveADC[2];
 float per, volt, perAvrg, voltAvrg ;
 uint16_t  currentTime[3]= {0};
 uint8_t RXdata;
-LedNotifier led(LD2_GPIO_Port, LD2_Pin, &htim4);
-LedNotifier led1(LED1_GPIO_Port, LED1_Pin, &htim4);
-LedNotifier led2(LED2_GPIO_Port, LED2_Pin, &htim4);
+LedNotifier led(LD2_GPIO_Port, LD2_Pin);
+LedNotifier led1(LED1_GPIO_Port, LED1_Pin);
+LedNotifier led2(LED2_GPIO_Port, LED2_Pin);
 
 
 void AllTasks_init(){
