@@ -11,12 +11,11 @@
 #include "main.h"
 #include "gpio.h"
 #include "tim.h"
+#include "TimeTool.h"
 
 /** Tool intended for led's, it provide typical behaviours for notifier - ON/OFF or blink.
- * To correctly define object of this class you have to define one timer in **OnePulse mode**.
- * To make led blink first you had to define use blink_config() to determine
- * periods. Next blink_process() has to be called by interrupt function: HAL_TIM_PeriodElapsed().
- * It should call blink_process() directly or by osSignal method.
+ * To blink mechanism it use TimeTool() global class object to calculate time between toggles.
+ * To blink use blink() function. blink_process() could be used only by manager task.
  *
  * Led blinking could be stopped by using on() / off() method
  */
@@ -29,19 +28,19 @@ public:
 	void off();
 
 	/** Put LED into BLINK state, and configure behaviour
-	 * @param perON - uint32_t value in miliseconds - configure the same time for ON and OFF state
+	 * @param perON - uint16_t value in miliseconds - configure the same time for ON and OFF state
 	 */
-	void blink_config( uint32_t perON);
+	void blink( uint16_t perON);
 
 	/** Put LED into BLINK state, and configure behaviour
-	 * @param perON - uint32_t value in miliseconds - configure time of LED ON state
-	 * @param perOFF - uint32_t value in miliseconds - configure time of LED OFF state
+	 * @param perON - uint16_t value in miliseconds - configure time of LED ON state
+	 * @param perOFF - uint16_t value in miliseconds - configure time of LED OFF state
 	 */
-	void blink_config( uint32_t perON, uint32_t perOFF);
+	void blink( uint16_t perON, uint16_t perOFF);
 
 	/** Process of led blinking.
-	 * Function that should be called by HAL_TIM_PeriodElapsed() function in any form to work properly.
-	 * @warning It won't work if blink_config() function wasn't called before
+	 * Function that should be called by task process only - it toggle LED in right time. It work only when
+	 * blink() function was used before. Without this operation nothing will happen.
 	 */
 	void blink_process();
 
@@ -57,18 +56,17 @@ public:
 	/**
 	 * @param *port - GPIO_TypeDef value - it define port of using pin
 	 * @param pin - uint16_t value - pin definition
-	 * @param tim - TIM_HandleTypeDef value - timer number eg. htim1
 	 * @param rev - uint8_t flag (optional) normally 0, but it should be set as 1 if there is reversed logic -
 	 *  eg. high state on pin -> led is turn off
 	 */
-	LedNotifier(GPIO_TypeDef *port, uint16_t pin,TIM_HandleTypeDef* tim, uint8_t rev=0);
+	LedNotifier(GPIO_TypeDef *port, uint16_t pin, uint8_t rev= 0);
 	virtual ~LedNotifier();
 private:
 	GPIO_TypeDef *Port;
 	uint16_t Pin;
-	TIM_HandleTypeDef* timer;
 
-	uint32_t blinkPeriodON, blinkPeriodOFF; /** blinking periods */
+	uint16_t blinkPeriodON, blinkPeriodOFF; /** blinking periods */
+	uint16_t last_toggle_time;
 
 	enum BlinkState{
 		blinkOff, blinkOn
@@ -84,10 +82,11 @@ private:
 
 	// Additional function need in blinking process
 	uint32_t getPeriod();		/** return current period in blinking process: blinkPeriodON / blinkPeriodOFF */
-	void timerSTOP();			/** stop timer and zeroing CNT register */
-	void timerSTART();			/** configure timer autoreload value and start timer */
 	void toggle_blinkstate();	/** toggle current blink_state (enum BlinkState) */
 	void toggle();				/** toggle led pin state */
+
+	uint16_t getTimeFromLastToggle(); 	/** compare saved CNT state, and current CNT state and return the difference [ms] */
+	void updateLastToggleTime();		/** reset saved CNT state by saving current state of counter */
 
 
 };

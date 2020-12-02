@@ -55,10 +55,10 @@
 class EnergyManager {
 public:
 
-	/** section info gather in one structure  */
+	/** Single section info gather in one structure  */
 	struct Section{
 		float A; /**Ampere [A]*/
-		float V; /**Voltaege [V] */
+		float V; /**Voltage [V] */
 		float P; /**Power [W] */
 	};
 private:

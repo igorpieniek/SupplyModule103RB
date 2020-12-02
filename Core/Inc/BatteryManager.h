@@ -32,7 +32,7 @@
 class BatteryManager {
 public:
 
-	/**Class Init function.
+	/**Task Init function.
 	 * Init of DMA ADC channels and LipoCell() objects */
 	void init();
 
