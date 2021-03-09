@@ -1,0 +1,6 @@
+<map id="BatteryManager" name="BatteryManager">
+<area shape="rect" id="node1" title=" " alt="" coords="69,199,195,225"/>
+<area shape="rect" id="node2" href="$classLipoCell.html" title=" " alt="" coords="95,109,169,136"/>
+<area shape="rect" id="node3" href="$classADC__Tools.html" title=" " alt="" coords="5,13,96,39"/>
+<area shape="rect" id="node4" href="$classAverage.html" title=" " alt="" coords="121,5,309,47"/>
+</map>

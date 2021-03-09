@@ -1,0 +1,105 @@
+\hypertarget{classTimeTool}{}\doxysection{Time\+Tool Class Reference}
+\label{classTimeTool}\index{TimeTool@{TimeTool}}
+
+
+{\ttfamily \#include $<$Time\+Tool.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTimeTool_ae36cf90e87d12f5e0cff623c9ed8f29d}{init}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classTimeTool_a49d63ca4eb47648f1d16efafbf071cc4}{is\+Tool\+Init}} (void)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classTimeTool_a59bc125c73948da5f6e9eae951b643a5}{get\+Micros}} (void)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classTimeTool_af49d5dba8371648253a2dcc8e43eaa89}{compare\+Micros}} (uint16\+\_\+t a, uint16\+\_\+t b)
+\item 
+\mbox{\hyperlink{classTimeTool_ae502b1fa7d40f25473893606ff3aa449}{Time\+Tool}} ()
+\item 
+virtual \mbox{\hyperlink{classTimeTool_a43da32dc5f35a28a261d7bf2c62d81d5}{$\sim$\+Time\+Tool}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classTimeTool_afb4e8dc08f5667f5a61f33eb4a01cd56}{micros\+Init\+Done}}
+\item 
+const uint16\+\_\+t \mbox{\hyperlink{classTimeTool_a524e6631b308b4045dd808511a08f18a}{uint16\+Half}} = U\+I\+N\+T16\+\_\+\+M\+AX / 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tool to measure time in miliseconds. It provide function to get current C\+NT register state and to compare between many measurments -\/ \mbox{\hyperlink{classTimeTool_af49d5dba8371648253a2dcc8e43eaa89}{compare\+Micros()}}. It use timer \mbox{\hyperlink{TimeTool_8h_ab2b5909f477a5e9a6e31bfcbca05b4de}{T\+I\+M\+E\+T\+O\+O\+L\+\_\+\+T\+I\+M\+ER}} \begin{DoxyWarning}{Warning}
+\#1 Only one global object could be created, but no more! 
+
+\#2 M\+X\+\_\+\+T\+I\+Mx\+\_\+\+Init() have to be called before \mbox{\hyperlink{classTimeTool_ae36cf90e87d12f5e0cff623c9ed8f29d}{init()}} method 
+\end{DoxyWarning}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTimeTool_ae502b1fa7d40f25473893606ff3aa449}\label{classTimeTool_ae502b1fa7d40f25473893606ff3aa449}} 
+\index{TimeTool@{TimeTool}!TimeTool@{TimeTool}}
+\index{TimeTool@{TimeTool}!TimeTool@{TimeTool}}
+\doxysubsubsection{\texorpdfstring{TimeTool()}{TimeTool()}}
+{\footnotesize\ttfamily Time\+Tool\+::\+Time\+Tool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classTimeTool_a43da32dc5f35a28a261d7bf2c62d81d5}\label{classTimeTool_a43da32dc5f35a28a261d7bf2c62d81d5}} 
+\index{TimeTool@{TimeTool}!````~TimeTool@{$\sim$TimeTool}}
+\index{````~TimeTool@{$\sim$TimeTool}!TimeTool@{TimeTool}}
+\doxysubsubsection{\texorpdfstring{$\sim$TimeTool()}{~TimeTool()}}
+{\footnotesize\ttfamily Time\+Tool\+::$\sim$\+Time\+Tool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTimeTool_af49d5dba8371648253a2dcc8e43eaa89}\label{classTimeTool_af49d5dba8371648253a2dcc8e43eaa89}} 
+\index{TimeTool@{TimeTool}!compareMicros@{compareMicros}}
+\index{compareMicros@{compareMicros}!TimeTool@{TimeTool}}
+\doxysubsubsection{\texorpdfstring{compareMicros()}{compareMicros()}}
+{\footnotesize\ttfamily uint16\+\_\+t Time\+Tool\+::compare\+Micros (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{a,  }\item[{uint16\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+To compare two timer states and return the difference. \begin{DoxyReturn}{Returns}
+value in range $<$0, \#\+U\+I\+N\+T16\+\_\+\+M\+AX/2 $>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTimeTool_a59bc125c73948da5f6e9eae951b643a5}\label{classTimeTool_a59bc125c73948da5f6e9eae951b643a5}} 
+\index{TimeTool@{TimeTool}!getMicros@{getMicros}}
+\index{getMicros@{getMicros}!TimeTool@{TimeTool}}
+\doxysubsubsection{\texorpdfstring{getMicros()}{getMicros()}}
+{\footnotesize\ttfamily uint16\+\_\+t Time\+Tool\+::get\+Micros (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+current state of C\+NT register 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTimeTool_ae36cf90e87d12f5e0cff623c9ed8f29d}\label{classTimeTool_ae36cf90e87d12f5e0cff623c9ed8f29d}} 
+\index{TimeTool@{TimeTool}!init@{init}}
+\index{init@{init}!TimeTool@{TimeTool}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Time\+Tool\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Init function -\/ it does\textquotesingle{}t use M\+X\+\_\+\+T\+I\+Mx\+\_\+\+Init() function -\/ it have to be called before \mbox{\Hypertarget{classTimeTool_a49d63ca4eb47648f1d16efafbf071cc4}\label{classTimeTool_a49d63ca4eb47648f1d16efafbf071cc4}} 
+\index{TimeTool@{TimeTool}!isToolInit@{isToolInit}}
+\index{isToolInit@{isToolInit}!TimeTool@{TimeTool}}
+\doxysubsubsection{\texorpdfstring{isToolInit()}{isToolInit()}}
+{\footnotesize\ttfamily uint8\+\_\+t Time\+Tool\+::is\+Tool\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Check if object timer is working 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTimeTool_afb4e8dc08f5667f5a61f33eb4a01cd56}\label{classTimeTool_afb4e8dc08f5667f5a61f33eb4a01cd56}} 
+\index{TimeTool@{TimeTool}!microsInitDone@{microsInitDone}}
+\index{microsInitDone@{microsInitDone}!TimeTool@{TimeTool}}
+\doxysubsubsection{\texorpdfstring{microsInitDone}{microsInitDone}}
+{\footnotesize\ttfamily uint8\+\_\+t Time\+Tool\+::micros\+Init\+Done\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTimeTool_a524e6631b308b4045dd808511a08f18a}\label{classTimeTool_a524e6631b308b4045dd808511a08f18a}} 
+\index{TimeTool@{TimeTool}!uint16Half@{uint16Half}}
+\index{uint16Half@{uint16Half}!TimeTool@{TimeTool}}
+\doxysubsubsection{\texorpdfstring{uint16Half}{uint16Half}}
+{\footnotesize\ttfamily const uint16\+\_\+t Time\+Tool\+::uint16\+Half = U\+I\+N\+T16\+\_\+\+M\+AX / 2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Software/\+Inc/\mbox{\hyperlink{TimeTool_8h}{Time\+Tool.\+h}}\item 
+Software/\+Src/\mbox{\hyperlink{TimeTool_8cpp}{Time\+Tool.\+cpp}}\end{DoxyCompactItemize}

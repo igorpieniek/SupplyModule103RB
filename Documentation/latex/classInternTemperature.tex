@@ -1,0 +1,98 @@
+\hypertarget{classInternTemperature}{}\doxysection{Intern\+Temperature Class Reference}
+\label{classInternTemperature}\index{InternTemperature@{InternTemperature}}
+
+
+{\ttfamily \#include $<$Intern\+Temperature.\+h$>$}
+
+
+
+Inheritance diagram for Intern\+Temperature\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classInternTemperature__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Intern\+Temperature\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classInternTemperature__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classInternTemperature_acf1221579f7f902b55274bb5e407e1a7}{get\+Temperature}} ()
+\item 
+void \mbox{\hyperlink{classInternTemperature_aafed4be59033983356e97f77dc6997f0}{update}} (uint32\+\_\+t raw)
+\item 
+\mbox{\hyperlink{classInternTemperature_ac38d434192a4addd3b94e99296db5c99}{Intern\+Temperature}} ()
+\item 
+virtual \mbox{\hyperlink{classInternTemperature_a676ceeb7a43c3185414fa8df15e20c1c}{$\sim$\+Intern\+Temperature}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classInternTemperature_aa5bbce97f294f2c9ec64081e101295b5}{convert\+To\+Temperature}} (float \mbox{\hyperlink{AllTasks_8cpp_a5ef8a2d5b808ba7eab24a1fa30e5157b}{volt}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Tool to help with temperature sensor calculations. Use datasheet formula \+: ~\newline
+ {\bfseries{T = ( \mbox{[}Vsense -\/ V25\mbox{]} / Avg\+\_\+slope\mbox{]} + 25}} ~\newline
+where\+: ~\newline
+Vsense = current sensor voltage ~\newline
+V25 = \mbox{\hyperlink{InternTemperature_8h_af216115435b598b625480a3db0a2670d}{T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+V25}} ~\newline
+Avg\+\_\+slope = \mbox{\hyperlink{InternTemperature_8h_a9ca7becb757cf9bead0bcc6bd7bb944b}{T\+E\+M\+P\+E\+T\+A\+T\+U\+R\+E\+\_\+\+A\+V\+G\+\_\+\+S\+L\+O\+PE}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInternTemperature_ac38d434192a4addd3b94e99296db5c99}\label{classInternTemperature_ac38d434192a4addd3b94e99296db5c99}} 
+\index{InternTemperature@{InternTemperature}!InternTemperature@{InternTemperature}}
+\index{InternTemperature@{InternTemperature}!InternTemperature@{InternTemperature}}
+\doxysubsubsection{\texorpdfstring{InternTemperature()}{InternTemperature()}}
+{\footnotesize\ttfamily Intern\+Temperature\+::\+Intern\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classInternTemperature_a676ceeb7a43c3185414fa8df15e20c1c}\label{classInternTemperature_a676ceeb7a43c3185414fa8df15e20c1c}} 
+\index{InternTemperature@{InternTemperature}!````~InternTemperature@{$\sim$InternTemperature}}
+\index{````~InternTemperature@{$\sim$InternTemperature}!InternTemperature@{InternTemperature}}
+\doxysubsubsection{\texorpdfstring{$\sim$InternTemperature()}{~InternTemperature()}}
+{\footnotesize\ttfamily Intern\+Temperature\+::$\sim$\+Intern\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInternTemperature_aa5bbce97f294f2c9ec64081e101295b5}\label{classInternTemperature_aa5bbce97f294f2c9ec64081e101295b5}} 
+\index{InternTemperature@{InternTemperature}!convertToTemperature@{convertToTemperature}}
+\index{convertToTemperature@{convertToTemperature}!InternTemperature@{InternTemperature}}
+\doxysubsubsection{\texorpdfstring{convertToTemperature()}{convertToTemperature()}}
+{\footnotesize\ttfamily float Intern\+Temperature\+::convert\+To\+Temperature (\begin{DoxyParamCaption}\item[{float}]{volt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+datasheet formula\mbox{\Hypertarget{classInternTemperature_acf1221579f7f902b55274bb5e407e1a7}\label{classInternTemperature_acf1221579f7f902b55274bb5e407e1a7}} 
+\index{InternTemperature@{InternTemperature}!getTemperature@{getTemperature}}
+\index{getTemperature@{getTemperature}!InternTemperature@{InternTemperature}}
+\doxysubsubsection{\texorpdfstring{getTemperature()}{getTemperature()}}
+{\footnotesize\ttfamily float Intern\+Temperature\+::get\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calculate and return current internal temperature. \mbox{\Hypertarget{classInternTemperature_aafed4be59033983356e97f77dc6997f0}\label{classInternTemperature_aafed4be59033983356e97f77dc6997f0}} 
+\index{InternTemperature@{InternTemperature}!update@{update}}
+\index{update@{update}!InternTemperature@{InternTemperature}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Intern\+Temperature\+::update (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{raw }\end{DoxyParamCaption})}
+
+Update and calculate voltage value of temperature sensor 
+\begin{DoxyParams}{Parameters}
+{\em raw} & -\/ uint32\+\_\+t raw A\+DC channel register data \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Software/\+Inc/\mbox{\hyperlink{InternTemperature_8h}{Intern\+Temperature.\+h}}\item 
+Software/\+Src/\mbox{\hyperlink{InternTemperature_8cpp}{Intern\+Temperature.\+cpp}}\end{DoxyCompactItemize}

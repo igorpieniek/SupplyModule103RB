@@ -1,0 +1,313 @@
+\hypertarget{classLedNotifier}{}\doxysection{Led\+Notifier Class Reference}
+\label{classLedNotifier}\index{LedNotifier@{LedNotifier}}
+
+
+{\ttfamily \#include $<$Led\+Notifier.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classLedNotifier_a74fd8a481165eb750851e3f950d5876a}{Led\+State}} \{ \mbox{\hyperlink{classLedNotifier_a74fd8a481165eb750851e3f950d5876aadd94feafc9708b1d09733bd9c9284d38}{O\+FF}} =0, 
+\mbox{\hyperlink{classLedNotifier_a74fd8a481165eb750851e3f950d5876aa0482c4ef00c2b198b7638b36c114cc96}{ON}}, 
+\mbox{\hyperlink{classLedNotifier_a74fd8a481165eb750851e3f950d5876aa30e26f95534ec691d351b343ef00f8d5}{B\+L\+I\+NK}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLedNotifier_ac8ee5ac9ad4666a1034f79f7dcdf4c4a}{on}} ()
+\item 
+void \mbox{\hyperlink{classLedNotifier_ab8e5a76adf9204775f52bf3a4a020872}{off}} ()
+\item 
+void \mbox{\hyperlink{classLedNotifier_a9f0c00eb5158c58b1d1f4870e892d589}{blink}} (uint16\+\_\+t per\+ON)
+\item 
+void \mbox{\hyperlink{classLedNotifier_a4a0f00468f6a5aa165170b75ab2a466a}{blink}} (uint16\+\_\+t per\+ON, uint16\+\_\+t per\+O\+FF)
+\item 
+void \mbox{\hyperlink{classLedNotifier_a8fe6664b1157f3e86f0960ce985c7280}{blink\+\_\+process}} ()
+\item 
+\mbox{\hyperlink{classLedNotifier_a74fd8a481165eb750851e3f950d5876a}{Led\+State}} \mbox{\hyperlink{classLedNotifier_a1a8697c38881ad58dfa08c41304cab11}{get\+State}} ()
+\item 
+\mbox{\hyperlink{classLedNotifier_a3699074be96cd7825b6be5e55ca4c1ef}{Led\+Notifier}} (G\+P\+I\+O\+\_\+\+Type\+Def $\ast$port, uint16\+\_\+t pin, uint8\+\_\+t rev=0)
+\item 
+virtual \mbox{\hyperlink{classLedNotifier_af072b60236c5af9d5c14d0ea0e8ba5d2}{$\sim$\+Led\+Notifier}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classLedNotifier_a9a500636153ac5de27f3687fd2ecb77f}{Blink\+State}} \{ \mbox{\hyperlink{classLedNotifier_a9a500636153ac5de27f3687fd2ecb77fafd6e8ce93955391f6b612deaefe8e801}{blink\+Off}}, 
+\mbox{\hyperlink{classLedNotifier_a9a500636153ac5de27f3687fd2ecb77fa344d76c0d54e0c3c39477ab852bd9a8e}{blink\+On}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+G\+P\+I\+O\+\_\+\+Pin\+State \mbox{\hyperlink{classLedNotifier_a62333398842508b0ffd48106479fd448}{get\+O\+N\+Pin\+State}} ()
+\item 
+G\+P\+I\+O\+\_\+\+Pin\+State \mbox{\hyperlink{classLedNotifier_aaf4d93768f45ede96c5b8602c3871657}{get\+O\+F\+F\+Pin\+State}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classLedNotifier_adb08929616bfd065626d13d3cfa60917}{get\+Period}} ()
+\item 
+void \mbox{\hyperlink{classLedNotifier_a1d973f9cfac282e7238ed7a3ec8f4ae6}{toggle\+\_\+blinkstate}} ()
+\item 
+void \mbox{\hyperlink{classLedNotifier_a605aa9a358c3052a715af423f7ef7041}{toggle}} ()
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classLedNotifier_a53224d790ff09011f46edba48b59a51e}{get\+Time\+From\+Last\+Toggle}} ()
+\item 
+void \mbox{\hyperlink{classLedNotifier_af1b8a631f6d22b8115d9f28007525cf4}{update\+Last\+Toggle\+Time}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+P\+I\+O\+\_\+\+Type\+Def $\ast$ \mbox{\hyperlink{classLedNotifier_a0b982977c69536547b240eb242ecd88d}{Port}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classLedNotifier_a6533cdf4965ce679c54f7bc9aca7f7e8}{Pin}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classLedNotifier_a3c9077f71d71ae8fd43645ce772d7a90}{blink\+Period\+ON}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classLedNotifier_ad9f351896b2aac05f8cd6b39ac3aed2f}{blink\+Period\+O\+FF}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classLedNotifier_a010986a831ab76f97630156cf42e40fa}{last\+\_\+toggle\+\_\+time}}
+\item 
+enum \mbox{\hyperlink{classLedNotifier_a9a500636153ac5de27f3687fd2ecb77f}{Led\+Notifier\+::\+Blink\+State}} \mbox{\hyperlink{classLedNotifier_a7a385223b0c0072fe536eaa6c696e590}{blink\+\_\+state}}
+\item 
+\mbox{\hyperlink{classLedNotifier_a74fd8a481165eb750851e3f950d5876a}{Led\+State}} \mbox{\hyperlink{classLedNotifier_a1ea3a0c52fc1f8aac1efffa83eb573eb}{cur\+State}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classLedNotifier_a1019f29dc4b76ab4931a1694f851d07e}{is\+Reversed}}
+\item 
+G\+P\+I\+O\+\_\+\+Pin\+State \mbox{\hyperlink{classLedNotifier_a9f6825d28362fd86224e8e8ccb13cbe9}{on\+State}}
+\item 
+G\+P\+I\+O\+\_\+\+Pin\+State \mbox{\hyperlink{classLedNotifier_a36c85a36ea416624bfd74ad096815428}{off\+State}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tool intended for led\textquotesingle{}s, it provide typical behaviours for notifier -\/ O\+N/\+O\+FF or blink. To blink mechanism it use \mbox{\hyperlink{classTimeTool}{Time\+Tool()}} global class object to calculate time between toggles. To blink use \mbox{\hyperlink{classLedNotifier_a9f0c00eb5158c58b1d1f4870e892d589}{blink()}} function. \mbox{\hyperlink{classLedNotifier_a8fe6664b1157f3e86f0960ce985c7280}{blink\+\_\+process()}} could be used only by manager task.
+
+Led blinking could be stopped by using \mbox{\hyperlink{classLedNotifier_ac8ee5ac9ad4666a1034f79f7dcdf4c4a}{on()}} / \mbox{\hyperlink{classLedNotifier_ab8e5a76adf9204775f52bf3a4a020872}{off()}} method 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classLedNotifier_a9a500636153ac5de27f3687fd2ecb77f}\label{classLedNotifier_a9a500636153ac5de27f3687fd2ecb77f}} 
+\index{LedNotifier@{LedNotifier}!BlinkState@{BlinkState}}
+\index{BlinkState@{BlinkState}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{BlinkState}{BlinkState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classLedNotifier_a9a500636153ac5de27f3687fd2ecb77f}{Led\+Notifier\+::\+Blink\+State}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{blinkOff@{blinkOff}!LedNotifier@{LedNotifier}}\index{LedNotifier@{LedNotifier}!blinkOff@{blinkOff}}}\mbox{\Hypertarget{classLedNotifier_a9a500636153ac5de27f3687fd2ecb77fafd6e8ce93955391f6b612deaefe8e801}\label{classLedNotifier_a9a500636153ac5de27f3687fd2ecb77fafd6e8ce93955391f6b612deaefe8e801}} 
+blink\+Off&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{blinkOn@{blinkOn}!LedNotifier@{LedNotifier}}\index{LedNotifier@{LedNotifier}!blinkOn@{blinkOn}}}\mbox{\Hypertarget{classLedNotifier_a9a500636153ac5de27f3687fd2ecb77fa344d76c0d54e0c3c39477ab852bd9a8e}\label{classLedNotifier_a9a500636153ac5de27f3687fd2ecb77fa344d76c0d54e0c3c39477ab852bd9a8e}} 
+blink\+On&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classLedNotifier_a74fd8a481165eb750851e3f950d5876a}\label{classLedNotifier_a74fd8a481165eb750851e3f950d5876a}} 
+\index{LedNotifier@{LedNotifier}!LedState@{LedState}}
+\index{LedState@{LedState}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{LedState}{LedState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classLedNotifier_a74fd8a481165eb750851e3f950d5876a}{Led\+Notifier\+::\+Led\+State}}}
+
+Enum to specify state of lednotifier object \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OFF@{OFF}!LedNotifier@{LedNotifier}}\index{LedNotifier@{LedNotifier}!OFF@{OFF}}}\mbox{\Hypertarget{classLedNotifier_a74fd8a481165eb750851e3f950d5876aadd94feafc9708b1d09733bd9c9284d38}\label{classLedNotifier_a74fd8a481165eb750851e3f950d5876aadd94feafc9708b1d09733bd9c9284d38}} 
+O\+FF&in this state led should be turn off ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ON@{ON}!LedNotifier@{LedNotifier}}\index{LedNotifier@{LedNotifier}!ON@{ON}}}\mbox{\Hypertarget{classLedNotifier_a74fd8a481165eb750851e3f950d5876aa0482c4ef00c2b198b7638b36c114cc96}\label{classLedNotifier_a74fd8a481165eb750851e3f950d5876aa0482c4ef00c2b198b7638b36c114cc96}} 
+ON&in this state led should be turn on ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLINK@{BLINK}!LedNotifier@{LedNotifier}}\index{LedNotifier@{LedNotifier}!BLINK@{BLINK}}}\mbox{\Hypertarget{classLedNotifier_a74fd8a481165eb750851e3f950d5876aa30e26f95534ec691d351b343ef00f8d5}\label{classLedNotifier_a74fd8a481165eb750851e3f950d5876aa30e26f95534ec691d351b343ef00f8d5}} 
+B\+L\+I\+NK&in this state led should blinking ~\newline
+ \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLedNotifier_a3699074be96cd7825b6be5e55ca4c1ef}\label{classLedNotifier_a3699074be96cd7825b6be5e55ca4c1ef}} 
+\index{LedNotifier@{LedNotifier}!LedNotifier@{LedNotifier}}
+\index{LedNotifier@{LedNotifier}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{LedNotifier()}{LedNotifier()}}
+{\footnotesize\ttfamily Led\+Notifier\+::\+Led\+Notifier (\begin{DoxyParamCaption}\item[{G\+P\+I\+O\+\_\+\+Type\+Def $\ast$}]{port,  }\item[{uint16\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{rev = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$port} & -\/ G\+P\+I\+O\+\_\+\+Type\+Def value -\/ it define port of using pin \\
+\hline
+{\em pin} & -\/ uint16\+\_\+t value -\/ pin definition \\
+\hline
+{\em rev} & -\/ uint8\+\_\+t flag (optional) normally 0, but it should be set as 1 if there is reversed logic -\/ eg. high state on pin -\/$>$ led is turn off \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLedNotifier_af072b60236c5af9d5c14d0ea0e8ba5d2}\label{classLedNotifier_af072b60236c5af9d5c14d0ea0e8ba5d2}} 
+\index{LedNotifier@{LedNotifier}!````~LedNotifier@{$\sim$LedNotifier}}
+\index{````~LedNotifier@{$\sim$LedNotifier}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{$\sim$LedNotifier()}{~LedNotifier()}}
+{\footnotesize\ttfamily Led\+Notifier\+::$\sim$\+Led\+Notifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLedNotifier_a9f0c00eb5158c58b1d1f4870e892d589}\label{classLedNotifier_a9f0c00eb5158c58b1d1f4870e892d589}} 
+\index{LedNotifier@{LedNotifier}!blink@{blink}}
+\index{blink@{blink}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{blink()}{blink()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Led\+Notifier\+::blink (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{per\+ON }\end{DoxyParamCaption})}
+
+Put L\+ED into B\+L\+I\+NK state, and configure behaviour 
+\begin{DoxyParams}{Parameters}
+{\em per\+ON} & -\/ uint16\+\_\+t value in miliseconds -\/ configure the same time for ON and O\+FF state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLedNotifier_a4a0f00468f6a5aa165170b75ab2a466a}\label{classLedNotifier_a4a0f00468f6a5aa165170b75ab2a466a}} 
+\index{LedNotifier@{LedNotifier}!blink@{blink}}
+\index{blink@{blink}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{blink()}{blink()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Led\+Notifier\+::blink (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{per\+ON,  }\item[{uint16\+\_\+t}]{per\+O\+FF }\end{DoxyParamCaption})}
+
+Put L\+ED into B\+L\+I\+NK state, and configure behaviour 
+\begin{DoxyParams}{Parameters}
+{\em per\+ON} & -\/ uint16\+\_\+t value in miliseconds -\/ configure time of L\+ED ON state \\
+\hline
+{\em per\+O\+FF} & -\/ uint16\+\_\+t value in miliseconds -\/ configure time of L\+ED O\+FF state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLedNotifier_a8fe6664b1157f3e86f0960ce985c7280}\label{classLedNotifier_a8fe6664b1157f3e86f0960ce985c7280}} 
+\index{LedNotifier@{LedNotifier}!blink\_process@{blink\_process}}
+\index{blink\_process@{blink\_process}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{blink\_process()}{blink\_process()}}
+{\footnotesize\ttfamily void Led\+Notifier\+::blink\+\_\+process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Process of led blinking. Function that should be called by task process only -\/ it toggle L\+ED in right time. It work only when \mbox{\hyperlink{classLedNotifier_a9f0c00eb5158c58b1d1f4870e892d589}{blink()}} function was used before. Without this operation nothing will happen. \mbox{\Hypertarget{classLedNotifier_aaf4d93768f45ede96c5b8602c3871657}\label{classLedNotifier_aaf4d93768f45ede96c5b8602c3871657}} 
+\index{LedNotifier@{LedNotifier}!getOFFPinState@{getOFFPinState}}
+\index{getOFFPinState@{getOFFPinState}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{getOFFPinState()}{getOFFPinState()}}
+{\footnotesize\ttfamily G\+P\+I\+O\+\_\+\+Pin\+State Led\+Notifier\+::get\+O\+F\+F\+Pin\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+return real ON state \mbox{\Hypertarget{classLedNotifier_a62333398842508b0ffd48106479fd448}\label{classLedNotifier_a62333398842508b0ffd48106479fd448}} 
+\index{LedNotifier@{LedNotifier}!getONPinState@{getONPinState}}
+\index{getONPinState@{getONPinState}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{getONPinState()}{getONPinState()}}
+{\footnotesize\ttfamily G\+P\+I\+O\+\_\+\+Pin\+State Led\+Notifier\+::get\+O\+N\+Pin\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+state consider as O\+FF \mbox{\Hypertarget{classLedNotifier_adb08929616bfd065626d13d3cfa60917}\label{classLedNotifier_adb08929616bfd065626d13d3cfa60917}} 
+\index{LedNotifier@{LedNotifier}!getPeriod@{getPeriod}}
+\index{getPeriod@{getPeriod}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{getPeriod()}{getPeriod()}}
+{\footnotesize\ttfamily uint32\+\_\+t Led\+Notifier\+::get\+Period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+return real O\+FF state \mbox{\Hypertarget{classLedNotifier_a1a8697c38881ad58dfa08c41304cab11}\label{classLedNotifier_a1a8697c38881ad58dfa08c41304cab11}} 
+\index{LedNotifier@{LedNotifier}!getState@{getState}}
+\index{getState@{getState}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLedNotifier_a74fd8a481165eb750851e3f950d5876a}{Led\+Notifier\+::\+Led\+State}} Led\+Notifier\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return current object state using \mbox{\hyperlink{classLedNotifier_a74fd8a481165eb750851e3f950d5876a}{Led\+State()}} \mbox{\Hypertarget{classLedNotifier_a53224d790ff09011f46edba48b59a51e}\label{classLedNotifier_a53224d790ff09011f46edba48b59a51e}} 
+\index{LedNotifier@{LedNotifier}!getTimeFromLastToggle@{getTimeFromLastToggle}}
+\index{getTimeFromLastToggle@{getTimeFromLastToggle}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{getTimeFromLastToggle()}{getTimeFromLastToggle()}}
+{\footnotesize\ttfamily uint16\+\_\+t Led\+Notifier\+::get\+Time\+From\+Last\+Toggle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+toggle led pin state \mbox{\Hypertarget{classLedNotifier_ab8e5a76adf9204775f52bf3a4a020872}\label{classLedNotifier_ab8e5a76adf9204775f52bf3a4a020872}} 
+\index{LedNotifier@{LedNotifier}!off@{off}}
+\index{off@{off}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{off()}{off()}}
+{\footnotesize\ttfamily void Led\+Notifier\+::off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Put L\+ED into O\+FF state \mbox{\Hypertarget{classLedNotifier_ac8ee5ac9ad4666a1034f79f7dcdf4c4a}\label{classLedNotifier_ac8ee5ac9ad4666a1034f79f7dcdf4c4a}} 
+\index{LedNotifier@{LedNotifier}!on@{on}}
+\index{on@{on}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{on()}{on()}}
+{\footnotesize\ttfamily void Led\+Notifier\+::on (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Put L\+ED into ON state \mbox{\Hypertarget{classLedNotifier_a605aa9a358c3052a715af423f7ef7041}\label{classLedNotifier_a605aa9a358c3052a715af423f7ef7041}} 
+\index{LedNotifier@{LedNotifier}!toggle@{toggle}}
+\index{toggle@{toggle}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{toggle()}{toggle()}}
+{\footnotesize\ttfamily void Led\+Notifier\+::toggle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+toggle current blink\+\_\+state (enum Blink\+State) \mbox{\Hypertarget{classLedNotifier_a1d973f9cfac282e7238ed7a3ec8f4ae6}\label{classLedNotifier_a1d973f9cfac282e7238ed7a3ec8f4ae6}} 
+\index{LedNotifier@{LedNotifier}!toggle\_blinkstate@{toggle\_blinkstate}}
+\index{toggle\_blinkstate@{toggle\_blinkstate}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{toggle\_blinkstate()}{toggle\_blinkstate()}}
+{\footnotesize\ttfamily void Led\+Notifier\+::toggle\+\_\+blinkstate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+return current period in blinking process\+: blink\+Period\+ON / blink\+Period\+O\+FF \mbox{\Hypertarget{classLedNotifier_af1b8a631f6d22b8115d9f28007525cf4}\label{classLedNotifier_af1b8a631f6d22b8115d9f28007525cf4}} 
+\index{LedNotifier@{LedNotifier}!updateLastToggleTime@{updateLastToggleTime}}
+\index{updateLastToggleTime@{updateLastToggleTime}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{updateLastToggleTime()}{updateLastToggleTime()}}
+{\footnotesize\ttfamily void Led\+Notifier\+::update\+Last\+Toggle\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+compare saved C\+NT state, and current C\+NT state and return the difference \mbox{[}ms\mbox{]} 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classLedNotifier_a7a385223b0c0072fe536eaa6c696e590}\label{classLedNotifier_a7a385223b0c0072fe536eaa6c696e590}} 
+\index{LedNotifier@{LedNotifier}!blink\_state@{blink\_state}}
+\index{blink\_state@{blink\_state}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{blink\_state}{blink\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classLedNotifier_a9a500636153ac5de27f3687fd2ecb77f}{Led\+Notifier\+::\+Blink\+State}} Led\+Notifier\+::blink\+\_\+state\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLedNotifier_ad9f351896b2aac05f8cd6b39ac3aed2f}\label{classLedNotifier_ad9f351896b2aac05f8cd6b39ac3aed2f}} 
+\index{LedNotifier@{LedNotifier}!blinkPeriodOFF@{blinkPeriodOFF}}
+\index{blinkPeriodOFF@{blinkPeriodOFF}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{blinkPeriodOFF}{blinkPeriodOFF}}
+{\footnotesize\ttfamily uint16\+\_\+t Led\+Notifier\+::blink\+Period\+O\+FF\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLedNotifier_a3c9077f71d71ae8fd43645ce772d7a90}\label{classLedNotifier_a3c9077f71d71ae8fd43645ce772d7a90}} 
+\index{LedNotifier@{LedNotifier}!blinkPeriodON@{blinkPeriodON}}
+\index{blinkPeriodON@{blinkPeriodON}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{blinkPeriodON}{blinkPeriodON}}
+{\footnotesize\ttfamily uint16\+\_\+t Led\+Notifier\+::blink\+Period\+ON\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLedNotifier_a1ea3a0c52fc1f8aac1efffa83eb573eb}\label{classLedNotifier_a1ea3a0c52fc1f8aac1efffa83eb573eb}} 
+\index{LedNotifier@{LedNotifier}!curState@{curState}}
+\index{curState@{curState}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{curState}{curState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLedNotifier_a74fd8a481165eb750851e3f950d5876a}{Led\+State}} Led\+Notifier\+::cur\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLedNotifier_a1019f29dc4b76ab4931a1694f851d07e}\label{classLedNotifier_a1019f29dc4b76ab4931a1694f851d07e}} 
+\index{LedNotifier@{LedNotifier}!isReversed@{isReversed}}
+\index{isReversed@{isReversed}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{isReversed}{isReversed}}
+{\footnotesize\ttfamily uint8\+\_\+t Led\+Notifier\+::is\+Reversed\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLedNotifier_a010986a831ab76f97630156cf42e40fa}\label{classLedNotifier_a010986a831ab76f97630156cf42e40fa}} 
+\index{LedNotifier@{LedNotifier}!last\_toggle\_time@{last\_toggle\_time}}
+\index{last\_toggle\_time@{last\_toggle\_time}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{last\_toggle\_time}{last\_toggle\_time}}
+{\footnotesize\ttfamily uint16\+\_\+t Led\+Notifier\+::last\+\_\+toggle\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+
+blinking periods \mbox{\Hypertarget{classLedNotifier_a36c85a36ea416624bfd74ad096815428}\label{classLedNotifier_a36c85a36ea416624bfd74ad096815428}} 
+\index{LedNotifier@{LedNotifier}!offState@{offState}}
+\index{offState@{offState}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{offState}{offState}}
+{\footnotesize\ttfamily G\+P\+I\+O\+\_\+\+Pin\+State Led\+Notifier\+::off\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+state consider as ON \mbox{\Hypertarget{classLedNotifier_a9f6825d28362fd86224e8e8ccb13cbe9}\label{classLedNotifier_a9f6825d28362fd86224e8e8ccb13cbe9}} 
+\index{LedNotifier@{LedNotifier}!onState@{onState}}
+\index{onState@{onState}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{onState}{onState}}
+{\footnotesize\ttfamily G\+P\+I\+O\+\_\+\+Pin\+State Led\+Notifier\+::on\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+flag of reversed led logic \mbox{\Hypertarget{classLedNotifier_a6533cdf4965ce679c54f7bc9aca7f7e8}\label{classLedNotifier_a6533cdf4965ce679c54f7bc9aca7f7e8}} 
+\index{LedNotifier@{LedNotifier}!Pin@{Pin}}
+\index{Pin@{Pin}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{Pin}{Pin}}
+{\footnotesize\ttfamily uint16\+\_\+t Led\+Notifier\+::\+Pin\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLedNotifier_a0b982977c69536547b240eb242ecd88d}\label{classLedNotifier_a0b982977c69536547b240eb242ecd88d}} 
+\index{LedNotifier@{LedNotifier}!Port@{Port}}
+\index{Port@{Port}!LedNotifier@{LedNotifier}}
+\doxysubsubsection{\texorpdfstring{Port}{Port}}
+{\footnotesize\ttfamily G\+P\+I\+O\+\_\+\+Type\+Def$\ast$ Led\+Notifier\+::\+Port\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Software/\+Inc/\mbox{\hyperlink{LedNotifier_8h}{Led\+Notifier.\+h}}\item 
+Software/\+Src/\mbox{\hyperlink{LedNotifier_8cpp}{Led\+Notifier.\+cpp}}\end{DoxyCompactItemize}

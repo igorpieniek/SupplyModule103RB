@@ -1,0 +1,184 @@
+\hypertarget{classBatteryManager}{}\doxysection{Battery\+Manager Class Reference}
+\label{classBatteryManager}\index{BatteryManager@{BatteryManager}}
+
+
+{\ttfamily \#include $<$Battery\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Battery\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classBatteryManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148}{cell\+\_\+name}} \{ \mbox{\hyperlink{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148ae5d48c9e6758e4ec4be78917bbc2a65b}{cell1}}, 
+\mbox{\hyperlink{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148a1bbd2e7b11c628164d2a325cab1da8c4}{cell2}}, 
+\mbox{\hyperlink{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148a6c2d280aefb66a801f5537d66b7d6332}{cell3}}, 
+\mbox{\hyperlink{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148a0e7c294c727cc894908d3f5079f5ca78}{cell4}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBatteryManager_a4e5e24414d24421dfb93179591faa04e}{init}} ()
+\item 
+void \mbox{\hyperlink{classBatteryManager_abaebedeb920de9e9fe3ce040d9eebf65}{process}} ()
+\item 
+float \mbox{\hyperlink{classBatteryManager_afd9cfcc35e3c22ddad4ef73e20e410e3}{get\+Battery\+Voltage}} ()
+\item 
+float \mbox{\hyperlink{classBatteryManager_a774b438039676380d9d283fecff55087}{get\+Battery\+Level}} ()
+\item 
+float \mbox{\hyperlink{classBatteryManager_a78eb52c8d711e09457c6d553060b111e}{get\+Cell\+Voltage}} (\mbox{\hyperlink{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148}{cell\+\_\+name}} name)
+\item 
+\mbox{\hyperlink{classBatteryManager_ad9b2e2beae5b9b2ecf696dea7ac7c0ad}{Battery\+Manager}} ()
+\item 
+virtual \mbox{\hyperlink{classBatteryManager_a2b148b3ddb405b7a323fc3314facf2ad}{$\sim$\+Battery\+Manager}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBatteryManager_a9020ebd96cd4f994ab71780be668300f}{update\+Measurments}} ()
+\item 
+void \mbox{\hyperlink{classBatteryManager_afd1326a8e935012b001f4472d35187db}{check\+Battery\+Level}} ()
+\item 
+void \mbox{\hyperlink{classBatteryManager_af3366543743df5ab47efbe5031bab7d7}{add\+Cells}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLipoCell}{Lipo\+Cell}} $\ast$ \mbox{\hyperlink{classBatteryManager_ac3fdb6708238891640198a3934ce09c2}{cells}} \mbox{[}L\+I\+P\+O\+C\+E\+L\+L\+S\+\_\+\+N\+U\+M\+B\+ER\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classBatteryManager_ac7c63f8ee8fe33a0098573ec4b76acd3}{raw\+A\+DC}} \mbox{[}L\+I\+P\+O\+C\+E\+L\+L\+S\+\_\+\+N\+U\+M\+B\+ER\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Task class to manage all battery operations 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148}\label{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148}} 
+\index{BatteryManager@{BatteryManager}!cell\_name@{cell\_name}}
+\index{cell\_name@{cell\_name}!BatteryManager@{BatteryManager}}
+\doxysubsubsection{\texorpdfstring{cell\_name}{cell\_name}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148}{Battery\+Manager\+::cell\+\_\+name}}}
+
+Enum to define names of cells \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cell1@{cell1}!BatteryManager@{BatteryManager}}\index{BatteryManager@{BatteryManager}!cell1@{cell1}}}\mbox{\Hypertarget{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148ae5d48c9e6758e4ec4be78917bbc2a65b}\label{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148ae5d48c9e6758e4ec4be78917bbc2a65b}} 
+cell1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cell2@{cell2}!BatteryManager@{BatteryManager}}\index{BatteryManager@{BatteryManager}!cell2@{cell2}}}\mbox{\Hypertarget{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148a1bbd2e7b11c628164d2a325cab1da8c4}\label{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148a1bbd2e7b11c628164d2a325cab1da8c4}} 
+cell2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cell3@{cell3}!BatteryManager@{BatteryManager}}\index{BatteryManager@{BatteryManager}!cell3@{cell3}}}\mbox{\Hypertarget{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148a6c2d280aefb66a801f5537d66b7d6332}\label{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148a6c2d280aefb66a801f5537d66b7d6332}} 
+cell3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{cell4@{cell4}!BatteryManager@{BatteryManager}}\index{BatteryManager@{BatteryManager}!cell4@{cell4}}}\mbox{\Hypertarget{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148a0e7c294c727cc894908d3f5079f5ca78}\label{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148a0e7c294c727cc894908d3f5079f5ca78}} 
+cell4&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBatteryManager_ad9b2e2beae5b9b2ecf696dea7ac7c0ad}\label{classBatteryManager_ad9b2e2beae5b9b2ecf696dea7ac7c0ad}} 
+\index{BatteryManager@{BatteryManager}!BatteryManager@{BatteryManager}}
+\index{BatteryManager@{BatteryManager}!BatteryManager@{BatteryManager}}
+\doxysubsubsection{\texorpdfstring{BatteryManager()}{BatteryManager()}}
+{\footnotesize\ttfamily Battery\+Manager\+::\+Battery\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classBatteryManager_a2b148b3ddb405b7a323fc3314facf2ad}\label{classBatteryManager_a2b148b3ddb405b7a323fc3314facf2ad}} 
+\index{BatteryManager@{BatteryManager}!````~BatteryManager@{$\sim$BatteryManager}}
+\index{````~BatteryManager@{$\sim$BatteryManager}!BatteryManager@{BatteryManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$BatteryManager()}{~BatteryManager()}}
+{\footnotesize\ttfamily Battery\+Manager\+::$\sim$\+Battery\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBatteryManager_af3366543743df5ab47efbe5031bab7d7}\label{classBatteryManager_af3366543743df5ab47efbe5031bab7d7}} 
+\index{BatteryManager@{BatteryManager}!addCells@{addCells}}
+\index{addCells@{addCells}!BatteryManager@{BatteryManager}}
+\doxysubsubsection{\texorpdfstring{addCells()}{addCells()}}
+{\footnotesize\ttfamily void Battery\+Manager\+::add\+Cells (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Check battery lvl and give info to other tasks -\/ buzzer \& oled in case of low level \mbox{\Hypertarget{classBatteryManager_afd1326a8e935012b001f4472d35187db}\label{classBatteryManager_afd1326a8e935012b001f4472d35187db}} 
+\index{BatteryManager@{BatteryManager}!checkBatteryLevel@{checkBatteryLevel}}
+\index{checkBatteryLevel@{checkBatteryLevel}!BatteryManager@{BatteryManager}}
+\doxysubsubsection{\texorpdfstring{checkBatteryLevel()}{checkBatteryLevel()}}
+{\footnotesize\ttfamily void Battery\+Manager\+::check\+Battery\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Read data using D\+MA and refresh data stored in every \mbox{\hyperlink{classLipoCell}{Lipo\+Cell}} object \mbox{\Hypertarget{classBatteryManager_a774b438039676380d9d283fecff55087}\label{classBatteryManager_a774b438039676380d9d283fecff55087}} 
+\index{BatteryManager@{BatteryManager}!getBatteryLevel@{getBatteryLevel}}
+\index{getBatteryLevel@{getBatteryLevel}!BatteryManager@{BatteryManager}}
+\doxysubsubsection{\texorpdfstring{getBatteryLevel()}{getBatteryLevel()}}
+{\footnotesize\ttfamily float Battery\+Manager\+::get\+Battery\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return current state of battery in percentage \mbox{\Hypertarget{classBatteryManager_afd9cfcc35e3c22ddad4ef73e20e410e3}\label{classBatteryManager_afd9cfcc35e3c22ddad4ef73e20e410e3}} 
+\index{BatteryManager@{BatteryManager}!getBatteryVoltage@{getBatteryVoltage}}
+\index{getBatteryVoltage@{getBatteryVoltage}!BatteryManager@{BatteryManager}}
+\doxysubsubsection{\texorpdfstring{getBatteryVoltage()}{getBatteryVoltage()}}
+{\footnotesize\ttfamily float Battery\+Manager\+::get\+Battery\+Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return current voltage of battery \mbox{\Hypertarget{classBatteryManager_a78eb52c8d711e09457c6d553060b111e}\label{classBatteryManager_a78eb52c8d711e09457c6d553060b111e}} 
+\index{BatteryManager@{BatteryManager}!getCellVoltage@{getCellVoltage}}
+\index{getCellVoltage@{getCellVoltage}!BatteryManager@{BatteryManager}}
+\doxysubsubsection{\texorpdfstring{getCellVoltage()}{getCellVoltage()}}
+{\footnotesize\ttfamily float Battery\+Manager\+::get\+Cell\+Voltage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBatteryManager_aa49de6b0b8d58c1cf2b88c59cfcf6148}{cell\+\_\+name}}}]{name }\end{DoxyParamCaption})}
+
+Return specified cell voltage -\/ (reference to the previous cell voltage value) 
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ cell\+\_\+number enum -\/ to prevent from incorrect index \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBatteryManager_a4e5e24414d24421dfb93179591faa04e}\label{classBatteryManager_a4e5e24414d24421dfb93179591faa04e}} 
+\index{BatteryManager@{BatteryManager}!init@{init}}
+\index{init@{init}!BatteryManager@{BatteryManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Battery\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Task Init function. Init of D\+MA A\+DC channels and \mbox{\hyperlink{classLipoCell}{Lipo\+Cell()}} objects \mbox{\Hypertarget{classBatteryManager_abaebedeb920de9e9fe3ce040d9eebf65}\label{classBatteryManager_abaebedeb920de9e9fe3ce040d9eebf65}} 
+\index{BatteryManager@{BatteryManager}!process@{process}}
+\index{process@{process}!BatteryManager@{BatteryManager}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily void Battery\+Manager\+::process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Main Process of task
+\begin{DoxyItemize}
+\item measurements update
+\item check battery level and sending signals in case of battery low level 
+\end{DoxyItemize}\mbox{\Hypertarget{classBatteryManager_a9020ebd96cd4f994ab71780be668300f}\label{classBatteryManager_a9020ebd96cd4f994ab71780be668300f}} 
+\index{BatteryManager@{BatteryManager}!updateMeasurments@{updateMeasurments}}
+\index{updateMeasurments@{updateMeasurments}!BatteryManager@{BatteryManager}}
+\doxysubsubsection{\texorpdfstring{updateMeasurments()}{updateMeasurments()}}
+{\footnotesize\ttfamily void Battery\+Manager\+::update\+Measurments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classBatteryManager_ac3fdb6708238891640198a3934ce09c2}\label{classBatteryManager_ac3fdb6708238891640198a3934ce09c2}} 
+\index{BatteryManager@{BatteryManager}!cells@{cells}}
+\index{cells@{cells}!BatteryManager@{BatteryManager}}
+\doxysubsubsection{\texorpdfstring{cells}{cells}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLipoCell}{Lipo\+Cell}}$\ast$ Battery\+Manager\+::cells\mbox{[}L\+I\+P\+O\+C\+E\+L\+L\+S\+\_\+\+N\+U\+M\+B\+ER\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+add cells and initilize them (to \mbox{\hyperlink{classBatteryManager_a4e5e24414d24421dfb93179591faa04e}{init()}} ) \mbox{\Hypertarget{classBatteryManager_ac7c63f8ee8fe33a0098573ec4b76acd3}\label{classBatteryManager_ac7c63f8ee8fe33a0098573ec4b76acd3}} 
+\index{BatteryManager@{BatteryManager}!rawADC@{rawADC}}
+\index{rawADC@{rawADC}!BatteryManager@{BatteryManager}}
+\doxysubsubsection{\texorpdfstring{rawADC}{rawADC}}
+{\footnotesize\ttfamily uint32\+\_\+t Battery\+Manager\+::raw\+A\+DC\mbox{[}L\+I\+P\+O\+C\+E\+L\+L\+S\+\_\+\+N\+U\+M\+B\+ER\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Software/\+Inc/\mbox{\hyperlink{BatteryManager_8h}{Battery\+Manager.\+h}}\item 
+Software/\+Src/\mbox{\hyperlink{BatteryManager_8cpp}{Battery\+Manager.\+cpp}}\end{DoxyCompactItemize}
