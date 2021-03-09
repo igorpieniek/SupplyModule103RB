@@ -1,0 +1,165 @@
+\hypertarget{AllTasks_8cpp}{}\doxysection{Software/\+Src/\+All\+Tasks.cpp File Reference}
+\label{AllTasks_8cpp}\index{Software/Src/AllTasks.cpp@{Software/Src/AllTasks.cpp}}
+{\ttfamily \#include $<$All\+Tasks.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Lipo\+Cell.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}usart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}adc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Led\+Notifier.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Time\+Tool.\+h\char`\"{}}\newline
+Include dependency graph for All\+Tasks.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AllTasks_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{AllTasks_8cpp_abebcf9e241cf0a846196f78a30b4c016}{Start\+Battery\+Manager\+Task}} (void const $\ast$argument)
+\item 
+void \mbox{\hyperlink{AllTasks_8cpp_a990d01510ec9f2f2d03b0abb312d6337}{Start\+Led\+Up\+Task}} (void const $\ast$argument)
+\item 
+void \mbox{\hyperlink{AllTasks_8cpp_ab33a51f9ab16a59682556273efbfbc27}{All\+Tasks\+\_\+init}} ()
+\item 
+void \mbox{\hyperlink{AllTasks_8cpp_ae494a9643f29b87d6d81e5264e60e57b}{H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Rx\+Cplt\+Callback}} (U\+A\+R\+T\+\_\+\+Handle\+Type\+Def $\ast$huart)
+\item 
+void \mbox{\hyperlink{AllTasks_8cpp_a8a3b0ad512a6e6c6157440b68d395eac}{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+Period\+Elapsed\+Callback}} (T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$htim)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+os\+Thread\+Id \mbox{\hyperlink{AllTasks_8cpp_a103b37bbce360d0fd62bf5ce0b43439c}{Battery\+Manager\+Handle}}
+\item 
+os\+Thread\+Id \mbox{\hyperlink{AllTasks_8cpp_a17644413b11066ac731152049c8214c9}{Led\+Up\+Handle}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{AllTasks_8cpp_ad4722640aa50c9389bc3861e9545cc3c}{receive\+A\+DC}} \mbox{[}2\mbox{]}
+\item 
+float \mbox{\hyperlink{AllTasks_8cpp_aff8b1863b0092b29219886c9895b2c1c}{per}}
+\item 
+float \mbox{\hyperlink{AllTasks_8cpp_a5ef8a2d5b808ba7eab24a1fa30e5157b}{volt}}
+\item 
+float \mbox{\hyperlink{AllTasks_8cpp_a6db5b949b54dc37355bc4104f955b457}{per\+Avrg}}
+\item 
+float \mbox{\hyperlink{AllTasks_8cpp_aa1628b5007795c4e199fb5d739d90f74}{volt\+Avrg}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{AllTasks_8cpp_a3812304f77082da92d4c0c6ea8d0585f}{current\+Time}} \mbox{[}3\mbox{]} = \{0\}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{AllTasks_8cpp_ae7e4cd2f21d7e0a0996097ccb0c598a9}{R\+Xdata}}
+\item 
+\mbox{\hyperlink{classLedNotifier}{Led\+Notifier}} \mbox{\hyperlink{AllTasks_8cpp_a85df190bdc7a7ce26f1790a81395cc8f}{led}} (L\+D2\+\_\+\+G\+P\+I\+O\+\_\+\+Port, L\+D2\+\_\+\+Pin)
+\item 
+\mbox{\hyperlink{classLedNotifier}{Led\+Notifier}} \mbox{\hyperlink{AllTasks_8cpp_a51a650aac58478043e4c8601e28258c8}{led1}} (L\+E\+D1\+\_\+\+G\+P\+I\+O\+\_\+\+Port, L\+E\+D1\+\_\+\+Pin)
+\item 
+\mbox{\hyperlink{classLedNotifier}{Led\+Notifier}} \mbox{\hyperlink{AllTasks_8cpp_a35ce8ceeece9ad573caa856b5fdaafa0}{led2}} (L\+E\+D2\+\_\+\+G\+P\+I\+O\+\_\+\+Port, L\+E\+D2\+\_\+\+Pin)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{AllTasks_8cpp_ab33a51f9ab16a59682556273efbfbc27}\label{AllTasks_8cpp_ab33a51f9ab16a59682556273efbfbc27}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!AllTasks\_init@{AllTasks\_init}}
+\index{AllTasks\_init@{AllTasks\_init}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{AllTasks\_init()}{AllTasks\_init()}}
+{\footnotesize\ttfamily void All\+Tasks\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{AllTasks_8cpp_a8a3b0ad512a6e6c6157440b68d395eac}\label{AllTasks_8cpp_a8a3b0ad512a6e6c6157440b68d395eac}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}}
+\index{HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_PeriodElapsedCallback()}{HAL\_TIM\_PeriodElapsedCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+Period\+Elapsed\+Callback (\begin{DoxyParamCaption}\item[{T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$}]{htim }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{AllTasks_8cpp_ae494a9643f29b87d6d81e5264e60e57b}\label{AllTasks_8cpp_ae494a9643f29b87d6d81e5264e60e57b}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!HAL\_UART\_RxCpltCallback@{HAL\_UART\_RxCpltCallback}}
+\index{HAL\_UART\_RxCpltCallback@{HAL\_UART\_RxCpltCallback}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{HAL\_UART\_RxCpltCallback()}{HAL\_UART\_RxCpltCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle\+Type\+Def $\ast$}]{huart }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{AllTasks_8cpp_abebcf9e241cf0a846196f78a30b4c016}\label{AllTasks_8cpp_abebcf9e241cf0a846196f78a30b4c016}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!StartBatteryManagerTask@{StartBatteryManagerTask}}
+\index{StartBatteryManagerTask@{StartBatteryManagerTask}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{StartBatteryManagerTask()}{StartBatteryManagerTask()}}
+{\footnotesize\ttfamily void Start\+Battery\+Manager\+Task (\begin{DoxyParamCaption}\item[{void const $\ast$}]{argument }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{AllTasks_8cpp_a990d01510ec9f2f2d03b0abb312d6337}\label{AllTasks_8cpp_a990d01510ec9f2f2d03b0abb312d6337}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!StartLedUpTask@{StartLedUpTask}}
+\index{StartLedUpTask@{StartLedUpTask}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{StartLedUpTask()}{StartLedUpTask()}}
+{\footnotesize\ttfamily void Start\+Led\+Up\+Task (\begin{DoxyParamCaption}\item[{void const $\ast$}]{argument }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{AllTasks_8cpp_a103b37bbce360d0fd62bf5ce0b43439c}\label{AllTasks_8cpp_a103b37bbce360d0fd62bf5ce0b43439c}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!BatteryManagerHandle@{BatteryManagerHandle}}
+\index{BatteryManagerHandle@{BatteryManagerHandle}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{BatteryManagerHandle}{BatteryManagerHandle}}
+{\footnotesize\ttfamily os\+Thread\+Id Battery\+Manager\+Handle}
+
+\mbox{\Hypertarget{AllTasks_8cpp_a3812304f77082da92d4c0c6ea8d0585f}\label{AllTasks_8cpp_a3812304f77082da92d4c0c6ea8d0585f}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!currentTime@{currentTime}}
+\index{currentTime@{currentTime}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{currentTime}{currentTime}}
+{\footnotesize\ttfamily uint16\+\_\+t current\+Time\mbox{[}3\mbox{]} = \{0\}}
+
+\mbox{\Hypertarget{AllTasks_8cpp_a85df190bdc7a7ce26f1790a81395cc8f}\label{AllTasks_8cpp_a85df190bdc7a7ce26f1790a81395cc8f}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!led@{led}}
+\index{led@{led}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{led}{led}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLedNotifier}{Led\+Notifier}} led(L\+D2\+\_\+\+G\+P\+I\+O\+\_\+\+Port, L\+D2\+\_\+\+Pin)}
+
+\mbox{\Hypertarget{AllTasks_8cpp_a51a650aac58478043e4c8601e28258c8}\label{AllTasks_8cpp_a51a650aac58478043e4c8601e28258c8}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!led1@{led1}}
+\index{led1@{led1}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{led1}{led1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLedNotifier}{Led\+Notifier}} led1(L\+E\+D1\+\_\+\+G\+P\+I\+O\+\_\+\+Port, L\+E\+D1\+\_\+\+Pin)}
+
+\mbox{\Hypertarget{AllTasks_8cpp_a35ce8ceeece9ad573caa856b5fdaafa0}\label{AllTasks_8cpp_a35ce8ceeece9ad573caa856b5fdaafa0}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!led2@{led2}}
+\index{led2@{led2}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{led2}{led2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLedNotifier}{Led\+Notifier}} led2(L\+E\+D2\+\_\+\+G\+P\+I\+O\+\_\+\+Port, L\+E\+D2\+\_\+\+Pin)}
+
+\mbox{\Hypertarget{AllTasks_8cpp_a17644413b11066ac731152049c8214c9}\label{AllTasks_8cpp_a17644413b11066ac731152049c8214c9}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!LedUpHandle@{LedUpHandle}}
+\index{LedUpHandle@{LedUpHandle}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{LedUpHandle}{LedUpHandle}}
+{\footnotesize\ttfamily os\+Thread\+Id Led\+Up\+Handle}
+
+\mbox{\Hypertarget{AllTasks_8cpp_aff8b1863b0092b29219886c9895b2c1c}\label{AllTasks_8cpp_aff8b1863b0092b29219886c9895b2c1c}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!per@{per}}
+\index{per@{per}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{per}{per}}
+{\footnotesize\ttfamily float per}
+
+\mbox{\Hypertarget{AllTasks_8cpp_a6db5b949b54dc37355bc4104f955b457}\label{AllTasks_8cpp_a6db5b949b54dc37355bc4104f955b457}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!perAvrg@{perAvrg}}
+\index{perAvrg@{perAvrg}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{perAvrg}{perAvrg}}
+{\footnotesize\ttfamily float per\+Avrg}
+
+\mbox{\Hypertarget{AllTasks_8cpp_ad4722640aa50c9389bc3861e9545cc3c}\label{AllTasks_8cpp_ad4722640aa50c9389bc3861e9545cc3c}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!receiveADC@{receiveADC}}
+\index{receiveADC@{receiveADC}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{receiveADC}{receiveADC}}
+{\footnotesize\ttfamily uint32\+\_\+t receive\+A\+DC\mbox{[}2\mbox{]}}
+
+\mbox{\Hypertarget{AllTasks_8cpp_ae7e4cd2f21d7e0a0996097ccb0c598a9}\label{AllTasks_8cpp_ae7e4cd2f21d7e0a0996097ccb0c598a9}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!RXdata@{RXdata}}
+\index{RXdata@{RXdata}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{RXdata}{RXdata}}
+{\footnotesize\ttfamily uint8\+\_\+t R\+Xdata}
+
+\mbox{\Hypertarget{AllTasks_8cpp_a5ef8a2d5b808ba7eab24a1fa30e5157b}\label{AllTasks_8cpp_a5ef8a2d5b808ba7eab24a1fa30e5157b}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!volt@{volt}}
+\index{volt@{volt}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{volt}{volt}}
+{\footnotesize\ttfamily float volt}
+
+\mbox{\Hypertarget{AllTasks_8cpp_aa1628b5007795c4e199fb5d739d90f74}\label{AllTasks_8cpp_aa1628b5007795c4e199fb5d739d90f74}} 
+\index{AllTasks.cpp@{AllTasks.cpp}!voltAvrg@{voltAvrg}}
+\index{voltAvrg@{voltAvrg}!AllTasks.cpp@{AllTasks.cpp}}
+\doxysubsubsection{\texorpdfstring{voltAvrg}{voltAvrg}}
+{\footnotesize\ttfamily float volt\+Avrg}
+

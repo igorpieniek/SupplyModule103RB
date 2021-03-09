@@ -1,0 +1,148 @@
+\hypertarget{classSectionSwitch}{}\doxysection{Section\+Switch Class Reference}
+\label{classSectionSwitch}\index{SectionSwitch@{SectionSwitch}}
+
+
+{\ttfamily \#include $<$Section\+Switch.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classSectionSwitch_a585a04f89f27f3228aff156e068087c3}{Section\+\_\+state}} \{ \mbox{\hyperlink{classSectionSwitch_a585a04f89f27f3228aff156e068087c3ae04f5f452419bdbd4c06c7b2d3e545c1}{O\+FF}}, 
+\mbox{\hyperlink{classSectionSwitch_a585a04f89f27f3228aff156e068087c3af018047cb5a8a1b3628f5e0ed8b98e3c}{ON}}, 
+\mbox{\hyperlink{classSectionSwitch_a585a04f89f27f3228aff156e068087c3aeb2fcf38e188c06dcfbfb458c00ab652}{O\+N\+\_\+\+B\+Y\+\_\+\+S\+L\+I\+D\+ER}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSectionSwitch_a585a04f89f27f3228aff156e068087c3}{Section\+\_\+state}} \mbox{\hyperlink{classSectionSwitch_adb6aa511f39c91d64f6cda2afce9b999}{get\+State}} () const
+\item 
+void \mbox{\hyperlink{classSectionSwitch_a4caf6d21ea63a55b24ba69b25de862b9}{on}} ()
+\item 
+void \mbox{\hyperlink{classSectionSwitch_a2b86450bcb11ce9317c03679eaa2d9dd}{off}} ()
+\item 
+void \mbox{\hyperlink{classSectionSwitch_a5eb1dfe3252aa7e6db55989f38b4ce89}{update\+Real\+State\+ON}} ()
+\item 
+\mbox{\hyperlink{classSectionSwitch_ac6128ff8e504f21fd46598902dff7e18}{Section\+Switch}} (G\+P\+I\+O\+\_\+\+Type\+Def $\ast$\mbox{\hyperlink{classSectionSwitch_a1e6e52f0346633c8d9a6e045b7752aa9}{port}}, uint16\+\_\+t \mbox{\hyperlink{classSectionSwitch_a51613a727f4a1a46e28a2ed958db1540}{pin}}, G\+P\+I\+O\+\_\+\+Pin\+State st=G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+S\+ET)
+\item 
+virtual \mbox{\hyperlink{classSectionSwitch_a79442f993efc9f79c6e37468bf367fb7}{$\sim$\+Section\+Switch}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+P\+I\+O\+\_\+\+Type\+Def $\ast$ \mbox{\hyperlink{classSectionSwitch_a1e6e52f0346633c8d9a6e045b7752aa9}{port}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classSectionSwitch_a51613a727f4a1a46e28a2ed958db1540}{pin}}
+\item 
+\mbox{\hyperlink{classSectionSwitch_a585a04f89f27f3228aff156e068087c3}{Section\+\_\+state}} \mbox{\hyperlink{classSectionSwitch_a4f5e33003fc00ae4d84b8b2085fddddd}{real\+State}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tools for switching ON / O\+FF specific supply branch. It help in easy way to set branch in right state. It solve the problem of branch state -\/ when pin is set to O\+FF but branch is still ON because of mechanical slider switch -\/\mbox{\hyperlink{classSectionSwitch_a5eb1dfe3252aa7e6db55989f38b4ce89}{update\+Real\+State\+O\+N()}} 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classSectionSwitch_a585a04f89f27f3228aff156e068087c3}\label{classSectionSwitch_a585a04f89f27f3228aff156e068087c3}} 
+\index{SectionSwitch@{SectionSwitch}!Section\_state@{Section\_state}}
+\index{Section\_state@{Section\_state}!SectionSwitch@{SectionSwitch}}
+\doxysubsubsection{\texorpdfstring{Section\_state}{Section\_state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classSectionSwitch_a585a04f89f27f3228aff156e068087c3}{Section\+Switch\+::\+Section\+\_\+state}}}
+
+To specify current state of supply branch \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OFF@{OFF}!SectionSwitch@{SectionSwitch}}\index{SectionSwitch@{SectionSwitch}!OFF@{OFF}}}\mbox{\Hypertarget{classSectionSwitch_a585a04f89f27f3228aff156e068087c3ae04f5f452419bdbd4c06c7b2d3e545c1}\label{classSectionSwitch_a585a04f89f27f3228aff156e068087c3ae04f5f452419bdbd4c06c7b2d3e545c1}} 
+O\+FF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ON@{ON}!SectionSwitch@{SectionSwitch}}\index{SectionSwitch@{SectionSwitch}!ON@{ON}}}\mbox{\Hypertarget{classSectionSwitch_a585a04f89f27f3228aff156e068087c3af018047cb5a8a1b3628f5e0ed8b98e3c}\label{classSectionSwitch_a585a04f89f27f3228aff156e068087c3af018047cb5a8a1b3628f5e0ed8b98e3c}} 
+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ON\_BY\_SLIDER@{ON\_BY\_SLIDER}!SectionSwitch@{SectionSwitch}}\index{SectionSwitch@{SectionSwitch}!ON\_BY\_SLIDER@{ON\_BY\_SLIDER}}}\mbox{\Hypertarget{classSectionSwitch_a585a04f89f27f3228aff156e068087c3aeb2fcf38e188c06dcfbfb458c00ab652}\label{classSectionSwitch_a585a04f89f27f3228aff156e068087c3aeb2fcf38e188c06dcfbfb458c00ab652}} 
+O\+N\+\_\+\+B\+Y\+\_\+\+S\+L\+I\+D\+ER&state when section pin is set to O\+FF but mechanical switch was turned ON \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSectionSwitch_ac6128ff8e504f21fd46598902dff7e18}\label{classSectionSwitch_ac6128ff8e504f21fd46598902dff7e18}} 
+\index{SectionSwitch@{SectionSwitch}!SectionSwitch@{SectionSwitch}}
+\index{SectionSwitch@{SectionSwitch}!SectionSwitch@{SectionSwitch}}
+\doxysubsubsection{\texorpdfstring{SectionSwitch()}{SectionSwitch()}}
+{\footnotesize\ttfamily Section\+Switch\+::\+Section\+Switch (\begin{DoxyParamCaption}\item[{G\+P\+I\+O\+\_\+\+Type\+Def $\ast$}]{port,  }\item[{uint16\+\_\+t}]{pin,  }\item[{G\+P\+I\+O\+\_\+\+Pin\+State}]{st = {\ttfamily GPIO\+\_\+PIN\+\_\+SET} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & -\/ G\+P\+I\+O\+\_\+\+Type\+Def$\ast$ -\/ pin port \\
+\hline
+{\em pin} & -\/ uint16\+\_\+t \\
+\hline
+{\em st} & -\/ G\+P\+I\+O\+\_\+\+Pin\+State (optional) -\/ initial state of supply branch -\/ normally ON \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSectionSwitch_a79442f993efc9f79c6e37468bf367fb7}\label{classSectionSwitch_a79442f993efc9f79c6e37468bf367fb7}} 
+\index{SectionSwitch@{SectionSwitch}!````~SectionSwitch@{$\sim$SectionSwitch}}
+\index{````~SectionSwitch@{$\sim$SectionSwitch}!SectionSwitch@{SectionSwitch}}
+\doxysubsubsection{\texorpdfstring{$\sim$SectionSwitch()}{~SectionSwitch()}}
+{\footnotesize\ttfamily Section\+Switch\+::$\sim$\+Section\+Switch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSectionSwitch_adb6aa511f39c91d64f6cda2afce9b999}\label{classSectionSwitch_adb6aa511f39c91d64f6cda2afce9b999}} 
+\index{SectionSwitch@{SectionSwitch}!getState@{getState}}
+\index{getState@{getState}!SectionSwitch@{SectionSwitch}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSectionSwitch_a585a04f89f27f3228aff156e068087c3}{Section\+\_\+state}} Section\+Switch\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+current state of supply branch in Section\+\_\+state enum 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSectionSwitch_a2b86450bcb11ce9317c03679eaa2d9dd}\label{classSectionSwitch_a2b86450bcb11ce9317c03679eaa2d9dd}} 
+\index{SectionSwitch@{SectionSwitch}!off@{off}}
+\index{off@{off}!SectionSwitch@{SectionSwitch}}
+\doxysubsubsection{\texorpdfstring{off()}{off()}}
+{\footnotesize\ttfamily void Section\+Switch\+::off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Turn branch ON and change internal state \mbox{\Hypertarget{classSectionSwitch_a4caf6d21ea63a55b24ba69b25de862b9}\label{classSectionSwitch_a4caf6d21ea63a55b24ba69b25de862b9}} 
+\index{SectionSwitch@{SectionSwitch}!on@{on}}
+\index{on@{on}!SectionSwitch@{SectionSwitch}}
+\doxysubsubsection{\texorpdfstring{on()}{on()}}
+{\footnotesize\ttfamily void Section\+Switch\+::on (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Turn branch ON and change internal state \mbox{\Hypertarget{classSectionSwitch_a5eb1dfe3252aa7e6db55989f38b4ce89}\label{classSectionSwitch_a5eb1dfe3252aa7e6db55989f38b4ce89}} 
+\index{SectionSwitch@{SectionSwitch}!updateRealStateON@{updateRealStateON}}
+\index{updateRealStateON@{updateRealStateON}!SectionSwitch@{SectionSwitch}}
+\doxysubsubsection{\texorpdfstring{updateRealStateON()}{updateRealStateON()}}
+{\footnotesize\ttfamily void Section\+Switch\+::update\+Real\+State\+ON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Change internal state to real one. It update info about supply branch, but without changing pin state to ON \begin{DoxyWarning}{Warning}
+It must be called when current state is O\+FF, but branch voltage is higher than 0V ! 
+\end{DoxyWarning}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSectionSwitch_a51613a727f4a1a46e28a2ed958db1540}\label{classSectionSwitch_a51613a727f4a1a46e28a2ed958db1540}} 
+\index{SectionSwitch@{SectionSwitch}!pin@{pin}}
+\index{pin@{pin}!SectionSwitch@{SectionSwitch}}
+\doxysubsubsection{\texorpdfstring{pin}{pin}}
+{\footnotesize\ttfamily uint16\+\_\+t Section\+Switch\+::pin\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSectionSwitch_a1e6e52f0346633c8d9a6e045b7752aa9}\label{classSectionSwitch_a1e6e52f0346633c8d9a6e045b7752aa9}} 
+\index{SectionSwitch@{SectionSwitch}!port@{port}}
+\index{port@{port}!SectionSwitch@{SectionSwitch}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily G\+P\+I\+O\+\_\+\+Type\+Def$\ast$ Section\+Switch\+::port\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSectionSwitch_a4f5e33003fc00ae4d84b8b2085fddddd}\label{classSectionSwitch_a4f5e33003fc00ae4d84b8b2085fddddd}} 
+\index{SectionSwitch@{SectionSwitch}!realState@{realState}}
+\index{realState@{realState}!SectionSwitch@{SectionSwitch}}
+\doxysubsubsection{\texorpdfstring{realState}{realState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSectionSwitch_a585a04f89f27f3228aff156e068087c3}{Section\+\_\+state}} Section\+Switch\+::real\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Software/\+Inc/\mbox{\hyperlink{SectionSwitch_8h}{Section\+Switch.\+h}}\item 
+Software/\+Src/\mbox{\hyperlink{SectionSwitch_8cpp}{Section\+Switch.\+cpp}}\end{DoxyCompactItemize}

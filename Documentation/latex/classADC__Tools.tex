@@ -1,0 +1,205 @@
+\hypertarget{classADC__Tools}{}\doxysection{A\+D\+C\+\_\+\+Tools Class Reference}
+\label{classADC__Tools}\index{ADC\_Tools@{ADC\_Tools}}
+
+
+{\ttfamily \#include $<$A\+D\+C\+\_\+\+Tools.\+h$>$}
+
+
+
+Inheritance diagram for A\+D\+C\+\_\+\+Tools\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classADC__Tools__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classADC__Tools_a935c830196ff3e802e202c5ba56d627d}{get\+Voltage}} () const
+\item 
+virtual float \mbox{\hyperlink{classADC__Tools_a4218d92afd7e4bfc8da45f2fcc576eb5}{get\+Voltage\+Avrg}} ()
+\item 
+virtual float \mbox{\hyperlink{classADC__Tools_a2fbcf714b8ac2eee92c0aece474ddaa2}{get\+Percentage}} () const
+\item 
+virtual float \mbox{\hyperlink{classADC__Tools_ab4b95e586d452c6c7027a187a360be2d}{get\+Percentage\+Avrg}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classADC__Tools_a58dcd5ef821a94efbe1262f786af4ccb}{A\+D\+C\+\_\+\+Tools}} (float max, float min=\mbox{\hyperlink{ADC__Tools_8h_ae9431c6bc99d48d8c0024810c3912193}{S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+O\+LT}}, uint32\+\_\+t res=\mbox{\hyperlink{ADC__Tools_8h_a9df5299c7a0a7e7e953c0fb1bfa6a524}{S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON}})
+\item 
+void \mbox{\hyperlink{classADC__Tools_a526498cd3659b59bb8813505430530dc}{update\+Measurments}} (uint32\+\_\+t val)
+\item 
+float \mbox{\hyperlink{classADC__Tools_a02f7a9e9c6e1135ac7851bc293b535bf}{convert\+To\+Voltage}} (uint32\+\_\+t raw)
+\item 
+float \mbox{\hyperlink{classADC__Tools_a396560e86dd7f2b76844f4d16dc17d47}{convert\+To\+Percentage}} (float val)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classADC__Tools_ad42276e9fa83bb9c79d5ac8b3d1a49ec}{bit\+Resolution}}
+\item 
+float \mbox{\hyperlink{classADC__Tools_ab84752f83ad0f3095471d577c32aee7f}{max\+Val}}
+\item 
+float \mbox{\hyperlink{classADC__Tools_a00c44e7e83485f4c3f6eb735ac073185}{min\+Val}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classADC__Tools_a7bc364db1b13f34e2a6362e148f0546c}{max\+Levels}}
+\item 
+float \mbox{\hyperlink{classADC__Tools_a11481a8b247412b78c8ea10f7cc147b4}{value}}
+\item 
+float \mbox{\hyperlink{classADC__Tools_ae7159c14d4e36bbc7ba7cf3e8c16c51d}{per}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class to help in A\+DC data conversion. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classADC__Tools_a58dcd5ef821a94efbe1262f786af4ccb}\label{classADC__Tools_a58dcd5ef821a94efbe1262f786af4ccb}} 
+\index{ADC\_Tools@{ADC\_Tools}!ADC\_Tools@{ADC\_Tools}}
+\index{ADC\_Tools@{ADC\_Tools}!ADC\_Tools@{ADC\_Tools}}
+\doxysubsubsection{\texorpdfstring{ADC\_Tools()}{ADC\_Tools()}}
+{\footnotesize\ttfamily A\+D\+C\+\_\+\+Tools\+::\+A\+D\+C\+\_\+\+Tools (\begin{DoxyParamCaption}\item[{float}]{max,  }\item[{float}]{min = {\ttfamily \mbox{\hyperlink{ADC__Tools_8h_ae9431c6bc99d48d8c0024810c3912193}{S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+M\+I\+N\+I\+M\+U\+M\+\_\+\+V\+O\+LT}}},  }\item[{uint32\+\_\+t}]{res = {\ttfamily \mbox{\hyperlink{ADC__Tools_8h_a9df5299c7a0a7e7e953c0fb1bfa6a524}{S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+R\+E\+S\+O\+L\+U\+T\+I\+ON}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & -\/ float value -\/ maximum voltage \\
+\hline
+{\em min} & -\/ float value (optional) -\/ voltage consider as minimum in percentage calculation (normally 0.\+0V) \\
+\hline
+{\em res} & -\/ uint32\+\_\+t value (optional) -\/ resolution; number of bits (normally it\textquotesingle{}s 12) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classADC__Tools_a396560e86dd7f2b76844f4d16dc17d47}\label{classADC__Tools_a396560e86dd7f2b76844f4d16dc17d47}} 
+\index{ADC\_Tools@{ADC\_Tools}!convertToPercentage@{convertToPercentage}}
+\index{convertToPercentage@{convertToPercentage}!ADC\_Tools@{ADC\_Tools}}
+\doxysubsubsection{\texorpdfstring{convertToPercentage()}{convertToPercentage()}}
+{\footnotesize\ttfamily float A\+D\+C\+\_\+\+Tools\+::convert\+To\+Percentage (\begin{DoxyParamCaption}\item[{float}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function that convert stored in object voltage value into percents in referance to range $<$min\+\_\+voltage, max\+\_\+voltage$>$ (initial configuration) 
+\begin{DoxyParams}{Parameters}
+{\em val} & -\/ float value -\/ voltage value in \mbox{[}V\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float value in percents \mbox{[}\%\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classADC__Tools_a02f7a9e9c6e1135ac7851bc293b535bf}\label{classADC__Tools_a02f7a9e9c6e1135ac7851bc293b535bf}} 
+\index{ADC\_Tools@{ADC\_Tools}!convertToVoltage@{convertToVoltage}}
+\index{convertToVoltage@{convertToVoltage}!ADC\_Tools@{ADC\_Tools}}
+\doxysubsubsection{\texorpdfstring{convertToVoltage()}{convertToVoltage()}}
+{\footnotesize\ttfamily float A\+D\+C\+\_\+\+Tools\+::convert\+To\+Voltage (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{raw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function that convert raw A\+DC channel register value into voltage using inital configuration 
+\begin{DoxyParams}{Parameters}
+{\em raw} & -\/ uint32\+\_\+t value -\/ raw value from A\+DC channel register \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float value of voltage in \mbox{[}V\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classADC__Tools_a2fbcf714b8ac2eee92c0aece474ddaa2}\label{classADC__Tools_a2fbcf714b8ac2eee92c0aece474ddaa2}} 
+\index{ADC\_Tools@{ADC\_Tools}!getPercentage@{getPercentage}}
+\index{getPercentage@{getPercentage}!ADC\_Tools@{ADC\_Tools}}
+\doxysubsubsection{\texorpdfstring{getPercentage()}{getPercentage()}}
+{\footnotesize\ttfamily virtual float A\+D\+C\+\_\+\+Tools\+::get\+Percentage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Abstract method to return percent value in reference to maximum and minimum voltage value. Could be defined in derived class -\/ normally it returned percent value in voltage range $<$max, min$>$ (defined in Constructor \mbox{\hyperlink{classADC__Tools_a58dcd5ef821a94efbe1262f786af4ccb}{A\+D\+C\+\_\+\+Tools()}}) \begin{DoxyReturn}{Returns}
+float voltage\+Average or voltage 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classADC__Tools_ab4b95e586d452c6c7027a187a360be2d}\label{classADC__Tools_ab4b95e586d452c6c7027a187a360be2d}} 
+\index{ADC\_Tools@{ADC\_Tools}!getPercentageAvrg@{getPercentageAvrg}}
+\index{getPercentageAvrg@{getPercentageAvrg}!ADC\_Tools@{ADC\_Tools}}
+\doxysubsubsection{\texorpdfstring{getPercentageAvrg()}{getPercentageAvrg()}}
+{\footnotesize\ttfamily virtual float A\+D\+C\+\_\+\+Tools\+::get\+Percentage\+Avrg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Abstract method to return voltage value average. Need to be defined in derived class -\/ in case it won\textquotesingle{}t be defined it return \mbox{\hyperlink{classADC__Tools_a935c830196ff3e802e202c5ba56d627d}{get\+Voltage()}} result \begin{DoxyReturn}{Returns}
+float voltage\+Average or float voltage 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classSupplyBranch_a8ec540e13a014b5cb451a0ffa8e98594}{Supply\+Branch}}, and \mbox{\hyperlink{classLipoCell_a8f26ecc49129c3e9ab29fadc06973f86}{Lipo\+Cell}}.
+
+\mbox{\Hypertarget{classADC__Tools_a935c830196ff3e802e202c5ba56d627d}\label{classADC__Tools_a935c830196ff3e802e202c5ba56d627d}} 
+\index{ADC\_Tools@{ADC\_Tools}!getVoltage@{getVoltage}}
+\index{getVoltage@{getVoltage}!ADC\_Tools@{ADC\_Tools}}
+\doxysubsubsection{\texorpdfstring{getVoltage()}{getVoltage()}}
+{\footnotesize\ttfamily float A\+D\+C\+\_\+\+Tools\+::get\+Voltage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return value in Volts \begin{DoxyReturn}{Returns}
+float value -\/ \mbox{[}V\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classADC__Tools_a4218d92afd7e4bfc8da45f2fcc576eb5}\label{classADC__Tools_a4218d92afd7e4bfc8da45f2fcc576eb5}} 
+\index{ADC\_Tools@{ADC\_Tools}!getVoltageAvrg@{getVoltageAvrg}}
+\index{getVoltageAvrg@{getVoltageAvrg}!ADC\_Tools@{ADC\_Tools}}
+\doxysubsubsection{\texorpdfstring{getVoltageAvrg()}{getVoltageAvrg()}}
+{\footnotesize\ttfamily virtual float A\+D\+C\+\_\+\+Tools\+::get\+Voltage\+Avrg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Abstract method to return voltage value average. Need to be defined in derived class -\/ in case it won\textquotesingle{}t be defined it return \mbox{\hyperlink{classADC__Tools_a935c830196ff3e802e202c5ba56d627d}{get\+Voltage()}} result \begin{DoxyReturn}{Returns}
+float voltage\+Average or float voltage 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classSupplyBranch_afcd24b0cb49c1ba7f948343372fd7e9b}{Supply\+Branch}}, and \mbox{\hyperlink{classLipoCell_a3a6c455daba0565b5c2c14cb4faf0b89}{Lipo\+Cell}}.
+
+\mbox{\Hypertarget{classADC__Tools_a526498cd3659b59bb8813505430530dc}\label{classADC__Tools_a526498cd3659b59bb8813505430530dc}} 
+\index{ADC\_Tools@{ADC\_Tools}!updateMeasurments@{updateMeasurments}}
+\index{updateMeasurments@{updateMeasurments}!ADC\_Tools@{ADC\_Tools}}
+\doxysubsubsection{\texorpdfstring{updateMeasurments()}{updateMeasurments()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Tools\+::update\+Measurments (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function called to update the measurments in object. It provide voltage and percent conversion 
+\begin{DoxyParams}{Parameters}
+{\em val} & -\/ uint32\+\_\+t value -\/ raw value from A\+DC channel register \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classADC__Tools_ad42276e9fa83bb9c79d5ac8b3d1a49ec}\label{classADC__Tools_ad42276e9fa83bb9c79d5ac8b3d1a49ec}} 
+\index{ADC\_Tools@{ADC\_Tools}!bitResolution@{bitResolution}}
+\index{bitResolution@{bitResolution}!ADC\_Tools@{ADC\_Tools}}
+\doxysubsubsection{\texorpdfstring{bitResolution}{bitResolution}}
+{\footnotesize\ttfamily uint16\+\_\+t A\+D\+C\+\_\+\+Tools\+::bit\+Resolution\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classADC__Tools_a7bc364db1b13f34e2a6362e148f0546c}\label{classADC__Tools_a7bc364db1b13f34e2a6362e148f0546c}} 
+\index{ADC\_Tools@{ADC\_Tools}!maxLevels@{maxLevels}}
+\index{maxLevels@{maxLevels}!ADC\_Tools@{ADC\_Tools}}
+\doxysubsubsection{\texorpdfstring{maxLevels}{maxLevels}}
+{\footnotesize\ttfamily uint32\+\_\+t A\+D\+C\+\_\+\+Tools\+::max\+Levels\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classADC__Tools_ab84752f83ad0f3095471d577c32aee7f}\label{classADC__Tools_ab84752f83ad0f3095471d577c32aee7f}} 
+\index{ADC\_Tools@{ADC\_Tools}!maxVal@{maxVal}}
+\index{maxVal@{maxVal}!ADC\_Tools@{ADC\_Tools}}
+\doxysubsubsection{\texorpdfstring{maxVal}{maxVal}}
+{\footnotesize\ttfamily float A\+D\+C\+\_\+\+Tools\+::max\+Val\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classADC__Tools_a00c44e7e83485f4c3f6eb735ac073185}\label{classADC__Tools_a00c44e7e83485f4c3f6eb735ac073185}} 
+\index{ADC\_Tools@{ADC\_Tools}!minVal@{minVal}}
+\index{minVal@{minVal}!ADC\_Tools@{ADC\_Tools}}
+\doxysubsubsection{\texorpdfstring{minVal}{minVal}}
+{\footnotesize\ttfamily float A\+D\+C\+\_\+\+Tools\+::min\+Val\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classADC__Tools_ae7159c14d4e36bbc7ba7cf3e8c16c51d}\label{classADC__Tools_ae7159c14d4e36bbc7ba7cf3e8c16c51d}} 
+\index{ADC\_Tools@{ADC\_Tools}!per@{per}}
+\index{per@{per}!ADC\_Tools@{ADC\_Tools}}
+\doxysubsubsection{\texorpdfstring{per}{per}}
+{\footnotesize\ttfamily float A\+D\+C\+\_\+\+Tools\+::per\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classADC__Tools_a11481a8b247412b78c8ea10f7cc147b4}\label{classADC__Tools_a11481a8b247412b78c8ea10f7cc147b4}} 
+\index{ADC\_Tools@{ADC\_Tools}!value@{value}}
+\index{value@{value}!ADC\_Tools@{ADC\_Tools}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily float A\+D\+C\+\_\+\+Tools\+::value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Software/\+Inc/\mbox{\hyperlink{ADC__Tools_8h}{A\+D\+C\+\_\+\+Tools.\+h}}\item 
+Software/\+Src/\mbox{\hyperlink{ADC__Tools_8cpp}{A\+D\+C\+\_\+\+Tools.\+cpp}}\end{DoxyCompactItemize}

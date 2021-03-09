@@ -1,0 +1,336 @@
+\hypertarget{classParameter}{}\doxysection{Parameter Class Reference}
+\label{classParameter}\index{Parameter@{Parameter}}
+
+
+{\ttfamily \#include $<$Parameter.\+h$>$}
+
+
+
+Collaboration diagram for Parameter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classParameter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classParameter_a8668e6b3e89a8c8fdd9984c248e38684}{Parameter}} (string, uint16\+\_\+t=0, string=\char`\"{}\char`\"{}, uint8\+\_\+t=false)
+\item 
+\mbox{\hyperlink{classInterface__Element_a2e8dcdab9280f6f311cddb3cc3010ee5}{Interface\+\_\+\+Element\+::\+Action}} \mbox{\hyperlink{classParameter_aa49e65b0e3cabc1273758f29ec7b19c7}{get\+Button}} (\mbox{\hyperlink{classInterface__Element_a55e85f9b3803029298f402b8772340c2}{Interface\+\_\+\+Element\+::\+Button}})
+\item 
+void \mbox{\hyperlink{classParameter_a20a922760904ff0cc0bfa2d7ad3ad399}{send\+Error\+No\+Changeable}} ()
+\item 
+\mbox{\hyperlink{classParameter}{Parameter}} $\ast$ \mbox{\hyperlink{classParameter_a4c8d81b89a9b460d0675bfbf8b4035fc}{get\+Parametr}} ()
+\item 
+void \mbox{\hyperlink{classParameter_a02b618515c44c6e0a0653d91d82ba135}{add\+To\+Sub\+List}} (\mbox{\hyperlink{classParameter}{Parameter}} $\ast$p)
+\item 
+string \mbox{\hyperlink{classParameter_ad76d62a8eebebea7c61534b529496b8c}{get\+Head\+Line}} ()
+\item 
+\mbox{\hyperlink{classList}{List}} $\ast$ \mbox{\hyperlink{classParameter_a32d5ec5ff77a38cafeace431f7c7ae9e}{get\+Sub\+List}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classParameter_a3216f192f291375a18f0aec6dead3f21}{if\+Has\+Sub\+List}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classParameter_a960555718149a3ead1c8abc30dbd9fe0}{if\+In\+Sub\+List}} ()
+\item 
+\mbox{\hyperlink{classParameter}{Parameter}} $\ast$ \mbox{\hyperlink{classParameter_ac99b23568168f2a809de02073a46730f}{get\+Last\+Element\+Of\+Sub\+List}} ()
+\item 
+void \mbox{\hyperlink{classParameter_a52711f8084b49322e70a636123cefe34}{set\+Out\+Of\+Sub\+List}} ()
+\item 
+void \mbox{\hyperlink{classParameter_ab861702c21c62c2c5141359f3d5e173d}{new\+Move}} (\mbox{\hyperlink{classInterface__Element_a2e8dcdab9280f6f311cddb3cc3010ee5}{Interface\+\_\+\+Element\+::\+Action}} action)
+\item 
+void \mbox{\hyperlink{classParameter_a32ad3db25f9a2ea041d784bf6de08a39}{refresh\+Edit\+Mode}} ()
+\item 
+void \mbox{\hyperlink{classParameter_adb2047c7aef9748e6b330936ba0b9cfe}{refresh\+No\+Changeable\+Error}} ()
+\item 
+void \mbox{\hyperlink{classParameter_a414e9028c34d3fd9611c84840bc71347}{set\+As\+Back\+Parameter}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classParameter_a355e005c7e6d9a050c85e144622a1f1e}{is\+Back\+Parameter}} ()
+\item 
+void \mbox{\hyperlink{classParameter_a6fab9115056a4e6c7c05a614dabb4ae2}{add\+Back\+Parameter\+To\+List}} ()
+\item 
+void \mbox{\hyperlink{classParameter_af8d831f2bd2e4001c4a59995c0be8ea9}{close\+Last\+Open\+Sub\+List}} ()
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classParameter_ac2607fe9401eeff7743d02e0d413788a}{get\+Value}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classParameter_a6d6045ab1e1d03ffc0328d1b2189f0ae}{is\+Counting\+No\+Changeable\+Error}} ()
+\item 
+string \mbox{\hyperlink{classParameter_aa77380972c062de8137ba07cccfae572}{get\+Unit}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classParameter_ae1807dce991cdbddc6ded24b4b8ebff8}{is\+Value\+Visible}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classParameter_a173f65a63f5ead4b00cfbf2311e27205}{create\+List}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classParameter_ac237b41c20eae0f09c3b8f743bfbedd0}{headline}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classParameter_a32a870dcbebd786efe124aebe9b4bb4a}{value}}
+\item 
+string \mbox{\hyperlink{classParameter_a765a51b96cab6035a3962f67553f6c1d}{unit}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classParameter_ab56894f0a427f765dc02b28584fa42e1}{edit\+\_\+mode}}
+\item 
+\mbox{\hyperlink{classList}{List}} $\ast$ \mbox{\hyperlink{classParameter_a1ea0a6265a95a00d871aea284b41403b}{list}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classParameter_a8697a996d83096e4b36f39561c4f22d7}{in\+\_\+sub\+\_\+list}} = false
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classParameter_a11649c531f6524f8712d2b29b4a4d509}{has\+\_\+sub\+\_\+list}} = false
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classParameter_ae1948c71daf27d5124a315d8b215cb86}{visible\+\_\+value}} = true
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classParameter_a4d1c95c4aaceafc500bd75b24bd9efbd}{changeable\+\_\+value}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classParameter_a638100e56b7ac7cca2772f2279b2b5d1}{back\+\_\+from\+\_\+sub\+\_\+list}} = false
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classParameter_a33d817b1e4975b6b2d604a08ffd8ee93}{visible\+\_\+no\+\_\+changeable\+\_\+error}} = false
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classParameter_a79b18e4ba2ba7cc9799a789abea039fc}{edit\+\_\+mode\+\_\+counting}} = false
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classParameter_ad7e525749742fa1ef8b782f744898d1e}{no\+\_\+changeable\+\_\+error\+\_\+counting}} = false
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classParameter_a91464b0523fd223890379ccc96c8b6f9}{start\+\_\+counting\+\_\+no\+\_\+changeable\+\_\+error}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classParameter_a8668e6b3e89a8c8fdd9984c248e38684}\label{classParameter_a8668e6b3e89a8c8fdd9984c248e38684}} 
+\index{Parameter@{Parameter}!Parameter@{Parameter}}
+\index{Parameter@{Parameter}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{Parameter()}{Parameter()}}
+{\footnotesize\ttfamily Parameter\+::\+Parameter (\begin{DoxyParamCaption}\item[{string}]{h,  }\item[{uint16\+\_\+t}]{v = {\ttfamily 0},  }\item[{string}]{u = {\ttfamily \char`\"{}\char`\"{}},  }\item[{uint8\+\_\+t}]{ch = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classParameter_a6fab9115056a4e6c7c05a614dabb4ae2}\label{classParameter_a6fab9115056a4e6c7c05a614dabb4ae2}} 
+\index{Parameter@{Parameter}!addBackParameterToList@{addBackParameterToList}}
+\index{addBackParameterToList@{addBackParameterToList}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{addBackParameterToList()}{addBackParameterToList()}}
+{\footnotesize\ttfamily void Parameter\+::add\+Back\+Parameter\+To\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_a02b618515c44c6e0a0653d91d82ba135}\label{classParameter_a02b618515c44c6e0a0653d91d82ba135}} 
+\index{Parameter@{Parameter}!addToSubList@{addToSubList}}
+\index{addToSubList@{addToSubList}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{addToSubList()}{addToSubList()}}
+{\footnotesize\ttfamily void Parameter\+::add\+To\+Sub\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classParameter}{Parameter}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_af8d831f2bd2e4001c4a59995c0be8ea9}\label{classParameter_af8d831f2bd2e4001c4a59995c0be8ea9}} 
+\index{Parameter@{Parameter}!closeLastOpenSubList@{closeLastOpenSubList}}
+\index{closeLastOpenSubList@{closeLastOpenSubList}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{closeLastOpenSubList()}{closeLastOpenSubList()}}
+{\footnotesize\ttfamily void Parameter\+::close\+Last\+Open\+Sub\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_a173f65a63f5ead4b00cfbf2311e27205}\label{classParameter_a173f65a63f5ead4b00cfbf2311e27205}} 
+\index{Parameter@{Parameter}!createList@{createList}}
+\index{createList@{createList}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{createList()}{createList()}}
+{\footnotesize\ttfamily void Parameter\+::create\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classParameter_aa49e65b0e3cabc1273758f29ec7b19c7}\label{classParameter_aa49e65b0e3cabc1273758f29ec7b19c7}} 
+\index{Parameter@{Parameter}!getButton@{getButton}}
+\index{getButton@{getButton}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{getButton()}{getButton()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classInterface__Element_a2e8dcdab9280f6f311cddb3cc3010ee5}{Interface\+\_\+\+Element\+::\+Action}} Parameter\+::get\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInterface__Element_a55e85f9b3803029298f402b8772340c2}{Interface\+\_\+\+Element\+::\+Button}}}]{button }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_ad76d62a8eebebea7c61534b529496b8c}\label{classParameter_ad76d62a8eebebea7c61534b529496b8c}} 
+\index{Parameter@{Parameter}!getHeadLine@{getHeadLine}}
+\index{getHeadLine@{getHeadLine}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{getHeadLine()}{getHeadLine()}}
+{\footnotesize\ttfamily string Parameter\+::get\+Head\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_ac99b23568168f2a809de02073a46730f}\label{classParameter_ac99b23568168f2a809de02073a46730f}} 
+\index{Parameter@{Parameter}!getLastElementOfSubList@{getLastElementOfSubList}}
+\index{getLastElementOfSubList@{getLastElementOfSubList}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{getLastElementOfSubList()}{getLastElementOfSubList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classParameter}{Parameter}}$\ast$ Parameter\+::get\+Last\+Element\+Of\+Sub\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_a4c8d81b89a9b460d0675bfbf8b4035fc}\label{classParameter_a4c8d81b89a9b460d0675bfbf8b4035fc}} 
+\index{Parameter@{Parameter}!getParametr@{getParametr}}
+\index{getParametr@{getParametr}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{getParametr()}{getParametr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classParameter}{Parameter}} $\ast$ Parameter\+::get\+Parametr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_a32d5ec5ff77a38cafeace431f7c7ae9e}\label{classParameter_a32d5ec5ff77a38cafeace431f7c7ae9e}} 
+\index{Parameter@{Parameter}!getSubList@{getSubList}}
+\index{getSubList@{getSubList}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{getSubList()}{getSubList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classList}{List}} $\ast$ Parameter\+::get\+Sub\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_aa77380972c062de8137ba07cccfae572}\label{classParameter_aa77380972c062de8137ba07cccfae572}} 
+\index{Parameter@{Parameter}!getUnit@{getUnit}}
+\index{getUnit@{getUnit}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{getUnit()}{getUnit()}}
+{\footnotesize\ttfamily string Parameter\+::get\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_ac2607fe9401eeff7743d02e0d413788a}\label{classParameter_ac2607fe9401eeff7743d02e0d413788a}} 
+\index{Parameter@{Parameter}!getValue@{getValue}}
+\index{getValue@{getValue}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily uint16\+\_\+t Parameter\+::get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_a3216f192f291375a18f0aec6dead3f21}\label{classParameter_a3216f192f291375a18f0aec6dead3f21}} 
+\index{Parameter@{Parameter}!ifHasSubList@{ifHasSubList}}
+\index{ifHasSubList@{ifHasSubList}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{ifHasSubList()}{ifHasSubList()}}
+{\footnotesize\ttfamily uint8\+\_\+t Parameter\+::if\+Has\+Sub\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_a960555718149a3ead1c8abc30dbd9fe0}\label{classParameter_a960555718149a3ead1c8abc30dbd9fe0}} 
+\index{Parameter@{Parameter}!ifInSubList@{ifInSubList}}
+\index{ifInSubList@{ifInSubList}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{ifInSubList()}{ifInSubList()}}
+{\footnotesize\ttfamily uint8\+\_\+t Parameter\+::if\+In\+Sub\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_a355e005c7e6d9a050c85e144622a1f1e}\label{classParameter_a355e005c7e6d9a050c85e144622a1f1e}} 
+\index{Parameter@{Parameter}!isBackParameter@{isBackParameter}}
+\index{isBackParameter@{isBackParameter}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{isBackParameter()}{isBackParameter()}}
+{\footnotesize\ttfamily uint8\+\_\+t Parameter\+::is\+Back\+Parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_a6d6045ab1e1d03ffc0328d1b2189f0ae}\label{classParameter_a6d6045ab1e1d03ffc0328d1b2189f0ae}} 
+\index{Parameter@{Parameter}!isCountingNoChangeableError@{isCountingNoChangeableError}}
+\index{isCountingNoChangeableError@{isCountingNoChangeableError}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{isCountingNoChangeableError()}{isCountingNoChangeableError()}}
+{\footnotesize\ttfamily uint8\+\_\+t Parameter\+::is\+Counting\+No\+Changeable\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_ae1807dce991cdbddc6ded24b4b8ebff8}\label{classParameter_ae1807dce991cdbddc6ded24b4b8ebff8}} 
+\index{Parameter@{Parameter}!isValueVisible@{isValueVisible}}
+\index{isValueVisible@{isValueVisible}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{isValueVisible()}{isValueVisible()}}
+{\footnotesize\ttfamily uint8\+\_\+t Parameter\+::is\+Value\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_ab861702c21c62c2c5141359f3d5e173d}\label{classParameter_ab861702c21c62c2c5141359f3d5e173d}} 
+\index{Parameter@{Parameter}!newMove@{newMove}}
+\index{newMove@{newMove}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{newMove()}{newMove()}}
+{\footnotesize\ttfamily void Parameter\+::new\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInterface__Element_a2e8dcdab9280f6f311cddb3cc3010ee5}{Interface\+\_\+\+Element\+::\+Action}}}]{action }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_a32ad3db25f9a2ea041d784bf6de08a39}\label{classParameter_a32ad3db25f9a2ea041d784bf6de08a39}} 
+\index{Parameter@{Parameter}!refreshEditMode@{refreshEditMode}}
+\index{refreshEditMode@{refreshEditMode}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{refreshEditMode()}{refreshEditMode()}}
+{\footnotesize\ttfamily void Parameter\+::refresh\+Edit\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_adb2047c7aef9748e6b330936ba0b9cfe}\label{classParameter_adb2047c7aef9748e6b330936ba0b9cfe}} 
+\index{Parameter@{Parameter}!refreshNoChangeableError@{refreshNoChangeableError}}
+\index{refreshNoChangeableError@{refreshNoChangeableError}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{refreshNoChangeableError()}{refreshNoChangeableError()}}
+{\footnotesize\ttfamily void Parameter\+::refresh\+No\+Changeable\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_a20a922760904ff0cc0bfa2d7ad3ad399}\label{classParameter_a20a922760904ff0cc0bfa2d7ad3ad399}} 
+\index{Parameter@{Parameter}!sendErrorNoChangeable@{sendErrorNoChangeable}}
+\index{sendErrorNoChangeable@{sendErrorNoChangeable}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{sendErrorNoChangeable()}{sendErrorNoChangeable()}}
+{\footnotesize\ttfamily void Parameter\+::send\+Error\+No\+Changeable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_a414e9028c34d3fd9611c84840bc71347}\label{classParameter_a414e9028c34d3fd9611c84840bc71347}} 
+\index{Parameter@{Parameter}!setAsBackParameter@{setAsBackParameter}}
+\index{setAsBackParameter@{setAsBackParameter}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{setAsBackParameter()}{setAsBackParameter()}}
+{\footnotesize\ttfamily void Parameter\+::set\+As\+Back\+Parameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classParameter_a52711f8084b49322e70a636123cefe34}\label{classParameter_a52711f8084b49322e70a636123cefe34}} 
+\index{Parameter@{Parameter}!setOutOfSubList@{setOutOfSubList}}
+\index{setOutOfSubList@{setOutOfSubList}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{setOutOfSubList()}{setOutOfSubList()}}
+{\footnotesize\ttfamily void Parameter\+::set\+Out\+Of\+Sub\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classParameter_a638100e56b7ac7cca2772f2279b2b5d1}\label{classParameter_a638100e56b7ac7cca2772f2279b2b5d1}} 
+\index{Parameter@{Parameter}!back\_from\_sub\_list@{back\_from\_sub\_list}}
+\index{back\_from\_sub\_list@{back\_from\_sub\_list}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{back\_from\_sub\_list}{back\_from\_sub\_list}}
+{\footnotesize\ttfamily uint8\+\_\+t Parameter\+::back\+\_\+from\+\_\+sub\+\_\+list = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classParameter_a4d1c95c4aaceafc500bd75b24bd9efbd}\label{classParameter_a4d1c95c4aaceafc500bd75b24bd9efbd}} 
+\index{Parameter@{Parameter}!changeable\_value@{changeable\_value}}
+\index{changeable\_value@{changeable\_value}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{changeable\_value}{changeable\_value}}
+{\footnotesize\ttfamily uint8\+\_\+t Parameter\+::changeable\+\_\+value\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classParameter_ab56894f0a427f765dc02b28584fa42e1}\label{classParameter_ab56894f0a427f765dc02b28584fa42e1}} 
+\index{Parameter@{Parameter}!edit\_mode@{edit\_mode}}
+\index{edit\_mode@{edit\_mode}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{edit\_mode}{edit\_mode}}
+{\footnotesize\ttfamily uint8\+\_\+t Parameter\+::edit\+\_\+mode\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classParameter_a79b18e4ba2ba7cc9799a789abea039fc}\label{classParameter_a79b18e4ba2ba7cc9799a789abea039fc}} 
+\index{Parameter@{Parameter}!edit\_mode\_counting@{edit\_mode\_counting}}
+\index{edit\_mode\_counting@{edit\_mode\_counting}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{edit\_mode\_counting}{edit\_mode\_counting}}
+{\footnotesize\ttfamily uint8\+\_\+t Parameter\+::edit\+\_\+mode\+\_\+counting = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classParameter_a11649c531f6524f8712d2b29b4a4d509}\label{classParameter_a11649c531f6524f8712d2b29b4a4d509}} 
+\index{Parameter@{Parameter}!has\_sub\_list@{has\_sub\_list}}
+\index{has\_sub\_list@{has\_sub\_list}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{has\_sub\_list}{has\_sub\_list}}
+{\footnotesize\ttfamily uint8\+\_\+t Parameter\+::has\+\_\+sub\+\_\+list = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classParameter_ac237b41c20eae0f09c3b8f743bfbedd0}\label{classParameter_ac237b41c20eae0f09c3b8f743bfbedd0}} 
+\index{Parameter@{Parameter}!headline@{headline}}
+\index{headline@{headline}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{headline}{headline}}
+{\footnotesize\ttfamily string Parameter\+::headline\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classParameter_a8697a996d83096e4b36f39561c4f22d7}\label{classParameter_a8697a996d83096e4b36f39561c4f22d7}} 
+\index{Parameter@{Parameter}!in\_sub\_list@{in\_sub\_list}}
+\index{in\_sub\_list@{in\_sub\_list}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{in\_sub\_list}{in\_sub\_list}}
+{\footnotesize\ttfamily uint8\+\_\+t Parameter\+::in\+\_\+sub\+\_\+list = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classParameter_a1ea0a6265a95a00d871aea284b41403b}\label{classParameter_a1ea0a6265a95a00d871aea284b41403b}} 
+\index{Parameter@{Parameter}!list@{list}}
+\index{list@{list}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{list}{list}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classList}{List}}$\ast$ Parameter\+::list\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classParameter_ad7e525749742fa1ef8b782f744898d1e}\label{classParameter_ad7e525749742fa1ef8b782f744898d1e}} 
+\index{Parameter@{Parameter}!no\_changeable\_error\_counting@{no\_changeable\_error\_counting}}
+\index{no\_changeable\_error\_counting@{no\_changeable\_error\_counting}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{no\_changeable\_error\_counting}{no\_changeable\_error\_counting}}
+{\footnotesize\ttfamily uint8\+\_\+t Parameter\+::no\+\_\+changeable\+\_\+error\+\_\+counting = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classParameter_a91464b0523fd223890379ccc96c8b6f9}\label{classParameter_a91464b0523fd223890379ccc96c8b6f9}} 
+\index{Parameter@{Parameter}!start\_counting\_no\_changeable\_error@{start\_counting\_no\_changeable\_error}}
+\index{start\_counting\_no\_changeable\_error@{start\_counting\_no\_changeable\_error}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{start\_counting\_no\_changeable\_error}{start\_counting\_no\_changeable\_error}}
+{\footnotesize\ttfamily uint8\+\_\+t Parameter\+::start\+\_\+counting\+\_\+no\+\_\+changeable\+\_\+error = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classParameter_a765a51b96cab6035a3962f67553f6c1d}\label{classParameter_a765a51b96cab6035a3962f67553f6c1d}} 
+\index{Parameter@{Parameter}!unit@{unit}}
+\index{unit@{unit}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{unit}{unit}}
+{\footnotesize\ttfamily string Parameter\+::unit\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classParameter_a32a870dcbebd786efe124aebe9b4bb4a}\label{classParameter_a32a870dcbebd786efe124aebe9b4bb4a}} 
+\index{Parameter@{Parameter}!value@{value}}
+\index{value@{value}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily uint16\+\_\+t Parameter\+::value\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classParameter_a33d817b1e4975b6b2d604a08ffd8ee93}\label{classParameter_a33d817b1e4975b6b2d604a08ffd8ee93}} 
+\index{Parameter@{Parameter}!visible\_no\_changeable\_error@{visible\_no\_changeable\_error}}
+\index{visible\_no\_changeable\_error@{visible\_no\_changeable\_error}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{visible\_no\_changeable\_error}{visible\_no\_changeable\_error}}
+{\footnotesize\ttfamily uint8\+\_\+t Parameter\+::visible\+\_\+no\+\_\+changeable\+\_\+error = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classParameter_ae1948c71daf27d5124a315d8b215cb86}\label{classParameter_ae1948c71daf27d5124a315d8b215cb86}} 
+\index{Parameter@{Parameter}!visible\_value@{visible\_value}}
+\index{visible\_value@{visible\_value}!Parameter@{Parameter}}
+\doxysubsubsection{\texorpdfstring{visible\_value}{visible\_value}}
+{\footnotesize\ttfamily uint8\+\_\+t Parameter\+::visible\+\_\+value = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Software/\+Src/\+Interface/\mbox{\hyperlink{Parameter_8h}{Parameter.\+h}}\item 
+Software/\+Src/\+Interface/\mbox{\hyperlink{Parameter_8cpp}{Parameter.\+cpp}}\end{DoxyCompactItemize}
