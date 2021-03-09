@@ -1,5 +1,5 @@
 stm32f1xx_hal_uart.c:2738:13:UART_EndRxTransfer	0	static
-stm32f1xx_hal_uart.c:3056:13:UART_SetConfig	16	static
+stm32f1xx_hal_uart.c:3056:13:UART_SetConfig	8	static
 stm32f1xx_hal_uart.c:2692:26:UART_WaitOnFlagUntilTimeout.constprop	24	static
 stm32f1xx_hal_uart.c:672:13:HAL_UART_MspInit	0	static
 stm32f1xx_hal_uart.c:314:19:HAL_UART_Init	8	static
