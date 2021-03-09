@@ -1,3 +1,0 @@
-BatteryManager.cpp:10:1:BatteryManager::BatteryManager()	16	static
-BatteryManager.cpp:15:1:BatteryManager::~BatteryManager()	16	static
-BatteryManager.cpp:15:1:virtual BatteryManager::~BatteryManager()	16	static
