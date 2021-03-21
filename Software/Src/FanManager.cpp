@@ -79,3 +79,7 @@ void FanManager::startOverheatedProcedure() {
 	fans[(uint8_t) FanName::Fan1].on(Fan::HIGH);
 	fans[(uint8_t) FanName::Fan2].on(Fan::HIGH);
 }
+
+uint8_t FanManager::isFanOn(FanName name) const {
+	return fans[ (uint8_t) name ].isOn();
+}

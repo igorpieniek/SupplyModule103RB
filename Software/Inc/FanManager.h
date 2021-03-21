@@ -72,6 +72,7 @@ public:
 	void onHighSpeed(FanName name);
 
 	void off(FanName name);
+	uint8_t isFanOn(FanName name) const;
 
 	FanManager();
 	virtual ~FanManager();
