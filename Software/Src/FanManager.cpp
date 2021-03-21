@@ -13,10 +13,11 @@ FanManager::FanManager() {
 }
 
 void FanManager::init() {
-//	fans[0] = new Fan(&FAN1_TIMER, FAN1_TIMER_CHANNEL);
-//	fans[1] = new Fan(&FAN2_TIMER, FAN2_TIMER_CHANNEL);
-//	fans[2] = new Fan(&FAN3_TIMER, FAN3_TIMER_CHANNEL);
-//	fans[3] = new Fan(&FAN4_TIMER, FAN4_TIMER_CHANNEL);
+	MX_TIM3_Init(); //TODO: move to different place
+	fans[0] = new Fan(&FAN1_TIMER, FAN1_TIMER_CHANNEL);
+	fans[1] = new Fan(&FAN2_TIMER, FAN2_TIMER_CHANNEL);
+	fans[2] = new Fan(&FAN3_TIMER, FAN3_TIMER_CHANNEL);
+	fans[3] = new Fan(&FAN4_TIMER, FAN4_TIMER_CHANNEL);
 }
 
 void FanManager::process() {

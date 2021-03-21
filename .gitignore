@@ -1,2 +1,4 @@
 doc/
 /Debug/
+*.o
+*.su

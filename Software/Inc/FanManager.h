@@ -19,17 +19,17 @@
 #include "tim.h"
 #include "Fan.h"
 
-//#define FAN1_TIMER			htim12
-//#define FAN1_TIMER_CHANNEL	TIM_CHANNEL_1
-//
-//#define FAN2_TIMER			htim12
-//#define FAN2_TIMER_CHANNEL	TIM_CHANNEL_2
-//
-//#define FAN3_TIMER			htim4
-//#define FAN3_TIMER_CHANNEL	TIM_CHANNEL_3
-//
-//#define FAN4_TIMER			htim4
-//#define FAN4_TIMER_CHANNEL	TIM_CHANNEL_4
+#define FAN1_TIMER			htim3			//htim12
+#define FAN1_TIMER_CHANNEL	TIM_CHANNEL_1
+
+#define FAN2_TIMER			htim3				//htim12
+#define FAN2_TIMER_CHANNEL	TIM_CHANNEL_2
+
+#define FAN3_TIMER			htim3
+#define FAN3_TIMER_CHANNEL	TIM_CHANNEL_3
+
+#define FAN4_TIMER			htim3
+#define FAN4_TIMER_CHANNEL	TIM_CHANNEL_4
 
 
 enum class FanName: uint8_t{

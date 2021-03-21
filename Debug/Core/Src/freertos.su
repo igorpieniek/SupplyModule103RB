@@ -1,3 +1,0 @@
-freertos.cpp:75:6:void vApplicationGetIdleTaskMemory(StaticTask_t**, StackType_t**, uint32_t*)	24	static
-freertos.cpp:89:6:void MX_FREERTOS_Init()	48	static
-freertos.cpp:130:6:void StartDefaultTask(const void*)	16	static
