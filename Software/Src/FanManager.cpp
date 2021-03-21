@@ -17,6 +17,8 @@ void FanManager::init() {
 	fans[1].init(&FAN2_TIMER, FAN2_TIMER_CHANNEL);
 	fans[2].init(&FAN3_TIMER, FAN3_TIMER_CHANNEL);
 	fans[3].init(&FAN4_TIMER, FAN4_TIMER_CHANNEL);
+
+	//if dynamic allocation problem will be solved:
 //	fans[0] = new Fan(&FAN1_TIMER, FAN1_TIMER_CHANNEL);
 //	fans[1] = new Fan(&FAN2_TIMER, FAN2_TIMER_CHANNEL);
 //	fans[2] = new Fan(&FAN3_TIMER, FAN3_TIMER_CHANNEL);
@@ -24,11 +26,22 @@ void FanManager::init() {
 }
 
 void FanManager::process() {
-	for(uint8_t i=0; i < NUMBER_OF_FANS; i++){
-		if(!fans[i].isOn()){
-			fans[i].on(Fan::NORMAL);
-		}
+	osEvent evt = osSignalWait(	(uint8_t)TemperatureSignals::COOLDOWN |
+								(uint8_t)TemperatureSignals::HIGH_TEMPERATURE |
+								(uint8_t)TemperatureSignals::OVERHEATED
+							   , osWaitForever);
+	switch(evt.value.signals){
+		case (uint8_t)TemperatureSignals::COOLDOWN:
+			startCooldownProcedure();
+			break;
+		case (uint8_t)TemperatureSignals::HIGH_TEMPERATURE:
+			startHighTemperatureProcedure();
+			break;
+		case (uint8_t)TemperatureSignals::OVERHEATED:
+			startOverheatedProcedure();
+			break;
 	}
+
 }
 
 
@@ -52,3 +65,17 @@ FanManager::~FanManager() {
 
 }
 
+void FanManager::startCooldownProcedure() {
+	fans[(uint8_t) FanName::Fan1].on(Fan::LOW);
+	fans[(uint8_t) FanName::Fan2].on(Fan::LOW);
+}
+
+void FanManager::startHighTemperatureProcedure() {
+	fans[(uint8_t) FanName::Fan1].on(Fan::NORMAL);
+	fans[(uint8_t) FanName::Fan2].on(Fan::NORMAL);
+}
+
+void FanManager::startOverheatedProcedure() {
+	fans[(uint8_t) FanName::Fan1].on(Fan::HIGH);
+	fans[(uint8_t) FanName::Fan2].on(Fan::HIGH);
+}

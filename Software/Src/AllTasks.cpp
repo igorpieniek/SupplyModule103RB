@@ -82,8 +82,6 @@ void StartLedUpTask(void const * argument){
 
 	time_tool.init();
 
-	fans.init();
-	fans.process();
 
 	for(;;){
 

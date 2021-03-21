@@ -5,12 +5,6 @@
  *      Author: Igor
  */
 
-/*
- * FanManager.h
- *
- *  Created on: 24.11.2020
- *      Author: Igor
- */
 
 #ifndef INC_FANMANAGER_H_
 #define INC_FANMANAGER_H_
@@ -18,11 +12,12 @@
 #include "main.h"
 #include "tim.h"
 #include "Fan.h"
+#include "cmsis_os.h"
 
-#define FAN1_TIMER			htim3			//htim12
+#define FAN1_TIMER			htim3				//in target STM :htim12
 #define FAN1_TIMER_CHANNEL	TIM_CHANNEL_1
 
-#define FAN2_TIMER			htim3				//htim12
+#define FAN2_TIMER			htim3				//in target STM :htim12
 #define FAN2_TIMER_CHANNEL	TIM_CHANNEL_2
 
 #define FAN3_TIMER			htim3
@@ -33,6 +28,14 @@
 
 
 #define NUMBER_OF_FANS		4
+
+
+
+enum class TemperatureSignals: uint8_t{
+	COOLDOWN = 0x01,
+    HIGH_TEMPERATURE = 0x02,
+	OVERHEATED = 0x03
+};
 
 enum class FanName: uint8_t{
 	Fan1 = 0,
@@ -47,6 +50,11 @@ enum class FanName: uint8_t{
 class FanManager {
 private:
 	Fan fans[NUMBER_OF_FANS];
+
+	void startCooldownProcedure();
+	void startHighTemperatureProcedure();
+	void startOverheatedProcedure();
+
 
 public:
 
