@@ -14,9 +14,10 @@
 #include "HallSensor.h"
 #include "SectionSwitch.h"
 #include "SupplyBranch.h"
+#include "InternTemperature.h"
 
 #define EM_DMA_ADC_CHANNEL hadc1 		/**TODO: TARGET HADC2 */
-#define EM_DMA_NUMBER_OF_CONVERSION  9  /**5 HALL + 4 VOLTAGE MEASURMENTS (+ 1 internal temperature?) */
+#define EM_DMA_NUMBER_OF_CONVERSION  10  /**5 HALL + 4 VOLTAGE MEASURMENTS (+ 1 internal temperature?) */
 #define HALL_SENSOR_NUMBER 5			/** Number of hall senors */
 #define SUPPLY_BRANCH_NUMBER 4			/** Number of section voltage measurements*/
 #define SECTION_SWITCH_NUMBER 5			/** Number of digital switches */
@@ -44,6 +45,7 @@
 #define SEC_7_INDEX     6
 #define SEC_5_2_INDEX   8
 
+#define TEMPERATURE_INDEX 9
 //-------------------------------
 /** Task class to manage branches energy measurements.
  * * Hall Sensor measurments (HallSensor())
@@ -66,6 +68,7 @@ private:
 	HallSensor* hall_sensors[HALL_SENSOR_NUMBER];
 	SupplyBranch* supply_branches[SUPPLY_BRANCH_NUMBER];
 	SectionSwitch* section_switches[SECTION_SWITCH_NUMBER];
+	InternTemperature temperature;
 
 	uint32_t rawADC[EM_DMA_NUMBER_OF_CONVERSION];
 	Section sectionData[HALL_SENSOR_NUMBER]; //number of branches (motor included)
@@ -119,6 +122,8 @@ public:
 
 	/** Return current state of specified branch */
 	SectionSwitch::Section_state getSectionState(Section_name);
+
+	float getTemperature();
 
 
 	EnergyManager();

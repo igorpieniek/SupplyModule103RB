@@ -12,6 +12,8 @@ EnergyManager::EnergyManager() {
 
 }
 
+
+
 EnergyManager::~EnergyManager() {
 	// TODO Auto-generated destructor stub
 }
@@ -61,6 +63,8 @@ void EnergyManager::sectionSwitch_init(){
 
 }
 
+
+
 void EnergyManager::update_dma_data(){
 	/*rawADC is a table to be written by DMA. It store data in specific order:
 	 * 0. Hall_5_1
@@ -72,6 +76,7 @@ void EnergyManager::update_dma_data(){
 	 * 6. Section_7
 	 * 7. Hall_0 (MOTOR)
 	 * 8. Section_5_2
+	 * 9. Intern Temperature
 	 */
 	hall_sensors[section_5_1]->update(rawADC[ HALL_5_1_INDEX ]);
 	hall_sensors[section_5_2]->update(rawADC[ HALL_5_2_INDEX ]);
@@ -83,6 +88,8 @@ void EnergyManager::update_dma_data(){
 	supply_branches[section_5_2]->update(rawADC[ SEC_5_2_INDEX ]);
 	supply_branches[section_3]->update(rawADC[ SEC_3_INDEX ]);
 	supply_branches[section_7]->update(rawADC[ SEC_7_INDEX ]);
+
+	temperature.updater(rawADC[ TEMPERATURE_INDEX ]);
 }
 
 void EnergyManager::update_section_data(){
@@ -121,3 +128,7 @@ EnergyManager::Section EnergyManager::getSectionData(Section_name sec){
 	return sectionData[sec];
 }
 
+float EnergyManager::getTemperature() {
+	return temperature.getTemperature();
+
+}
