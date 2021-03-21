@@ -32,6 +32,8 @@
 #define FAN4_TIMER_CHANNEL	TIM_CHANNEL_4
 
 
+#define NUMBER_OF_FANS		4
+
 enum class FanName: uint8_t{
 	Fan1 = 0,
 	Fan2,
@@ -43,6 +45,9 @@ enum class FanName: uint8_t{
  *
  */
 class FanManager {
+private:
+	Fan fans[NUMBER_OF_FANS];
+
 public:
 
 	void init();
@@ -63,10 +68,7 @@ public:
 	FanManager();
 	virtual ~FanManager();
 
-private:
-	Fan* fans[4];
-
-
 };
 
+extern FanManager fans;
 #endif /* INC_FANMANAGER_H_ */

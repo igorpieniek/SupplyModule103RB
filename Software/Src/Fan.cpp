@@ -7,6 +7,14 @@
 
 #include <Fan.h>
 
+Fan::Fan(void) {}
+
+void Fan::init(TIM_HandleTypeDef *tim, uint32_t ch) {
+	timer = tim;
+	channel = ch;
+	is_on = 0;
+}
+
 void Fan::on(Velocity vel){
 	velocity = vel;
 	stateON();
@@ -20,6 +28,8 @@ void Fan::on(uint16_t vel){
 	stateON();
 	timerSTART(vel);
 }
+
+
 
 void Fan::timerSTART(uint16_t compare_val){
 	HAL_TIM_Base_Start(timer);
@@ -39,11 +49,8 @@ float Fan::getPWMvalue(){
 }
 
 
-Fan::Fan(TIM_HandleTypeDef * tim, uint32_t ch):
-	timer(tim), channel(ch), is_on(0){
-}
-
 Fan::~Fan() {
 	// TODO Auto-generated destructor stub
 }
+
 

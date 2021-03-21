@@ -12,6 +12,7 @@
 #include "adc.h"
 #include "LedNotifier.h"
 #include "TimeTool.h"
+#include "FanManager.h"
 
 osThreadId BatteryManagerHandle;
 osThreadId LedUpHandle;
@@ -26,6 +27,7 @@ uint8_t RXdata;
 LedNotifier led(LD2_GPIO_Port, LD2_Pin);
 LedNotifier led1(LED1_GPIO_Port, LED1_Pin);
 LedNotifier led2(LED2_GPIO_Port, LED2_Pin);
+
 
 
 void AllTasks_init(){
@@ -80,7 +82,12 @@ void StartLedUpTask(void const * argument){
 
 	time_tool.init();
 
+	fans.init();
+	fans.process();
+
 	for(;;){
+
+
 		currentTime[2]= time_tool.getMicros();
 		currentTime[0]= time_tool.compareMicros(currentTime[2], currentTime[1]);
 		currentTime[1] = currentTime[2];
