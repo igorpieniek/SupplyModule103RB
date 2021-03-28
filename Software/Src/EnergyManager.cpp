@@ -97,24 +97,30 @@ void EnergyManager::update_section_data(){
 	for(uint8_t i =0; i < 4; i++){ //TODO: do smth with this "number"
 		sectionData[i].A = hall_sensors[i]->getAmpereAvrg();
 		sectionData[i].V = supply_branches[i]->getVoltageAvrg();
-		sectionData[i].P =  sectionData[i].V * sectionData[i].A;
+		sectionData[i].P =  powerCalculate(sectionData[i].V, sectionData[i].A);
 	}
 	sectionData[section_motor].A = hall_sensors[section_motor]->getAmpereAvrg();
 	//TODO: add after define batterymanager and adding to target project
-//	sectorsData[SECTION_MOTOR].V = battery_manager.getBatteryVoltage();
-//	sectorsData[SECTION_MOTOR].P = sectorsData[SECTION_MOTOR].A * sectorsData[SECTION_MOTOR].V;
+	//sectionData[section_motor].V = battery_manager.getBatteryVoltage();
+	sectionData[section_motor].P = powerCalculate(sectionData[section_motor].A, sectionData[section_motor].V);
+}
 
-
+float EnergyManager::powerCalculate(float v, float a) {
+	return v * a;
 }
 
 void EnergyManager::update_switch_data(){
 	//check the "false/ positive" problem - when pin is off but all branch is still turn on
 	for(uint8_t i=0; i <SECTION_SWITCH_NUMBER -1; i++){ // -1 because main switch can't do anything when branch was turn on by slider
-		// if voltage on branch is non zero and switch state ii OFF
-		if(!( supply_branches[i]->isCloseToZero() ) && ( section_switches[i]->getState() == SectionSwitch::OFF)  ){
+		if(checkIfBranchIsRealSwitchON( i ) ){
 			section_switches[i]->updateRealStateON();
 		}
 	}
+}
+
+uint8_t EnergyManager::checkIfBranchIsRealSwitchON(uint8_t branchnum){
+	return (!( supply_branches[branchnum]->isCloseToZero() ) && ( section_switches[branchnum]->getState() == SectionSwitch::OFF));
+
 }
 
 void EnergyManager::sectionON(Section_name sec){

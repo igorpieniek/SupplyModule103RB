@@ -11,6 +11,7 @@
 #include "main.h"
 #include "FreeRTOS.h"
 #include "cmsis_os.h"
+#include "task.h"
 
 
 extern osThreadId BatteryManagerHandle;

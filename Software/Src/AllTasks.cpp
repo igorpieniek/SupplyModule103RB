@@ -35,7 +35,7 @@ void AllTasks_init(){
 	  osThreadDef(BatteryManagerTask, StartBatteryManagerTask, osPriorityNormal, 0, 256);
 	  BatteryManagerHandle = osThreadCreate(osThread(BatteryManagerTask), NULL);
 
-	  osThreadDef(LedUpTask, StartLedUpTask, osPriorityBelowNormal, 0, 256);
+	  osThreadDef(LedUpTask, StartLedUpTask, osPriorityNormal, 0, 1024);
 	  LedUpHandle = osThreadCreate(osThread(LedUpTask), NULL);
 
 
@@ -81,7 +81,6 @@ void StartBatteryManagerTask(void const * argument){
 void StartLedUpTask(void const * argument){
 
 	time_tool.init();
-
 
 	for(;;){
 

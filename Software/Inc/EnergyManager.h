@@ -15,6 +15,7 @@
 #include "SectionSwitch.h"
 #include "SupplyBranch.h"
 #include "InternTemperature.h"
+#include "BatteryManager.h"
 
 #define EM_DMA_ADC_CHANNEL 			 	hadc1 	/**TODO: TARGET HADC2 */
 #define EM_DMA_NUMBER_OF_CONVERSION  	10  	/**5 HALL + 4 VOLTAGE MEASURMENTS (+ 1 internal temperature?) */
@@ -80,6 +81,9 @@ private:
 	void update_dma_data();
 	void update_section_data();
 	void update_switch_data();
+
+	uint8_t checkIfBranchIsRealSwitchON(uint8_t branchnum);
+	float powerCalculate(float v, float a);
 
 public:
 	/** Enum to define names of cells */
