@@ -46,10 +46,10 @@ void EnergyManager::hallSensor_init(){
 }
 
 void EnergyManager::supplyBranch_init(){
-	supply_branches[section_5_1] = new SupplyBranch(BRANCH_5_VOLTAGE,NEAR_ZERO_VOLTAGE );
-	supply_branches[section_5_2] = new SupplyBranch(BRANCH_5_VOLTAGE,NEAR_ZERO_VOLTAGE );
-	supply_branches[section_3] =   new SupplyBranch(BRANCH_3_VOLTAGE,NEAR_ZERO_VOLTAGE );
-	supply_branches[section_7] =   new SupplyBranch(BRANCH_7_VOLTAGE,NEAR_ZERO_VOLTAGE );
+	supply_branches[section_5_1] = SupplyBranch(BRANCH_5_VOLTAGE,NEAR_ZERO_VOLTAGE );
+	supply_branches[section_5_2] = SupplyBranch(BRANCH_5_VOLTAGE,NEAR_ZERO_VOLTAGE );
+	supply_branches[section_3] =   SupplyBranch(BRANCH_3_VOLTAGE,NEAR_ZERO_VOLTAGE );
+	supply_branches[section_7] =   SupplyBranch(BRANCH_7_VOLTAGE,NEAR_ZERO_VOLTAGE );
 }
 
 void EnergyManager::sectionSwitch_init(){
@@ -82,10 +82,10 @@ void EnergyManager::update_dma_data(){
 	hall_sensors[section_7].update(rawADC[ HALL_7 ]);
 	hall_sensors[section_motor].update(rawADC[ HALL_0 ]);
 
-	supply_branches[section_5_1]->update(rawADC[ SEC_5_1 ]);
-	supply_branches[section_5_2]->update(rawADC[ SEC_5_2 ]);
-	supply_branches[section_3]->update(rawADC[ SEC_3 ]);
-	supply_branches[section_7]->update(rawADC[ SEC_7 ]);
+	supply_branches[section_5_1].update(rawADC[ SEC_5_1 ]);
+	supply_branches[section_5_2].update(rawADC[ SEC_5_2 ]);
+	supply_branches[section_3].update(rawADC[ SEC_3 ]);
+	supply_branches[section_7].update(rawADC[ SEC_7 ]);
 
 	temperature.update(rawADC[ TEMPERATURE ]);
 }
@@ -94,7 +94,7 @@ void EnergyManager::update_section_data(){
 	// gather all data in Section struct
 	for(uint8_t i =0; i < 4; i++){ //TODO: do smth with this "number"
 		sectionData[i].A = hall_sensors[i].getAmpereAvrg();
-		sectionData[i].V = supply_branches[i]->getVoltageAvrg();
+		sectionData[i].V = supply_branches[i].getVoltageAvrg();
 		sectionData[i].P =  powerCalculate(sectionData[i].V, sectionData[i].A);
 	}
 	sectionData[section_motor].A = hall_sensors[section_motor].getAmpereAvrg();
@@ -117,7 +117,8 @@ void EnergyManager::update_switch_data(){
 }
 
 uint8_t EnergyManager::checkIfBranchIsRealSwitchON(uint8_t branchnum){
-	return (!( supply_branches[branchnum]->isCloseToZero() ) && ( section_switches[branchnum]->getState() == SectionSwitch::OFF));
+	return (!( supply_branches[branchnum].isCloseToZero() ) &&
+			( section_switches[branchnum]->getState() == SectionSwitch::OFF));
 
 }
 
