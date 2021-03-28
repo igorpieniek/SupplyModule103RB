@@ -32,18 +32,16 @@ void EnergyManager::process(){
 	update_switch_data();
 }
 
-
-
 void EnergyManager::dma_init(){
 	HAL_ADC_Start(&EM_DMA_ADC_CHANNEL);
 	HAL_ADC_Start_DMA(&EM_DMA_ADC_CHANNEL, rawADC, EM_DMA_NUMBER_OF_CONVERSION);
 }
 void EnergyManager::hallSensor_init(){
-	hall_sensors[section_5_1] = new HallSensor(HALL_ACHS7121_SENSIVITY );
-	hall_sensors[section_5_2] = new HallSensor(HALL_ACHS7121_SENSIVITY );
-	hall_sensors[section_3] =   new HallSensor(HALL_ACHS7121_SENSIVITY );
-	hall_sensors[section_7] =   new HallSensor(HALL_ACHS7121_SENSIVITY );
-	hall_sensors[section_motor] = 	   new HallSensor(HALL_ACS714_50A_SENSIVITY);
+	hall_sensors[section_5_1] = 	HallSensor(HALL_ACHS7121_SENSIVITY );
+	hall_sensors[section_5_2] = 	HallSensor(HALL_ACHS7121_SENSIVITY );
+	hall_sensors[section_3] =   	HallSensor(HALL_ACHS7121_SENSIVITY );
+	hall_sensors[section_7] =   	HallSensor(HALL_ACHS7121_SENSIVITY );
+	hall_sensors[section_motor] = 	HallSensor(HALL_ACS714_50A_SENSIVITY);
 
 }
 
@@ -78,11 +76,11 @@ void EnergyManager::update_dma_data(){
 	 * 8. Section_5_2
 	 * 9. Intern Temperature
 	 */
-	hall_sensors[section_5_1]->update(rawADC[ HALL_5_1 ]);
-	hall_sensors[section_5_2]->update(rawADC[ HALL_5_2 ]);
-	hall_sensors[section_3]->update(rawADC[ HALL_3 ]);
-	hall_sensors[section_7]->update(rawADC[ HALL_7 ]);
-	hall_sensors[section_motor]->update(rawADC[ HALL_0 ]);
+	hall_sensors[section_5_1].update(rawADC[ HALL_5_1 ]);
+	hall_sensors[section_5_2].update(rawADC[ HALL_5_2 ]);
+	hall_sensors[section_3].update(rawADC[ HALL_3 ]);
+	hall_sensors[section_7].update(rawADC[ HALL_7 ]);
+	hall_sensors[section_motor].update(rawADC[ HALL_0 ]);
 
 	supply_branches[section_5_1]->update(rawADC[ SEC_5_1 ]);
 	supply_branches[section_5_2]->update(rawADC[ SEC_5_2 ]);
@@ -95,11 +93,11 @@ void EnergyManager::update_dma_data(){
 void EnergyManager::update_section_data(){
 	// gather all data in Section struct
 	for(uint8_t i =0; i < 4; i++){ //TODO: do smth with this "number"
-		sectionData[i].A = hall_sensors[i]->getAmpereAvrg();
+		sectionData[i].A = hall_sensors[i].getAmpereAvrg();
 		sectionData[i].V = supply_branches[i]->getVoltageAvrg();
 		sectionData[i].P =  powerCalculate(sectionData[i].V, sectionData[i].A);
 	}
-	sectionData[section_motor].A = hall_sensors[section_motor]->getAmpereAvrg();
+	sectionData[section_motor].A = hall_sensors[section_motor].getAmpereAvrg();
 	//TODO: add after define batterymanager and adding to target project
 	//sectionData[section_motor].V = battery_manager.getBatteryVoltage();
 	sectionData[section_motor].P = powerCalculate(sectionData[section_motor].A, sectionData[section_motor].V);

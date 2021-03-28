@@ -28,6 +28,7 @@ public:
 	 * there will be negative ampere values
 	 * @param max_vol - float value (optional) - maximum voltage (normally 5.0V)
 	 */
+	HallSensor();
 	HallSensor(float sens,float neutral = NEUTRAL_HALL_VOLTAGE, float max_vol = MAX_HALL_VOLTAGE);
 
 	virtual ~HallSensor();
