@@ -53,11 +53,11 @@ void EnergyManager::supplyBranch_init(){
 }
 
 void EnergyManager::sectionSwitch_init(){
-//	section_switches[section_5_1] =      new SectionSwitch(SW_5_1_GPIO_Port,  SW_5_1_Pin);
-//	section_switches[section_5_2] =      new SectionSwitch(SW_5_2_GPIO_Port,  SW_5_2_Pin);
-//	section_switches[section_3] =        new SectionSwitch(SW_3_GPIO_Port,    SW_3_Pin);
-//	section_switches[section_7] =        new SectionSwitch(SW_7_GPIO_Port,    SW_7_Pin);
-//	section_switches[section_main] =   new SectionSwitch(SW_MAIN_GPIO_Port, SW_MAIN_Pin);
+//	section_switches[section_5_1] =      SectionSwitch(SW_5_1_GPIO_Port,  SW_5_1_Pin);
+//	section_switches[section_5_2] =      SectionSwitch(SW_5_2_GPIO_Port,  SW_5_2_Pin);
+//	section_switches[section_3] =        SectionSwitch(SW_3_GPIO_Port,    SW_3_Pin);
+//	section_switches[section_7] =        SectionSwitch(SW_7_GPIO_Port,    SW_7_Pin);
+//	section_switches[section_motor] =    SectionSwitch(SW_MAIN_GPIO_Port, SW_MAIN_Pin);
 
 }
 
@@ -111,22 +111,22 @@ void EnergyManager::update_switch_data(){
 	//check the "false/ positive" problem - when pin is off but all branch is still turn on
 	for(uint8_t i=0; i <SECTION_SWITCH_NUMBER -1; i++){ // -1 because main switch can't do anything when branch was turn on by slider
 		if(checkIfBranchIsRealSwitchON( i ) ){
-			section_switches[i]->updateRealStateON();
+			section_switches[i].updateRealStateON();
 		}
 	}
 }
 
 uint8_t EnergyManager::checkIfBranchIsRealSwitchON(uint8_t branchnum){
 	return (!( supply_branches[branchnum].isCloseToZero() ) &&
-			( section_switches[branchnum]->getState() == SectionSwitch::OFF));
+			( section_switches[branchnum].getState() == SectionSwitch::OFF));
 
 }
 
 void EnergyManager::sectionON(Section_name sec){
-	section_switches[sec]->on();
+	section_switches[sec].on();
 }
 void EnergyManager::sectionOFF(Section_name sec){
-	section_switches[sec]->off();
+	section_switches[sec].off();
 }
 
 EnergyManager::Section EnergyManager::getSectionData(Section_name sec){

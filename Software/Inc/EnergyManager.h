@@ -53,7 +53,7 @@ private:
 
 	HallSensor hall_sensors[HALL_SENSOR_NUMBER];
 	SupplyBranch supply_branches[SUPPLY_BRANCH_NUMBER];
-	SectionSwitch* section_switches[SECTION_SWITCH_NUMBER];
+	SectionSwitch section_switches[SECTION_SWITCH_NUMBER];
 	InternTemperature temperature;
 
 	uint32_t rawADC[EM_DMA_NUMBER_OF_CONVERSION];
