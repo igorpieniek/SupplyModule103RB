@@ -30,7 +30,7 @@ void AllTasks_init(){
 	  LedUpHandle = osThreadCreate(osThread(LedUpTask), NULL);
 
 
-	  HAL_UART_Receive_IT(&huart3, &RXdata, 1);
+	 // HAL_UART_Receive_IT(&huart3, &RXdata, 1);
 
 }
 
