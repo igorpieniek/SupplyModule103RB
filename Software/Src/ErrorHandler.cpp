@@ -14,9 +14,7 @@ ErrorHandler::ErrorHandler() {
 	errorCounter = 0;
 }
 
-ErrorHandler::~ErrorHandler() {
-	// TODO Auto-generated destructor stub
-}
+
 
 void ErrorHandler::insert(int line, std::string file, std::string msg) {
 	std::string fullMsg = convertToErrorMsg(line, file, msg);
@@ -25,7 +23,10 @@ void ErrorHandler::insert(int line, std::string file, std::string msg) {
 
 std::string ErrorHandler::convertToErrorMsg(int line, std::string file, std::string msg) {
 	char fileExt = getFileExtension(file);
-	return file.substr(0, fileLetters) +fileExt + std::to_string(line) + msg;
+	return file.substr(0, numberOfFileLetters)
+		   + fileExt
+		   + std::to_string(line)
+	       + msg;
 }
 
 char ErrorHandler::getFileExtension(std::string file){
@@ -38,10 +39,27 @@ void ErrorHandler::addToBuffer(std::string msg){
 	incrementBufferIndex();
 }
 
+
 void ErrorHandler::incrementBufferIndex(){
 	if (errorCounter < ERROR_BUFFER_SIZE -1){
 		errorCounter++;
 	}
+}
+
+uint8_t ErrorHandler::isBufferEmpty(){
+	if(errorCounter == 0) return 1;
+	else 				  return 0;
+}
+
+std::string ErrorHandler::getLast(){
+	std::string last = buffer[errorCounter];
+	deleteLastError();
+	return last;
+}
+
+void ErrorHandler::deleteLastError(){
+	buffer[errorCounter] = "";
+	decrementBufferIndex();
 }
 
 void ErrorHandler::decrementBufferIndex(){
@@ -50,20 +68,21 @@ void ErrorHandler::decrementBufferIndex(){
 	}
 }
 
-std::string ErrorHandler::getLastError(){
-	std::string last = buffer[errorCounter];
-	deleteLastError();
-	return last;
+void ErrorHandler::clearAll(){
+	for(uint8_t i=0; i < ERROR_BUFFER_SIZE; i++){
+		buffer[i] = "";
+	}
+}
+
+ErrorHandler::~ErrorHandler() {
+	// TODO Auto-generated destructor stub
 }
 
 
 
-uint8_t ErrorHandler::isBufferEmpty(){
-	if(errorCounter == 0) return 1;
-	else 				  return 0;
-}
 
-void ErrorHandler::deleteLastError(){
-	buffer[errorCounter] = "";
-	decrementBufferIndex();
-}
+
+
+
+
+

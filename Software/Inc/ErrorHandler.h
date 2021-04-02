@@ -12,8 +12,8 @@
 
 
 
-#define THROW_ERROR()       er.insert(__LINE__, __FILE__ );
-#define THROW_ERROR_M(msg)  er.insert(__LINE__, __FILE__, msg);
+#define THROW_ERROR()       errorHandler.insert(__LINE__, __FILE__ );
+#define THROW_ERROR_M(msg)  errorHandler.insert(__LINE__, __FILE__, msg);
 
 #define ERROR_BUFFER_SIZE 10
 class ErrorHandler {
@@ -21,7 +21,9 @@ public:
 	void insert(int line, std::string file, std::string msg = {} );
 	uint8_t isBufferEmpty();
 
-	std::string getLastError();
+	std::string getLast();
+
+	void clearAll();
 
 	ErrorHandler();
 	virtual ~ErrorHandler();
@@ -29,7 +31,7 @@ public:
 private:
 	std::string buffer[ERROR_BUFFER_SIZE];
 	uint8_t errorCounter;
-	const uint8_t fileLetters = 4;
+	const uint8_t numberOfFileLetters = 4;
 	std::string convertToErrorMsg(int line, std::string file, std::string msg );
 	void addToBuffer(std::string msg);
 	void incrementBufferIndex();
@@ -41,4 +43,5 @@ private:
 
 };
 
+extern ErrorHandler errorHandler;
 #endif /* INC_ERRORHANDLER_H_ */
