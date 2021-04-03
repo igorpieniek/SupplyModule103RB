@@ -5,7 +5,7 @@
  *      Author: Igor
  */
 
-#include <ErrorHandler.h>
+#include "ErrorHandler.h"
 
 
 ErrorHandler errorHandler;
@@ -60,12 +60,12 @@ void ErrorHandler::decrementIndex() {
 }
 
 uint8_t ErrorHandler::isBufferEmpty(){
-	if(currentIndex == 0) return 1;
-	else 				  return 0;
+	if(currentSize == 0) return 1;
+	else 				 return 0;
 }
 
 void ErrorHandler::incrementBufferSize(){
-	if (currentSize < ERROR_BUFFER_SIZE -1){
+	if (currentSize < ERROR_BUFFER_SIZE ){
 		currentSize++;
 	}
 }
@@ -77,16 +77,15 @@ void ErrorHandler::decrementBufferSize(){
 }
 
 std::string ErrorHandler::getLast(){
+	decrementIndex();
 	std::string last = buffer[currentIndex];
 	deleteLastError();
+	decrementBufferSize();
 	return last;
 }
 
 void ErrorHandler::deleteLastError(){
 	buffer[currentIndex] = "";
-	decrementIndex();
-	decrementBufferSize();
-
 }
 
 void ErrorHandler::clearAll(){
