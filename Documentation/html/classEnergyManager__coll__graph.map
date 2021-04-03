@@ -1,0 +1,10 @@
+<map id="EnergyManager" name="EnergyManager">
+<area shape="rect" id="node1" title=" " alt="" coords="655,129,779,155"/>
+<area shape="rect" id="node2" href="$classSupplyBranch.html" title=" " alt="" coords="345,50,456,77"/>
+<area shape="rect" id="node3" href="$classADC__Tools.html" title=" " alt="" coords="54,71,145,98"/>
+<area shape="rect" id="node6" href="$classHallSensor.html" title=" " alt="" coords="355,101,447,127"/>
+<area shape="rect" id="node4" href="$classAverage.html" title=" " alt="" coords="5,5,193,47"/>
+<area shape="rect" id="node5" href="$structEnergyManager_1_1Section.html" title=" " alt="" coords="311,151,491,178"/>
+<area shape="rect" id="node7" href="$classAverage.html" title=" " alt="" coords="5,123,193,164"/>
+<area shape="rect" id="node8" href="$classSectionSwitch.html" title=" " alt="" coords="344,202,457,229"/>
+</map>
