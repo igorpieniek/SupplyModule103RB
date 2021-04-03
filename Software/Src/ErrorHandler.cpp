@@ -11,10 +11,9 @@
 ErrorHandler errorHandler;
 
 ErrorHandler::ErrorHandler() {
-	errorCounter = 0;
+	currentIndex = 0;
+	currentSize = 0;
 }
-
-
 
 void ErrorHandler::insert(int line, std::string file, std::string msg) {
 	std::string fullMsg = convertToErrorMsg(line, file, msg);
@@ -29,49 +28,73 @@ std::string ErrorHandler::convertToErrorMsg(int line, std::string file, std::str
 	       + msg;
 }
 
+
 char ErrorHandler::getFileExtension(std::string file){
 	if(file.find(".c") != std::string::npos) return 'c';
 	else 									 return 'h';
 }
 
 void ErrorHandler::addToBuffer(std::string msg){
-	buffer[errorCounter] = msg;
-	incrementBufferIndex();
+	buffer[currentIndex] = msg;
+	incrementIndex();
+	incrementBufferSize();
 }
 
 
-void ErrorHandler::incrementBufferIndex(){
-	if (errorCounter < ERROR_BUFFER_SIZE -1){
-		errorCounter++;
+void ErrorHandler::incrementIndex(){
+	if (currentIndex < ERROR_BUFFER_SIZE -1){
+		currentIndex++;
+	}
+	else if( currentIndex == ERROR_BUFFER_SIZE -1){
+		currentIndex = 0;
+	}
+}
+
+void ErrorHandler::decrementIndex() {
+	if (currentIndex > 0){
+		currentIndex--;
+	}
+	else if( currentIndex == 0){
+		currentIndex = ERROR_BUFFER_SIZE - 1;
 	}
 }
 
 uint8_t ErrorHandler::isBufferEmpty(){
-	if(errorCounter == 0) return 1;
+	if(currentIndex == 0) return 1;
 	else 				  return 0;
 }
 
+void ErrorHandler::incrementBufferSize(){
+	if (currentSize < ERROR_BUFFER_SIZE -1){
+		currentSize++;
+	}
+}
+
+void ErrorHandler::decrementBufferSize(){
+	if (currentSize > 0){
+		currentSize--;
+	}
+}
+
 std::string ErrorHandler::getLast(){
-	std::string last = buffer[errorCounter];
+	std::string last = buffer[currentIndex];
 	deleteLastError();
 	return last;
 }
 
 void ErrorHandler::deleteLastError(){
-	buffer[errorCounter] = "";
-	decrementBufferIndex();
-}
+	buffer[currentIndex] = "";
+	decrementIndex();
+	decrementBufferSize();
 
-void ErrorHandler::decrementBufferIndex(){
-	if(errorCounter > 0){
-		errorCounter--;
-	}
 }
 
 void ErrorHandler::clearAll(){
 	for(uint8_t i=0; i < ERROR_BUFFER_SIZE; i++){
 		buffer[i] = "";
 	}
+	currentIndex = 0;
+	currentSize = 0;
 }
 
 ErrorHandler::~ErrorHandler() {

@@ -16,6 +16,8 @@
 #define THROW_ERROR_M(msg)  errorHandler.insert(__LINE__, __FILE__, msg);
 
 #define ERROR_BUFFER_SIZE 10
+
+
 class ErrorHandler {
 public:
 	void insert(int line, std::string file, std::string msg = {} );
@@ -30,12 +32,16 @@ public:
 
 private:
 	std::string buffer[ERROR_BUFFER_SIZE];
-	uint8_t errorCounter;
+	uint8_t currentIndex;
+	uint8_t currentSize;
 	const uint8_t numberOfFileLetters = 4;
 	std::string convertToErrorMsg(int line, std::string file, std::string msg );
 	void addToBuffer(std::string msg);
-	void incrementBufferIndex();
-	void decrementBufferIndex();
+	void incrementIndex();
+	void decrementIndex();
+
+	void incrementBufferSize();
+	void decrementBufferSize();
 
 	void deleteLastError();
 
