@@ -35,6 +35,7 @@ private:
 	uint8_t currentIndex;
 	uint8_t currentSize;
 	const uint8_t numberOfFileLetters = 4;
+
 	std::string convertToErrorMsg(int line, std::string file, std::string msg );
 	void addToBuffer(std::string msg);
 	void incrementIndex();
