@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Fan Class Reference</title>
+<title>LampLink ESP32 Firmware: Fan Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">LampLink ESP32 Firmware
    </div>
   </td>
  </tr>
@@ -95,8 +95,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a71ca5f8358bc929baf1c9ecea6930235"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c998be737a97ace37de657e250aa37b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFan.html#a2c998be737a97ace37de657e250aa37b">getPWMvalue</a> ()</td></tr>
 <tr class="separator:a2c998be737a97ace37de657e250aa37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a518e0bebb6da6d0c7f7aef5e2ff30cfb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFan.html#a518e0bebb6da6d0c7f7aef5e2ff30cfb">Fan</a> (TIM_HandleTypeDef *tim, uint32_t ch)</td></tr>
-<tr class="separator:a518e0bebb6da6d0c7f7aef5e2ff30cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cc06376b9fc92d4cf06e3311226f26d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFan.html#a7cc06376b9fc92d4cf06e3311226f26d">init</a> (TIM_HandleTypeDef *tim, uint32_t ch)</td></tr>
+<tr class="separator:a7cc06376b9fc92d4cf06e3311226f26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2764eef13adf8989ab7e99c8438f68f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFan.html#a2764eef13adf8989ab7e99c8438f68f2">Fan</a> ()</td></tr>
+<tr class="separator:a2764eef13adf8989ab7e99c8438f68f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c01036a754d1f37c97ef4338f0aa325"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFan.html#a0c01036a754d1f37c97ef4338f0aa325">~Fan</a> ()</td></tr>
 <tr class="separator:a0c01036a754d1f37c97ef4338f0aa325"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -149,8 +151,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a518e0bebb6da6d0c7f7aef5e2ff30cfb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a518e0bebb6da6d0c7f7aef5e2ff30cfb">&#9670;&nbsp;</a></span>Fan()</h2>
+<a id="a2764eef13adf8989ab7e99c8438f68f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2764eef13adf8989ab7e99c8438f68f2">&#9670;&nbsp;</a></span>Fan()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -158,29 +160,11 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">Fan::Fan </td>
           <td>(</td>
-          <td class="paramtype">TIM_HandleTypeDef *&#160;</td>
-          <td class="paramname"><em>tim</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>ch</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">tim</td><td>- TIM_HandleTypeDef * - to define timer to use eg. htim12 </td></tr>
-    <tr><td class="paramname">ch</td><td>- uint32_t - timer channel eg. TIM_CHANNEL_1 </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -225,6 +209,41 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Return current PWM value in percents [%] </p>
+
+</div>
+</div>
+<a id="a7cc06376b9fc92d4cf06e3311226f26d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cc06376b9fc92d4cf06e3311226f26d">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Fan::init </td>
+          <td>(</td>
+          <td class="paramtype">TIM_HandleTypeDef *&#160;</td>
+          <td class="paramname"><em>tim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ch</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tim</td><td>- TIM_HandleTypeDef * - to define timer to use eg. htim12 </td></tr>
+    <tr><td class="paramname">ch</td><td>- uint32_t - timer channel eg. TIM_CHANNEL_1 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

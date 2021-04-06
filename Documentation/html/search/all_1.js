@@ -7,7 +7,7 @@ var searchData=
   ['batterymanager_2eh_32',['BatteryManager.h',['../BatteryManager_8h.html',1,'']]],
   ['batterymanagerhandle_33',['BatteryManagerHandle',['../AllTasks_8cpp.html#a103b37bbce360d0fd62bf5ce0b43439c',1,'BatteryManagerHandle():&#160;AllTasks.cpp'],['../AllTasks_8h.html#a103b37bbce360d0fd62bf5ce0b43439c',1,'BatteryManagerHandle():&#160;AllTasks.cpp']]],
   ['bitresolution_34',['bitResolution',['../classADC__Tools.html#ad42276e9fa83bb9c79d5ac8b3d1a49ec',1,'ADC_Tools']]],
-  ['blink_35',['blink',['../classLedNotifier.html#a9f0c00eb5158c58b1d1f4870e892d589',1,'LedNotifier::blink(uint16_t perON)'],['../classLedNotifier.html#a4a0f00468f6a5aa165170b75ab2a466a',1,'LedNotifier::blink(uint16_t perON, uint16_t perOFF)'],['../classLedNotifier.html#a74fd8a481165eb750851e3f950d5876aa30e26f95534ec691d351b343ef00f8d5',1,'LedNotifier::BLINK()']]],
+  ['blink_35',['BLINK',['../classLedNotifier.html#a74fd8a481165eb750851e3f950d5876aa30e26f95534ec691d351b343ef00f8d5',1,'LedNotifier::BLINK()'],['../classLedNotifier.html#a9f0c00eb5158c58b1d1f4870e892d589',1,'LedNotifier::blink(uint16_t perON)'],['../classLedNotifier.html#a4a0f00468f6a5aa165170b75ab2a466a',1,'LedNotifier::blink(uint16_t perON, uint16_t perOFF)']]],
   ['blink_5fprocess_36',['blink_process',['../classLedNotifier.html#a8fe6664b1157f3e86f0960ce985c7280',1,'LedNotifier']]],
   ['blink_5fstate_37',['blink_state',['../classLedNotifier.html#a7a385223b0c0072fe536eaa6c696e590',1,'LedNotifier']]],
   ['blinkoff_38',['blinkOff',['../classLedNotifier.html#a9a500636153ac5de27f3687fd2ecb77fafd6e8ce93955391f6b612deaefe8e801',1,'LedNotifier']]],

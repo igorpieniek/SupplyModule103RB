@@ -26,7 +26,9 @@ uint8\+\_\+t \mbox{\hyperlink{classFan_a71ca5f8358bc929baf1c9ecea6930235}{is\+On
 \item 
 float \mbox{\hyperlink{classFan_a2c998be737a97ace37de657e250aa37b}{get\+P\+W\+Mvalue}} ()
 \item 
-\mbox{\hyperlink{classFan_a518e0bebb6da6d0c7f7aef5e2ff30cfb}{Fan}} (T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$tim, uint32\+\_\+t ch)
+void \mbox{\hyperlink{classFan_a7cc06376b9fc92d4cf06e3311226f26d}{init}} (T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$tim, uint32\+\_\+t ch)
+\item 
+\mbox{\hyperlink{classFan_a2764eef13adf8989ab7e99c8438f68f2}{Fan}} ()
 \item 
 virtual \mbox{\hyperlink{classFan_a0c01036a754d1f37c97ef4338f0aa325}{$\sim$\+Fan}} ()
 \end{DoxyCompactItemize}
@@ -83,19 +85,12 @@ H\+I\+GH&Max speed \+: 100\% \\
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classFan_a518e0bebb6da6d0c7f7aef5e2ff30cfb}\label{classFan_a518e0bebb6da6d0c7f7aef5e2ff30cfb}} 
+\mbox{\Hypertarget{classFan_a2764eef13adf8989ab7e99c8438f68f2}\label{classFan_a2764eef13adf8989ab7e99c8438f68f2}} 
 \index{Fan@{Fan}!Fan@{Fan}}
 \index{Fan@{Fan}!Fan@{Fan}}
 \doxysubsubsection{\texorpdfstring{Fan()}{Fan()}}
-{\footnotesize\ttfamily Fan\+::\+Fan (\begin{DoxyParamCaption}\item[{T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$}]{tim,  }\item[{uint32\+\_\+t}]{ch }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Fan\+::\+Fan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-\begin{DoxyParams}{Parameters}
-{\em tim} & -\/ T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$ -\/ to define timer to use eg. htim12 \\
-\hline
-{\em ch} & -\/ uint32\+\_\+t -\/ timer channel eg. T\+I\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1 \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{classFan_a0c01036a754d1f37c97ef4338f0aa325}\label{classFan_a0c01036a754d1f37c97ef4338f0aa325}} 
 \index{Fan@{Fan}!````~Fan@{$\sim$Fan}}
 \index{````~Fan@{$\sim$Fan}!Fan@{Fan}}
@@ -111,7 +106,20 @@ H\+I\+GH&Max speed \+: 100\% \\
 \doxysubsubsection{\texorpdfstring{getPWMvalue()}{getPWMvalue()}}
 {\footnotesize\ttfamily float Fan\+::get\+P\+W\+Mvalue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Return current P\+WM value in percents \mbox{[}\%\mbox{]} \mbox{\Hypertarget{classFan_a71ca5f8358bc929baf1c9ecea6930235}\label{classFan_a71ca5f8358bc929baf1c9ecea6930235}} 
+Return current P\+WM value in percents \mbox{[}\%\mbox{]} \mbox{\Hypertarget{classFan_a7cc06376b9fc92d4cf06e3311226f26d}\label{classFan_a7cc06376b9fc92d4cf06e3311226f26d}} 
+\index{Fan@{Fan}!init@{init}}
+\index{init@{init}!Fan@{Fan}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Fan\+::init (\begin{DoxyParamCaption}\item[{T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$}]{tim,  }\item[{uint32\+\_\+t}]{ch }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tim} & -\/ T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$ -\/ to define timer to use eg. htim12 \\
+\hline
+{\em ch} & -\/ uint32\+\_\+t -\/ timer channel eg. T\+I\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFan_a71ca5f8358bc929baf1c9ecea6930235}\label{classFan_a71ca5f8358bc929baf1c9ecea6930235}} 
 \index{Fan@{Fan}!isOn@{isOn}}
 \index{isOn@{isOn}!Fan@{Fan}}
 \doxysubsubsection{\texorpdfstring{isOn()}{isOn()}}

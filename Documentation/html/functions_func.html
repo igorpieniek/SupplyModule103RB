@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Class Members - Functions</title>
+<title>LampLink ESP32 Firmware: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">LampLink ESP32 Firmware
    </div>
   </td>
  </tr>
@@ -117,6 +117,9 @@ $(function() {
 <li>checkBatteryLevel()
 : <a class="el" href="classBatteryManager.html#afd1326a8e935012b001f4472d35187db">BatteryManager</a>
 </li>
+<li>checkIfBranchIsRealSwitchON()
+: <a class="el" href="classEnergyManager.html#a801858dd9177e895d7fd496bcb546a8f">EnergyManager</a>
+</li>
 <li>clear()
 : <a class="el" href="classAverage.html#a5a8b51c8173421a2f69e586fdae3f688">Average&lt; T, s &gt;</a>
 </li>
@@ -163,7 +166,10 @@ $(function() {
 
 <h3><a id="index_f"></a>- f -</h3><ul>
 <li>Fan()
-: <a class="el" href="classFan.html#a518e0bebb6da6d0c7f7aef5e2ff30cfb">Fan</a>
+: <a class="el" href="classFan.html#a2764eef13adf8989ab7e99c8438f68f2">Fan</a>
+</li>
+<li>FanManager()
+: <a class="el" href="classFanManager.html#a25d0930b7c9988c9c32c351941060e6b">FanManager</a>
 </li>
 </ul>
 
@@ -264,7 +270,8 @@ $(function() {
 : <a class="el" href="classParameter.html#a32d5ec5ff77a38cafeace431f7c7ae9e">Parameter</a>
 </li>
 <li>getTemperature()
-: <a class="el" href="classInternTemperature.html#acf1221579f7f902b55274bb5e407e1a7">InternTemperature</a>
+: <a class="el" href="classEnergyManager.html#a707ce1d76d6506b3e1e12e9a22f45060">EnergyManager</a>
+, <a class="el" href="classInternTemperature.html#acf1221579f7f902b55274bb5e407e1a7">InternTemperature</a>
 </li>
 <li>getTimeFromLastToggle()
 : <a class="el" href="classLedNotifier.html#a53224d790ff09011f46edba48b59a51e">LedNotifier</a>
@@ -288,7 +295,7 @@ $(function() {
 
 <h3><a id="index_h"></a>- h -</h3><ul>
 <li>HallSensor()
-: <a class="el" href="classHallSensor.html#a040513b43c83cae4e7221cdc9e8e8af7">HallSensor</a>
+: <a class="el" href="classHallSensor.html#a6ea072904ce733c45bea4e487298391f">HallSensor</a>
 </li>
 <li>hallSensor_init()
 : <a class="el" href="classEnergyManager.html#ac7a3d6fc2dca0492472c947271962ec5">EnergyManager</a>
@@ -315,6 +322,8 @@ $(function() {
 <li>init()
 : <a class="el" href="classBatteryManager.html#a4e5e24414d24421dfb93179591faa04e">BatteryManager</a>
 , <a class="el" href="classEnergyManager.html#a6f844e991fa5a1ce56f7771134d65443">EnergyManager</a>
+, <a class="el" href="classFan.html#a7cc06376b9fc92d4cf06e3311226f26d">Fan</a>
+, <a class="el" href="classFanManager.html#a2b9b886b6e3e94564221489dae2c98ce">FanManager</a>
 , <a class="el" href="classTimeTool.html#ae36cf90e87d12f5e0cff623c9ed8f29d">TimeTool</a>
 </li>
 <li>insert()
@@ -340,6 +349,9 @@ $(function() {
 </li>
 <li>isCountingNoChangeableError()
 : <a class="el" href="classParameter.html#a6d6045ab1e1d03ffc0328d1b2189f0ae">Parameter</a>
+</li>
+<li>isFanOn()
+: <a class="el" href="classFanManager.html#ab0f9a0fe8c4021a4ee67c17d312e6144">FanManager</a>
 </li>
 <li>isNoChangeableErrorCounting()
 : <a class="el" href="classInterface.html#a3d576ef3a73d2da0b9454e93a19ca006">Interface</a>
@@ -395,6 +407,7 @@ $(function() {
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>off()
 : <a class="el" href="classFan.html#a4f227cf7d510dead390ab72fafbd28e9">Fan</a>
+, <a class="el" href="classFanManager.html#a2600f971c272e79d10a533ea6e9c70ec">FanManager</a>
 , <a class="el" href="classLedNotifier.html#ab8e5a76adf9204775f52bf3a4a020872">LedNotifier</a>
 , <a class="el" href="classSectionSwitch.html#a2b86450bcb11ce9317c03679eaa2d9dd">SectionSwitch</a>
 </li>
@@ -402,6 +415,15 @@ $(function() {
 : <a class="el" href="classFan.html#a358fb3f36ea2ecca1dbf3be4f0993bf9">Fan</a>
 , <a class="el" href="classLedNotifier.html#ac8ee5ac9ad4666a1034f79f7dcdf4c4a">LedNotifier</a>
 , <a class="el" href="classSectionSwitch.html#a4caf6d21ea63a55b24ba69b25de862b9">SectionSwitch</a>
+</li>
+<li>onHighSpeed()
+: <a class="el" href="classFanManager.html#a2b9c2b4fe1458ff27799eeb3348bcefc">FanManager</a>
+</li>
+<li>onLowSpeed()
+: <a class="el" href="classFanManager.html#a7979e80fa4c253d535a58a1da9578a0d">FanManager</a>
+</li>
+<li>onNormalSpeed()
+: <a class="el" href="classFanManager.html#a0940b57fb92a4b6d205a4024cc86287d">FanManager</a>
 </li>
 <li>operator()()
 : <a class="el" href="classAverage.html#a2fe37f3bf3041754a7ca9413efe17fca">Average&lt; T, s &gt;</a>
@@ -413,6 +435,9 @@ $(function() {
 <li>Parameter()
 : <a class="el" href="classParameter.html#a8668e6b3e89a8c8fdd9984c248e38684">Parameter</a>
 </li>
+<li>powerCalculate()
+: <a class="el" href="classEnergyManager.html#a528f9b61f67e7d7fb4591d989c31cd50">EnergyManager</a>
+</li>
 <li>print()
 : <a class="el" href="classList.html#ac334b7866f8dd21f730442b2553df60f">List</a>
 , <a class="el" href="classList__element.html#aa76c2482fbbd54cd56da0dba7937947e">List_element</a>
@@ -420,6 +445,7 @@ $(function() {
 <li>process()
 : <a class="el" href="classBatteryManager.html#abaebedeb920de9e9fe3ce040d9eebf65">BatteryManager</a>
 , <a class="el" href="classEnergyManager.html#a8ce85905b01c390642678ec08e19ae02">EnergyManager</a>
+, <a class="el" href="classFanManager.html#acc8bb95723c69b792ac5f8c5a51d50ca">FanManager</a>
 </li>
 </ul>
 
@@ -448,7 +474,7 @@ $(function() {
 : <a class="el" href="classEnergyManager.html#aa7a41ce68cc7086bc2c0d67249d48bbe">EnergyManager</a>
 </li>
 <li>SectionSwitch()
-: <a class="el" href="classSectionSwitch.html#ac6128ff8e504f21fd46598902dff7e18">SectionSwitch</a>
+: <a class="el" href="classSectionSwitch.html#a2eb5645ca1d4c6f290acef2ab9c34253">SectionSwitch</a>
 </li>
 <li>sectionSwitch_init()
 : <a class="el" href="classEnergyManager.html#a156ed4ccf6f0daabcfc6f4fe4f012c48">EnergyManager</a>
@@ -474,6 +500,15 @@ $(function() {
 </li>
 <li>size()
 : <a class="el" href="classAverage.html#a19f5da302ad2c5e0911a7be11d5863be">Average&lt; T, s &gt;</a>
+</li>
+<li>startCooldownProcedure()
+: <a class="el" href="classFanManager.html#a84497cf16ca7e9a7bbd9252873516329">FanManager</a>
+</li>
+<li>startHighTemperatureProcedure()
+: <a class="el" href="classFanManager.html#a5c4c3965ff0fb24dbe268a5edc9212d0">FanManager</a>
+</li>
+<li>startOverheatedProcedure()
+: <a class="el" href="classFanManager.html#a537999ca45533d3e9c1f7855ff566f4f">FanManager</a>
 </li>
 <li>stateOFF()
 : <a class="el" href="classFan.html#af3736120c54220d79819072adac42cf1">Fan</a>
@@ -550,6 +585,9 @@ $(function() {
 </li>
 <li>~Fan()
 : <a class="el" href="classFan.html#a0c01036a754d1f37c97ef4338f0aa325">Fan</a>
+</li>
+<li>~FanManager()
+: <a class="el" href="classFanManager.html#a312bfb233f6ce1cdae1f817b23142294">FanManager</a>
 </li>
 <li>~HallSensor()
 : <a class="el" href="classHallSensor.html#aa82bb55372f3b696096938604a3c4526">HallSensor</a>

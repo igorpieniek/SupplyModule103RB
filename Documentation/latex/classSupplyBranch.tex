@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for Supply\+Branch\+:
-\nopagebreak
+Inheritance diagram for Supply\+Branch\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for Supply\+Branch\+:
 \end{figure}
 
 
-Collaboration diagram for Supply\+Branch\+:
-\nopagebreak
+Collaboration diagram for Supply\+Branch\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -36,6 +34,8 @@ void \mbox{\hyperlink{classSupplyBranch_a3f44782f6e405f5733ab3636b6b10a0b}{updat
 uint8\+\_\+t \mbox{\hyperlink{classSupplyBranch_a9242b91d9949f71ab5e43d9d35d6db50}{is\+Close\+To\+Zero}} ()
 \item 
 \mbox{\hyperlink{classSupplyBranch_ad24302eda5fd226c1d70061c516b4210}{Supply\+Branch}} (float max, float marg=\mbox{\hyperlink{SupplyBranch_8h_ad892284fe58c926b6a7b213a0553b605}{S\+U\+P\+P\+L\+Y\+B\+R\+A\+N\+C\+H\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+M\+A\+R\+G\+IN}})
+\item 
+\mbox{\hyperlink{classSupplyBranch_ae9b59b7cb1427ac43faf2669b295a4dc}{Supply\+Branch}} ()
 \item 
 virtual \mbox{\hyperlink{classSupplyBranch_a5e1ef3c94ea7d2f20c3a151890a85aa2}{$\sim$\+Supply\+Branch}} ()
 \end{DoxyCompactItemize}
@@ -58,7 +58,7 @@ It uses \mbox{\hyperlink{classAverage}{Average()}} class object with fixed numbe
 \mbox{\Hypertarget{classSupplyBranch_ad24302eda5fd226c1d70061c516b4210}\label{classSupplyBranch_ad24302eda5fd226c1d70061c516b4210}} 
 \index{SupplyBranch@{SupplyBranch}!SupplyBranch@{SupplyBranch}}
 \index{SupplyBranch@{SupplyBranch}!SupplyBranch@{SupplyBranch}}
-\doxysubsubsection{\texorpdfstring{SupplyBranch()}{SupplyBranch()}}
+\doxysubsubsection{\texorpdfstring{SupplyBranch()}{SupplyBranch()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Supply\+Branch\+::\+Supply\+Branch (\begin{DoxyParamCaption}\item[{float}]{max,  }\item[{float}]{marg = {\ttfamily \mbox{\hyperlink{SupplyBranch_8h_ad892284fe58c926b6a7b213a0553b605}{S\+U\+P\+P\+L\+Y\+B\+R\+A\+N\+C\+H\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+M\+A\+R\+G\+IN}}} }\end{DoxyParamCaption})}
 
 Define initial parameters, also connected with \mbox{\hyperlink{classADC__Tools}{A\+D\+C\+\_\+\+Tools(max)}} 
@@ -68,6 +68,12 @@ Define initial parameters, also connected with \mbox{\hyperlink{classADC__Tools}
 {\em marg} & -\/ float value (optional) -\/ normally \mbox{\hyperlink{SupplyBranch_8h_ad892284fe58c926b6a7b213a0553b605}{S\+U\+P\+P\+L\+Y\+B\+R\+A\+N\+C\+H\+\_\+\+V\+O\+L\+T\+A\+G\+E\+\_\+\+M\+A\+R\+G\+IN}} -\/ voltage value below which it will be consider as 0V (po prevent from incorrect result of \mbox{\hyperlink{classSupplyBranch_a9242b91d9949f71ab5e43d9d35d6db50}{is\+Close\+To\+Zero()}} function ) \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classSupplyBranch_ae9b59b7cb1427ac43faf2669b295a4dc}\label{classSupplyBranch_ae9b59b7cb1427ac43faf2669b295a4dc}} 
+\index{SupplyBranch@{SupplyBranch}!SupplyBranch@{SupplyBranch}}
+\index{SupplyBranch@{SupplyBranch}!SupplyBranch@{SupplyBranch}}
+\doxysubsubsection{\texorpdfstring{SupplyBranch()}{SupplyBranch()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Supply\+Branch\+::\+Supply\+Branch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{classSupplyBranch_a5e1ef3c94ea7d2f20c3a151890a85aa2}\label{classSupplyBranch_a5e1ef3c94ea7d2f20c3a151890a85aa2}} 
 \index{SupplyBranch@{SupplyBranch}!````~SupplyBranch@{$\sim$SupplyBranch}}
 \index{````~SupplyBranch@{$\sim$SupplyBranch}!SupplyBranch@{SupplyBranch}}
@@ -104,7 +110,7 @@ Reimplemented from \mbox{\hyperlink{classADC__Tools_a4218d92afd7e4bfc8da45f2fcc5
 \doxysubsubsection{\texorpdfstring{isCloseToZero()}{isCloseToZero()}}
 {\footnotesize\ttfamily uint8\+\_\+t Supply\+Branch\+::is\+Close\+To\+Zero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Function return {\bfseries{1}} when branch voltage is near zero value (in range from 0V to margin defined in \mbox{\hyperlink{classSupplyBranch_ad24302eda5fd226c1d70061c516b4210}{Supply\+Branch()}}) \mbox{\Hypertarget{classSupplyBranch_a3f44782f6e405f5733ab3636b6b10a0b}\label{classSupplyBranch_a3f44782f6e405f5733ab3636b6b10a0b}} 
+Function return {\bfseries{1}} when branch voltage is near zero value (in range from 0V to margin defined in \mbox{\hyperlink{classSupplyBranch_ae9b59b7cb1427ac43faf2669b295a4dc}{Supply\+Branch()}}) \mbox{\Hypertarget{classSupplyBranch_a3f44782f6e405f5733ab3636b6b10a0b}\label{classSupplyBranch_a3f44782f6e405f5733ab3636b6b10a0b}} 
 \index{SupplyBranch@{SupplyBranch}!update@{update}}
 \index{update@{update}!SupplyBranch@{SupplyBranch}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}

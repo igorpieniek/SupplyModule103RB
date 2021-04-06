@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['velocity_620',['Velocity',['../classFan.html#a3bee1f52aed7e66f4d7877e925b768f9',1,'Fan']]]
+  ['ledstate_648',['LedState',['../classLedNotifier.html#a74fd8a481165eb750851e3f950d5876a',1,'LedNotifier']]]
 ];

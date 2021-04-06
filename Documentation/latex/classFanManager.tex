@@ -1,0 +1,151 @@
+\hypertarget{classFanManager}{}\doxysection{Fan\+Manager Class Reference}
+\label{classFanManager}\index{FanManager@{FanManager}}
+
+
+{\ttfamily \#include $<$Fan\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Fan\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{classFanManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classFanManager_a2b9b886b6e3e94564221489dae2c98ce}{init}} ()
+\item 
+void \mbox{\hyperlink{classFanManager_acc8bb95723c69b792ac5f8c5a51d50ca}{process}} ()
+\item 
+void \mbox{\hyperlink{classFanManager_a7979e80fa4c253d535a58a1da9578a0d}{on\+Low\+Speed}} (\mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42}{Fan\+Name}} name)
+\item 
+void \mbox{\hyperlink{classFanManager_a0940b57fb92a4b6d205a4024cc86287d}{on\+Normal\+Speed}} (\mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42}{Fan\+Name}} name)
+\item 
+void \mbox{\hyperlink{classFanManager_a2b9c2b4fe1458ff27799eeb3348bcefc}{on\+High\+Speed}} (\mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42}{Fan\+Name}} name)
+\item 
+void \mbox{\hyperlink{classFanManager_a2600f971c272e79d10a533ea6e9c70ec}{off}} (\mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42}{Fan\+Name}} name)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classFanManager_ab0f9a0fe8c4021a4ee67c17d312e6144}{is\+Fan\+On}} (\mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42}{Fan\+Name}} name) const
+\item 
+\mbox{\hyperlink{classFanManager_a25d0930b7c9988c9c32c351941060e6b}{Fan\+Manager}} ()
+\item 
+virtual \mbox{\hyperlink{classFanManager_a312bfb233f6ce1cdae1f817b23142294}{$\sim$\+Fan\+Manager}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classFanManager_a84497cf16ca7e9a7bbd9252873516329}{start\+Cooldown\+Procedure}} ()
+\item 
+void \mbox{\hyperlink{classFanManager_a5c4c3965ff0fb24dbe268a5edc9212d0}{start\+High\+Temperature\+Procedure}} ()
+\item 
+void \mbox{\hyperlink{classFanManager_a537999ca45533d3e9c1f7855ff566f4f}{start\+Overheated\+Procedure}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFan}{Fan}} \mbox{\hyperlink{classFanManager_adff67b0992849789c8060c550309aa7b}{fans}} \mbox{[}\mbox{\hyperlink{FanManager_8h_a4bc175d39bbf3011aad887aa158931d3}{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+A\+NS}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Task class to manage all fans 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFanManager_a25d0930b7c9988c9c32c351941060e6b}\label{classFanManager_a25d0930b7c9988c9c32c351941060e6b}} 
+\index{FanManager@{FanManager}!FanManager@{FanManager}}
+\index{FanManager@{FanManager}!FanManager@{FanManager}}
+\doxysubsubsection{\texorpdfstring{FanManager()}{FanManager()}}
+{\footnotesize\ttfamily Fan\+Manager\+::\+Fan\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFanManager_a312bfb233f6ce1cdae1f817b23142294}\label{classFanManager_a312bfb233f6ce1cdae1f817b23142294}} 
+\index{FanManager@{FanManager}!````~FanManager@{$\sim$FanManager}}
+\index{````~FanManager@{$\sim$FanManager}!FanManager@{FanManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$FanManager()}{~FanManager()}}
+{\footnotesize\ttfamily Fan\+Manager\+::$\sim$\+Fan\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFanManager_a2b9b886b6e3e94564221489dae2c98ce}\label{classFanManager_a2b9b886b6e3e94564221489dae2c98ce}} 
+\index{FanManager@{FanManager}!init@{init}}
+\index{init@{init}!FanManager@{FanManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Fan\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFanManager_ab0f9a0fe8c4021a4ee67c17d312e6144}\label{classFanManager_ab0f9a0fe8c4021a4ee67c17d312e6144}} 
+\index{FanManager@{FanManager}!isFanOn@{isFanOn}}
+\index{isFanOn@{isFanOn}!FanManager@{FanManager}}
+\doxysubsubsection{\texorpdfstring{isFanOn()}{isFanOn()}}
+{\footnotesize\ttfamily uint8\+\_\+t Fan\+Manager\+::is\+Fan\+On (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42}{Fan\+Name}}}]{name }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classFanManager_a2600f971c272e79d10a533ea6e9c70ec}\label{classFanManager_a2600f971c272e79d10a533ea6e9c70ec}} 
+\index{FanManager@{FanManager}!off@{off}}
+\index{off@{off}!FanManager@{FanManager}}
+\doxysubsubsection{\texorpdfstring{off()}{off()}}
+{\footnotesize\ttfamily void Fan\+Manager\+::off (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42}{Fan\+Name}}}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFanManager_a2b9c2b4fe1458ff27799eeb3348bcefc}\label{classFanManager_a2b9c2b4fe1458ff27799eeb3348bcefc}} 
+\index{FanManager@{FanManager}!onHighSpeed@{onHighSpeed}}
+\index{onHighSpeed@{onHighSpeed}!FanManager@{FanManager}}
+\doxysubsubsection{\texorpdfstring{onHighSpeed()}{onHighSpeed()}}
+{\footnotesize\ttfamily void Fan\+Manager\+::on\+High\+Speed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42}{Fan\+Name}}}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFanManager_a7979e80fa4c253d535a58a1da9578a0d}\label{classFanManager_a7979e80fa4c253d535a58a1da9578a0d}} 
+\index{FanManager@{FanManager}!onLowSpeed@{onLowSpeed}}
+\index{onLowSpeed@{onLowSpeed}!FanManager@{FanManager}}
+\doxysubsubsection{\texorpdfstring{onLowSpeed()}{onLowSpeed()}}
+{\footnotesize\ttfamily void Fan\+Manager\+::on\+Low\+Speed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42}{Fan\+Name}}}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFanManager_a0940b57fb92a4b6d205a4024cc86287d}\label{classFanManager_a0940b57fb92a4b6d205a4024cc86287d}} 
+\index{FanManager@{FanManager}!onNormalSpeed@{onNormalSpeed}}
+\index{onNormalSpeed@{onNormalSpeed}!FanManager@{FanManager}}
+\doxysubsubsection{\texorpdfstring{onNormalSpeed()}{onNormalSpeed()}}
+{\footnotesize\ttfamily void Fan\+Manager\+::on\+Normal\+Speed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42}{Fan\+Name}}}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classFanManager_acc8bb95723c69b792ac5f8c5a51d50ca}\label{classFanManager_acc8bb95723c69b792ac5f8c5a51d50ca}} 
+\index{FanManager@{FanManager}!process@{process}}
+\index{process@{process}!FanManager@{FanManager}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily void Fan\+Manager\+::process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+All fans process
+\begin{DoxyItemize}
+\item Check internal temperature
+\item Processing all signals (send by communication module, energy manager, battery manager) 
+\end{DoxyItemize}\mbox{\Hypertarget{classFanManager_a84497cf16ca7e9a7bbd9252873516329}\label{classFanManager_a84497cf16ca7e9a7bbd9252873516329}} 
+\index{FanManager@{FanManager}!startCooldownProcedure@{startCooldownProcedure}}
+\index{startCooldownProcedure@{startCooldownProcedure}!FanManager@{FanManager}}
+\doxysubsubsection{\texorpdfstring{startCooldownProcedure()}{startCooldownProcedure()}}
+{\footnotesize\ttfamily void Fan\+Manager\+::start\+Cooldown\+Procedure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFanManager_a5c4c3965ff0fb24dbe268a5edc9212d0}\label{classFanManager_a5c4c3965ff0fb24dbe268a5edc9212d0}} 
+\index{FanManager@{FanManager}!startHighTemperatureProcedure@{startHighTemperatureProcedure}}
+\index{startHighTemperatureProcedure@{startHighTemperatureProcedure}!FanManager@{FanManager}}
+\doxysubsubsection{\texorpdfstring{startHighTemperatureProcedure()}{startHighTemperatureProcedure()}}
+{\footnotesize\ttfamily void Fan\+Manager\+::start\+High\+Temperature\+Procedure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFanManager_a537999ca45533d3e9c1f7855ff566f4f}\label{classFanManager_a537999ca45533d3e9c1f7855ff566f4f}} 
+\index{FanManager@{FanManager}!startOverheatedProcedure@{startOverheatedProcedure}}
+\index{startOverheatedProcedure@{startOverheatedProcedure}!FanManager@{FanManager}}
+\doxysubsubsection{\texorpdfstring{startOverheatedProcedure()}{startOverheatedProcedure()}}
+{\footnotesize\ttfamily void Fan\+Manager\+::start\+Overheated\+Procedure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classFanManager_adff67b0992849789c8060c550309aa7b}\label{classFanManager_adff67b0992849789c8060c550309aa7b}} 
+\index{FanManager@{FanManager}!fans@{fans}}
+\index{fans@{fans}!FanManager@{FanManager}}
+\doxysubsubsection{\texorpdfstring{fans}{fans}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFan}{Fan}} Fan\+Manager\+::fans\mbox{[}\mbox{\hyperlink{FanManager_8h_a4bc175d39bbf3011aad887aa158931d3}{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+A\+NS}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Software/\+Inc/\mbox{\hyperlink{FanManager_8h}{Fan\+Manager.\+h}}\item 
+Software/\+Src/\mbox{\hyperlink{FanManager_8cpp}{Fan\+Manager.\+cpp}}\end{DoxyCompactItemize}

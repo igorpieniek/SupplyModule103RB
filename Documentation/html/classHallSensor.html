@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: HallSensor Class Reference</title>
+<title>LampLink ESP32 Firmware: HallSensor Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">LampLink ESP32 Firmware
    </div>
   </td>
  </tr>
@@ -94,6 +94,8 @@ Collaboration diagram for HallSensor:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a6ea072904ce733c45bea4e487298391f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHallSensor.html#a6ea072904ce733c45bea4e487298391f">HallSensor</a> ()</td></tr>
+<tr class="separator:a6ea072904ce733c45bea4e487298391f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a040513b43c83cae4e7221cdc9e8e8af7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHallSensor.html#a040513b43c83cae4e7221cdc9e8e8af7">HallSensor</a> (float sens, float neutral=<a class="el" href="HallSensor_8h.html#aba751540838677d49b30043b36ffcd73">NEUTRAL_HALL_VOLTAGE</a>, float max_vol=<a class="el" href="HallSensor_8h.html#acaa12d7a98430a4f38ee5e2798f7eb6d">MAX_HALL_VOLTAGE</a>)</td></tr>
 <tr class="separator:a040513b43c83cae4e7221cdc9e8e8af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa82bb55372f3b696096938604a3c4526"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHallSensor.html#aa82bb55372f3b696096938604a3c4526">~HallSensor</a> ()</td></tr>
@@ -149,8 +151,33 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tool that could help in store and conversion of data intended for Hall Sensors. It based on <a class="el" href="classADC__Tools.html#a58dcd5ef821a94efbe1262f786af4ccb">ADC_Tools()</a> class and it help in conversion raw ADC data into current intensity in Amperes </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6ea072904ce733c45bea4e487298391f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ea072904ce733c45bea4e487298391f">&#9670;&nbsp;</a></span>HallSensor() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HallSensor::HallSensor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sens</td><td>- float value - sensitive of sensor; value in <b>[ V/A ]</b> </td></tr>
+    <tr><td class="paramname">neutral</td><td>- float value (optional)- voltage value consider as 0A - normally it's 2.5V, below that there will be negative ampere values </td></tr>
+    <tr><td class="paramname">max_vol</td><td>- float value (optional) - maximum voltage (normally 5.0V) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a040513b43c83cae4e7221cdc9e8e8af7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a040513b43c83cae4e7221cdc9e8e8af7">&#9670;&nbsp;</a></span>HallSensor()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a040513b43c83cae4e7221cdc9e8e8af7">&#9670;&nbsp;</a></span>HallSensor() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,14 +207,6 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">sens</td><td>- float value - sensitive of sensor; value in <b>[ V/A ]</b> </td></tr>
-    <tr><td class="paramname">neutral</td><td>- float value (optional)- voltage value consider as 0A - normally it's 2.5V, below that there will be negative ampere values </td></tr>
-    <tr><td class="paramname">max_vol</td><td>- float value (optional) - maximum voltage (normally 5.0V) </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

@@ -28,7 +28,7 @@ enum \mbox{\hyperlink{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2}{Sect
 \mbox{\hyperlink{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2ac505e0d6cfd657575a2c9941412959e1}{section\+\_\+3}}, 
 \mbox{\hyperlink{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2a704c3c29fe94260cd1ec8824bfa53c72}{section\+\_\+7}}, 
 \newline
-\mbox{\hyperlink{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2a84ea5aa2b2cae9a1c065bfc8263cae6b}{section\+\_\+main}}
+\mbox{\hyperlink{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2afc8a53c6983dd6c9ae90884174e0485d}{section\+\_\+motor}}
  \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
@@ -46,9 +46,29 @@ void \mbox{\hyperlink{classEnergyManager_a251ebe5e4ed36d7afba7dd563bce5417}{sect
 \item 
 \mbox{\hyperlink{classSectionSwitch_a585a04f89f27f3228aff156e068087c3}{Section\+Switch\+::\+Section\+\_\+state}} \mbox{\hyperlink{classEnergyManager_af1808f2168b46688f21d72a81c49f53d}{get\+Section\+State}} (\mbox{\hyperlink{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2}{Section\+\_\+name}})
 \item 
+float \mbox{\hyperlink{classEnergyManager_a707ce1d76d6506b3e1e12e9a22f45060}{get\+Temperature}} ()
+\item 
 \mbox{\hyperlink{classEnergyManager_a225c02bbc8c1382362e6b333e555761d}{Energy\+Manager}} ()
 \item 
 virtual \mbox{\hyperlink{classEnergyManager_a04b353a9291e940827499dd6f4ba57b2}{$\sim$\+Energy\+Manager}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classEnergyManager_a5e268d36cdb7382999da4ff38126f86f}{Dma\+Indexes}} \{ \newline
+\mbox{\hyperlink{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fa1d3fab0bf212f0712778f2d2eb6c1b81}{H\+A\+L\+L\+\_\+5\+\_\+1}} = 0, 
+\mbox{\hyperlink{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fa28f32ba68eda07f5ba465362d871f758}{H\+A\+L\+L\+\_\+5\+\_\+2}} = 1, 
+\mbox{\hyperlink{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fad3ed968df1235f91fb98371157a0861c}{H\+A\+L\+L\+\_\+7}} = 2, 
+\mbox{\hyperlink{classEnergyManager_a5e268d36cdb7382999da4ff38126f86faf1f46ba101b2e73f52b8538996c68c15}{S\+E\+C\+\_\+3}} = 3, 
+\newline
+\mbox{\hyperlink{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fab1baa20e84b487d6d1c63634a0e0f9fc}{S\+E\+C\+\_\+5\+\_\+1}} = 4, 
+\mbox{\hyperlink{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fafbad3d675bd651bac2707f9fb393134e}{H\+A\+L\+L\+\_\+3}} = 5, 
+\mbox{\hyperlink{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fadc39790e754c32c29739ea17f90d0224}{S\+E\+C\+\_\+7}} = 6, 
+\mbox{\hyperlink{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fa459f6241e8aa86deaf2cfb5d64104311}{H\+A\+L\+L\+\_\+0}} = 7, 
+\newline
+\mbox{\hyperlink{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fabad7c69ad8ae5a9e012359936e1c0cb6}{S\+E\+C\+\_\+5\+\_\+2}} = 8, 
+\mbox{\hyperlink{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fa1b2053a4df303f1f5d5382dd540b7d61}{T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}} = 9
+ \}
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -66,15 +86,21 @@ void \mbox{\hyperlink{classEnergyManager_ab32f93aacc15a9f311352a35799d289c}{upda
 void \mbox{\hyperlink{classEnergyManager_adbce81bccb4d3937e379c5ab4e8cd2cf}{update\+\_\+section\+\_\+data}} ()
 \item 
 void \mbox{\hyperlink{classEnergyManager_a4010a6d14e95928573d068539b948e5b}{update\+\_\+switch\+\_\+data}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classEnergyManager_a801858dd9177e895d7fd496bcb546a8f}{check\+If\+Branch\+Is\+Real\+Switch\+ON}} (uint8\+\_\+t branchnum)
+\item 
+float \mbox{\hyperlink{classEnergyManager_a528f9b61f67e7d7fb4591d989c31cd50}{power\+Calculate}} (float v, float a)
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classHallSensor}{Hall\+Sensor}} $\ast$ \mbox{\hyperlink{classEnergyManager_a12c49143721151ab0f322f50d977ae58}{hall\+\_\+sensors}} \mbox{[}\mbox{\hyperlink{EnergyManager_8h_ac51bb49de562e49df2b0cdc7d781e65b}{H\+A\+L\+L\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+N\+U\+M\+B\+ER}}\mbox{]}
+\mbox{\hyperlink{classHallSensor}{Hall\+Sensor}} \mbox{\hyperlink{classEnergyManager_a2394c602c284d8aca0ba510c60a1cfb1}{hall\+\_\+sensors}} \mbox{[}\mbox{\hyperlink{EnergyManager_8h_ac51bb49de562e49df2b0cdc7d781e65b}{H\+A\+L\+L\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+N\+U\+M\+B\+ER}}\mbox{]}
 \item 
-\mbox{\hyperlink{classSupplyBranch}{Supply\+Branch}} $\ast$ \mbox{\hyperlink{classEnergyManager_a01b81a1c7f4fe002db6b81b73d6e9e31}{supply\+\_\+branches}} \mbox{[}\mbox{\hyperlink{EnergyManager_8h_afee7eba68459f6d680f2844b69ddd970}{S\+U\+P\+P\+L\+Y\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+\+N\+U\+M\+B\+ER}}\mbox{]}
+\mbox{\hyperlink{classSupplyBranch}{Supply\+Branch}} \mbox{\hyperlink{classEnergyManager_aeb29c30d5e0a3bc60f707ae088cd6418}{supply\+\_\+branches}} \mbox{[}\mbox{\hyperlink{EnergyManager_8h_afee7eba68459f6d680f2844b69ddd970}{S\+U\+P\+P\+L\+Y\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+\+N\+U\+M\+B\+ER}}\mbox{]}
 \item 
-\mbox{\hyperlink{classSectionSwitch}{Section\+Switch}} $\ast$ \mbox{\hyperlink{classEnergyManager_a2f7eaca689ce15f3aa0bf2a72e6c1fb0}{section\+\_\+switches}} \mbox{[}\mbox{\hyperlink{EnergyManager_8h_a6ae9f6ad3e37e72370c9906dc814c715}{S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+N\+U\+M\+B\+ER}}\mbox{]}
+\mbox{\hyperlink{classSectionSwitch}{Section\+Switch}} \mbox{\hyperlink{classEnergyManager_ad77712490ccc4a579c82baeba7270cee}{section\+\_\+switches}} \mbox{[}\mbox{\hyperlink{EnergyManager_8h_a6ae9f6ad3e37e72370c9906dc814c715}{S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+N\+U\+M\+B\+ER}}\mbox{]}
+\item 
+\mbox{\hyperlink{classInternTemperature}{Intern\+Temperature}} \mbox{\hyperlink{classEnergyManager_affe0ed043d1757a210eee60f9b3ea377}{temperature}}
 \item 
 uint32\+\_\+t \mbox{\hyperlink{classEnergyManager_af71432af04396febfefd95140a23f94c}{raw\+A\+DC}} \mbox{[}\mbox{\hyperlink{EnergyManager_8h_a14fcc935d826f954635217ea446bcc5d}{E\+M\+\_\+\+D\+M\+A\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+ON}}\mbox{]}
 \item 
@@ -92,6 +118,54 @@ Task class to manage branches energy measurements.
 \end{DoxyItemize}
 
 \doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classEnergyManager_a5e268d36cdb7382999da4ff38126f86f}\label{classEnergyManager_a5e268d36cdb7382999da4ff38126f86f}} 
+\index{EnergyManager@{EnergyManager}!DmaIndexes@{DmaIndexes}}
+\index{DmaIndexes@{DmaIndexes}!EnergyManager@{EnergyManager}}
+\doxysubsubsection{\texorpdfstring{DmaIndexes}{DmaIndexes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classEnergyManager_a5e268d36cdb7382999da4ff38126f86f}{Energy\+Manager\+::\+Dma\+Indexes}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HALL\_5\_1@{HALL\_5\_1}!EnergyManager@{EnergyManager}}\index{EnergyManager@{EnergyManager}!HALL\_5\_1@{HALL\_5\_1}}}\mbox{\Hypertarget{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fa1d3fab0bf212f0712778f2d2eb6c1b81}\label{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fa1d3fab0bf212f0712778f2d2eb6c1b81}} 
+H\+A\+L\+L\+\_\+5\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HALL\_5\_2@{HALL\_5\_2}!EnergyManager@{EnergyManager}}\index{EnergyManager@{EnergyManager}!HALL\_5\_2@{HALL\_5\_2}}}\mbox{\Hypertarget{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fa28f32ba68eda07f5ba465362d871f758}\label{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fa28f32ba68eda07f5ba465362d871f758}} 
+H\+A\+L\+L\+\_\+5\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HALL\_7@{HALL\_7}!EnergyManager@{EnergyManager}}\index{EnergyManager@{EnergyManager}!HALL\_7@{HALL\_7}}}\mbox{\Hypertarget{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fad3ed968df1235f91fb98371157a0861c}\label{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fad3ed968df1235f91fb98371157a0861c}} 
+H\+A\+L\+L\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEC\_3@{SEC\_3}!EnergyManager@{EnergyManager}}\index{EnergyManager@{EnergyManager}!SEC\_3@{SEC\_3}}}\mbox{\Hypertarget{classEnergyManager_a5e268d36cdb7382999da4ff38126f86faf1f46ba101b2e73f52b8538996c68c15}\label{classEnergyManager_a5e268d36cdb7382999da4ff38126f86faf1f46ba101b2e73f52b8538996c68c15}} 
+S\+E\+C\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEC\_5\_1@{SEC\_5\_1}!EnergyManager@{EnergyManager}}\index{EnergyManager@{EnergyManager}!SEC\_5\_1@{SEC\_5\_1}}}\mbox{\Hypertarget{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fab1baa20e84b487d6d1c63634a0e0f9fc}\label{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fab1baa20e84b487d6d1c63634a0e0f9fc}} 
+S\+E\+C\+\_\+5\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HALL\_3@{HALL\_3}!EnergyManager@{EnergyManager}}\index{EnergyManager@{EnergyManager}!HALL\_3@{HALL\_3}}}\mbox{\Hypertarget{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fafbad3d675bd651bac2707f9fb393134e}\label{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fafbad3d675bd651bac2707f9fb393134e}} 
+H\+A\+L\+L\+\_\+3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEC\_7@{SEC\_7}!EnergyManager@{EnergyManager}}\index{EnergyManager@{EnergyManager}!SEC\_7@{SEC\_7}}}\mbox{\Hypertarget{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fadc39790e754c32c29739ea17f90d0224}\label{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fadc39790e754c32c29739ea17f90d0224}} 
+S\+E\+C\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HALL\_0@{HALL\_0}!EnergyManager@{EnergyManager}}\index{EnergyManager@{EnergyManager}!HALL\_0@{HALL\_0}}}\mbox{\Hypertarget{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fa459f6241e8aa86deaf2cfb5d64104311}\label{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fa459f6241e8aa86deaf2cfb5d64104311}} 
+H\+A\+L\+L\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SEC\_5\_2@{SEC\_5\_2}!EnergyManager@{EnergyManager}}\index{EnergyManager@{EnergyManager}!SEC\_5\_2@{SEC\_5\_2}}}\mbox{\Hypertarget{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fabad7c69ad8ae5a9e012359936e1c0cb6}\label{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fabad7c69ad8ae5a9e012359936e1c0cb6}} 
+S\+E\+C\+\_\+5\+\_\+2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEMPERATURE@{TEMPERATURE}!EnergyManager@{EnergyManager}}\index{EnergyManager@{EnergyManager}!TEMPERATURE@{TEMPERATURE}}}\mbox{\Hypertarget{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fa1b2053a4df303f1f5d5382dd540b7d61}\label{classEnergyManager_a5e268d36cdb7382999da4ff38126f86fa1b2053a4df303f1f5d5382dd540b7d61}} 
+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE&\\
+\hline
+
+\end{DoxyEnumFields}
 \mbox{\Hypertarget{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2}\label{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2}} 
 \index{EnergyManager@{EnergyManager}!Section\_name@{Section\_name}}
 \index{Section\_name@{Section\_name}!EnergyManager@{EnergyManager}}
@@ -115,8 +189,8 @@ section\+\_\+3&3.\+3V section \\
 section\+\_\+7&7V section -\/ on X\+L4015 \\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{section\_main@{section\_main}!EnergyManager@{EnergyManager}}\index{EnergyManager@{EnergyManager}!section\_main@{section\_main}}}\mbox{\Hypertarget{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2a84ea5aa2b2cae9a1c065bfc8263cae6b}\label{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2a84ea5aa2b2cae9a1c065bfc8263cae6b}} 
-section\+\_\+main&Motor section \\
+\raisebox{\heightof{T}}[0pt][0pt]{\index{section\_motor@{section\_motor}!EnergyManager@{EnergyManager}}\index{EnergyManager@{EnergyManager}!section\_motor@{section\_motor}}}\mbox{\Hypertarget{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2afc8a53c6983dd6c9ae90884174e0485d}\label{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2afc8a53c6983dd6c9ae90884174e0485d}} 
+section\+\_\+motor&Motor section \\
 \hline
 
 \end{DoxyEnumFields}
@@ -138,6 +212,12 @@ section\+\_\+main&Motor section \\
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEnergyManager_a801858dd9177e895d7fd496bcb546a8f}\label{classEnergyManager_a801858dd9177e895d7fd496bcb546a8f}} 
+\index{EnergyManager@{EnergyManager}!checkIfBranchIsRealSwitchON@{checkIfBranchIsRealSwitchON}}
+\index{checkIfBranchIsRealSwitchON@{checkIfBranchIsRealSwitchON}!EnergyManager@{EnergyManager}}
+\doxysubsubsection{\texorpdfstring{checkIfBranchIsRealSwitchON()}{checkIfBranchIsRealSwitchON()}}
+{\footnotesize\ttfamily uint8\+\_\+t Energy\+Manager\+::check\+If\+Branch\+Is\+Real\+Switch\+ON (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{branchnum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{classEnergyManager_a26e681d9661b140d6225fd937574f667}\label{classEnergyManager_a26e681d9661b140d6225fd937574f667}} 
 \index{EnergyManager@{EnergyManager}!dma\_init@{dma\_init}}
 \index{dma\_init@{dma\_init}!EnergyManager@{EnergyManager}}
@@ -156,7 +236,13 @@ Return specified \mbox{\hyperlink{structEnergyManager_1_1Section}{Section}} stru
 \doxysubsubsection{\texorpdfstring{getSectionState()}{getSectionState()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classSectionSwitch_a585a04f89f27f3228aff156e068087c3}{Section\+Switch\+::\+Section\+\_\+state}} Energy\+Manager\+::get\+Section\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2}{Section\+\_\+name}}}]{ }\end{DoxyParamCaption})}
 
-Return current state of specified branch \mbox{\Hypertarget{classEnergyManager_ac7a3d6fc2dca0492472c947271962ec5}\label{classEnergyManager_ac7a3d6fc2dca0492472c947271962ec5}} 
+Return current state of specified branch \mbox{\Hypertarget{classEnergyManager_a707ce1d76d6506b3e1e12e9a22f45060}\label{classEnergyManager_a707ce1d76d6506b3e1e12e9a22f45060}} 
+\index{EnergyManager@{EnergyManager}!getTemperature@{getTemperature}}
+\index{getTemperature@{getTemperature}!EnergyManager@{EnergyManager}}
+\doxysubsubsection{\texorpdfstring{getTemperature()}{getTemperature()}}
+{\footnotesize\ttfamily float Energy\+Manager\+::get\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classEnergyManager_ac7a3d6fc2dca0492472c947271962ec5}\label{classEnergyManager_ac7a3d6fc2dca0492472c947271962ec5}} 
 \index{EnergyManager@{EnergyManager}!hallSensor\_init@{hallSensor\_init}}
 \index{hallSensor\_init@{hallSensor\_init}!EnergyManager@{EnergyManager}}
 \doxysubsubsection{\texorpdfstring{hallSensor\_init()}{hallSensor\_init()}}
@@ -174,7 +260,13 @@ Task init function.
 \item Hall sensors init
 \item Supply Branch init
 \item Switches init 
-\end{DoxyItemize}\mbox{\Hypertarget{classEnergyManager_a8ce85905b01c390642678ec08e19ae02}\label{classEnergyManager_a8ce85905b01c390642678ec08e19ae02}} 
+\end{DoxyItemize}\mbox{\Hypertarget{classEnergyManager_a528f9b61f67e7d7fb4591d989c31cd50}\label{classEnergyManager_a528f9b61f67e7d7fb4591d989c31cd50}} 
+\index{EnergyManager@{EnergyManager}!powerCalculate@{powerCalculate}}
+\index{powerCalculate@{powerCalculate}!EnergyManager@{EnergyManager}}
+\doxysubsubsection{\texorpdfstring{powerCalculate()}{powerCalculate()}}
+{\footnotesize\ttfamily float Energy\+Manager\+::power\+Calculate (\begin{DoxyParamCaption}\item[{float}]{v,  }\item[{float}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classEnergyManager_a8ce85905b01c390642678ec08e19ae02}\label{classEnergyManager_a8ce85905b01c390642678ec08e19ae02}} 
 \index{EnergyManager@{EnergyManager}!process@{process}}
 \index{process@{process}!EnergyManager@{EnergyManager}}
 \doxysubsubsection{\texorpdfstring{process()}{process()}}
@@ -192,7 +284,7 @@ Main process of energy\+Manager task
 {\footnotesize\ttfamily void Energy\+Manager\+::section\+O\+FF (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2}{Section\+\_\+name}}}]{sec }\end{DoxyParamCaption})}
 
 Turn ON specific section \begin{DoxyWarning}{Warning}
-using \mbox{\hyperlink{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2a84ea5aa2b2cae9a1c065bfc8263cae6b}{section\+\_\+main()}} will turn O\+FF all branches -\/ it isn\textquotesingle{}t cut the power supply of motor and Intel N\+UC 
+using section\+\_\+main() will turn O\+FF all branches -\/ it isn\textquotesingle{}t cut the power supply of motor and Intel N\+UC 
 \end{DoxyWarning}
 \mbox{\Hypertarget{classEnergyManager_aa7a41ce68cc7086bc2c0d67249d48bbe}\label{classEnergyManager_aa7a41ce68cc7086bc2c0d67249d48bbe}} 
 \index{EnergyManager@{EnergyManager}!sectionON@{sectionON}}
@@ -201,7 +293,7 @@ using \mbox{\hyperlink{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2a84ea
 {\footnotesize\ttfamily void Energy\+Manager\+::section\+ON (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2}{Section\+\_\+name}}}]{sec }\end{DoxyParamCaption})}
 
 Turn ON specific section \begin{DoxyWarning}{Warning}
-using \mbox{\hyperlink{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2a84ea5aa2b2cae9a1c065bfc8263cae6b}{section\+\_\+main()}} will turn ON all branches -\/ it\textquotesingle{}s not connected with motor and Intel N\+UC power supply 
+using section\+\_\+main() will turn ON all branches -\/ it\textquotesingle{}s not connected with motor and Intel N\+UC power supply 
 \end{DoxyWarning}
 \mbox{\Hypertarget{classEnergyManager_a156ed4ccf6f0daabcfc6f4fe4f012c48}\label{classEnergyManager_a156ed4ccf6f0daabcfc6f4fe4f012c48}} 
 \index{EnergyManager@{EnergyManager}!sectionSwitch\_init@{sectionSwitch\_init}}
@@ -236,11 +328,11 @@ using \mbox{\hyperlink{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2a84ea
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classEnergyManager_a12c49143721151ab0f322f50d977ae58}\label{classEnergyManager_a12c49143721151ab0f322f50d977ae58}} 
+\mbox{\Hypertarget{classEnergyManager_a2394c602c284d8aca0ba510c60a1cfb1}\label{classEnergyManager_a2394c602c284d8aca0ba510c60a1cfb1}} 
 \index{EnergyManager@{EnergyManager}!hall\_sensors@{hall\_sensors}}
 \index{hall\_sensors@{hall\_sensors}!EnergyManager@{EnergyManager}}
 \doxysubsubsection{\texorpdfstring{hall\_sensors}{hall\_sensors}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classHallSensor}{Hall\+Sensor}}$\ast$ Energy\+Manager\+::hall\+\_\+sensors\mbox{[}\mbox{\hyperlink{EnergyManager_8h_ac51bb49de562e49df2b0cdc7d781e65b}{H\+A\+L\+L\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+N\+U\+M\+B\+ER}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHallSensor}{Hall\+Sensor}} Energy\+Manager\+::hall\+\_\+sensors\mbox{[}\mbox{\hyperlink{EnergyManager_8h_ac51bb49de562e49df2b0cdc7d781e65b}{H\+A\+L\+L\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+N\+U\+M\+B\+ER}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{classEnergyManager_af71432af04396febfefd95140a23f94c}\label{classEnergyManager_af71432af04396febfefd95140a23f94c}} 
 \index{EnergyManager@{EnergyManager}!rawADC@{rawADC}}
@@ -248,11 +340,11 @@ using \mbox{\hyperlink{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2a84ea
 \doxysubsubsection{\texorpdfstring{rawADC}{rawADC}}
 {\footnotesize\ttfamily uint32\+\_\+t Energy\+Manager\+::raw\+A\+DC\mbox{[}\mbox{\hyperlink{EnergyManager_8h_a14fcc935d826f954635217ea446bcc5d}{E\+M\+\_\+\+D\+M\+A\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+ON}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{classEnergyManager_a2f7eaca689ce15f3aa0bf2a72e6c1fb0}\label{classEnergyManager_a2f7eaca689ce15f3aa0bf2a72e6c1fb0}} 
+\mbox{\Hypertarget{classEnergyManager_ad77712490ccc4a579c82baeba7270cee}\label{classEnergyManager_ad77712490ccc4a579c82baeba7270cee}} 
 \index{EnergyManager@{EnergyManager}!section\_switches@{section\_switches}}
 \index{section\_switches@{section\_switches}!EnergyManager@{EnergyManager}}
 \doxysubsubsection{\texorpdfstring{section\_switches}{section\_switches}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classSectionSwitch}{Section\+Switch}}$\ast$ Energy\+Manager\+::section\+\_\+switches\mbox{[}\mbox{\hyperlink{EnergyManager_8h_a6ae9f6ad3e37e72370c9906dc814c715}{S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+N\+U\+M\+B\+ER}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSectionSwitch}{Section\+Switch}} Energy\+Manager\+::section\+\_\+switches\mbox{[}\mbox{\hyperlink{EnergyManager_8h_a6ae9f6ad3e37e72370c9906dc814c715}{S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+N\+U\+M\+B\+ER}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{classEnergyManager_aa8c79fbb1cd1f6149d64047a41c3e768}\label{classEnergyManager_aa8c79fbb1cd1f6149d64047a41c3e768}} 
 \index{EnergyManager@{EnergyManager}!sectionData@{sectionData}}
@@ -260,11 +352,17 @@ using \mbox{\hyperlink{classEnergyManager_a4445cb3e5924789b2edd4dd9d44a1df2a84ea
 \doxysubsubsection{\texorpdfstring{sectionData}{sectionData}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structEnergyManager_1_1Section}{Section}} Energy\+Manager\+::section\+Data\mbox{[}\mbox{\hyperlink{EnergyManager_8h_ac51bb49de562e49df2b0cdc7d781e65b}{H\+A\+L\+L\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+N\+U\+M\+B\+ER}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{classEnergyManager_a01b81a1c7f4fe002db6b81b73d6e9e31}\label{classEnergyManager_a01b81a1c7f4fe002db6b81b73d6e9e31}} 
+\mbox{\Hypertarget{classEnergyManager_aeb29c30d5e0a3bc60f707ae088cd6418}\label{classEnergyManager_aeb29c30d5e0a3bc60f707ae088cd6418}} 
 \index{EnergyManager@{EnergyManager}!supply\_branches@{supply\_branches}}
 \index{supply\_branches@{supply\_branches}!EnergyManager@{EnergyManager}}
 \doxysubsubsection{\texorpdfstring{supply\_branches}{supply\_branches}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classSupplyBranch}{Supply\+Branch}}$\ast$ Energy\+Manager\+::supply\+\_\+branches\mbox{[}\mbox{\hyperlink{EnergyManager_8h_afee7eba68459f6d680f2844b69ddd970}{S\+U\+P\+P\+L\+Y\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+\+N\+U\+M\+B\+ER}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSupplyBranch}{Supply\+Branch}} Energy\+Manager\+::supply\+\_\+branches\mbox{[}\mbox{\hyperlink{EnergyManager_8h_afee7eba68459f6d680f2844b69ddd970}{S\+U\+P\+P\+L\+Y\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+\+N\+U\+M\+B\+ER}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classEnergyManager_affe0ed043d1757a210eee60f9b3ea377}\label{classEnergyManager_affe0ed043d1757a210eee60f9b3ea377}} 
+\index{EnergyManager@{EnergyManager}!temperature@{temperature}}
+\index{temperature@{temperature}!EnergyManager@{EnergyManager}}
+\doxysubsubsection{\texorpdfstring{temperature}{temperature}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classInternTemperature}{Intern\+Temperature}} Energy\+Manager\+::temperature\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
