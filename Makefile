@@ -1,2 +1,2 @@
 documentation_doxygen:
-	doxygen documentation/Doxyfile
+	doxygen Documentation/Doxyfile

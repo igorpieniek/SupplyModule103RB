@@ -1,4 +1,6 @@
 <map id="Software/Inc/InternTemperature.h" name="Software/Inc/InternTemperature.h">
-<area shape="rect" id="node1" title=" " alt="" coords="13,5,252,32"/>
-<area shape="rect" id="node2" href="$InternTemperature_8cpp.html" title=" " alt="" coords="5,80,260,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="133,5,349,32"/>
+<area shape="rect" id="node2" href="$InternTemperature_8cpp.html" title=" " alt="" coords="5,80,237,107"/>
+<area shape="rect" id="node3" href="$EnergyManager_8h.html" title=" " alt="" coords="262,80,463,107"/>
+<area shape="rect" id="node4" href="$EnergyManager_8cpp.html" title=" " alt="" coords="254,155,471,181"/>
 </map>

@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['high_631',['HIGH',['../classFan.html#a3bee1f52aed7e66f4d7877e925b768f9a3ee0b1b7fccb3cd3708fb63d0691ffde',1,'Fan']]]
+  ['fan1_664',['Fan1',['../FanManager_8h.html#a8239143b7e01dd8e49061d69cf1bcc42a6f7fcc29979ffc8afe80e716278a9c36',1,'FanManager.h']]],
+  ['fan2_665',['Fan2',['../FanManager_8h.html#a8239143b7e01dd8e49061d69cf1bcc42a6c695d3055c97c35a8171cbd5b5420c8',1,'FanManager.h']]],
+  ['fan3_666',['Fan3',['../FanManager_8h.html#a8239143b7e01dd8e49061d69cf1bcc42a4ad292511feb6818a330c42e10a48a44',1,'FanManager.h']]],
+  ['fan4_667',['Fan4',['../FanManager_8h.html#a8239143b7e01dd8e49061d69cf1bcc42a95f1d1fce1d63963a7719086f81f94ed',1,'FanManager.h']]]
 ];

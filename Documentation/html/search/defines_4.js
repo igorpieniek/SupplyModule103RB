@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['hall_5f0_5findex_663',['HALL_0_INDEX',['../EnergyManager_8h.html#ad51600b688970c07fa073613d50873e3',1,'EnergyManager.h']]],
-  ['hall_5f3_5findex_664',['HALL_3_INDEX',['../EnergyManager_8h.html#a5d50a97d7720994eb723de3df01f93ff',1,'EnergyManager.h']]],
-  ['hall_5f5_5f1_5findex_665',['HALL_5_1_INDEX',['../EnergyManager_8h.html#ae1cd4293c0ac451b0000fb0f0d18ffc6',1,'EnergyManager.h']]],
-  ['hall_5f5_5f2_5findex_666',['HALL_5_2_INDEX',['../EnergyManager_8h.html#ac53890e92934b271f4e7b8ba6b72d1ad',1,'EnergyManager.h']]],
-  ['hall_5f7_5findex_667',['HALL_7_INDEX',['../EnergyManager_8h.html#a05aeba5e533fd20517eef46838920fd2',1,'EnergyManager.h']]],
-  ['hall_5fachs7121_5fsensivity_668',['HALL_ACHS7121_SENSIVITY',['../EnergyManager_8h.html#a1085b808853b4f29208564aca750eb52',1,'EnergyManager.h']]],
-  ['hall_5facs714_5f50a_5fsensivity_669',['HALL_ACS714_50A_SENSIVITY',['../EnergyManager_8h.html#a7f01a9c38a7e6964bc5ec60b5ca6dc43',1,'EnergyManager.h']]],
-  ['hall_5fsensor_5fnumber_670',['HALL_SENSOR_NUMBER',['../EnergyManager_8h.html#ac51bb49de562e49df2b0cdc7d781e65b',1,'EnergyManager.h']]]
+  ['fan1_5ftimer_712',['FAN1_TIMER',['../FanManager_8h.html#aa1b94959911941ccffcef81c92554fc1',1,'FanManager.h']]],
+  ['fan1_5ftimer_5fchannel_713',['FAN1_TIMER_CHANNEL',['../FanManager_8h.html#a6b50a28884d35a38c8d108ddca3bca97',1,'FanManager.h']]],
+  ['fan2_5ftimer_714',['FAN2_TIMER',['../FanManager_8h.html#ab871b49c1e238f88f722addf328d19e8',1,'FanManager.h']]],
+  ['fan2_5ftimer_5fchannel_715',['FAN2_TIMER_CHANNEL',['../FanManager_8h.html#a0fe326a038d65ce1a4991e623cfd0290',1,'FanManager.h']]],
+  ['fan3_5ftimer_716',['FAN3_TIMER',['../FanManager_8h.html#a3e41b5f5a52d7b7cf0edd86e3a94630b',1,'FanManager.h']]],
+  ['fan3_5ftimer_5fchannel_717',['FAN3_TIMER_CHANNEL',['../FanManager_8h.html#aa5a5c62b8c6f00b82e29994c400aacc8',1,'FanManager.h']]],
+  ['fan4_5ftimer_718',['FAN4_TIMER',['../FanManager_8h.html#ae1d37ab4a378df1076cfc45a1ef8004c',1,'FanManager.h']]],
+  ['fan4_5ftimer_5fchannel_719',['FAN4_TIMER_CHANNEL',['../FanManager_8h.html#aeb54249add3e9ffb9105e21bc7c91903',1,'FanManager.h']]]
 ];

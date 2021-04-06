@@ -6,6 +6,7 @@
 {\ttfamily \#include \char`\"{}Hall\+Sensor.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Section\+Switch.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Supply\+Branch.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Intern\+Temperature.\+h\char`\"{}}\newline
 Include dependency graph for Energy\+Manager.\+h\+:
 \nopagebreak
 \begin{figure}[H]
@@ -14,8 +15,7 @@ Include dependency graph for Energy\+Manager.\+h\+:
 \includegraphics[width=350pt]{EnergyManager_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,47 +32,27 @@ struct \mbox{\hyperlink{structEnergyManager_1_1Section}{Energy\+Manager\+::\+Sec
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{EnergyManager_8h_acbcad18587f38f794a07cde9edca842c}{E\+M\+\_\+\+D\+M\+A\+\_\+\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+EL}}~hadc1 		/$\ast$$\ast$T\+O\+D\+O\+: T\+A\+R\+G\+ET H\+A\+D\+C2 $\ast$/
+\#define \mbox{\hyperlink{EnergyManager_8h_acbcad18587f38f794a07cde9edca842c}{E\+M\+\_\+\+D\+M\+A\+\_\+\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+EL}}~hadc1 	/$\ast$$\ast$T\+O\+D\+O\+: T\+A\+R\+G\+ET H\+A\+D\+C2 $\ast$/
 \item 
-\#define \mbox{\hyperlink{EnergyManager_8h_a14fcc935d826f954635217ea446bcc5d}{E\+M\+\_\+\+D\+M\+A\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+ON}}~9  /$\ast$$\ast$5 H\+A\+LL + 4 V\+O\+L\+T\+A\+GE M\+E\+A\+S\+U\+R\+M\+E\+N\+TS (+ 1 internal temperature?) $\ast$/
+\#define \mbox{\hyperlink{EnergyManager_8h_a14fcc935d826f954635217ea446bcc5d}{E\+M\+\_\+\+D\+M\+A\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+ON}}~10  	/$\ast$$\ast$5 H\+A\+LL + 4 V\+O\+L\+T\+A\+GE M\+E\+A\+S\+U\+R\+M\+E\+N\+TS (+ 1 internal temperature?) $\ast$/
 \item 
-\#define \mbox{\hyperlink{EnergyManager_8h_ac51bb49de562e49df2b0cdc7d781e65b}{H\+A\+L\+L\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+N\+U\+M\+B\+ER}}~5			/$\ast$$\ast$ Number of hall senors $\ast$/
+\#define \mbox{\hyperlink{EnergyManager_8h_ac51bb49de562e49df2b0cdc7d781e65b}{H\+A\+L\+L\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+N\+U\+M\+B\+ER}}~5		/$\ast$$\ast$ Number of hall senors $\ast$/
 \item 
-\#define \mbox{\hyperlink{EnergyManager_8h_afee7eba68459f6d680f2844b69ddd970}{S\+U\+P\+P\+L\+Y\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+\+N\+U\+M\+B\+ER}}~4			/$\ast$$\ast$ Number of section voltage measurements$\ast$/
+\#define \mbox{\hyperlink{EnergyManager_8h_afee7eba68459f6d680f2844b69ddd970}{S\+U\+P\+P\+L\+Y\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+\+N\+U\+M\+B\+ER}}~4		/$\ast$$\ast$ Number of section voltage measurements$\ast$/
 \item 
-\#define \mbox{\hyperlink{EnergyManager_8h_a6ae9f6ad3e37e72370c9906dc814c715}{S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+N\+U\+M\+B\+ER}}~5			/$\ast$$\ast$ Number of digital switches $\ast$/
+\#define \mbox{\hyperlink{EnergyManager_8h_a6ae9f6ad3e37e72370c9906dc814c715}{S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+N\+U\+M\+B\+ER}}~5		/$\ast$$\ast$ Number of digital switches $\ast$/
 \item 
 \#define \mbox{\hyperlink{EnergyManager_8h_a7f01a9c38a7e6964bc5ec60b5ca6dc43}{H\+A\+L\+L\+\_\+\+A\+C\+S714\+\_\+50\+A\+\_\+\+S\+E\+N\+S\+I\+V\+I\+TY}}~0.\+04f	/$\ast$$\ast$ Sensivity of 50A A\+C\+S714 hall sensor in \mbox{[}V/A\mbox{]}$\ast$/
 \item 
-\#define \mbox{\hyperlink{EnergyManager_8h_a1085b808853b4f29208564aca750eb52}{H\+A\+L\+L\+\_\+\+A\+C\+H\+S7121\+\_\+\+S\+E\+N\+S\+I\+V\+I\+TY}}~0.\+185f/$\ast$$\ast$ Sensivity of 10A A\+C\+H\+S7121 hall sensor in \mbox{[}V/A\mbox{]}$\ast$/
+\#define \mbox{\hyperlink{EnergyManager_8h_a1085b808853b4f29208564aca750eb52}{H\+A\+L\+L\+\_\+\+A\+C\+H\+S7121\+\_\+\+S\+E\+N\+S\+I\+V\+I\+TY}}~0.\+185f	/$\ast$$\ast$ Sensivity of 10A A\+C\+H\+S7121 hall sensor in \mbox{[}V/A\mbox{]}$\ast$/
 \item 
-\#define \mbox{\hyperlink{EnergyManager_8h_a195a76eadbe35efccce871b7e8e996bb}{B\+R\+A\+N\+C\+H\+\_\+5\+\_\+\+V\+O\+L\+T\+A\+GE}}~5.\+0f			/$\ast$$\ast$ Max voltage of 5V branch -\/ T\+O\+D\+O\+: need correction after selection voltage divider $\ast$/
+\#define \mbox{\hyperlink{EnergyManager_8h_a195a76eadbe35efccce871b7e8e996bb}{B\+R\+A\+N\+C\+H\+\_\+5\+\_\+\+V\+O\+L\+T\+A\+GE}}~5.\+0f	/$\ast$$\ast$ Max voltage of 5V branch -\/ T\+O\+D\+O\+: need correction after selection voltage divider $\ast$/
 \item 
-\#define \mbox{\hyperlink{EnergyManager_8h_ad895be675f05639f256bf88207331ddf}{B\+R\+A\+N\+C\+H\+\_\+3\+\_\+\+V\+O\+L\+T\+A\+GE}}~3.\+3f			/$\ast$$\ast$ Max voltage of 3.\+3V branch -\/ T\+O\+D\+O\+: need correction after selection voltage divider $\ast$/
+\#define \mbox{\hyperlink{EnergyManager_8h_ad895be675f05639f256bf88207331ddf}{B\+R\+A\+N\+C\+H\+\_\+3\+\_\+\+V\+O\+L\+T\+A\+GE}}~3.\+3f	/$\ast$$\ast$ Max voltage of 3.\+3V branch -\/ T\+O\+D\+O\+: need correction after selection voltage divider $\ast$/
 \item 
-\#define \mbox{\hyperlink{EnergyManager_8h_af46ce239320b50eaaca16027d26f780b}{B\+R\+A\+N\+C\+H\+\_\+7\+\_\+\+V\+O\+L\+T\+A\+GE}}~7.\+0f			/$\ast$$\ast$ Max voltage of 7V branch -\/ T\+O\+D\+O\+: need correction after selection voltage divider $\ast$/
+\#define \mbox{\hyperlink{EnergyManager_8h_af46ce239320b50eaaca16027d26f780b}{B\+R\+A\+N\+C\+H\+\_\+7\+\_\+\+V\+O\+L\+T\+A\+GE}}~7.\+0f	/$\ast$$\ast$ Max voltage of 7V branch -\/ T\+O\+D\+O\+: need correction after selection voltage divider $\ast$/
 \item 
-\#define \mbox{\hyperlink{EnergyManager_8h_a274acc7e3df03c4513520e12ff8c4b51}{N\+E\+A\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+V\+O\+L\+T\+A\+GE}}~0.\+5f			/$\ast$$\ast$ Margin -\/ below this value senction will be consider as turned off  $\ast$/
-\item 
-\#define \mbox{\hyperlink{EnergyManager_8h_a52a32b55b6fcc865234e1f5c0f80c821}{S\+E\+C\+T\+I\+O\+N\+\_\+\+M\+O\+T\+OR}}~4 				/$\ast$$\ast$T\+O\+D\+O\+: deal with this messy method (use enum or smth)$\ast$/
-\item 
-\#define \mbox{\hyperlink{EnergyManager_8h_ae1cd4293c0ac451b0000fb0f0d18ffc6}{H\+A\+L\+L\+\_\+5\+\_\+1\+\_\+\+I\+N\+D\+EX}}~0
-\item 
-\#define \mbox{\hyperlink{EnergyManager_8h_ac53890e92934b271f4e7b8ba6b72d1ad}{H\+A\+L\+L\+\_\+5\+\_\+2\+\_\+\+I\+N\+D\+EX}}~1
-\item 
-\#define \mbox{\hyperlink{EnergyManager_8h_a05aeba5e533fd20517eef46838920fd2}{H\+A\+L\+L\+\_\+7\+\_\+\+I\+N\+D\+EX}}~2
-\item 
-\#define \mbox{\hyperlink{EnergyManager_8h_a5d50a97d7720994eb723de3df01f93ff}{H\+A\+L\+L\+\_\+3\+\_\+\+I\+N\+D\+EX}}~5
-\item 
-\#define \mbox{\hyperlink{EnergyManager_8h_ad51600b688970c07fa073613d50873e3}{H\+A\+L\+L\+\_\+0\+\_\+\+I\+N\+D\+EX}}~7
-\item 
-\#define \mbox{\hyperlink{EnergyManager_8h_af0c79da2cbcf3371bb6580c112a99b94}{S\+E\+C\+\_\+3\+\_\+\+I\+N\+D\+EX}}~3
-\item 
-\#define \mbox{\hyperlink{EnergyManager_8h_abf7ab7f6ce50e158fdb42526ea6e3da2}{S\+E\+C\+\_\+5\+\_\+1\+\_\+\+I\+N\+D\+EX}}~4
-\item 
-\#define \mbox{\hyperlink{EnergyManager_8h_a2c09b2d8f350fa63044d9533c53c3b5f}{S\+E\+C\+\_\+7\+\_\+\+I\+N\+D\+EX}}~6
-\item 
-\#define \mbox{\hyperlink{EnergyManager_8h_a944ee890b936d03f1ce96c9091d7ce2e}{S\+E\+C\+\_\+5\+\_\+2\+\_\+\+I\+N\+D\+EX}}~8
+\#define \mbox{\hyperlink{EnergyManager_8h_a274acc7e3df03c4513520e12ff8c4b51}{N\+E\+A\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+V\+O\+L\+T\+A\+GE}}~0.\+5f	/$\ast$$\ast$ Margin -\/ below this value senction will be consider as turned off  $\ast$/
 \end{DoxyCompactItemize}
 
 
@@ -81,67 +61,37 @@ struct \mbox{\hyperlink{structEnergyManager_1_1Section}{Energy\+Manager\+::\+Sec
 \index{EnergyManager.h@{EnergyManager.h}!BRANCH\_3\_VOLTAGE@{BRANCH\_3\_VOLTAGE}}
 \index{BRANCH\_3\_VOLTAGE@{BRANCH\_3\_VOLTAGE}!EnergyManager.h@{EnergyManager.h}}
 \doxysubsubsection{\texorpdfstring{BRANCH\_3\_VOLTAGE}{BRANCH\_3\_VOLTAGE}}
-{\footnotesize\ttfamily \#define B\+R\+A\+N\+C\+H\+\_\+3\+\_\+\+V\+O\+L\+T\+A\+GE~3.\+3f			/$\ast$$\ast$ Max voltage of 3.\+3V branch -\/ T\+O\+D\+O\+: need correction after selection voltage divider $\ast$/}
+{\footnotesize\ttfamily \#define B\+R\+A\+N\+C\+H\+\_\+3\+\_\+\+V\+O\+L\+T\+A\+GE~3.\+3f	/$\ast$$\ast$ Max voltage of 3.\+3V branch -\/ T\+O\+D\+O\+: need correction after selection voltage divider $\ast$/}
 
 \mbox{\Hypertarget{EnergyManager_8h_a195a76eadbe35efccce871b7e8e996bb}\label{EnergyManager_8h_a195a76eadbe35efccce871b7e8e996bb}} 
 \index{EnergyManager.h@{EnergyManager.h}!BRANCH\_5\_VOLTAGE@{BRANCH\_5\_VOLTAGE}}
 \index{BRANCH\_5\_VOLTAGE@{BRANCH\_5\_VOLTAGE}!EnergyManager.h@{EnergyManager.h}}
 \doxysubsubsection{\texorpdfstring{BRANCH\_5\_VOLTAGE}{BRANCH\_5\_VOLTAGE}}
-{\footnotesize\ttfamily \#define B\+R\+A\+N\+C\+H\+\_\+5\+\_\+\+V\+O\+L\+T\+A\+GE~5.\+0f			/$\ast$$\ast$ Max voltage of 5V branch -\/ T\+O\+D\+O\+: need correction after selection voltage divider $\ast$/}
+{\footnotesize\ttfamily \#define B\+R\+A\+N\+C\+H\+\_\+5\+\_\+\+V\+O\+L\+T\+A\+GE~5.\+0f	/$\ast$$\ast$ Max voltage of 5V branch -\/ T\+O\+D\+O\+: need correction after selection voltage divider $\ast$/}
 
 \mbox{\Hypertarget{EnergyManager_8h_af46ce239320b50eaaca16027d26f780b}\label{EnergyManager_8h_af46ce239320b50eaaca16027d26f780b}} 
 \index{EnergyManager.h@{EnergyManager.h}!BRANCH\_7\_VOLTAGE@{BRANCH\_7\_VOLTAGE}}
 \index{BRANCH\_7\_VOLTAGE@{BRANCH\_7\_VOLTAGE}!EnergyManager.h@{EnergyManager.h}}
 \doxysubsubsection{\texorpdfstring{BRANCH\_7\_VOLTAGE}{BRANCH\_7\_VOLTAGE}}
-{\footnotesize\ttfamily \#define B\+R\+A\+N\+C\+H\+\_\+7\+\_\+\+V\+O\+L\+T\+A\+GE~7.\+0f			/$\ast$$\ast$ Max voltage of 7V branch -\/ T\+O\+D\+O\+: need correction after selection voltage divider $\ast$/}
+{\footnotesize\ttfamily \#define B\+R\+A\+N\+C\+H\+\_\+7\+\_\+\+V\+O\+L\+T\+A\+GE~7.\+0f	/$\ast$$\ast$ Max voltage of 7V branch -\/ T\+O\+D\+O\+: need correction after selection voltage divider $\ast$/}
 
 \mbox{\Hypertarget{EnergyManager_8h_acbcad18587f38f794a07cde9edca842c}\label{EnergyManager_8h_acbcad18587f38f794a07cde9edca842c}} 
 \index{EnergyManager.h@{EnergyManager.h}!EM\_DMA\_ADC\_CHANNEL@{EM\_DMA\_ADC\_CHANNEL}}
 \index{EM\_DMA\_ADC\_CHANNEL@{EM\_DMA\_ADC\_CHANNEL}!EnergyManager.h@{EnergyManager.h}}
 \doxysubsubsection{\texorpdfstring{EM\_DMA\_ADC\_CHANNEL}{EM\_DMA\_ADC\_CHANNEL}}
-{\footnotesize\ttfamily \#define E\+M\+\_\+\+D\+M\+A\+\_\+\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+EL~hadc1 		/$\ast$$\ast$T\+O\+D\+O\+: T\+A\+R\+G\+ET H\+A\+D\+C2 $\ast$/}
+{\footnotesize\ttfamily \#define E\+M\+\_\+\+D\+M\+A\+\_\+\+A\+D\+C\+\_\+\+C\+H\+A\+N\+N\+EL~hadc1 	/$\ast$$\ast$T\+O\+D\+O\+: T\+A\+R\+G\+ET H\+A\+D\+C2 $\ast$/}
 
 \mbox{\Hypertarget{EnergyManager_8h_a14fcc935d826f954635217ea446bcc5d}\label{EnergyManager_8h_a14fcc935d826f954635217ea446bcc5d}} 
 \index{EnergyManager.h@{EnergyManager.h}!EM\_DMA\_NUMBER\_OF\_CONVERSION@{EM\_DMA\_NUMBER\_OF\_CONVERSION}}
 \index{EM\_DMA\_NUMBER\_OF\_CONVERSION@{EM\_DMA\_NUMBER\_OF\_CONVERSION}!EnergyManager.h@{EnergyManager.h}}
 \doxysubsubsection{\texorpdfstring{EM\_DMA\_NUMBER\_OF\_CONVERSION}{EM\_DMA\_NUMBER\_OF\_CONVERSION}}
-{\footnotesize\ttfamily \#define E\+M\+\_\+\+D\+M\+A\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+ON~9  /$\ast$$\ast$5 H\+A\+LL + 4 V\+O\+L\+T\+A\+GE M\+E\+A\+S\+U\+R\+M\+E\+N\+TS (+ 1 internal temperature?) $\ast$/}
-
-\mbox{\Hypertarget{EnergyManager_8h_ad51600b688970c07fa073613d50873e3}\label{EnergyManager_8h_ad51600b688970c07fa073613d50873e3}} 
-\index{EnergyManager.h@{EnergyManager.h}!HALL\_0\_INDEX@{HALL\_0\_INDEX}}
-\index{HALL\_0\_INDEX@{HALL\_0\_INDEX}!EnergyManager.h@{EnergyManager.h}}
-\doxysubsubsection{\texorpdfstring{HALL\_0\_INDEX}{HALL\_0\_INDEX}}
-{\footnotesize\ttfamily \#define H\+A\+L\+L\+\_\+0\+\_\+\+I\+N\+D\+EX~7}
-
-\mbox{\Hypertarget{EnergyManager_8h_a5d50a97d7720994eb723de3df01f93ff}\label{EnergyManager_8h_a5d50a97d7720994eb723de3df01f93ff}} 
-\index{EnergyManager.h@{EnergyManager.h}!HALL\_3\_INDEX@{HALL\_3\_INDEX}}
-\index{HALL\_3\_INDEX@{HALL\_3\_INDEX}!EnergyManager.h@{EnergyManager.h}}
-\doxysubsubsection{\texorpdfstring{HALL\_3\_INDEX}{HALL\_3\_INDEX}}
-{\footnotesize\ttfamily \#define H\+A\+L\+L\+\_\+3\+\_\+\+I\+N\+D\+EX~5}
-
-\mbox{\Hypertarget{EnergyManager_8h_ae1cd4293c0ac451b0000fb0f0d18ffc6}\label{EnergyManager_8h_ae1cd4293c0ac451b0000fb0f0d18ffc6}} 
-\index{EnergyManager.h@{EnergyManager.h}!HALL\_5\_1\_INDEX@{HALL\_5\_1\_INDEX}}
-\index{HALL\_5\_1\_INDEX@{HALL\_5\_1\_INDEX}!EnergyManager.h@{EnergyManager.h}}
-\doxysubsubsection{\texorpdfstring{HALL\_5\_1\_INDEX}{HALL\_5\_1\_INDEX}}
-{\footnotesize\ttfamily \#define H\+A\+L\+L\+\_\+5\+\_\+1\+\_\+\+I\+N\+D\+EX~0}
-
-Indexes from D\+MA structure \mbox{\Hypertarget{EnergyManager_8h_ac53890e92934b271f4e7b8ba6b72d1ad}\label{EnergyManager_8h_ac53890e92934b271f4e7b8ba6b72d1ad}} 
-\index{EnergyManager.h@{EnergyManager.h}!HALL\_5\_2\_INDEX@{HALL\_5\_2\_INDEX}}
-\index{HALL\_5\_2\_INDEX@{HALL\_5\_2\_INDEX}!EnergyManager.h@{EnergyManager.h}}
-\doxysubsubsection{\texorpdfstring{HALL\_5\_2\_INDEX}{HALL\_5\_2\_INDEX}}
-{\footnotesize\ttfamily \#define H\+A\+L\+L\+\_\+5\+\_\+2\+\_\+\+I\+N\+D\+EX~1}
-
-\mbox{\Hypertarget{EnergyManager_8h_a05aeba5e533fd20517eef46838920fd2}\label{EnergyManager_8h_a05aeba5e533fd20517eef46838920fd2}} 
-\index{EnergyManager.h@{EnergyManager.h}!HALL\_7\_INDEX@{HALL\_7\_INDEX}}
-\index{HALL\_7\_INDEX@{HALL\_7\_INDEX}!EnergyManager.h@{EnergyManager.h}}
-\doxysubsubsection{\texorpdfstring{HALL\_7\_INDEX}{HALL\_7\_INDEX}}
-{\footnotesize\ttfamily \#define H\+A\+L\+L\+\_\+7\+\_\+\+I\+N\+D\+EX~2}
+{\footnotesize\ttfamily \#define E\+M\+\_\+\+D\+M\+A\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+ON~10  	/$\ast$$\ast$5 H\+A\+LL + 4 V\+O\+L\+T\+A\+GE M\+E\+A\+S\+U\+R\+M\+E\+N\+TS (+ 1 internal temperature?) $\ast$/}
 
 \mbox{\Hypertarget{EnergyManager_8h_a1085b808853b4f29208564aca750eb52}\label{EnergyManager_8h_a1085b808853b4f29208564aca750eb52}} 
 \index{EnergyManager.h@{EnergyManager.h}!HALL\_ACHS7121\_SENSIVITY@{HALL\_ACHS7121\_SENSIVITY}}
 \index{HALL\_ACHS7121\_SENSIVITY@{HALL\_ACHS7121\_SENSIVITY}!EnergyManager.h@{EnergyManager.h}}
 \doxysubsubsection{\texorpdfstring{HALL\_ACHS7121\_SENSIVITY}{HALL\_ACHS7121\_SENSIVITY}}
-{\footnotesize\ttfamily \#define H\+A\+L\+L\+\_\+\+A\+C\+H\+S7121\+\_\+\+S\+E\+N\+S\+I\+V\+I\+TY~0.\+185f/$\ast$$\ast$ Sensivity of 10A A\+C\+H\+S7121 hall sensor in \mbox{[}V/A\mbox{]}$\ast$/}
+{\footnotesize\ttfamily \#define H\+A\+L\+L\+\_\+\+A\+C\+H\+S7121\+\_\+\+S\+E\+N\+S\+I\+V\+I\+TY~0.\+185f	/$\ast$$\ast$ Sensivity of 10A A\+C\+H\+S7121 hall sensor in \mbox{[}V/A\mbox{]}$\ast$/}
 
 \mbox{\Hypertarget{EnergyManager_8h_a7f01a9c38a7e6964bc5ec60b5ca6dc43}\label{EnergyManager_8h_a7f01a9c38a7e6964bc5ec60b5ca6dc43}} 
 \index{EnergyManager.h@{EnergyManager.h}!HALL\_ACS714\_50A\_SENSIVITY@{HALL\_ACS714\_50A\_SENSIVITY}}
@@ -153,53 +103,23 @@ Indexes from D\+MA structure \mbox{\Hypertarget{EnergyManager_8h_ac53890e92934b2
 \index{EnergyManager.h@{EnergyManager.h}!HALL\_SENSOR\_NUMBER@{HALL\_SENSOR\_NUMBER}}
 \index{HALL\_SENSOR\_NUMBER@{HALL\_SENSOR\_NUMBER}!EnergyManager.h@{EnergyManager.h}}
 \doxysubsubsection{\texorpdfstring{HALL\_SENSOR\_NUMBER}{HALL\_SENSOR\_NUMBER}}
-{\footnotesize\ttfamily \#define H\+A\+L\+L\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+N\+U\+M\+B\+ER~5			/$\ast$$\ast$ Number of hall senors $\ast$/}
+{\footnotesize\ttfamily \#define H\+A\+L\+L\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+N\+U\+M\+B\+ER~5		/$\ast$$\ast$ Number of hall senors $\ast$/}
 
 \mbox{\Hypertarget{EnergyManager_8h_a274acc7e3df03c4513520e12ff8c4b51}\label{EnergyManager_8h_a274acc7e3df03c4513520e12ff8c4b51}} 
 \index{EnergyManager.h@{EnergyManager.h}!NEAR\_ZERO\_VOLTAGE@{NEAR\_ZERO\_VOLTAGE}}
 \index{NEAR\_ZERO\_VOLTAGE@{NEAR\_ZERO\_VOLTAGE}!EnergyManager.h@{EnergyManager.h}}
 \doxysubsubsection{\texorpdfstring{NEAR\_ZERO\_VOLTAGE}{NEAR\_ZERO\_VOLTAGE}}
-{\footnotesize\ttfamily \#define N\+E\+A\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+V\+O\+L\+T\+A\+GE~0.\+5f			/$\ast$$\ast$ Margin -\/ below this value senction will be consider as turned off  $\ast$/}
-
-\mbox{\Hypertarget{EnergyManager_8h_af0c79da2cbcf3371bb6580c112a99b94}\label{EnergyManager_8h_af0c79da2cbcf3371bb6580c112a99b94}} 
-\index{EnergyManager.h@{EnergyManager.h}!SEC\_3\_INDEX@{SEC\_3\_INDEX}}
-\index{SEC\_3\_INDEX@{SEC\_3\_INDEX}!EnergyManager.h@{EnergyManager.h}}
-\doxysubsubsection{\texorpdfstring{SEC\_3\_INDEX}{SEC\_3\_INDEX}}
-{\footnotesize\ttfamily \#define S\+E\+C\+\_\+3\+\_\+\+I\+N\+D\+EX~3}
-
-\mbox{\Hypertarget{EnergyManager_8h_abf7ab7f6ce50e158fdb42526ea6e3da2}\label{EnergyManager_8h_abf7ab7f6ce50e158fdb42526ea6e3da2}} 
-\index{EnergyManager.h@{EnergyManager.h}!SEC\_5\_1\_INDEX@{SEC\_5\_1\_INDEX}}
-\index{SEC\_5\_1\_INDEX@{SEC\_5\_1\_INDEX}!EnergyManager.h@{EnergyManager.h}}
-\doxysubsubsection{\texorpdfstring{SEC\_5\_1\_INDEX}{SEC\_5\_1\_INDEX}}
-{\footnotesize\ttfamily \#define S\+E\+C\+\_\+5\+\_\+1\+\_\+\+I\+N\+D\+EX~4}
-
-\mbox{\Hypertarget{EnergyManager_8h_a944ee890b936d03f1ce96c9091d7ce2e}\label{EnergyManager_8h_a944ee890b936d03f1ce96c9091d7ce2e}} 
-\index{EnergyManager.h@{EnergyManager.h}!SEC\_5\_2\_INDEX@{SEC\_5\_2\_INDEX}}
-\index{SEC\_5\_2\_INDEX@{SEC\_5\_2\_INDEX}!EnergyManager.h@{EnergyManager.h}}
-\doxysubsubsection{\texorpdfstring{SEC\_5\_2\_INDEX}{SEC\_5\_2\_INDEX}}
-{\footnotesize\ttfamily \#define S\+E\+C\+\_\+5\+\_\+2\+\_\+\+I\+N\+D\+EX~8}
-
-\mbox{\Hypertarget{EnergyManager_8h_a2c09b2d8f350fa63044d9533c53c3b5f}\label{EnergyManager_8h_a2c09b2d8f350fa63044d9533c53c3b5f}} 
-\index{EnergyManager.h@{EnergyManager.h}!SEC\_7\_INDEX@{SEC\_7\_INDEX}}
-\index{SEC\_7\_INDEX@{SEC\_7\_INDEX}!EnergyManager.h@{EnergyManager.h}}
-\doxysubsubsection{\texorpdfstring{SEC\_7\_INDEX}{SEC\_7\_INDEX}}
-{\footnotesize\ttfamily \#define S\+E\+C\+\_\+7\+\_\+\+I\+N\+D\+EX~6}
-
-\mbox{\Hypertarget{EnergyManager_8h_a52a32b55b6fcc865234e1f5c0f80c821}\label{EnergyManager_8h_a52a32b55b6fcc865234e1f5c0f80c821}} 
-\index{EnergyManager.h@{EnergyManager.h}!SECTION\_MOTOR@{SECTION\_MOTOR}}
-\index{SECTION\_MOTOR@{SECTION\_MOTOR}!EnergyManager.h@{EnergyManager.h}}
-\doxysubsubsection{\texorpdfstring{SECTION\_MOTOR}{SECTION\_MOTOR}}
-{\footnotesize\ttfamily \#define S\+E\+C\+T\+I\+O\+N\+\_\+\+M\+O\+T\+OR~4 				/$\ast$$\ast$T\+O\+D\+O\+: deal with this messy method (use enum or smth)$\ast$/}
+{\footnotesize\ttfamily \#define N\+E\+A\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+V\+O\+L\+T\+A\+GE~0.\+5f	/$\ast$$\ast$ Margin -\/ below this value senction will be consider as turned off  $\ast$/}
 
 \mbox{\Hypertarget{EnergyManager_8h_a6ae9f6ad3e37e72370c9906dc814c715}\label{EnergyManager_8h_a6ae9f6ad3e37e72370c9906dc814c715}} 
 \index{EnergyManager.h@{EnergyManager.h}!SECTION\_SWITCH\_NUMBER@{SECTION\_SWITCH\_NUMBER}}
 \index{SECTION\_SWITCH\_NUMBER@{SECTION\_SWITCH\_NUMBER}!EnergyManager.h@{EnergyManager.h}}
 \doxysubsubsection{\texorpdfstring{SECTION\_SWITCH\_NUMBER}{SECTION\_SWITCH\_NUMBER}}
-{\footnotesize\ttfamily \#define S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+N\+U\+M\+B\+ER~5			/$\ast$$\ast$ Number of digital switches $\ast$/}
+{\footnotesize\ttfamily \#define S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+W\+I\+T\+C\+H\+\_\+\+N\+U\+M\+B\+ER~5		/$\ast$$\ast$ Number of digital switches $\ast$/}
 
 \mbox{\Hypertarget{EnergyManager_8h_afee7eba68459f6d680f2844b69ddd970}\label{EnergyManager_8h_afee7eba68459f6d680f2844b69ddd970}} 
 \index{EnergyManager.h@{EnergyManager.h}!SUPPLY\_BRANCH\_NUMBER@{SUPPLY\_BRANCH\_NUMBER}}
 \index{SUPPLY\_BRANCH\_NUMBER@{SUPPLY\_BRANCH\_NUMBER}!EnergyManager.h@{EnergyManager.h}}
 \doxysubsubsection{\texorpdfstring{SUPPLY\_BRANCH\_NUMBER}{SUPPLY\_BRANCH\_NUMBER}}
-{\footnotesize\ttfamily \#define S\+U\+P\+P\+L\+Y\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+\+N\+U\+M\+B\+ER~4			/$\ast$$\ast$ Number of section voltage measurements$\ast$/}
+{\footnotesize\ttfamily \#define S\+U\+P\+P\+L\+Y\+\_\+\+B\+R\+A\+N\+C\+H\+\_\+\+N\+U\+M\+B\+ER~4		/$\ast$$\ast$ Number of section voltage measurements$\ast$/}
 
