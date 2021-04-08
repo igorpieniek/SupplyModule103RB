@@ -45,7 +45,8 @@ public:
 	 * @param tim - TIM_HandleTypeDef * - to define timer to use eg. htim12
 	 * @param ch - uint32_t - timer channel eg. TIM_CHANNEL_1
 	 */
-	Fan(TIM_HandleTypeDef * tim, uint32_t ch);
+	void init(TIM_HandleTypeDef * tim, uint32_t ch);
+	Fan();
 	virtual ~Fan();
 private:
 

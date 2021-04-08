@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Software/Src/AllTasks.cpp File Reference</title>
+<title>SupplyModule 2.0 Firmware: Software/Src/AllTasks.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">SupplyModule 2.0 Firmware
    </div>
   </td>
  </tr>
@@ -79,28 +79,32 @@ $(function() {
 <code>#include &quot;adc.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="LedNotifier_8h_source.html">LedNotifier.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="TimeTool_8h_source.html">TimeTool.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="FanManager_8h_source.html">FanManager.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for AllTasks.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="AllTasks_8cpp__incl.png" border="0" usemap="#Software_2Src_2AllTasks_8cpp" alt=""/></div>
 <map name="Software_2Src_2AllTasks_8cpp" id="Software_2Src_2AllTasks_8cpp">
-<area shape="rect" title=" " alt="" coords="367,5,554,32"/>
-<area shape="rect" href="AllTasks_8h.html" title=" " alt="" coords="72,80,158,107"/>
-<area shape="rect" title=" " alt="" coords="224,80,291,107"/>
-<area shape="rect" href="LipoCell_8h.html" title=" " alt="" coords="316,80,402,107"/>
-<area shape="rect" title=" " alt="" coords="427,80,494,107"/>
-<area shape="rect" title=" " alt="" coords="518,80,576,107"/>
-<area shape="rect" href="LedNotifier_8h.html" title=" " alt="" coords="600,80,704,107"/>
-<area shape="rect" href="TimeTool_8h.html" title=" " alt="" coords="743,155,836,181"/>
-<area shape="rect" title=" " alt="" coords="326,229,392,256"/>
-<area shape="rect" title=" " alt="" coords="24,155,120,181"/>
-<area shape="rect" title=" " alt="" coords="145,155,240,181"/>
-<area shape="rect" href="Average_8h.html" title=" " alt="" coords="316,155,402,181"/>
-<area shape="rect" href="ADC__Tools_8h.html" title=" " alt="" coords="426,155,529,181"/>
-<area shape="rect" title=" " alt="" coords="605,155,668,181"/>
-<area shape="rect" title=" " alt="" coords="675,229,731,256"/>
-<area shape="rect" title=" " alt="" coords="756,229,826,256"/>
-<area shape="rect" title=" " alt="" coords="850,229,921,256"/>
+<area shape="rect" title=" " alt="" coords="511,5,689,32"/>
+<area shape="rect" href="AllTasks_8h.html" title=" " alt="" coords="180,80,263,107"/>
+<area shape="rect" title=" " alt="" coords="337,80,399,107"/>
+<area shape="rect" href="LipoCell_8h.html" title=" " alt="" coords="423,80,503,107"/>
+<area shape="rect" title=" " alt="" coords="527,80,590,107"/>
+<area shape="rect" title=" " alt="" coords="614,80,669,107"/>
+<area shape="rect" href="LedNotifier_8h.html" title=" " alt="" coords="866,80,961,107"/>
+<area shape="rect" href="TimeTool_8h.html" title=" " alt="" coords="1018,155,1105,181"/>
+<area shape="rect" href="FanManager_8h.html" title=" " alt="" coords="693,80,797,107"/>
+<area shape="rect" title=" " alt="" coords="548,229,609,256"/>
+<area shape="rect" title=" " alt="" coords="88,155,184,181"/>
+<area shape="rect" title=" " alt="" coords="310,155,399,181"/>
+<area shape="rect" title=" " alt="" coords="5,155,64,181"/>
+<area shape="rect" href="Average_8h.html" title=" " alt="" coords="423,155,505,181"/>
+<area shape="rect" href="ADC__Tools_8h.html" title=" " alt="" coords="529,155,629,181"/>
+<area shape="rect" title=" " alt="" coords="885,155,942,181"/>
+<area shape="rect" title=" " alt="" coords="953,229,1004,256"/>
+<area shape="rect" title=" " alt="" coords="1029,229,1094,256"/>
+<area shape="rect" title=" " alt="" coords="1119,229,1183,256"/>
+<area shape="rect" href="Fan_8h.html" title=" " alt="" coords="653,155,707,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -123,26 +127,6 @@ Variables</h2></td></tr>
 <tr class="separator:a103b37bbce360d0fd62bf5ce0b43439c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17644413b11066ac731152049c8214c9"><td class="memItemLeft" align="right" valign="top">osThreadId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AllTasks_8cpp.html#a17644413b11066ac731152049c8214c9">LedUpHandle</a></td></tr>
 <tr class="separator:a17644413b11066ac731152049c8214c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4722640aa50c9389bc3861e9545cc3c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AllTasks_8cpp.html#ad4722640aa50c9389bc3861e9545cc3c">receiveADC</a> [2]</td></tr>
-<tr class="separator:ad4722640aa50c9389bc3861e9545cc3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff8b1863b0092b29219886c9895b2c1c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AllTasks_8cpp.html#aff8b1863b0092b29219886c9895b2c1c">per</a></td></tr>
-<tr class="separator:aff8b1863b0092b29219886c9895b2c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ef8a2d5b808ba7eab24a1fa30e5157b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AllTasks_8cpp.html#a5ef8a2d5b808ba7eab24a1fa30e5157b">volt</a></td></tr>
-<tr class="separator:a5ef8a2d5b808ba7eab24a1fa30e5157b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6db5b949b54dc37355bc4104f955b457"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AllTasks_8cpp.html#a6db5b949b54dc37355bc4104f955b457">perAvrg</a></td></tr>
-<tr class="separator:a6db5b949b54dc37355bc4104f955b457"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1628b5007795c4e199fb5d739d90f74"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AllTasks_8cpp.html#aa1628b5007795c4e199fb5d739d90f74">voltAvrg</a></td></tr>
-<tr class="separator:aa1628b5007795c4e199fb5d739d90f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3812304f77082da92d4c0c6ea8d0585f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AllTasks_8cpp.html#a3812304f77082da92d4c0c6ea8d0585f">currentTime</a> [3] = {0}</td></tr>
-<tr class="separator:a3812304f77082da92d4c0c6ea8d0585f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7e4cd2f21d7e0a0996097ccb0c598a9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AllTasks_8cpp.html#ae7e4cd2f21d7e0a0996097ccb0c598a9">RXdata</a></td></tr>
-<tr class="separator:ae7e4cd2f21d7e0a0996097ccb0c598a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85df190bdc7a7ce26f1790a81395cc8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLedNotifier.html">LedNotifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AllTasks_8cpp.html#a85df190bdc7a7ce26f1790a81395cc8f">led</a> (LD2_GPIO_Port, LD2_Pin)</td></tr>
-<tr class="separator:a85df190bdc7a7ce26f1790a81395cc8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51a650aac58478043e4c8601e28258c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLedNotifier.html">LedNotifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AllTasks_8cpp.html#a51a650aac58478043e4c8601e28258c8">led1</a> (LED1_GPIO_Port, LED1_Pin)</td></tr>
-<tr class="separator:a51a650aac58478043e4c8601e28258c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35ce8ceeece9ad573caa856b5fdaafa0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLedNotifier.html">LedNotifier</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AllTasks_8cpp.html#a35ce8ceeece9ad573caa856b5fdaafa0">led2</a> (LED2_GPIO_Port, LED2_Pin)</td></tr>
-<tr class="separator:a35ce8ceeece9ad573caa856b5fdaafa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ab33a51f9ab16a59682556273efbfbc27"></a>
@@ -249,62 +233,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3812304f77082da92d4c0c6ea8d0585f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3812304f77082da92d4c0c6ea8d0585f">&#9670;&nbsp;</a></span>currentTime</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t currentTime[3] = {0}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a85df190bdc7a7ce26f1790a81395cc8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85df190bdc7a7ce26f1790a81395cc8f">&#9670;&nbsp;</a></span>led</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classLedNotifier.html">LedNotifier</a> led(LD2_GPIO_Port, LD2_Pin)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a51a650aac58478043e4c8601e28258c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51a650aac58478043e4c8601e28258c8">&#9670;&nbsp;</a></span>led1</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classLedNotifier.html">LedNotifier</a> led1(LED1_GPIO_Port, LED1_Pin)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a35ce8ceeece9ad573caa856b5fdaafa0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35ce8ceeece9ad573caa856b5fdaafa0">&#9670;&nbsp;</a></span>led2</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classLedNotifier.html">LedNotifier</a> led2(LED2_GPIO_Port, LED2_Pin)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a17644413b11066ac731152049c8214c9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a17644413b11066ac731152049c8214c9">&#9670;&nbsp;</a></span>LedUpHandle</h2>
 
@@ -313,90 +241,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">osThreadId LedUpHandle</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aff8b1863b0092b29219886c9895b2c1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff8b1863b0092b29219886c9895b2c1c">&#9670;&nbsp;</a></span>per</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float per</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6db5b949b54dc37355bc4104f955b457"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6db5b949b54dc37355bc4104f955b457">&#9670;&nbsp;</a></span>perAvrg</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float perAvrg</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad4722640aa50c9389bc3861e9545cc3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4722640aa50c9389bc3861e9545cc3c">&#9670;&nbsp;</a></span>receiveADC</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t receiveADC[2]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae7e4cd2f21d7e0a0996097ccb0c598a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7e4cd2f21d7e0a0996097ccb0c598a9">&#9670;&nbsp;</a></span>RXdata</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t RXdata</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5ef8a2d5b808ba7eab24a1fa30e5157b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ef8a2d5b808ba7eab24a1fa30e5157b">&#9670;&nbsp;</a></span>volt</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float volt</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa1628b5007795c4e199fb5d739d90f74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1628b5007795c4e199fb5d739d90f74">&#9670;&nbsp;</a></span>voltAvrg</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float voltAvrg</td>
         </tr>
       </table>
 </div><div class="memdoc">

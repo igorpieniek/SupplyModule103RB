@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Software/Inc/AllTasks.h Source File</title>
+<title>SupplyModule 2.0 Firmware: Software/Inc/AllTasks.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">SupplyModule 2.0 Firmware
    </div>
   </td>
  </tr>
@@ -82,19 +82,20 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;main.h&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;FreeRTOS.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;cmsis_os.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;task.h&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">extern</span> osThreadId <a class="code" href="AllTasks_8h.html#a103b37bbce360d0fd62bf5ce0b43439c">BatteryManagerHandle</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">extern</span> osThreadId <a class="code" href="AllTasks_8h.html#a17644413b11066ac731152049c8214c9">LedUpHandle</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">extern</span> osThreadId <a class="code" href="AllTasks_8h.html#a103b37bbce360d0fd62bf5ce0b43439c">BatteryManagerHandle</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">extern</span> osThreadId <a class="code" href="AllTasks_8h.html#a17644413b11066ac731152049c8214c9">LedUpHandle</a>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="AllTasks_8h.html#ab33a51f9ab16a59682556273efbfbc27">AllTasks_init</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INC_ALLTASKS_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="AllTasks_8h.html#ab33a51f9ab16a59682556273efbfbc27">AllTasks_init</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INC_ALLTASKS_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aAllTasks_8h_html_a17644413b11066ac731152049c8214c9"><div class="ttname"><a href="AllTasks_8h.html#a17644413b11066ac731152049c8214c9">LedUpHandle</a></div><div class="ttdeci">osThreadId LedUpHandle</div><div class="ttdef"><b>Definition:</b> AllTasks.cpp:17</div></div>
-<div class="ttc" id="aAllTasks_8h_html_a103b37bbce360d0fd62bf5ce0b43439c"><div class="ttname"><a href="AllTasks_8h.html#a103b37bbce360d0fd62bf5ce0b43439c">BatteryManagerHandle</a></div><div class="ttdeci">osThreadId BatteryManagerHandle</div><div class="ttdef"><b>Definition:</b> AllTasks.cpp:16</div></div>
-<div class="ttc" id="aAllTasks_8h_html_ab33a51f9ab16a59682556273efbfbc27"><div class="ttname"><a href="AllTasks_8h.html#ab33a51f9ab16a59682556273efbfbc27">AllTasks_init</a></div><div class="ttdeci">void AllTasks_init()</div><div class="ttdef"><b>Definition:</b> AllTasks.cpp:31</div></div>
+<div class="ttc" id="aAllTasks_8h_html_a17644413b11066ac731152049c8214c9"><div class="ttname"><a href="AllTasks_8h.html#a17644413b11066ac731152049c8214c9">LedUpHandle</a></div><div class="ttdeci">osThreadId LedUpHandle</div><div class="ttdef"><b>Definition:</b> AllTasks.cpp:18</div></div>
+<div class="ttc" id="aAllTasks_8h_html_a103b37bbce360d0fd62bf5ce0b43439c"><div class="ttname"><a href="AllTasks_8h.html#a103b37bbce360d0fd62bf5ce0b43439c">BatteryManagerHandle</a></div><div class="ttdeci">osThreadId BatteryManagerHandle</div><div class="ttdef"><b>Definition:</b> AllTasks.cpp:17</div></div>
+<div class="ttc" id="aAllTasks_8h_html_ab33a51f9ab16a59682556273efbfbc27"><div class="ttname"><a href="AllTasks_8h.html#ab33a51f9ab16a59682556273efbfbc27">AllTasks_init</a></div><div class="ttdeci">void AllTasks_init()</div><div class="ttdef"><b>Definition:</b> AllTasks.cpp:24</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

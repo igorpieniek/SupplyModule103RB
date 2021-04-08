@@ -1,0 +1,178 @@
+\hypertarget{FanManager_8h}{}\doxysection{Software/\+Inc/\+Fan\+Manager.h File Reference}
+\label{FanManager_8h}\index{Software/Inc/FanManager.h@{Software/Inc/FanManager.h}}
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tim.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Fan.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cmsis\+\_\+os.\+h\char`\"{}}\newline
+Include dependency graph for Fan\+Manager.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{FanManager_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{FanManager_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classFanManager}{Fan\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{FanManager_8h_aa1b94959911941ccffcef81c92554fc1}{F\+A\+N1\+\_\+\+T\+I\+M\+ER}}~htim3
+\item 
+\#define \mbox{\hyperlink{FanManager_8h_a6b50a28884d35a38c8d108ddca3bca97}{F\+A\+N1\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+H\+A\+N\+N\+EL}}~T\+I\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1
+\item 
+\#define \mbox{\hyperlink{FanManager_8h_ab871b49c1e238f88f722addf328d19e8}{F\+A\+N2\+\_\+\+T\+I\+M\+ER}}~htim3
+\item 
+\#define \mbox{\hyperlink{FanManager_8h_a0fe326a038d65ce1a4991e623cfd0290}{F\+A\+N2\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+H\+A\+N\+N\+EL}}~T\+I\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2
+\item 
+\#define \mbox{\hyperlink{FanManager_8h_a3e41b5f5a52d7b7cf0edd86e3a94630b}{F\+A\+N3\+\_\+\+T\+I\+M\+ER}}~htim3
+\item 
+\#define \mbox{\hyperlink{FanManager_8h_aa5a5c62b8c6f00b82e29994c400aacc8}{F\+A\+N3\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+H\+A\+N\+N\+EL}}~T\+I\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+3
+\item 
+\#define \mbox{\hyperlink{FanManager_8h_ae1d37ab4a378df1076cfc45a1ef8004c}{F\+A\+N4\+\_\+\+T\+I\+M\+ER}}~htim3
+\item 
+\#define \mbox{\hyperlink{FanManager_8h_aeb54249add3e9ffb9105e21bc7c91903}{F\+A\+N4\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+H\+A\+N\+N\+EL}}~T\+I\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+4
+\item 
+\#define \mbox{\hyperlink{FanManager_8h_a4bc175d39bbf3011aad887aa158931d3}{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+A\+NS}}~4
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{FanManager_8h_a9f4224bb747074dccaddf13b7f8e129c}{Temperature\+Signals}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{FanManager_8h_a9f4224bb747074dccaddf13b7f8e129ca6397c936615b97b70adb188970dfc31b}{Temperature\+Signals\+::\+C\+O\+O\+L\+D\+O\+WN}} = 0x01, 
+\mbox{\hyperlink{FanManager_8h_a9f4224bb747074dccaddf13b7f8e129ca9ca8335873c44a53b8f7c5fc526ee59b}{Temperature\+Signals\+::\+H\+I\+G\+H\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}} = 0x02, 
+\mbox{\hyperlink{FanManager_8h_a9f4224bb747074dccaddf13b7f8e129cad172a52bf5c6b8ca03028b1590a6292d}{Temperature\+Signals\+::\+O\+V\+E\+R\+H\+E\+A\+T\+ED}} = 0x03
+ \}
+\item 
+enum \mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42}{Fan\+Name}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42a6f7fcc29979ffc8afe80e716278a9c36}{Fan\+Name\+::\+Fan1}} = 0, 
+\mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42a6c695d3055c97c35a8171cbd5b5420c8}{Fan\+Name\+::\+Fan2}}, 
+\mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42a4ad292511feb6818a330c42e10a48a44}{Fan\+Name\+::\+Fan3}}, 
+\mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42a95f1d1fce1d63963a7719086f81f94ed}{Fan\+Name\+::\+Fan4}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFanManager}{Fan\+Manager}} \mbox{\hyperlink{FanManager_8h_aa38264fea7aec49478eaf2ca96c01ec3}{fans}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{FanManager_8h_aa1b94959911941ccffcef81c92554fc1}\label{FanManager_8h_aa1b94959911941ccffcef81c92554fc1}} 
+\index{FanManager.h@{FanManager.h}!FAN1\_TIMER@{FAN1\_TIMER}}
+\index{FAN1\_TIMER@{FAN1\_TIMER}!FanManager.h@{FanManager.h}}
+\doxysubsubsection{\texorpdfstring{FAN1\_TIMER}{FAN1\_TIMER}}
+{\footnotesize\ttfamily \#define F\+A\+N1\+\_\+\+T\+I\+M\+ER~htim3}
+
+\mbox{\Hypertarget{FanManager_8h_a6b50a28884d35a38c8d108ddca3bca97}\label{FanManager_8h_a6b50a28884d35a38c8d108ddca3bca97}} 
+\index{FanManager.h@{FanManager.h}!FAN1\_TIMER\_CHANNEL@{FAN1\_TIMER\_CHANNEL}}
+\index{FAN1\_TIMER\_CHANNEL@{FAN1\_TIMER\_CHANNEL}!FanManager.h@{FanManager.h}}
+\doxysubsubsection{\texorpdfstring{FAN1\_TIMER\_CHANNEL}{FAN1\_TIMER\_CHANNEL}}
+{\footnotesize\ttfamily \#define F\+A\+N1\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+H\+A\+N\+N\+EL~T\+I\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+1}
+
+\mbox{\Hypertarget{FanManager_8h_ab871b49c1e238f88f722addf328d19e8}\label{FanManager_8h_ab871b49c1e238f88f722addf328d19e8}} 
+\index{FanManager.h@{FanManager.h}!FAN2\_TIMER@{FAN2\_TIMER}}
+\index{FAN2\_TIMER@{FAN2\_TIMER}!FanManager.h@{FanManager.h}}
+\doxysubsubsection{\texorpdfstring{FAN2\_TIMER}{FAN2\_TIMER}}
+{\footnotesize\ttfamily \#define F\+A\+N2\+\_\+\+T\+I\+M\+ER~htim3}
+
+\mbox{\Hypertarget{FanManager_8h_a0fe326a038d65ce1a4991e623cfd0290}\label{FanManager_8h_a0fe326a038d65ce1a4991e623cfd0290}} 
+\index{FanManager.h@{FanManager.h}!FAN2\_TIMER\_CHANNEL@{FAN2\_TIMER\_CHANNEL}}
+\index{FAN2\_TIMER\_CHANNEL@{FAN2\_TIMER\_CHANNEL}!FanManager.h@{FanManager.h}}
+\doxysubsubsection{\texorpdfstring{FAN2\_TIMER\_CHANNEL}{FAN2\_TIMER\_CHANNEL}}
+{\footnotesize\ttfamily \#define F\+A\+N2\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+H\+A\+N\+N\+EL~T\+I\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+2}
+
+\mbox{\Hypertarget{FanManager_8h_a3e41b5f5a52d7b7cf0edd86e3a94630b}\label{FanManager_8h_a3e41b5f5a52d7b7cf0edd86e3a94630b}} 
+\index{FanManager.h@{FanManager.h}!FAN3\_TIMER@{FAN3\_TIMER}}
+\index{FAN3\_TIMER@{FAN3\_TIMER}!FanManager.h@{FanManager.h}}
+\doxysubsubsection{\texorpdfstring{FAN3\_TIMER}{FAN3\_TIMER}}
+{\footnotesize\ttfamily \#define F\+A\+N3\+\_\+\+T\+I\+M\+ER~htim3}
+
+\mbox{\Hypertarget{FanManager_8h_aa5a5c62b8c6f00b82e29994c400aacc8}\label{FanManager_8h_aa5a5c62b8c6f00b82e29994c400aacc8}} 
+\index{FanManager.h@{FanManager.h}!FAN3\_TIMER\_CHANNEL@{FAN3\_TIMER\_CHANNEL}}
+\index{FAN3\_TIMER\_CHANNEL@{FAN3\_TIMER\_CHANNEL}!FanManager.h@{FanManager.h}}
+\doxysubsubsection{\texorpdfstring{FAN3\_TIMER\_CHANNEL}{FAN3\_TIMER\_CHANNEL}}
+{\footnotesize\ttfamily \#define F\+A\+N3\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+H\+A\+N\+N\+EL~T\+I\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+3}
+
+\mbox{\Hypertarget{FanManager_8h_ae1d37ab4a378df1076cfc45a1ef8004c}\label{FanManager_8h_ae1d37ab4a378df1076cfc45a1ef8004c}} 
+\index{FanManager.h@{FanManager.h}!FAN4\_TIMER@{FAN4\_TIMER}}
+\index{FAN4\_TIMER@{FAN4\_TIMER}!FanManager.h@{FanManager.h}}
+\doxysubsubsection{\texorpdfstring{FAN4\_TIMER}{FAN4\_TIMER}}
+{\footnotesize\ttfamily \#define F\+A\+N4\+\_\+\+T\+I\+M\+ER~htim3}
+
+\mbox{\Hypertarget{FanManager_8h_aeb54249add3e9ffb9105e21bc7c91903}\label{FanManager_8h_aeb54249add3e9ffb9105e21bc7c91903}} 
+\index{FanManager.h@{FanManager.h}!FAN4\_TIMER\_CHANNEL@{FAN4\_TIMER\_CHANNEL}}
+\index{FAN4\_TIMER\_CHANNEL@{FAN4\_TIMER\_CHANNEL}!FanManager.h@{FanManager.h}}
+\doxysubsubsection{\texorpdfstring{FAN4\_TIMER\_CHANNEL}{FAN4\_TIMER\_CHANNEL}}
+{\footnotesize\ttfamily \#define F\+A\+N4\+\_\+\+T\+I\+M\+E\+R\+\_\+\+C\+H\+A\+N\+N\+EL~T\+I\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+4}
+
+\mbox{\Hypertarget{FanManager_8h_a4bc175d39bbf3011aad887aa158931d3}\label{FanManager_8h_a4bc175d39bbf3011aad887aa158931d3}} 
+\index{FanManager.h@{FanManager.h}!NUMBER\_OF\_FANS@{NUMBER\_OF\_FANS}}
+\index{NUMBER\_OF\_FANS@{NUMBER\_OF\_FANS}!FanManager.h@{FanManager.h}}
+\doxysubsubsection{\texorpdfstring{NUMBER\_OF\_FANS}{NUMBER\_OF\_FANS}}
+{\footnotesize\ttfamily \#define N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+A\+NS~4}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42}\label{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42}} 
+\index{FanManager.h@{FanManager.h}!FanName@{FanName}}
+\index{FanName@{FanName}!FanManager.h@{FanManager.h}}
+\doxysubsubsection{\texorpdfstring{FanName}{FanName}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42}{Fan\+Name}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fan1@{Fan1}!FanManager.h@{FanManager.h}}\index{FanManager.h@{FanManager.h}!Fan1@{Fan1}}}\mbox{\Hypertarget{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42a6f7fcc29979ffc8afe80e716278a9c36}\label{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42a6f7fcc29979ffc8afe80e716278a9c36}} 
+Fan1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fan2@{Fan2}!FanManager.h@{FanManager.h}}\index{FanManager.h@{FanManager.h}!Fan2@{Fan2}}}\mbox{\Hypertarget{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42a6c695d3055c97c35a8171cbd5b5420c8}\label{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42a6c695d3055c97c35a8171cbd5b5420c8}} 
+Fan2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fan3@{Fan3}!FanManager.h@{FanManager.h}}\index{FanManager.h@{FanManager.h}!Fan3@{Fan3}}}\mbox{\Hypertarget{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42a4ad292511feb6818a330c42e10a48a44}\label{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42a4ad292511feb6818a330c42e10a48a44}} 
+Fan3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fan4@{Fan4}!FanManager.h@{FanManager.h}}\index{FanManager.h@{FanManager.h}!Fan4@{Fan4}}}\mbox{\Hypertarget{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42a95f1d1fce1d63963a7719086f81f94ed}\label{FanManager_8h_a8239143b7e01dd8e49061d69cf1bcc42a95f1d1fce1d63963a7719086f81f94ed}} 
+Fan4&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{FanManager_8h_a9f4224bb747074dccaddf13b7f8e129c}\label{FanManager_8h_a9f4224bb747074dccaddf13b7f8e129c}} 
+\index{FanManager.h@{FanManager.h}!TemperatureSignals@{TemperatureSignals}}
+\index{TemperatureSignals@{TemperatureSignals}!FanManager.h@{FanManager.h}}
+\doxysubsubsection{\texorpdfstring{TemperatureSignals}{TemperatureSignals}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{FanManager_8h_a9f4224bb747074dccaddf13b7f8e129c}{Temperature\+Signals}} \+: uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COOLDOWN@{COOLDOWN}!FanManager.h@{FanManager.h}}\index{FanManager.h@{FanManager.h}!COOLDOWN@{COOLDOWN}}}\mbox{\Hypertarget{FanManager_8h_a9f4224bb747074dccaddf13b7f8e129ca6397c936615b97b70adb188970dfc31b}\label{FanManager_8h_a9f4224bb747074dccaddf13b7f8e129ca6397c936615b97b70adb188970dfc31b}} 
+C\+O\+O\+L\+D\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH\_TEMPERATURE@{HIGH\_TEMPERATURE}!FanManager.h@{FanManager.h}}\index{FanManager.h@{FanManager.h}!HIGH\_TEMPERATURE@{HIGH\_TEMPERATURE}}}\mbox{\Hypertarget{FanManager_8h_a9f4224bb747074dccaddf13b7f8e129ca9ca8335873c44a53b8f7c5fc526ee59b}\label{FanManager_8h_a9f4224bb747074dccaddf13b7f8e129ca9ca8335873c44a53b8f7c5fc526ee59b}} 
+H\+I\+G\+H\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OVERHEATED@{OVERHEATED}!FanManager.h@{FanManager.h}}\index{FanManager.h@{FanManager.h}!OVERHEATED@{OVERHEATED}}}\mbox{\Hypertarget{FanManager_8h_a9f4224bb747074dccaddf13b7f8e129cad172a52bf5c6b8ca03028b1590a6292d}\label{FanManager_8h_a9f4224bb747074dccaddf13b7f8e129cad172a52bf5c6b8ca03028b1590a6292d}} 
+O\+V\+E\+R\+H\+E\+A\+T\+ED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{FanManager_8h_aa38264fea7aec49478eaf2ca96c01ec3}\label{FanManager_8h_aa38264fea7aec49478eaf2ca96c01ec3}} 
+\index{FanManager.h@{FanManager.h}!fans@{fans}}
+\index{fans@{fans}!FanManager.h@{FanManager.h}}
+\doxysubsubsection{\texorpdfstring{fans}{fans}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFanManager}{Fan\+Manager}} fans}
+

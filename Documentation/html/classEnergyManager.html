@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: EnergyManager Class Reference</title>
+<title>SupplyModule 2.0 Firmware: EnergyManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">SupplyModule 2.0 Firmware
    </div>
   </td>
  </tr>
@@ -65,6 +65,7 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classEnergyManager-members.html">List of all members</a>  </div>
@@ -79,14 +80,15 @@ Collaboration diagram for EnergyManager:</div>
 <div class="dyncontent">
 <div class="center"><img src="classEnergyManager__coll__graph.png" border="0" usemap="#EnergyManager_coll__map" alt="Collaboration graph"/></div>
 <map name="EnergyManager_coll__map" id="EnergyManager_coll__map">
-<area shape="rect" title=" " alt="" coords="655,129,779,155"/>
-<area shape="rect" href="classSupplyBranch.html" title=" " alt="" coords="345,50,456,77"/>
-<area shape="rect" href="classADC__Tools.html" title=" " alt="" coords="54,71,145,98"/>
-<area shape="rect" href="classHallSensor.html" title=" " alt="" coords="355,101,447,127"/>
+<area shape="rect" title=" " alt="" coords="621,127,735,154"/>
+<area shape="rect" href="classSupplyBranch.html" title=" " alt="" coords="334,26,437,53"/>
+<area shape="rect" href="classADC__Tools.html" title=" " alt="" coords="55,90,144,117"/>
+<area shape="rect" href="classInternTemperature.html" title=" " alt="" coords="322,77,449,103"/>
+<area shape="rect" href="classHallSensor.html" title=" " alt="" coords="342,178,429,205"/>
 <area shape="rect" href="classAverage.html" title=" " alt="" coords="5,5,193,47"/>
-<area shape="rect" href="structEnergyManager_1_1Section.html" title=" " alt="" coords="311,151,491,178"/>
-<area shape="rect" href="classAverage.html" title=" " alt="" coords="5,123,193,164"/>
-<area shape="rect" href="classSectionSwitch.html" title=" " alt="" coords="344,202,457,229"/>
+<area shape="rect" href="structEnergyManager_1_1Section.html" title=" " alt="" coords="303,127,468,154"/>
+<area shape="rect" href="classAverage.html" title=" " alt="" coords="11,171,188,212"/>
+<area shape="rect" href="classSectionSwitch.html" title=" " alt="" coords="332,229,439,255"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -103,7 +105,7 @@ Public Types</h2></td></tr>
 <a class="el" href="classEnergyManager.html#a4445cb3e5924789b2edd4dd9d44a1df2ac505e0d6cfd657575a2c9941412959e1">section_3</a>, 
 <a class="el" href="classEnergyManager.html#a4445cb3e5924789b2edd4dd9d44a1df2a704c3c29fe94260cd1ec8824bfa53c72">section_7</a>, 
 <br />
-&#160;&#160;<a class="el" href="classEnergyManager.html#a4445cb3e5924789b2edd4dd9d44a1df2a84ea5aa2b2cae9a1c065bfc8263cae6b">section_main</a>
+&#160;&#160;<a class="el" href="classEnergyManager.html#a4445cb3e5924789b2edd4dd9d44a1df2afc8a53c6983dd6c9ae90884174e0485d">section_motor</a>
 <br />
  }</td></tr>
 <tr class="separator:a4445cb3e5924789b2edd4dd9d44a1df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,10 +124,31 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a62fccb5db223f8776233b2583616ade9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1808f2168b46688f21d72a81c49f53d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSectionSwitch.html#a585a04f89f27f3228aff156e068087c3">SectionSwitch::Section_state</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#af1808f2168b46688f21d72a81c49f53d">getSectionState</a> (<a class="el" href="classEnergyManager.html#a4445cb3e5924789b2edd4dd9d44a1df2">Section_name</a>)</td></tr>
 <tr class="separator:af1808f2168b46688f21d72a81c49f53d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a707ce1d76d6506b3e1e12e9a22f45060"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#a707ce1d76d6506b3e1e12e9a22f45060">getTemperature</a> ()</td></tr>
+<tr class="separator:a707ce1d76d6506b3e1e12e9a22f45060"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a225c02bbc8c1382362e6b333e555761d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#a225c02bbc8c1382362e6b333e555761d">EnergyManager</a> ()</td></tr>
 <tr class="separator:a225c02bbc8c1382362e6b333e555761d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04b353a9291e940827499dd6f4ba57b2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#a04b353a9291e940827499dd6f4ba57b2">~EnergyManager</a> ()</td></tr>
 <tr class="separator:a04b353a9291e940827499dd6f4ba57b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a5e268d36cdb7382999da4ff38126f86f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#a5e268d36cdb7382999da4ff38126f86f">DmaIndexes</a> { <br />
+&#160;&#160;<a class="el" href="classEnergyManager.html#a5e268d36cdb7382999da4ff38126f86fa1d3fab0bf212f0712778f2d2eb6c1b81">HALL_5_1</a> = 0, 
+<a class="el" href="classEnergyManager.html#a5e268d36cdb7382999da4ff38126f86fa28f32ba68eda07f5ba465362d871f758">HALL_5_2</a> = 1, 
+<a class="el" href="classEnergyManager.html#a5e268d36cdb7382999da4ff38126f86fad3ed968df1235f91fb98371157a0861c">HALL_7</a> = 2, 
+<a class="el" href="classEnergyManager.html#a5e268d36cdb7382999da4ff38126f86faf1f46ba101b2e73f52b8538996c68c15">SEC_3</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="classEnergyManager.html#a5e268d36cdb7382999da4ff38126f86fab1baa20e84b487d6d1c63634a0e0f9fc">SEC_5_1</a> = 4, 
+<a class="el" href="classEnergyManager.html#a5e268d36cdb7382999da4ff38126f86fafbad3d675bd651bac2707f9fb393134e">HALL_3</a> = 5, 
+<a class="el" href="classEnergyManager.html#a5e268d36cdb7382999da4ff38126f86fadc39790e754c32c29739ea17f90d0224">SEC_7</a> = 6, 
+<a class="el" href="classEnergyManager.html#a5e268d36cdb7382999da4ff38126f86fa459f6241e8aa86deaf2cfb5d64104311">HALL_0</a> = 7, 
+<br />
+&#160;&#160;<a class="el" href="classEnergyManager.html#a5e268d36cdb7382999da4ff38126f86fabad7c69ad8ae5a9e012359936e1c0cb6">SEC_5_2</a> = 8, 
+<a class="el" href="classEnergyManager.html#a5e268d36cdb7382999da4ff38126f86fa1b2053a4df303f1f5d5382dd540b7d61">TEMPERATURE</a> = 9
+<br />
+ }</td></tr>
+<tr class="separator:a5e268d36cdb7382999da4ff38126f86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -143,15 +166,21 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:adbce81bccb4d3937e379c5ab4e8cd2cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4010a6d14e95928573d068539b948e5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#a4010a6d14e95928573d068539b948e5b">update_switch_data</a> ()</td></tr>
 <tr class="separator:a4010a6d14e95928573d068539b948e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a801858dd9177e895d7fd496bcb546a8f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#a801858dd9177e895d7fd496bcb546a8f">checkIfBranchIsRealSwitchON</a> (uint8_t branchnum)</td></tr>
+<tr class="separator:a801858dd9177e895d7fd496bcb546a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a528f9b61f67e7d7fb4591d989c31cd50"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#a528f9b61f67e7d7fb4591d989c31cd50">powerCalculate</a> (float v, float a)</td></tr>
+<tr class="separator:a528f9b61f67e7d7fb4591d989c31cd50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a12c49143721151ab0f322f50d977ae58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHallSensor.html">HallSensor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#a12c49143721151ab0f322f50d977ae58">hall_sensors</a> [<a class="el" href="EnergyManager_8h.html#ac51bb49de562e49df2b0cdc7d781e65b">HALL_SENSOR_NUMBER</a>]</td></tr>
-<tr class="separator:a12c49143721151ab0f322f50d977ae58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01b81a1c7f4fe002db6b81b73d6e9e31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSupplyBranch.html">SupplyBranch</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#a01b81a1c7f4fe002db6b81b73d6e9e31">supply_branches</a> [<a class="el" href="EnergyManager_8h.html#afee7eba68459f6d680f2844b69ddd970">SUPPLY_BRANCH_NUMBER</a>]</td></tr>
-<tr class="separator:a01b81a1c7f4fe002db6b81b73d6e9e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f7eaca689ce15f3aa0bf2a72e6c1fb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSectionSwitch.html">SectionSwitch</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#a2f7eaca689ce15f3aa0bf2a72e6c1fb0">section_switches</a> [<a class="el" href="EnergyManager_8h.html#a6ae9f6ad3e37e72370c9906dc814c715">SECTION_SWITCH_NUMBER</a>]</td></tr>
-<tr class="separator:a2f7eaca689ce15f3aa0bf2a72e6c1fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2394c602c284d8aca0ba510c60a1cfb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHallSensor.html">HallSensor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#a2394c602c284d8aca0ba510c60a1cfb1">hall_sensors</a> [<a class="el" href="EnergyManager_8h.html#ac51bb49de562e49df2b0cdc7d781e65b">HALL_SENSOR_NUMBER</a>]</td></tr>
+<tr class="separator:a2394c602c284d8aca0ba510c60a1cfb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb29c30d5e0a3bc60f707ae088cd6418"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSupplyBranch.html">SupplyBranch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#aeb29c30d5e0a3bc60f707ae088cd6418">supply_branches</a> [<a class="el" href="EnergyManager_8h.html#afee7eba68459f6d680f2844b69ddd970">SUPPLY_BRANCH_NUMBER</a>]</td></tr>
+<tr class="separator:aeb29c30d5e0a3bc60f707ae088cd6418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad77712490ccc4a579c82baeba7270cee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSectionSwitch.html">SectionSwitch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#ad77712490ccc4a579c82baeba7270cee">section_switches</a> [<a class="el" href="EnergyManager_8h.html#a6ae9f6ad3e37e72370c9906dc814c715">SECTION_SWITCH_NUMBER</a>]</td></tr>
+<tr class="separator:ad77712490ccc4a579c82baeba7270cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe0ed043d1757a210eee60f9b3ea377"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInternTemperature.html">InternTemperature</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#affe0ed043d1757a210eee60f9b3ea377">temperature</a></td></tr>
+<tr class="separator:affe0ed043d1757a210eee60f9b3ea377"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af71432af04396febfefd95140a23f94c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#af71432af04396febfefd95140a23f94c">rawADC</a> [<a class="el" href="EnergyManager_8h.html#a14fcc935d826f954635217ea446bcc5d">EM_DMA_NUMBER_OF_CONVERSION</a>]</td></tr>
 <tr class="separator:af71432af04396febfefd95140a23f94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8c79fbb1cd1f6149d64047a41c3e768"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structEnergyManager_1_1Section.html">Section</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEnergyManager.html#aa8c79fbb1cd1f6149d64047a41c3e768">sectionData</a> [<a class="el" href="EnergyManager_8h.html#ac51bb49de562e49df2b0cdc7d781e65b">HALL_SENSOR_NUMBER</a>]</td></tr>
@@ -165,6 +194,40 @@ Private Attributes</h2></td></tr>
 <li>Temperature (maybe) - because of sensor available in same ADC </li>
 </ul>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a5e268d36cdb7382999da4ff38126f86f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e268d36cdb7382999da4ff38126f86f">&#9670;&nbsp;</a></span>DmaIndexes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classEnergyManager.html#a5e268d36cdb7382999da4ff38126f86f">EnergyManager::DmaIndexes</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5e268d36cdb7382999da4ff38126f86fa1d3fab0bf212f0712778f2d2eb6c1b81"></a>HALL_5_1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e268d36cdb7382999da4ff38126f86fa28f32ba68eda07f5ba465362d871f758"></a>HALL_5_2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e268d36cdb7382999da4ff38126f86fad3ed968df1235f91fb98371157a0861c"></a>HALL_7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e268d36cdb7382999da4ff38126f86faf1f46ba101b2e73f52b8538996c68c15"></a>SEC_3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e268d36cdb7382999da4ff38126f86fab1baa20e84b487d6d1c63634a0e0f9fc"></a>SEC_5_1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e268d36cdb7382999da4ff38126f86fafbad3d675bd651bac2707f9fb393134e"></a>HALL_3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e268d36cdb7382999da4ff38126f86fadc39790e754c32c29739ea17f90d0224"></a>SEC_7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e268d36cdb7382999da4ff38126f86fa459f6241e8aa86deaf2cfb5d64104311"></a>HALL_0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e268d36cdb7382999da4ff38126f86fabad7c69ad8ae5a9e012359936e1c0cb6"></a>SEC_5_2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e268d36cdb7382999da4ff38126f86fa1b2053a4df303f1f5d5382dd540b7d61"></a>TEMPERATURE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <a id="a4445cb3e5924789b2edd4dd9d44a1df2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4445cb3e5924789b2edd4dd9d44a1df2">&#9670;&nbsp;</a></span>Section_name</h2>
 
@@ -186,7 +249,7 @@ Private Attributes</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a4445cb3e5924789b2edd4dd9d44a1df2a704c3c29fe94260cd1ec8824bfa53c72"></a>section_7&#160;</td><td class="fielddoc"><p>7V section - on XL4015 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a4445cb3e5924789b2edd4dd9d44a1df2a84ea5aa2b2cae9a1c065bfc8263cae6b"></a>section_main&#160;</td><td class="fielddoc"><p>Motor section </p>
+<tr><td class="fieldname"><a id="a4445cb3e5924789b2edd4dd9d44a1df2afc8a53c6983dd6c9ae90884174e0485d"></a>section_motor&#160;</td><td class="fielddoc"><p>Motor section </p>
 </td></tr>
 </table>
 
@@ -236,6 +299,32 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a801858dd9177e895d7fd496bcb546a8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a801858dd9177e895d7fd496bcb546a8f">&#9670;&nbsp;</a></span>checkIfBranchIsRealSwitchON()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t EnergyManager::checkIfBranchIsRealSwitchON </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>branchnum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a26e681d9661b140d6225fd937574f667"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26e681d9661b140d6225fd937574f667">&#9670;&nbsp;</a></span>dma_init()</h2>
 
@@ -299,6 +388,23 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a707ce1d76d6506b3e1e12e9a22f45060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a707ce1d76d6506b3e1e12e9a22f45060">&#9670;&nbsp;</a></span>getTemperature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float EnergyManager::getTemperature </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac7a3d6fc2dca0492472c947271962ec5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac7a3d6fc2dca0492472c947271962ec5">&#9670;&nbsp;</a></span>hallSensor_init()</h2>
 
@@ -347,6 +453,42 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a528f9b61f67e7d7fb4591d989c31cd50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a528f9b61f67e7d7fb4591d989c31cd50">&#9670;&nbsp;</a></span>powerCalculate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float EnergyManager::powerCalculate </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8ce85905b01c390642678ec08e19ae02"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ce85905b01c390642678ec08e19ae02">&#9670;&nbsp;</a></span>process()</h2>
 
@@ -384,7 +526,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Turn ON specific section </p><dl class="section warning"><dt>Warning</dt><dd>using <a class="el" href="classEnergyManager.html#a4445cb3e5924789b2edd4dd9d44a1df2a84ea5aa2b2cae9a1c065bfc8263cae6b">section_main()</a> will turn OFF all branches - it isn't cut the power supply of motor and Intel NUC </dd></dl>
+<p>Turn ON specific section </p><dl class="section warning"><dt>Warning</dt><dd>using section_main() will turn OFF all branches - it isn't cut the power supply of motor and Intel NUC </dd></dl>
 
 </div>
 </div>
@@ -403,7 +545,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Turn ON specific section </p><dl class="section warning"><dt>Warning</dt><dd>using <a class="el" href="classEnergyManager.html#a4445cb3e5924789b2edd4dd9d44a1df2a84ea5aa2b2cae9a1c065bfc8263cae6b">section_main()</a> will turn ON all branches - it's not connected with motor and Intel NUC power supply </dd></dl>
+<p>Turn ON specific section </p><dl class="section warning"><dt>Warning</dt><dd>using section_main() will turn ON all branches - it's not connected with motor and Intel NUC power supply </dd></dl>
 
 </div>
 </div>
@@ -533,8 +675,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a12c49143721151ab0f322f50d977ae58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12c49143721151ab0f322f50d977ae58">&#9670;&nbsp;</a></span>hall_sensors</h2>
+<a id="a2394c602c284d8aca0ba510c60a1cfb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2394c602c284d8aca0ba510c60a1cfb1">&#9670;&nbsp;</a></span>hall_sensors</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -543,7 +685,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classHallSensor.html">HallSensor</a>* EnergyManager::hall_sensors[<a class="el" href="EnergyManager_8h.html#ac51bb49de562e49df2b0cdc7d781e65b">HALL_SENSOR_NUMBER</a>]</td>
+          <td class="memname"><a class="el" href="classHallSensor.html">HallSensor</a> EnergyManager::hall_sensors[<a class="el" href="EnergyManager_8h.html#ac51bb49de562e49df2b0cdc7d781e65b">HALL_SENSOR_NUMBER</a>]</td>
         </tr>
       </table>
   </td>
@@ -577,8 +719,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2f7eaca689ce15f3aa0bf2a72e6c1fb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f7eaca689ce15f3aa0bf2a72e6c1fb0">&#9670;&nbsp;</a></span>section_switches</h2>
+<a id="ad77712490ccc4a579c82baeba7270cee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad77712490ccc4a579c82baeba7270cee">&#9670;&nbsp;</a></span>section_switches</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -587,7 +729,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSectionSwitch.html">SectionSwitch</a>* EnergyManager::section_switches[<a class="el" href="EnergyManager_8h.html#a6ae9f6ad3e37e72370c9906dc814c715">SECTION_SWITCH_NUMBER</a>]</td>
+          <td class="memname"><a class="el" href="classSectionSwitch.html">SectionSwitch</a> EnergyManager::section_switches[<a class="el" href="EnergyManager_8h.html#a6ae9f6ad3e37e72370c9906dc814c715">SECTION_SWITCH_NUMBER</a>]</td>
         </tr>
       </table>
   </td>
@@ -621,8 +763,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a01b81a1c7f4fe002db6b81b73d6e9e31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01b81a1c7f4fe002db6b81b73d6e9e31">&#9670;&nbsp;</a></span>supply_branches</h2>
+<a id="aeb29c30d5e0a3bc60f707ae088cd6418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb29c30d5e0a3bc60f707ae088cd6418">&#9670;&nbsp;</a></span>supply_branches</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -631,7 +773,29 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classSupplyBranch.html">SupplyBranch</a>* EnergyManager::supply_branches[<a class="el" href="EnergyManager_8h.html#afee7eba68459f6d680f2844b69ddd970">SUPPLY_BRANCH_NUMBER</a>]</td>
+          <td class="memname"><a class="el" href="classSupplyBranch.html">SupplyBranch</a> EnergyManager::supply_branches[<a class="el" href="EnergyManager_8h.html#afee7eba68459f6d680f2844b69ddd970">SUPPLY_BRANCH_NUMBER</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affe0ed043d1757a210eee60f9b3ea377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe0ed043d1757a210eee60f9b3ea377">&#9670;&nbsp;</a></span>temperature</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classInternTemperature.html">InternTemperature</a> EnergyManager::temperature</td>
         </tr>
       </table>
   </td>

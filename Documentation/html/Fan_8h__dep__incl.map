@@ -1,4 +1,7 @@
 <map id="Software/Inc/Fan.h" name="Software/Inc/Fan.h">
-<area shape="rect" id="node1" title=" " alt="" coords="13,5,153,32"/>
-<area shape="rect" id="node2" href="$Fan_8cpp.html" title=" " alt="" coords="5,80,161,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="108,5,241,32"/>
+<area shape="rect" id="node2" href="$Fan_8cpp.html" title=" " alt="" coords="5,80,155,107"/>
+<area shape="rect" id="node3" href="$FanManager_8h.html" title=" " alt="" coords="179,80,362,107"/>
+<area shape="rect" id="node4" href="$AllTasks_8cpp.html" title=" " alt="" coords="75,155,253,181"/>
+<area shape="rect" id="node5" href="$FanManager_8cpp.html" title=" " alt="" coords="277,155,475,181"/>
 </map>

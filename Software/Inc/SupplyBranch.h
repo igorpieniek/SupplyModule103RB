@@ -44,6 +44,7 @@ public:
 	 * @param marg - float value (optional) - normally #SUPPLYBRANCH_VOLTAGE_MARGIN - voltage value below which it will be consider as 0V
 	 * (po prevent from incorrect result of isCloseToZero() function )*/
 	SupplyBranch(float max, float marg = SUPPLYBRANCH_VOLTAGE_MARGIN);
+	SupplyBranch();
 	virtual ~SupplyBranch();
 
 

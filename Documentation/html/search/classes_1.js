@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['batterymanager_338',['BatteryManager',['../classBatteryManager.html',1,'']]]
+  ['batterymanager_361',['BatteryManager',['../classBatteryManager.html',1,'']]]
 ];

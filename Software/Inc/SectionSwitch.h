@@ -46,6 +46,7 @@ public:
 	 * @param st - GPIO_PinState (optional) - initial state of supply branch - normally ON
 	 */
 	SectionSwitch(GPIO_TypeDef* port , uint16_t pin, GPIO_PinState st = GPIO_PIN_SET );
+	SectionSwitch();
 	virtual ~SectionSwitch();
 
 
