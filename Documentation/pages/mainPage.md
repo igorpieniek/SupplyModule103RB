@@ -1,8 +1,12 @@
 @mainpage
 
-# Ogólny schemat kodu
+# General system diagram
 \image html sm.png width=90%
 
 - - -
-# Pinout dla serii F7 w obudowie LQFP100
+# Pinout for F7 series in LQFP100 package
 \image html cube.png 
+
+- - -
+# List of compatible MCU
+\image html stm32f7.png 
