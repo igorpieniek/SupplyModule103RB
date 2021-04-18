@@ -111,18 +111,13 @@ public:
 	 * */
 	void process();
 
-	/** Turn ON specific section
-	 * @warning using section_main() will turn ON all branches - it's not connected with motor and Intel NUC power supply */
+	/** @warning using section_main() will turn ON all branches - it's not connected with motor and Intel NUC power supply */
 	void sectionON(Section_name);
 
-	/** Turn ON specific section
-	 * @warning using section_main() will turn OFF all branches - it isn't cut the power supply of motor and Intel NUC */
+	/** @warning using section_main() will turn OFF all branches - it isn't cut the power supply of motor and Intel NUC */
 	void sectionOFF(Section_name);
 
-	/** Return specified Section struct with updated data */
 	Section getSectionData(Section_name);
-
-	/** Return current state of specified branch */
 	SectionSwitch::Section_state getSectionState(Section_name);
 
 	float getTemperature();

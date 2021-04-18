@@ -15,47 +15,33 @@
 
 /** Tool intended for led's, it provide typical behaviours for notifier - ON/OFF or blink.
  * To blink mechanism it use TimeTool() global class object to calculate time between toggles.
- * To blink use blink() function. blink_process() could be used only by manager task.
+ * To blink use blink() functions. blink_process() could be used only by manager task.
  *
  * Led blinking could be stopped by using on() / off() method
  */
 class LedNotifier {
 public:
-	/** Put LED into ON state*/
-	void on();
 
-	/** Put LED into OFF state*/
+	void on();
 	void off();
 
-	/** Put LED into BLINK state, and configure behaviour
-	 * @param perON - uint16_t value in miliseconds - configure the same time for ON and OFF state
-	 */
-	void blink( uint16_t perON);
+	void blink( uint16_t milisOnOff);
+	void blink( uint16_t milisOn, uint16_t milisOff);
 
-	/** Put LED into BLINK state, and configure behaviour
-	 * @param perON - uint16_t value in miliseconds - configure time of LED ON state
-	 * @param perOFF - uint16_t value in miliseconds - configure time of LED OFF state
-	 */
-	void blink( uint16_t perON, uint16_t perOFF);
-
-	/** Process of led blinking.
-	 * Function that should be called by task process only - it toggle LED in right time. It work only when
-	 * blink() function was used before. Without this operation nothing will happen.
-	 */
+	/** Function that should be called by task process only - it toggle LED in right time. It work only when
+	 *  blink() function was used before. Without this operation nothing will happen.*/
 	void blink_process();
 
 	/** Enum to specify state of lednotifier object */
 	enum LedState{
-		OFF=0, /**< in this state led should be turn off  */
-		ON,    /**< in this state led should be turn on  */
-		BLINK  /**< in this state led should blinking  */
+		OFF,
+		ON,
+		BLINK
 	};
-	/** Return current object state using LedState() */
+
 	LedState getState();
 
 	/**
-	 * @param *port - GPIO_TypeDef value - it define port of using pin
-	 * @param pin - uint16_t value - pin definition
 	 * @param rev - uint8_t flag (optional) normally 0, but it should be set as 1 if there is reversed logic -
 	 *  eg. high state on pin -> led is turn off
 	 */

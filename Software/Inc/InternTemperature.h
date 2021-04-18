@@ -24,11 +24,9 @@
  */
 class InternTemperature: public ADC_Tools {
 public:
-	/** Calculate and return current internal temperature.*/
 	float getTemperature();
 
-	/**Update and calculate voltage value of temperature sensor
-	 * @param raw - uint32_t raw ADC channel register data*/
+	/** @param raw - uint32_t raw ADC channel register data*/
 	void update(uint32_t raw);
 
 	InternTemperature();

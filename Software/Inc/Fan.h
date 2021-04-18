@@ -19,32 +19,19 @@ public:
 	/** Velocity levels available to set */
 	enum Velocity{
 		ZERO,			/**< Zero speed- it's  OFF*/
-		LOW = 300, 		/**< Low speed : 30% */
+		LOW    = 300,   /**< Low speed : 30% */
 		NORMAL = 650,	/**< Normal speed : 65% */
-		HIGH= 1000		/**< Max speed : 100% */
+		HIGH   = 1000   /**< Max speed : 100% */
 	};
 
-	/** Turn ON Fan
-	 * @param vel - Velocity (optional) - normally velocity is set to NORMAL() */
+
 	void on(Velocity vel= NORMAL);
-
-	/**Turn ON Fan - with custom speed in range <ZERO(), HIGH()>
-	 * @param vel - uint16_t - custom value of speed*/
 	void on(uint16_t vel);
-
-	/**Turn off Fan */
 	void off();
-
-	/** Return info about current state of Fan*/
 	uint8_t isOn()const{ return is_on;};
 
-	/** Return current PWM value in percents [%]*/
 	float getPWMvalue();
 
-	/**
-	 * @param tim - TIM_HandleTypeDef * - to define timer to use eg. htim12
-	 * @param ch - uint32_t - timer channel eg. TIM_CHANNEL_1
-	 */
 	void init(TIM_HandleTypeDef * tim, uint32_t ch);
 	Fan();
 	virtual ~Fan();

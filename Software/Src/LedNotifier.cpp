@@ -19,11 +19,11 @@ void LedNotifier::off(){
 
 }
 
-void LedNotifier::blink( uint16_t perON){
-	blink(perON,perON);
+void LedNotifier::blink( uint16_t milisOnOff){
+	blink(milisOnOff,milisOnOff);
 }
 
-void LedNotifier::blink( uint16_t perON, uint16_t perOFF){
+void LedNotifier::blink( uint16_t milisOn, uint16_t milisOnOff){
 	// initial state of led in blinking mode
 	on();
 	// update led state
@@ -31,8 +31,8 @@ void LedNotifier::blink( uint16_t perON, uint16_t perOFF){
 	blink_state = blinkOn;
 
 	// saving required periods
-	blinkPeriodON = perON;
-	blinkPeriodOFF = perOFF;
+	blinkPeriodON = milisOn;
+	blinkPeriodOFF = milisOnOff;
 
 	updateLastToggleTime();
 }

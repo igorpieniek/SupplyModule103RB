@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['section_5fname_649',['Section_name',['../classEnergyManager.html#a4445cb3e5924789b2edd4dd9d44a1df2',1,'EnergyManager']]],
-  ['section_5fstate_650',['Section_state',['../classSectionSwitch.html#a585a04f89f27f3228aff156e068087c3',1,'SectionSwitch']]]
+  ['temperaturesignals_447',['TemperatureSignals',['../FanManager_8h.html#a9f4224bb747074dccaddf13b7f8e129c',1,'FanManager.h']]]
 ];

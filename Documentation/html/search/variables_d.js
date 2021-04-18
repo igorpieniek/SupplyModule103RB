@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['rawadc_623',['rawADC',['../classBatteryManager.html#ac7c63f8ee8fe33a0098573ec4b76acd3',1,'BatteryManager::rawADC()'],['../classEnergyManager.html#af71432af04396febfefd95140a23f94c',1,'EnergyManager::rawADC()']]],
-  ['realstate_624',['realState',['../classSectionSwitch.html#a4f5e33003fc00ae4d84b8b2085fddddd',1,'SectionSwitch']]]
+  ['section_5fswitches_429',['section_switches',['../classEnergyManager.html#ad77712490ccc4a579c82baeba7270cee',1,'EnergyManager']]],
+  ['sectiondata_430',['sectionData',['../classEnergyManager.html#aa8c79fbb1cd1f6149d64047a41c3e768',1,'EnergyManager']]],
+  ['sensivity_431',['sensivity',['../classHallSensor.html#af3de1cc14501a28bdddc186fe20ff8a6',1,'HallSensor']]],
+  ['supply_5fbranches_432',['supply_branches',['../classEnergyManager.html#aeb29c30d5e0a3bc60f707ae088cd6418',1,'EnergyManager']]]
 ];

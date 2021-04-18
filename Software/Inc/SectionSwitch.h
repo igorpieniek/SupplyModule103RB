@@ -26,12 +26,9 @@ public:
 		ON_BY_SLIDER /** state when section pin is set to OFF but mechanical switch was turned ON */
 	};
 
-	/**@return current state of supply branch in Section_state enum */
 	Section_state getState()const {return realState;};
 
-	/**Turn branch ON and change internal state*/
 	void on();
-	/**Turn branch ON and change internal state*/
 	void off();
 
 	/**Change internal state to real one.
@@ -40,11 +37,7 @@ public:
 	 *  */
 	void updateRealStateON();
 
-	/**
-	 * @param port - GPIO_TypeDef* - pin port
-	 * @param pin - uint16_t
-	 * @param st - GPIO_PinState (optional) - initial state of supply branch - normally ON
-	 */
+	/** @param st - GPIO_PinState (optional) - initial state of supply branch - normally ON */
 	SectionSwitch(GPIO_TypeDef* port , uint16_t pin, GPIO_PinState st = GPIO_PIN_SET );
 	SectionSwitch();
 	virtual ~SectionSwitch();

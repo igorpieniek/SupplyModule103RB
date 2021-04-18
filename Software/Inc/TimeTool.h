@@ -25,10 +25,7 @@ public:
 	 */
 	void init(void);
 
-	/** Check if object timer is working*/
 	uint8_t isToolInit(void);
-
-	/** @return current state of CNT register*/
 	uint16_t getMicros(void);
 
 	/** To compare two timer states and return the difference.
