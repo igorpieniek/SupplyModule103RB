@@ -18,6 +18,7 @@ extern osThreadId BatteryManagerHandle;
 extern osThreadId LedUpHandle;
 extern osThreadId OledTaskHandle;
 extern osThreadId InterfaceTaskHandle;
+extern osThreadId BuzzerTaskHandle;
 
 
 void AllTasks_init();

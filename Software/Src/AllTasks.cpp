@@ -16,16 +16,19 @@
 #include "Oled/SSD1306.h"
 #include "Interface/Interface_manager.h"
 #include "i2c.h"
+#include "Buzzer/Buzzer.h"
 
 osThreadId BatteryManagerHandle;
 osThreadId LedUpHandle;
 osThreadId OledTaskHandle;
 osThreadId InterfaceTaskHandle;
+osThreadId BuzzerTaskHandle;
 
 void StartBatteryManagerTask(void const * argument);
 void StartLedUpTask(void const * argument);
 void StartOledTask(void const *argument);
 void StartInterfaceTask(void const *argument);
+void StartBuzzerTask(void const *argument);
 
 SSD1306* oled2;
 
@@ -43,9 +46,25 @@ void AllTasks_init(){
 	  osThreadDef(InterfaceTask, StartInterfaceTask, osPriorityNormal, 0, 1024);
 	  InterfaceTaskHandle = osThreadCreate(osThread(InterfaceTask), NULL);
 
+	  osThreadDef(BuzzerTask, StartBuzzerTask, osPriorityLow, 0, 16);
+	  BuzzerTaskHandle = osThreadCreate(osThread(BuzzerTask), NULL);
+
 
 	  HAL_UART_Receive_IT(&huart3, &RXdata, 1);
 
+}
+
+void StartBuzzerTask(void const *argument){
+	    Buzzer* buzzer = new Buzzer(&htim3, TIM3, TIM_CHANNEL_1);
+	    buzzer->Init();
+	  for(;;)
+	  {
+		 // buzzer->EnableMode(Buzzer::LOW_BATTERY);
+		  buzzer->Loop();
+		  osDelay(1000);
+		  buzzer->SingleBeep(Buzzer::Sound1);
+	  }
+	  /* USER CODE END StartBuzzerTask */
 }
 
 void StartOledTask(void const *argument){
