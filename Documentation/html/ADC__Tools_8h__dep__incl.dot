@@ -1,0 +1,38 @@
+digraph "Software/Inc/ADC_Tools.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Software/Inc/ADC_Tools.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Software/Src/ADC_Tools.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ADC__Tools_8cpp.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Software/Inc/HallSensor.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$HallSensor_8h.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Software/Src/HallSensor.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$HallSensor_8cpp.html",tooltip=" "];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Software/Inc/EnergyManager.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$EnergyManager_8h.html",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Software/Src/EnergyManager.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$EnergyManager_8cpp.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Software/Inc/InternTemperature.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$InternTemperature_8h.html",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Software/Src/InternTemperature.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$InternTemperature_8cpp.html",tooltip=" "];
+  Node7 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Software/Inc/LipoCell.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$LipoCell_8h.html",tooltip=" "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Software/Src/AllTasks.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$AllTasks_8cpp.html",tooltip=" "];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Software/Src/LipoCell.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$LipoCell_8cpp.html",tooltip=" "];
+  Node9 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Software/Inc/BatteryManager.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$BatteryManager_8h.html",tooltip=" "];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Software/Src/BatteryManager.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$BatteryManager_8cpp.html",tooltip=" "];
+  Node12 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="Software/Inc/SupplyBranch.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$SupplyBranch_8h.html",tooltip=" "];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="Software/Src/SupplyBranch.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$SupplyBranch_8cpp.html",tooltip=" "];
+  Node14 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

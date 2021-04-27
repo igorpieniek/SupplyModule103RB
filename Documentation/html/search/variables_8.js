@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['last_5felement_601',['last_element',['../classList.html#a4743dc7d0e9521d1c9e2600a2246cdcc',1,'List']]],
-  ['last_5ftoggle_5ftime_602',['last_toggle_time',['../classLedNotifier.html#a010986a831ab76f97630156cf42e40fa',1,'LedNotifier']]],
-  ['leduphandle_603',['LedUpHandle',['../AllTasks_8cpp.html#a17644413b11066ac731152049c8214c9',1,'LedUpHandle():&#160;AllTasks.cpp'],['../AllTasks_8h.html#a17644413b11066ac731152049c8214c9',1,'LedUpHandle():&#160;AllTasks.cpp']]],
-  ['list_604',['list',['../classParameter.html#a1ea0a6265a95a00d871aea284b41403b',1,'Parameter']]],
-  ['list_5fof_5felements_605',['list_of_elements',['../classInterface.html#a81c174ddc8858258a523cb3c4200ffc7',1,'Interface']]]
+  ['margin_414',['margin',['../classSupplyBranch.html#a58cbe06723b33e4a0f681d3312f78d99',1,'SupplyBranch']]],
+  ['maxlevels_415',['maxLevels',['../classADC__Tools.html#a7bc364db1b13f34e2a6362e148f0546c',1,'ADC_Tools']]],
+  ['maxval_416',['maxVal',['../classADC__Tools.html#ab84752f83ad0f3095471d577c32aee7f',1,'ADC_Tools']]],
+  ['microsinitdone_417',['microsInitDone',['../classTimeTool.html#afb4e8dc08f5667f5a61f33eb4a01cd56',1,'TimeTool']]],
+  ['minval_418',['minVal',['../classADC__Tools.html#a00c44e7e83485f4c3f6eb735ac073185',1,'ADC_Tools']]]
 ];

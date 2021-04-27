@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['temperaturesignals_651',['TemperatureSignals',['../FanManager_8h.html#a9f4224bb747074dccaddf13b7f8e129c',1,'FanManager.h']]]
+  ['velocity_448',['Velocity',['../classFan.html#a3bee1f52aed7e66f4d7877e925b768f9',1,'Fan']]]
 ];

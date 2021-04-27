@@ -1,0 +1,12 @@
+digraph "Software" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_4e9c05acfa2c3671b8618fcb95d57d96 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_4e9c05acfa2c3671b8618fcb95d57d96.html"];
+    dir_4e9c05acfa2c3671b8618fcb95d57d96 [shape=plaintext label="Software"];
+    dir_9983cc9f2327901edd3f8960c0ad9c2f [shape=box label="Inc" color="black" fillcolor="white" style="filled" URL="dir_9983cc9f2327901edd3f8960c0ad9c2f.html"];
+    dir_f8859d1eac264ed290a029e4fa2f4722 [shape=box label="Src" color="black" fillcolor="white" style="filled" URL="dir_f8859d1eac264ed290a029e4fa2f4722.html"];
+  }
+  dir_f8859d1eac264ed290a029e4fa2f4722->dir_9983cc9f2327901edd3f8960c0ad9c2f [headlabel="18", labeldistance=1.5 headhref="dir_000004_000003.html"];
+}

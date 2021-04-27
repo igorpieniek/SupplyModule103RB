@@ -28,29 +28,17 @@ public:
 	 * there will be negative ampere values
 	 * @param max_vol - float value (optional) - maximum voltage (normally 5.0V)
 	 */
-	HallSensor();
 	HallSensor(float sens,float neutral = NEUTRAL_HALL_VOLTAGE, float max_vol = MAX_HALL_VOLTAGE);
+	HallSensor();
 
 	virtual ~HallSensor();
 
-	/** Function called to update all measurments and states stored in object.
-	 * @param val - uint32_t value - raw value from ADC channel register
-	 */
+	/** @param val - uint32_t value - raw value from ADC channel register */
 	void update(uint32_t val);
 
-	/** Return current value of current intensity in amperes
-	 * @return calculated current intensity in [A]
-	 */
+
 	float getAmpere()const{ return ampere;};
-
-	/** Calculate and return moving average of last 10 measurmants
-	 * @return average of amperes measumnets
-	 */
 	float getAmpereAvrg();
-
-	/** Return amperes value in percentage % in reference of initial values
-	 * @return % value of amperes
-	 */
 	float getPercentage();
 
 

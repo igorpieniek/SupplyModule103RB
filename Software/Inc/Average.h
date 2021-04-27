@@ -54,31 +54,19 @@ public:
 
 	}
 
-	///  Method to add value that will be take into consideration during average calculation
-	///  @param val  value that will be added to average
 	void insert(T val){
 		elem[currentIndex] = val;
 		indexIterate();
 	}
 
-	/// Clear average buffer
 	void clear(){
 		currentIndex = 0;
 		numberOfElem = 0;
 		for (uint8_t i = 0; i < s; i++) elem[i] = T();
 	}
 
-	/** Function to return maximal number of elements in average
-	 * @return uint8_t size - fixed maximal number of elements in average
-	 */
 	uint8_t size()const { return s; };
 
-	//T& getAvrage()const{ return avrg;};
-
-	/**Overload of () operator
-	 *  Calculate average and return it
-	 *  @return average of all data collected in object
-	 */
 	T& operator()(){
 		this->calculate();
 		return this->avrg;
@@ -87,59 +75,6 @@ public:
 
 };
 
-
-
-
-//
-//template<typename T, uint8_t s>
-//Average<T, s>::Average() {
-//	clear();
-//
-//}
-//
-//
-////template<typename T, uint8_t s>
-////Average<T, s>::~Average<T, s>() {
-////
-////
-////}
-//
-//template<typename T, uint8_t s>
-//void Average<T, s>::insert(T val) {
-//	elem[currentIndex] = val;
-//	indexIterate();
-//}
-//
-//template<typename T, uint8_t s>
-//void Average<T, s>::clear() {
-//	currentIndex = 0;
-//	numberOfElem = 0;
-//	for (uint8_t i = 0; i < s; i++) elem[i] = T();
-//}
-//
-//template<typename T, uint8_t s>
-//void Average<T, s>::indexIterate() {
-//	if (numberOfElem != s) numberOfElem++;
-//	if (currentIndex == (s - 1)) currentIndex = 0;
-//	else {
-//		currentIndex++;
-//
-//	}
-//
-//}
-//
-//template<typename T, uint8_t s>
-//void Average<T, s>::calculate() {
-//	T a = 0;
-//	for (uint8_t i = 0; i < numberOfElem; i++) a += elem[i];
-//	avrg = a /(T)numberOfElem;
-//}
-//
-//template<typename T, uint8_t s>
-//T& Average<T, s>::operator()() {
-//	this->calculate();
-//	return this->avrg;
-//}
 #endif /* INC_AVERAGE_H_ */
 
 

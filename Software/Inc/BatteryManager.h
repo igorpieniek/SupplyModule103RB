@@ -50,27 +50,20 @@ public:
 		cell4
 	};
 
-	/**Return current voltage of battery */
 	float getBatteryVoltage();
-
-	/**Return current state of battery in percentage */
 	float getBatteryLevel();
-
-	/**Return specified cell voltage - (reference to the previous cell voltage value)
-	 * @param name - cell_number enum - to prevent from incorrect index*/
 	float getCellVoltage(cell_name name);
-
 
 	BatteryManager();
 	virtual ~BatteryManager();
 
 private:
-	void updateMeasurments(); 	/** Read data using DMA and refresh data stored in every LipoCell object*/
-	void checkBatteryLevel(); 	/** Check battery lvl and give info to other tasks - buzzer & oled in case of low level */
-	void addCells();			/** add cells and initilize them (to init() ) */
+	void updateMeasurments();
+	void checkBatteryLevel();
+	void addCells();
 
 	LipoCell* cells[LIPOCELLS_NUMBER];
-	uint32_t rawADC[LIPOCELLS_NUMBER]; // IF IT WILL BE IN ONE DMA :/
+	uint32_t rawADC[LIPOCELLS_NUMBER];
 };
 
 #endif /* INC_BATTERYMANAGER_H_ */

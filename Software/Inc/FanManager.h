@@ -44,9 +44,7 @@ enum class FanName: uint8_t{
 	Fan4
 };
 
-/**Task class to manage all fans
- *
- */
+/**Task class to manage all fans */
 class FanManager {
 private:
 	Fan fans[NUMBER_OF_FANS];

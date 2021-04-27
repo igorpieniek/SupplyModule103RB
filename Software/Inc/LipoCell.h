@@ -20,18 +20,12 @@ public:
 	 */
 	LipoCell(float max);
 
-	/** Return voltage [V] moving average of #AVERAGE_SIZE_LIPO last samples.
-	 * It overwrite ADC_Tools() abstract method */
 	float getVoltageAvrg();
 
-	/** Return percent [%] moving average of #AVERAGE_SIZE_LIPO last samples.
-	 * It overwrite ADC_Tools() abstract method  */
+
 	float getPercentageAvrg();
 
-	/** Function called to update the measurments in object.
-	 * It provide voltage, percent conversion and adding sample to average object
-	 * @param raw - uint32_t value - raw value from ADC channel register
-	 */
+	/** @param raw - uint32_t value - raw value from ADC channel register */
 	void update(uint32_t raw);
 
 };

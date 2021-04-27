@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['work_5ftime_343',['work_time',['../classInterface.html#a2dc44af6471a6833e9609b3e25bb4dc7',1,'Interface']]]
+  ['zero_238',['ZERO',['../classFan.html#a3bee1f52aed7e66f4d7877e925b768f9ac8fb26c0e40199d863c52c61aec90f86',1,'Fan']]]
 ];
