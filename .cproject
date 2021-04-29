@@ -111,6 +111,7 @@
 						<entry excluding="Src/freertos.c|Src/main.c" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Middlewares"/>
+						<entry excluding="Src/FileManager" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Software"/>
 						<entry excluding="Src/Interface" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="Software"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="startup"/>
 					</sourceEntries>

@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <ScratchFile FileVersion="3.0">
   <FileVersion>3.0</FileVersion>
   <Workspace>
     <WorkspaceType>Single-project</WorkspaceType>
-    <WorkspacePath>C:\Users\Igor\git\SupplyModule103RB\</WorkspacePath>
+    <WorkspacePath>D:\CubeIDERepository\SupplyModule103RB\</WorkspacePath>
     <underRoot>true</underRoot>
     <TrustZone>0</TrustZone>
-    <HAL_Driver>C:\Users\Igor\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.3</HAL_Driver>
+    <HAL_Driver>C:\Users\danie\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.3</HAL_Driver>
     <CMSIS>Drivers/CMSIS</CMSIS>
     <Toolchain>STM32CubeIDE</Toolchain>
     <IocFile>SupplyModule103RB.ioc</IocFile>
     <Project>
       <ProjectName>SupplyModule103RB</ProjectName>
       <ProjectNature>CPP</ProjectNature>
-      <Secure />
-      <filestoremove />
+      <Secure/>
+      <filestoremove/>
       <sourceEntriesToRemove>
-        <sourceEntry />
+        <sourceEntry/>
       </sourceEntriesToRemove>
       <configs>
         <config>
@@ -27,27 +27,27 @@
           <cpucore>Arm Cortex-M3</cpucore>
           <fpu>None</fpu>
           <memories>
-            <memory access="xrw" name="RAM" size="20" start="0x20000000" />
-            <memory access="rx" name="FLASH" size="128" start="0x8000000" />
+            <memory access="xrw" name="RAM" size="20" start="0x20000000"/>
+            <memory access="rx" name="FLASH" size="128" start="0x8000000"/>
           </memories>
-          <startup>C:\Users\Igor\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.3\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xb.s</startup>
+          <startup>C:\Users\danie\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.3\Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f103xb.s</startup>
           <LinkSettings>
-            <LinkAdditionalLibs />
+            <LinkAdditionalLibs/>
           </LinkSettings>
           <heapSize>0x200</heapSize>
           <stackSize>0x400</stackSize>
           <board>NUCLEO-F103RB</board>
           <debugprobe>swd</debugprobe>
-          <optimization />
+          <optimization/>
           <Aincludes>
-            <include />
+            <include/>
           </Aincludes>
-          <Adefines />
+          <Adefines/>
           <Cdefines>
             <define>USE_HAL_DRIVER</define>
             <define>STM32F103xB</define>
           </Cdefines>
-          <Ldefines />
+          <Ldefines/>
           <Cincludes>
             <include>Core\Inc</include>
             <include>Drivers\STM32F1xx_HAL_Driver\Inc</include>
@@ -59,19 +59,19 @@
             <include>Drivers\CMSIS\Include</include>
           </Cincludes>
           <definestoremove>
-            <Adefines />
+            <Adefines/>
             <Cdefines>
               <define>USE_FULL_LL_DRIVER</define>
               <define>MBEDTLS_CONFIG_FILE="mbedtls_config.h"</define>
               <define>USE_FULL_ASSERT=1U</define>
             </Cdefines>
-            <Ldefines />
+            <Ldefines/>
           </definestoremove>
           <inctoremove>
             <Aincludes>
-              <include />
+              <include/>
             </Aincludes>
-            <Cincludes />
+            <Cincludes/>
           </inctoremove>
         </config>
       </configs>
@@ -87,8 +87,7 @@
           <name>Middlewares</name>
         </sourceEntry>
       </sourceEntries>
-      <Groups />
+      <Groups/>
     </Project>
   </Workspace>
 </ScratchFile>
-
