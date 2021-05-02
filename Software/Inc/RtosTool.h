@@ -15,6 +15,13 @@
 #include <unordered_map>
 #include <cstring>
 
+
+/** FreeRTOS tool.
+ * Class to help with adding queues and manage adding and receiving messages from a queue
+ *
+ * There are 3 steps to start using class (creating RtosTool instance not included):
+ */
+
 class RtosTool{
 public:
 	RtosTool();
@@ -28,14 +35,14 @@ public:
     /* Fill data structure passed in first argument and return bool value: true when there was
      * something pending in queue or false if there wasn't any messages in queue */
     template<typename MsgClass>
-    uint8_t pop(MsgClass& data,uint32_t timeout = {0});
+    uint8_t pop(MsgClass& data, uint32_t timeout = {0});
 
 private:
     struct QueuePools{
     	osPoolId mpool;
     	osMessageQId  msgBox;
     };
-    std::unordered_map<BaseRtosMsg::MsgType, QueuePools> queuesData;
+    std::unordered_map<uint16_t, QueuePools> queuesData;
 
 };
 
@@ -52,9 +59,9 @@ void RtosTool::registerQueue(uint8_t queueSize) {
 	queuePools.msgBox = osMessageCreate(&os_messageQ_defx, NULL);
 
 	MsgClass obj;
-	BaseRtosMsg::MsgType msgtype = obj.getMsgType();
+	uint16_t msgId = obj.getMsgID();
 
-	queuesData.insert(std::pair<BaseRtosMsg::MsgType, QueuePools>(msgtype, queuePools));
+	queuesData.insert(std::pair<uint16_t, QueuePools>(msgId, queuePools));
 }
 
 
@@ -63,7 +70,7 @@ void RtosTool::registerQueue(uint8_t queueSize) {
 template<typename MsgClass>
 void RtosTool::insert(MsgClass& data) {
 
-	QueuePools  queuePools = queueData[data.getMsgType()];
+	QueuePools  queuePools = queuesData[data.getMsgID()];
 
 	MsgClass* mptr = osPoolAlloc(queuePools.mpool);
 	std::memcpy(mptr, &data, sizeof(MsgClass));
@@ -73,7 +80,7 @@ void RtosTool::insert(MsgClass& data) {
 template<typename MsgClass>
 uint8_t RtosTool::pop(MsgClass& data, uint32_t timeout) {
 	osEvent  evt;
-	QueuePools  queuePools = queueData[data.getMsgType()];
+	QueuePools  queuePools = queuesData[data.getMsgID()];
 
     evt = osMessageGet(queuePools.msgBox, timeout);
     if (evt.status == osEventMessage) {

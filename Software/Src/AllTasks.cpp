@@ -13,6 +13,8 @@
 #include "LedNotifier.h"
 #include "TimeTool.h"
 #include "FanManager.h"
+#include "RtosTool.h"
+#include "RtosMessages.h"
 
 osThreadId BatteryManagerHandle;
 osThreadId LedUpHandle;

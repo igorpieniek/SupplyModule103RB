@@ -12,35 +12,48 @@
 #include "main.h"
 
 
-class BaseRtosMsg{
-public:
-    enum  MsgType{
-        DATA1,
-		DATA2,
-        TEMPERATURE,
-        BRANCH_DATA,
-        FAN1
-    };
-    BaseRtosMsg(MsgType mt): mtype(mt){};
 
-    MsgType getMsgType()const { return mtype;};
-private:
-    MsgType mtype;
+
+//--------------------------BASE STRUCT TOOLS--------------------------------------------------
+
+namespace UniqueID{
+	uint16_t idCount = 0;
+
+	template <typename T>
+	uint16_t getUniqueID()
+	{
+		static uint16_t id = idCount++;
+		return id;
+	}
 };
 
-class Data1: BaseRtosMsg{
-	Data1(): BaseRtosMsg(DATA1){};
+
+class BaseRtosMsg{
+public:
+
+    BaseRtosMsg(uint16_t uniqueID): id(uniqueID){};
+
+    uint16_t getMsgID()const { return id;};
+private:
+    const uint16_t id;
+};
+
+
+//--------------------------MESSAGES STRUCTS--------------------------------------------------
+struct Data1: BaseRtosMsg{
+	Data1(): BaseRtosMsg( UniqueID::getUniqueID<Data1>() ){};
     uint8_t x;
     uint8_t y;
     uint16_t z;
 };
 
-class Data2: BaseRtosMsg{
-	Data2(): BaseRtosMsg(DATA2){};
+struct Data2: BaseRtosMsg{
+	Data2(): BaseRtosMsg( UniqueID::getUniqueID<Data2>() ){};
     uint8_t xx;
     uint8_t yy;
     uint16_t zz;
 };
+
 
 
 
