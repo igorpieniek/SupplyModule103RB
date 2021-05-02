@@ -12,16 +12,28 @@
 #include "main.h"
 #include "RtosMessages.h"
 #include "cmsis_os.h"
+#include <vector>
+#include <unordered_map>
 
 class RtosTool{
 public:
 	RtosTool();
-    void registerQueue(BaseRtosMsg::MsgType type, uint8_t queueSize);
-    void insertData(BaseRtosMsg::MsgType type, BaseRtosMsg& data);
-    BaseRtosMsg* pop(BaseRtosMsg::MsgType type);
+
+    template<typename MsgClass>
+	void registerQueue(uint8_t queueSize);
+
+    template<typename MsgClass>
+    void insertData(MsgClass& data);
+
+    template<typename MsgClass>
+    MsgClass* pop(BaseRtosMsg::MsgType type); // bedzie mozna uzyć MsgClass.getMsgType
 
 private:
-
+    struct QueuePools{
+    	osPoolId mpool;
+    	osMessageQId  msgBox;
+    };
+    std::unordered_map<BaseRtosMsg::MsgType, QueuePools> queuesData;
 
 };
 

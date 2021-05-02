@@ -29,8 +29,6 @@ void AllTasks_init(){
 	  osThreadDef(LedUpTask, StartLedUpTask, osPriorityNormal, 0, 1024);
 	  LedUpHandle = osThreadCreate(osThread(LedUpTask), NULL);
 
-
-
 }
 
 

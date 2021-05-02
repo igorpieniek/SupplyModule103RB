@@ -22,6 +22,8 @@ public:
         FAN1
     };
     BaseRtosMsg(MsgType mt): mtype(mt){};
+
+    MsgType getMsgType()const { return mtype;};
 private:
     MsgType mtype;
 };
