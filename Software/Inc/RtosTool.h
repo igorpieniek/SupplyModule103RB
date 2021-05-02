@@ -13,6 +13,7 @@
 #include "RtosMessages.h"
 #include "cmsis_os.h"
 #include <unordered_map>
+#include <cstring>
 
 class RtosTool{
 public:
@@ -22,10 +23,10 @@ public:
 	void registerQueue(uint8_t queueSize);
 
     template<typename MsgClass>
-    void insertData(MsgClass& data);
+    void insert(MsgClass& data);
 
     template<typename MsgClass>
-    MsgClass* pop(BaseRtosMsg::MsgType type); // bedzie mozna uzyć MsgClass.getMsgType
+    MsgClass* pop(BaseRtosMsg::MsgType type);
 
 private:
     struct QueuePools{
@@ -51,22 +52,21 @@ void RtosTool::registerQueue(uint8_t queueSize) {
 	MsgClass obj;
 	BaseRtosMsg::MsgType msgtype = obj.getMsgType();
 
-	queuesData.insert(msgtype, queuePools);
-	//queuesData.insert(std::pair<BaseRtosMsg::MsgType, QueuePools>(msgtype, queuePools));
+	queuesData.insert(std::pair<BaseRtosMsg::MsgType, QueuePools>(msgtype, queuePools));
 }
 
 
 
 
 template<typename MsgClass>
-void RtosTool::insertData(MsgClass& data) {
-	//check type and :
-	// 1. create pointer to specific struct
-	// 2. cast "data" to that pointer
-	// 3. osMessagePut
+void RtosTool::insert(MsgClass& data) {
 
-//	  T_MEAS    *mptr;
-//	   mptr = osPoolAlloc(mpool)
+	QueuePools  queuePools = queueData[data.getMsgType()];
+
+	MsgClass* mptr = osPoolAlloc(queuePools.mpool);
+	std::memcpy(mptr, &data, sizeof(MsgClass));
+	osMessagePut(queuePools.msgBox, (uint32_t)mptr, osWaitForever);
+
 }
 template<typename MsgClass>
 MsgClass* RtosTool::pop(BaseRtosMsg::MsgType type) {
