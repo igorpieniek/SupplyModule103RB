@@ -19,7 +19,42 @@
 /** FreeRTOS tool.
  * Class to help with adding queues and manage adding and receiving messages from a queue
  *
- * There are 3 steps to start using class (creating RtosTool instance not included):
+ * There are 2 steps to start using class (creating RtosTool instance not included):
+ * 1. Add your data structure in RtosMessages.h. You have to use BaseRtosMsg as base!
+ * ### Example
+ * ~~~~~~~~~~~~~~~~~~~~~~~~.cpp
+ * struct Data1: BaseRtosMsg{
+ *		Data1(): BaseRtosMsg( UniqueID::getUniqueID<Data1>() ){};
+ * 		uint8_t x;
+ *		uint8_t y;
+ * };
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~
+ *
+ * 2. Register your struct using type and queue size in the same place
+ * where you define your threads:
+ * ### Example
+ * ~~~~~~~~~~~~~~~~~~~~~~~~.cpp
+ * tool.registerQueue<Data1>(5);
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~
+ *
+ * Putting data into queue:
+ * ### Example
+ * ~~~~~~~~~~~~~~~~~~~~~~~~.cpp
+ * Data1 data;
+ * data.x =9;
+ * data.y =8;
+ * data.z = 7;
+ * tool.insert<Data1>(data);
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~
+ *
+ * Getting data from queue:
+ * ### Example
+ * ~~~~~~~~~~~~~~~~~~~~~~~~.cpp
+ * Data1 dataToFill;
+ * uint8_t isReceived = tool.pop<Data1>(&data);
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~
+ *	When you use pop method you could define timeout, default timeout is 0 and that mean
+ *	the function returns instantly.
  */
 
 class RtosTool{
@@ -35,7 +70,7 @@ public:
     /* Fill data structure passed in first argument and return bool value: true when there was
      * something pending in queue or false if there wasn't any messages in queue */
     template<typename MsgClass>
-    uint8_t pop(MsgClass& data, uint32_t timeout = {0});
+    uint8_t pop(MsgClass* data, uint32_t timeout = {0});
 
 private:
     struct QueuePools{
@@ -78,13 +113,13 @@ void RtosTool::insert(MsgClass& data) {
 
 }
 template<typename MsgClass>
-uint8_t RtosTool::pop(MsgClass& data, uint32_t timeout) {
+uint8_t RtosTool::pop(MsgClass* data, uint32_t timeout) {
 	osEvent  evt;
-	QueuePools  queuePools = queuesData[data.getMsgID()];
+	QueuePools  queuePools = queuesData[data->getMsgID()];
 
     evt = osMessageGet(queuePools.msgBox, timeout);
     if (evt.status == osEventMessage) {
-    	std::memcpy(&data, evt.value.p, sizeof(MsgClass));
+    	std::memcpy(data, evt.value.p, sizeof(MsgClass));
     	osPoolFree(queuePools.mpool, evt.value.p);
     	return 1;
     }
