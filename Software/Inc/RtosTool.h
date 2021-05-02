@@ -25,8 +25,10 @@ public:
     template<typename MsgClass>
     void insert(MsgClass& data);
 
+    /* Fill data structure passed in first argument and return bool value: true when there was
+     * something pending in queue or false if there wasn't any messages in queue */
     template<typename MsgClass>
-    MsgClass* pop(BaseRtosMsg::MsgType type);
+    uint8_t pop(MsgClass& data,uint32_t timeout = {0});
 
 private:
     struct QueuePools{
@@ -69,7 +71,19 @@ void RtosTool::insert(MsgClass& data) {
 
 }
 template<typename MsgClass>
-MsgClass* RtosTool::pop(BaseRtosMsg::MsgType type) {
+uint8_t RtosTool::pop(MsgClass& data, uint32_t timeout) {
+	osEvent  evt;
+	QueuePools  queuePools = queueData[data.getMsgType()];
+
+    evt = osMessageGet(queuePools.msgBox, timeout);
+    if (evt.status == osEventMessage) {
+    	std::memcpy(&data, evt.value.p, sizeof(MsgClass));
+    	osPoolFree(queuePools.mpool, evt.value.p);
+    	return 1;
+    }
+    else{ //e.g. osEventTimeout
+    	return 0;
+    }
 }
 
 #endif /* INC_RTOSTOOL_H_ */
