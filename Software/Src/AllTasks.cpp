@@ -13,6 +13,7 @@
 #include "LedNotifier.h"
 #include "TimeTool.h"
 #include "FanManager.h"
+
 #include "RtosTool.h"
 #include "RtosMessages.h"
 
@@ -22,10 +23,15 @@ osThreadId LedUpHandle;
 void StartBatteryManagerTask(void const * argument);
 void StartLedUpTask(void const * argument);
 
+RtosTool tool;
+Data1 data;
+Data1 data2;
 
 void AllTasks_init(){
 
-	  osThreadDef(BatteryManagerTask, StartBatteryManagerTask, osPriorityNormal, 0, 256);
+	  tool.registerQueue<Data1>(3);
+
+	  osThreadDef(BatteryManagerTask, StartBatteryManagerTask, osPriorityNormal, 0, 1024);
 	  BatteryManagerHandle = osThreadCreate(osThread(BatteryManagerTask), NULL);
 
 	  osThreadDef(LedUpTask, StartLedUpTask, osPriorityNormal, 0, 1024);
@@ -35,21 +41,27 @@ void AllTasks_init(){
 
 
 void StartBatteryManagerTask(void const * argument){
-
+	data.x = 9;
+	data.y = 8;
+	data.z = 7;
 	for(;;){
+		tool.insert<Data1>(data);
+		 data.x++;
+		 data.y++;
+		 data.z++;
 
-		osDelay(100);
+		osDelay(500);
 
 
 	}
 }
 
 void StartLedUpTask(void const * argument){
-
-
 	for(;;){
-
-		osDelay(10);
+		while(tool.pop<Data1>(&data2)){
+			HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+		}
+		osDelay(200);
 	}
 }
 

@@ -59,7 +59,6 @@
 
 class RtosTool{
 public:
-	RtosTool();
 
     template<typename MsgClass>
 	void registerQueue(uint8_t queueSize);
@@ -107,7 +106,7 @@ void RtosTool::insert(MsgClass& data) {
 
 	QueuePools  queuePools = queuesData[data.getMsgID()];
 
-	MsgClass* mptr = osPoolAlloc(queuePools.mpool);
+	MsgClass* mptr = (MsgClass*)osPoolAlloc(queuePools.mpool);
 	std::memcpy(mptr, &data, sizeof(MsgClass));
 	osMessagePut(queuePools.msgBox, (uint32_t)mptr, osWaitForever);
 
